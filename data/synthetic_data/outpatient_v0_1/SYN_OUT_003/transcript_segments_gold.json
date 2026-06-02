@@ -5,10 +5,14 @@
     "start_time": 0.0,
     "end_time": 3.2,
     "speaker_id": "Speaker_0",
-    "speaker_role": "Doctor",
+    "speaker_role": "doctor",
     "text": "Chào anh, hôm nay anh đi khám vì vấn đề gì?",
     "source": "gold_transcript",
-    "confidence": null
+    "confidence": 1.0,
+    "audio_span": {
+      "start_time": 0.0,
+      "end_time": 3.2
+    }
   },
   {
     "segment_id": "seg_002",
@@ -16,10 +20,14 @@
     "start_time": 3.3,
     "end_time": 6.5,
     "speaker_id": "Speaker_1",
-    "speaker_role": "Patient",
+    "speaker_role": "patient",
     "text": "Dạ em bị đau đầu khoảng một tuần nay.",
     "source": "gold_transcript",
-    "confidence": null
+    "confidence": 1.0,
+    "audio_span": {
+      "start_time": 3.3,
+      "end_time": 6.5
+    }
   },
   {
     "segment_id": "seg_003",
@@ -27,10 +35,14 @@
     "start_time": 6.6,
     "end_time": 10.0,
     "speaker_id": "Speaker_0",
-    "speaker_role": "Doctor",
+    "speaker_role": "doctor",
     "text": "Anh đau đầu kiểu như thế nào và đau ở đâu?",
     "source": "gold_transcript",
-    "confidence": null
+    "confidence": 1.0,
+    "audio_span": {
+      "start_time": 6.6,
+      "end_time": 10.0
+    }
   },
   {
     "segment_id": "seg_004",
@@ -38,10 +50,14 @@
     "start_time": 10.1,
     "end_time": 14.4,
     "speaker_id": "Speaker_1",
-    "speaker_role": "Patient",
+    "speaker_role": "patient",
     "text": "Em đau âm ỉ hai bên thái dương, không đau dữ dội.",
     "source": "gold_transcript",
-    "confidence": null
+    "confidence": 1.0,
+    "audio_span": {
+      "start_time": 10.1,
+      "end_time": 14.4
+    }
   },
   {
     "segment_id": "seg_005",
@@ -49,10 +65,14 @@
     "start_time": 14.5,
     "end_time": 18.6,
     "speaker_id": "Speaker_0",
-    "speaker_role": "Doctor",
+    "speaker_role": "doctor",
     "text": "Cơn đau có tăng dần lên không, hay xuất hiện đột ngột không?",
     "source": "gold_transcript",
-    "confidence": null
+    "confidence": 1.0,
+    "audio_span": {
+      "start_time": 14.5,
+      "end_time": 18.6
+    }
   },
   {
     "segment_id": "seg_006",
@@ -60,10 +80,14 @@
     "start_time": 18.7,
     "end_time": 22.5,
     "speaker_id": "Speaker_1",
-    "speaker_role": "Patient",
+    "speaker_role": "patient",
     "text": "Dạ không đột ngột. Nó âm ỉ, lúc tăng lúc giảm.",
     "source": "gold_transcript",
-    "confidence": null
+    "confidence": 1.0,
+    "audio_span": {
+      "start_time": 18.7,
+      "end_time": 22.5
+    }
   },
   {
     "segment_id": "seg_007",
@@ -71,10 +95,14 @@
     "start_time": 22.6,
     "end_time": 27.1,
     "speaker_id": "Speaker_0",
-    "speaker_role": "Doctor",
+    "speaker_role": "doctor",
     "text": "Anh có buồn nôn, nhìn mờ, nói khó hoặc yếu liệt tay chân không?",
     "source": "gold_transcript",
-    "confidence": null
+    "confidence": 1.0,
+    "audio_span": {
+      "start_time": 22.6,
+      "end_time": 27.1
+    }
   },
   {
     "segment_id": "seg_008",
@@ -82,10 +110,14 @@
     "start_time": 27.2,
     "end_time": 32.0,
     "speaker_id": "Speaker_1",
-    "speaker_role": "Patient",
+    "speaker_role": "patient",
     "text": "Dạ không, em không nhìn mờ, không nói khó và không yếu liệt tay chân.",
     "source": "gold_transcript",
-    "confidence": null
+    "confidence": 1.0,
+    "audio_span": {
+      "start_time": 27.2,
+      "end_time": 32.0
+    }
   },
   {
     "segment_id": "seg_009",
@@ -93,10 +125,14 @@
     "start_time": 32.1,
     "end_time": 34.3,
     "speaker_id": "Speaker_0",
-    "speaker_role": "Doctor",
+    "speaker_role": "doctor",
     "text": "Gần đây anh ngủ thế nào?",
     "source": "gold_transcript",
-    "confidence": null
+    "confidence": 1.0,
+    "audio_span": {
+      "start_time": 32.1,
+      "end_time": 34.3
+    }
   },
   {
     "segment_id": "seg_010",
@@ -104,10 +140,14 @@
     "start_time": 34.4,
     "end_time": 38.7,
     "speaker_id": "Speaker_1",
-    "speaker_role": "Patient",
+    "speaker_role": "patient",
     "text": "Em ngủ kém, mỗi đêm chỉ khoảng bốn đến năm tiếng.",
     "source": "gold_transcript",
-    "confidence": null
+    "confidence": 1.0,
+    "audio_span": {
+      "start_time": 34.4,
+      "end_time": 38.7
+    }
   },
   {
     "segment_id": "seg_011",
@@ -115,10 +155,14 @@
     "start_time": 38.8,
     "end_time": 42.0,
     "speaker_id": "Speaker_0",
-    "speaker_role": "Doctor",
+    "speaker_role": "doctor",
     "text": "Anh có uống nhiều cà phê hoặc thức khuya không?",
     "source": "gold_transcript",
-    "confidence": null
+    "confidence": 1.0,
+    "audio_span": {
+      "start_time": 38.8,
+      "end_time": 42.0
+    }
   },
   {
     "segment_id": "seg_012",
@@ -126,10 +170,14 @@
     "start_time": 42.1,
     "end_time": 46.5,
     "speaker_id": "Speaker_1",
-    "speaker_role": "Patient",
+    "speaker_role": "patient",
     "text": "Dạ em hay uống cà phê buổi tối và làm việc máy tính khá khuya.",
     "source": "gold_transcript",
-    "confidence": null
+    "confidence": 1.0,
+    "audio_span": {
+      "start_time": 42.1,
+      "end_time": 46.5
+    }
   },
   {
     "segment_id": "seg_013",
@@ -137,10 +185,14 @@
     "start_time": 46.6,
     "end_time": 52.0,
     "speaker_id": "Speaker_0",
-    "speaker_role": "Doctor",
+    "speaker_role": "doctor",
     "text": "Anh có bị co giật, ngất hoặc đau đầu dữ dội nhất từ trước đến nay không?",
     "source": "gold_transcript",
-    "confidence": null
+    "confidence": 1.0,
+    "audio_span": {
+      "start_time": 46.6,
+      "end_time": 52.0
+    }
   },
   {
     "segment_id": "seg_014",
@@ -148,10 +200,14 @@
     "start_time": 52.1,
     "end_time": 57.0,
     "speaker_id": "Speaker_1",
-    "speaker_role": "Patient",
+    "speaker_role": "patient",
     "text": "Dạ không có co giật, không ngất và cũng không phải đau dữ dội nhất.",
     "source": "gold_transcript",
-    "confidence": null
+    "confidence": 1.0,
+    "audio_span": {
+      "start_time": 52.1,
+      "end_time": 57.0
+    }
   },
   {
     "segment_id": "seg_015",
@@ -159,10 +215,14 @@
     "start_time": 57.1,
     "end_time": 72.8,
     "speaker_id": "Speaker_0",
-    "speaker_role": "Doctor",
+    "speaker_role": "doctor",
     "text": "Trước mắt anh nên nghỉ ngơi, giảm cà phê buổi tối, hạn chế thức khuya và theo dõi mức độ đau đầu. Nếu đau đầu dữ dội, yếu liệt, nói khó, nhìn mờ, co giật hoặc ngất thì cần đi khám ngay.",
     "source": "gold_transcript",
-    "confidence": null
+    "confidence": 1.0,
+    "audio_span": {
+      "start_time": 57.1,
+      "end_time": 72.8
+    }
   },
   {
     "segment_id": "seg_016",
@@ -170,9 +230,13 @@
     "start_time": 72.9,
     "end_time": 75.4,
     "speaker_id": "Speaker_1",
-    "speaker_role": "Patient",
+    "speaker_role": "patient",
     "text": "Dạ vâng, em hiểu rồi.",
     "source": "gold_transcript",
-    "confidence": null
+    "confidence": 1.0,
+    "audio_span": {
+      "start_time": 72.9,
+      "end_time": 75.4
+    }
   }
 ]

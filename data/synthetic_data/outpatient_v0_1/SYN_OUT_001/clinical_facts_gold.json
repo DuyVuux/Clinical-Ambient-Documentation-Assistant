@@ -4,184 +4,220 @@
     "encounter_id": "SYN_OUT_001",
     "fact_type": "symptom",
     "original_text": "Dạ em bị ho khoảng ba ngày nay.",
-    "normalized_text": "ho",
+    "normalized_text": "ho (duration: 3 ngày, source_start_time: 3.3, source_end_time: 6.1)",
     "assertion": "present",
-    "duration": "3 ngày",
-    "severity": null,
-    "speaker_role": "Patient",
-    "clinical_subject": "Patient",
-    "source_segment_ids": ["seg_002"],
-    "source_start_time": 3.3,
-    "source_end_time": 6.1,
+    "speaker_role": "patient",
+    "clinical_subject": {
+      "subject_type": "patient",
+      "relationship_to_patient": "self"
+    },
+    "source_segment_ids": [
+      "seg_002"
+    ],
     "requires_doctor_confirmation": true,
     "doctor_confirmation_status": "accepted",
     "coding_candidates": [
       {
-        "system": "local_dictionary",
+        "system": "local_mvp_dictionary",
         "code": "SYM_COUGH",
         "display": "Ho"
       }
-    ]
+    ],
+    "reviewed_by": "synthetic_reviewer",
+    "reviewed_at": "2026-06-02T00:00:00+07:00",
+    "review_status": "gold"
   },
   {
     "fact_id": "fact_002",
     "encounter_id": "SYN_OUT_001",
     "fact_type": "symptom",
     "original_text": "Em ho khan là chính, thỉnh thoảng hơi rát họng.",
-    "normalized_text": "ho khan",
+    "normalized_text": "ho khan (source_start_time: 9.1, source_end_time: 13.4)",
     "assertion": "present",
-    "duration": null,
-    "severity": null,
-    "speaker_role": "Patient",
-    "clinical_subject": "Patient",
-    "source_segment_ids": ["seg_004"],
-    "source_start_time": 9.1,
-    "source_end_time": 13.4,
+    "speaker_role": "patient",
+    "clinical_subject": {
+      "subject_type": "patient",
+      "relationship_to_patient": "self"
+    },
+    "source_segment_ids": [
+      "seg_004"
+    ],
     "requires_doctor_confirmation": true,
     "doctor_confirmation_status": "accepted",
     "coding_candidates": [
       {
-        "system": "local_dictionary",
+        "system": "local_mvp_dictionary",
         "code": "SYM_DRY_COUGH",
         "display": "Ho khan"
       }
-    ]
+    ],
+    "reviewed_by": "synthetic_reviewer",
+    "reviewed_at": "2026-06-02T00:00:00+07:00",
+    "review_status": "gold"
   },
   {
     "fact_id": "fact_003",
     "encounter_id": "SYN_OUT_001",
     "fact_type": "symptom",
     "original_text": "Dạ có sốt nhẹ tối qua, khoảng ba mươi bảy độ tám.",
-    "normalized_text": "sốt nhẹ",
+    "normalized_text": "sốt nhẹ (duration: tối qua, source_start_time: 15.1, source_end_time: 19.2)",
     "assertion": "present",
-    "duration": "tối qua",
     "value": "37.8",
     "unit": "°C",
-    "speaker_role": "Patient",
-    "clinical_subject": "Patient",
-    "source_segment_ids": ["seg_006"],
-    "source_start_time": 15.1,
-    "source_end_time": 19.2,
+    "speaker_role": "patient",
+    "clinical_subject": {
+      "subject_type": "patient",
+      "relationship_to_patient": "self"
+    },
+    "source_segment_ids": [
+      "seg_006"
+    ],
     "requires_doctor_confirmation": true,
     "doctor_confirmation_status": "accepted",
     "coding_candidates": [
       {
-        "system": "local_dictionary",
+        "system": "local_mvp_dictionary",
         "code": "SYM_FEVER",
         "display": "Sốt"
       }
-    ]
+    ],
+    "reviewed_by": "synthetic_reviewer",
+    "reviewed_at": "2026-06-02T00:00:00+07:00",
+    "review_status": "gold"
   },
   {
     "fact_id": "fact_004",
     "encounter_id": "SYN_OUT_001",
     "fact_type": "symptom",
     "original_text": "Dạ không, em không đau ngực và cũng không khó thở.",
-    "normalized_text": "đau ngực",
-    "assertion": "negated",
-    "duration": null,
-    "severity": null,
-    "speaker_role": "Patient",
-    "clinical_subject": "Patient",
-    "source_segment_ids": ["seg_008"],
-    "source_start_time": 22.8,
-    "source_end_time": 27.1,
+    "normalized_text": "đau ngực (source_start_time: 22.8, source_end_time: 27.1)",
+    "assertion": "absent",
+    "speaker_role": "patient",
+    "clinical_subject": {
+      "subject_type": "patient",
+      "relationship_to_patient": "self"
+    },
+    "source_segment_ids": [
+      "seg_008"
+    ],
     "requires_doctor_confirmation": true,
     "doctor_confirmation_status": "accepted",
     "coding_candidates": [
       {
-        "system": "local_dictionary",
+        "system": "local_mvp_dictionary",
         "code": "SYM_CHEST_PAIN",
         "display": "Đau ngực"
       }
-    ]
+    ],
+    "reviewed_by": "synthetic_reviewer",
+    "reviewed_at": "2026-06-02T00:00:00+07:00",
+    "review_status": "gold"
   },
   {
     "fact_id": "fact_005",
     "encounter_id": "SYN_OUT_001",
     "fact_type": "symptom",
     "original_text": "Dạ không, em không đau ngực và cũng không khó thở.",
-    "normalized_text": "khó thở",
-    "assertion": "negated",
-    "duration": null,
-    "severity": null,
-    "speaker_role": "Patient",
-    "clinical_subject": "Patient",
-    "source_segment_ids": ["seg_008"],
-    "source_start_time": 22.8,
-    "source_end_time": 27.1,
+    "normalized_text": "khó thở (source_start_time: 22.8, source_end_time: 27.1)",
+    "assertion": "absent",
+    "speaker_role": "patient",
+    "clinical_subject": {
+      "subject_type": "patient",
+      "relationship_to_patient": "self"
+    },
+    "source_segment_ids": [
+      "seg_008"
+    ],
     "requires_doctor_confirmation": true,
     "doctor_confirmation_status": "accepted",
     "coding_candidates": [
       {
-        "system": "local_dictionary",
+        "system": "local_mvp_dictionary",
         "code": "SYM_DYSPNEA",
         "display": "Khó thở"
       }
-    ]
+    ],
+    "reviewed_by": "synthetic_reviewer",
+    "reviewed_at": "2026-06-02T00:00:00+07:00",
+    "review_status": "gold"
   },
   {
     "fact_id": "fact_006",
     "encounter_id": "SYN_OUT_001",
     "fact_type": "allergy",
     "original_text": "Dạ em chưa từng dị ứng thuốc.",
-    "normalized_text": "dị ứng thuốc",
-    "assertion": "negated",
-    "speaker_role": "Patient",
-    "clinical_subject": "Patient",
-    "source_segment_ids": ["seg_010"],
-    "source_start_time": 30.2,
-    "source_end_time": 32.9,
+    "normalized_text": "dị ứng thuốc (source_start_time: 30.2, source_end_time: 32.9)",
+    "assertion": "absent",
+    "speaker_role": "patient",
+    "clinical_subject": {
+      "subject_type": "patient",
+      "relationship_to_patient": "self"
+    },
+    "source_segment_ids": [
+      "seg_010"
+    ],
     "requires_doctor_confirmation": true,
     "doctor_confirmation_status": "accepted",
     "coding_candidates": [
       {
-        "system": "local_dictionary",
+        "system": "local_mvp_dictionary",
         "code": "ALL_DRUG_ALLERGY",
         "display": "Dị ứng thuốc"
       }
-    ]
+    ],
+    "reviewed_by": "synthetic_reviewer",
+    "reviewed_at": "2026-06-02T00:00:00+07:00",
+    "review_status": "gold"
   },
   {
     "fact_id": "fact_007",
     "encounter_id": "SYN_OUT_001",
     "fact_type": "medication",
     "original_text": "Em có uống một viên paracetamol năm trăm miligam tối qua khi sốt.",
-    "normalized_text": "paracetamol",
+    "normalized_text": "paracetamol (dose: 500 mg, route: oral, frequency: once, source_start_time: 35.4, source_end_time: 40.5)",
     "assertion": "present",
-    "dose": "500 mg",
-    "route": "oral",
-    "frequency": "once",
     "time": "tối qua",
-    "speaker_role": "Patient",
-    "clinical_subject": "Patient",
-    "source_segment_ids": ["seg_012"],
-    "source_start_time": 35.4,
-    "source_end_time": 40.5,
+    "speaker_role": "patient",
+    "clinical_subject": {
+      "subject_type": "patient",
+      "relationship_to_patient": "self"
+    },
+    "source_segment_ids": [
+      "seg_012"
+    ],
     "requires_doctor_confirmation": true,
     "doctor_confirmation_status": "accepted",
     "coding_candidates": [
       {
-        "system": "local_dictionary",
+        "system": "local_mvp_dictionary",
         "code": "DRUG_PARACETAMOL",
         "display": "Paracetamol"
       }
-    ]
+    ],
+    "reviewed_by": "synthetic_reviewer",
+    "reviewed_at": "2026-06-02T00:00:00+07:00",
+    "review_status": "gold"
   },
   {
     "fact_id": "fact_008",
     "encounter_id": "SYN_OUT_001",
     "fact_type": "plan",
     "original_text": "Anh nghỉ ngơi, uống đủ nước, theo dõi nhiệt độ. Nếu sốt cao, khó thở hoặc đau ngực thì cần quay lại khám ngay.",
-    "normalized_text": "nghỉ ngơi, uống đủ nước, theo dõi nhiệt độ, tái khám nếu có dấu hiệu nặng",
+    "normalized_text": "nghỉ ngơi, uống đủ nước, theo dõi nhiệt độ, tái khám nếu có dấu hiệu nặng (source_start_time: 40.6, source_end_time: 52.5)",
     "assertion": "instruction",
-    "speaker_role": "Doctor",
-    "clinical_subject": "Patient",
-    "source_segment_ids": ["seg_013"],
-    "source_start_time": 40.6,
-    "source_end_time": 52.5,
+    "speaker_role": "doctor",
+    "clinical_subject": {
+      "subject_type": "patient",
+      "relationship_to_patient": "self"
+    },
+    "source_segment_ids": [
+      "seg_013"
+    ],
     "requires_doctor_confirmation": true,
     "doctor_confirmation_status": "accepted",
-    "coding_candidates": []
+    "coding_candidates": [],
+    "reviewed_by": "synthetic_reviewer",
+    "reviewed_at": "2026-06-02T00:00:00+07:00",
+    "review_status": "gold"
   }
 ]

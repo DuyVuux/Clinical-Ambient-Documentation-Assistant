@@ -5,10 +5,14 @@
     "start_time": 0.0,
     "end_time": 3.1,
     "speaker_id": "Speaker_0",
-    "speaker_role": "Doctor",
+    "speaker_role": "doctor",
     "text": "Chào chị, hôm nay chị đi khám vì vấn đề gì?",
     "source": "gold_transcript",
-    "confidence": null
+    "confidence": 1.0,
+    "audio_span": {
+      "start_time": 0.0,
+      "end_time": 3.1
+    }
   },
   {
     "segment_id": "seg_002",
@@ -16,10 +20,14 @@
     "start_time": 3.2,
     "end_time": 7.4,
     "speaker_id": "Speaker_1",
-    "speaker_role": "Patient",
+    "speaker_role": "patient",
     "text": "Dạ em bị đau bụng và đi ngoài lỏng khoảng hai ngày nay.",
     "source": "gold_transcript",
-    "confidence": null
+    "confidence": 1.0,
+    "audio_span": {
+      "start_time": 3.2,
+      "end_time": 7.4
+    }
   },
   {
     "segment_id": "seg_003",
@@ -27,10 +35,14 @@
     "start_time": 7.5,
     "end_time": 9.7,
     "speaker_id": "Speaker_0",
-    "speaker_role": "Doctor",
+    "speaker_role": "doctor",
     "text": "Chị đau bụng ở vị trí nào?",
     "source": "gold_transcript",
-    "confidence": null
+    "confidence": 1.0,
+    "audio_span": {
+      "start_time": 7.5,
+      "end_time": 9.7
+    }
   },
   {
     "segment_id": "seg_004",
@@ -38,10 +50,14 @@
     "start_time": 9.8,
     "end_time": 14.2,
     "speaker_id": "Speaker_1",
-    "speaker_role": "Patient",
+    "speaker_role": "patient",
     "text": "Em đau quanh rốn, đau từng cơn chứ không đau liên tục.",
     "source": "gold_transcript",
-    "confidence": null
+    "confidence": 1.0,
+    "audio_span": {
+      "start_time": 9.8,
+      "end_time": 14.2
+    }
   },
   {
     "segment_id": "seg_005",
@@ -49,10 +65,14 @@
     "start_time": 14.3,
     "end_time": 17.0,
     "speaker_id": "Speaker_0",
-    "speaker_role": "Doctor",
+    "speaker_role": "doctor",
     "text": "Một ngày chị đi ngoài khoảng mấy lần?",
     "source": "gold_transcript",
-    "confidence": null
+    "confidence": 1.0,
+    "audio_span": {
+      "start_time": 14.3,
+      "end_time": 17.0
+    }
   },
   {
     "segment_id": "seg_006",
@@ -60,10 +80,14 @@
     "start_time": 17.1,
     "end_time": 20.6,
     "speaker_id": "Speaker_1",
-    "speaker_role": "Patient",
+    "speaker_role": "patient",
     "text": "Dạ khoảng bốn đến năm lần một ngày.",
     "source": "gold_transcript",
-    "confidence": null
+    "confidence": 1.0,
+    "audio_span": {
+      "start_time": 17.1,
+      "end_time": 20.6
+    }
   },
   {
     "segment_id": "seg_007",
@@ -71,10 +95,14 @@
     "start_time": 20.7,
     "end_time": 24.0,
     "speaker_id": "Speaker_0",
-    "speaker_role": "Doctor",
+    "speaker_role": "doctor",
     "text": "Phân có máu hoặc có màu đen bất thường không?",
     "source": "gold_transcript",
-    "confidence": null
+    "confidence": 1.0,
+    "audio_span": {
+      "start_time": 20.7,
+      "end_time": 24.0
+    }
   },
   {
     "segment_id": "seg_008",
@@ -82,10 +110,14 @@
     "start_time": 24.1,
     "end_time": 28.2,
     "speaker_id": "Speaker_1",
-    "speaker_role": "Patient",
+    "speaker_role": "patient",
     "text": "Dạ không, em không thấy máu và cũng không thấy phân đen.",
     "source": "gold_transcript",
-    "confidence": null
+    "confidence": 1.0,
+    "audio_span": {
+      "start_time": 24.1,
+      "end_time": 28.2
+    }
   },
   {
     "segment_id": "seg_009",
@@ -93,10 +125,14 @@
     "start_time": 28.3,
     "end_time": 32.0,
     "speaker_id": "Speaker_0",
-    "speaker_role": "Doctor",
+    "speaker_role": "doctor",
     "text": "Chị có sốt cao, nôn nhiều hoặc nôn ra máu không?",
     "source": "gold_transcript",
-    "confidence": null
+    "confidence": 1.0,
+    "audio_span": {
+      "start_time": 28.3,
+      "end_time": 32.0
+    }
   },
   {
     "segment_id": "seg_010",
@@ -104,10 +140,14 @@
     "start_time": 32.1,
     "end_time": 36.5,
     "speaker_id": "Speaker_1",
-    "speaker_role": "Patient",
+    "speaker_role": "patient",
     "text": "Dạ không sốt cao, không nôn ra máu. Em chỉ hơi buồn nôn thôi.",
     "source": "gold_transcript",
-    "confidence": null
+    "confidence": 1.0,
+    "audio_span": {
+      "start_time": 32.1,
+      "end_time": 36.5
+    }
   },
   {
     "segment_id": "seg_011",
@@ -115,10 +155,14 @@
     "start_time": 36.6,
     "end_time": 40.6,
     "speaker_id": "Speaker_0",
-    "speaker_role": "Doctor",
+    "speaker_role": "doctor",
     "text": "Trước khi bị đau bụng chị có ăn đồ lạ hoặc ăn ngoài không?",
     "source": "gold_transcript",
-    "confidence": null
+    "confidence": 1.0,
+    "audio_span": {
+      "start_time": 36.6,
+      "end_time": 40.6
+    }
   },
   {
     "segment_id": "seg_012",
@@ -126,10 +170,14 @@
     "start_time": 40.7,
     "end_time": 44.8,
     "speaker_id": "Speaker_1",
-    "speaker_role": "Patient",
+    "speaker_role": "patient",
     "text": "Dạ hôm trước em có ăn hải sản ở ngoài với bạn.",
     "source": "gold_transcript",
-    "confidence": null
+    "confidence": 1.0,
+    "audio_span": {
+      "start_time": 40.7,
+      "end_time": 44.8
+    }
   },
   {
     "segment_id": "seg_013",
@@ -137,10 +185,14 @@
     "start_time": 44.9,
     "end_time": 49.5,
     "speaker_id": "Speaker_0",
-    "speaker_role": "Doctor",
+    "speaker_role": "doctor",
     "text": "Chị có dấu hiệu khát nhiều, chóng mặt hoặc tiểu ít hơn bình thường không?",
     "source": "gold_transcript",
-    "confidence": null
+    "confidence": 1.0,
+    "audio_span": {
+      "start_time": 44.9,
+      "end_time": 49.5
+    }
   },
   {
     "segment_id": "seg_014",
@@ -148,10 +200,14 @@
     "start_time": 49.6,
     "end_time": 54.8,
     "speaker_id": "Speaker_1",
-    "speaker_role": "Patient",
+    "speaker_role": "patient",
     "text": "Dạ em hơi khát nước hơn, nhưng chưa chóng mặt và vẫn đi tiểu bình thường.",
     "source": "gold_transcript",
-    "confidence": null
+    "confidence": 1.0,
+    "audio_span": {
+      "start_time": 49.6,
+      "end_time": 54.8
+    }
   },
   {
     "segment_id": "seg_015",
@@ -159,10 +215,14 @@
     "start_time": 54.9,
     "end_time": 70.0,
     "speaker_id": "Speaker_0",
-    "speaker_role": "Doctor",
+    "speaker_role": "doctor",
     "text": "Trước mắt chị cần uống đủ nước, có thể dùng dung dịch bù nước nếu đi ngoài nhiều. Chị theo dõi thêm. Nếu đau bụng tăng, sốt cao, nôn nhiều, đi ngoài ra máu hoặc có dấu hiệu mất nước thì cần quay lại khám ngay.",
     "source": "gold_transcript",
-    "confidence": null
+    "confidence": 1.0,
+    "audio_span": {
+      "start_time": 54.9,
+      "end_time": 70.0
+    }
   },
   {
     "segment_id": "seg_016",
@@ -170,9 +230,13 @@
     "start_time": 70.1,
     "end_time": 73.0,
     "speaker_id": "Speaker_1",
-    "speaker_role": "Patient",
+    "speaker_role": "patient",
     "text": "Dạ vâng, em sẽ theo dõi thêm.",
     "source": "gold_transcript",
-    "confidence": null
+    "confidence": 1.0,
+    "audio_span": {
+      "start_time": 70.1,
+      "end_time": 73.0
+    }
   }
 ]

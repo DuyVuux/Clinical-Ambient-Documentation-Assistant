@@ -5,51 +5,35 @@
   "setting": "outpatient",
   "specialty": "internal_medicine",
   "language": "vi-VN",
+  "audio_path": "not_applicable",
+  "transcript_path": "transcript_segments_gold.json",
+  "contains_phi": "no",
+  "consent_status": "synthetic",
+  "license_status": "internal",
+  "allowed_use": [
+    "training",
+    "evaluation",
+    "demo"
+  ],
+  "review_status": "gold",
   "version": "v0.1",
-  "case_title": "Đau đầu, mất ngủ, không yếu liệt tay chân",
-  "clinical_scenario": "Bệnh nhân nam trưởng thành đi khám ngoại trú vì đau đầu âm ỉ khoảng 1 tuần, kèm ngủ kém. Bệnh nhân phủ nhận các dấu hiệu cảnh báo thần kinh như nhìn mờ, nói khó, yếu liệt tay chân, co giật và ngất.",
-  "roles": [
-    "Doctor",
-    "Patient"
-  ],
-  "speaker_map": {
-    "Speaker_0": "Doctor",
-    "Speaker_1": "Patient"
-  },
-  "audio": {
-    "has_audio": false,
-    "raw_audio_path": null,
-    "duration_seconds_estimated": 260,
-    "sample_rate": null,
-    "recording_environment": "synthetic_script_only"
-  },
-  "governance": {
-    "contains_phi": false,
-    "contains_real_patient_data": false,
-    "consent_status": "synthetic",
-    "license_status": "internal",
-    "allowed_use": [
-      "training",
-      "evaluation",
-      "demo"
-    ],
-    "retention_policy": "keep_versioned",
-    "governance_status": "approved_internal"
-  },
-  "annotations": {
-    "has_gold_transcript": true,
-    "has_speaker_roles": true,
-    "has_clinical_facts": true,
-    "has_soap_note": true,
-    "review_status": "synthetic_gold"
-  },
-  "safety_focus": [
-    "headache",
-    "sleep_problem",
-    "neurological_red_flag_negation",
-    "source_attribution",
-    "follow_up_instruction"
-  ],
+  "created_at": "2026-06-02T00:00:00Z",
+  "updated_at": "2026-06-02T00:00:00Z",
+  "governance_status": "approved_internal",
   "created_by": "Duy",
-  "created_at": "2026-06-02"
+  "retention_policy": "keep_versioned",
+  "access_control_policy": "project_team",
+  "audit_log_required": false,
+  "provenance": {
+    "recording_environment": "simulated",
+    "collection_method": "script_generated",
+    "deidentification_status": "not_required_synthetic"
+  },
+  "clinical_note": {
+    "note_format": "soap",
+    "reviewed_note_path": "soap_note_gold.md",
+    "doctor_confirmation_status": "accepted",
+    "reviewed_by": "synthetic_reviewer",
+    "reviewed_at": "2026-06-02T00:00:00Z"
+  }
 }
