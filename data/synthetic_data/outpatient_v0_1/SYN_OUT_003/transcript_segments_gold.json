@@ -1,242 +1,258 @@
 [
-  {
-    "segment_id": "seg_001",
-    "encounter_id": "SYN_OUT_003",
-    "start_time": 0.0,
-    "end_time": 3.2,
-    "speaker_id": "Speaker_0",
-    "speaker_role": "doctor",
-    "text": "Chào anh, hôm nay anh đi khám vì vấn đề gì?",
-    "source": "gold_transcript",
-    "confidence": 1.0,
-    "audio_span": {
-      "start_time": 0.0,
-      "end_time": 3.2
+    {
+        "segment_id": "seg_001",
+        "encounter_id": "SYN_OUT_003",
+        "start_time": 0.0,
+        "end_time": 3.2,
+        "speaker_id": "Speaker_0",
+        "speaker_role": "doctor",
+        "text": "Ch\u00e0o anh, h\u00f4m nay anh \u0111i kh\u00e1m v\u00ec v\u1ea5n \u0111\u1ec1 g\u00ec?",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 0.0,
+            "end_time": 3.2
+        },
+        "created_at": "2026-06-02T00:00:00+07:00",
+        "version": "v0.1.0"
+    },
+    {
+        "segment_id": "seg_002",
+        "encounter_id": "SYN_OUT_003",
+        "start_time": 3.3,
+        "end_time": 6.5,
+        "speaker_id": "Speaker_1",
+        "speaker_role": "patient",
+        "text": "D\u1ea1 em b\u1ecb \u0111au \u0111\u1ea7u kho\u1ea3ng m\u1ed9t tu\u1ea7n nay.",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 3.3,
+            "end_time": 6.5
+        },
+        "created_at": "2026-06-02T00:00:00+07:00",
+        "version": "v0.1.0"
+    },
+    {
+        "segment_id": "seg_003",
+        "encounter_id": "SYN_OUT_003",
+        "start_time": 6.6,
+        "end_time": 10.0,
+        "speaker_id": "Speaker_0",
+        "speaker_role": "doctor",
+        "text": "Anh \u0111au \u0111\u1ea7u ki\u1ec3u nh\u01b0 th\u1ebf n\u00e0o v\u00e0 \u0111au \u1edf \u0111\u00e2u?",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 6.6,
+            "end_time": 10.0
+        },
+        "created_at": "2026-06-02T00:00:00+07:00",
+        "version": "v0.1.0"
+    },
+    {
+        "segment_id": "seg_004",
+        "encounter_id": "SYN_OUT_003",
+        "start_time": 10.1,
+        "end_time": 14.4,
+        "speaker_id": "Speaker_1",
+        "speaker_role": "patient",
+        "text": "Em \u0111au \u00e2m \u1ec9 hai b\u00ean th\u00e1i d\u01b0\u01a1ng, kh\u00f4ng \u0111au d\u1eef d\u1ed9i.",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 10.1,
+            "end_time": 14.4
+        },
+        "created_at": "2026-06-02T00:00:00+07:00",
+        "version": "v0.1.0"
+    },
+    {
+        "segment_id": "seg_005",
+        "encounter_id": "SYN_OUT_003",
+        "start_time": 14.5,
+        "end_time": 18.6,
+        "speaker_id": "Speaker_0",
+        "speaker_role": "doctor",
+        "text": "C\u01a1n \u0111au c\u00f3 t\u0103ng d\u1ea7n l\u00ean kh\u00f4ng, hay xu\u1ea5t hi\u1ec7n \u0111\u1ed9t ng\u1ed9t kh\u00f4ng?",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 14.5,
+            "end_time": 18.6
+        },
+        "created_at": "2026-06-02T00:00:00+07:00",
+        "version": "v0.1.0"
+    },
+    {
+        "segment_id": "seg_006",
+        "encounter_id": "SYN_OUT_003",
+        "start_time": 18.7,
+        "end_time": 22.5,
+        "speaker_id": "Speaker_1",
+        "speaker_role": "patient",
+        "text": "D\u1ea1 kh\u00f4ng \u0111\u1ed9t ng\u1ed9t. N\u00f3 \u00e2m \u1ec9, l\u00fac t\u0103ng l\u00fac gi\u1ea3m.",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 18.7,
+            "end_time": 22.5
+        },
+        "created_at": "2026-06-02T00:00:00+07:00",
+        "version": "v0.1.0"
+    },
+    {
+        "segment_id": "seg_007",
+        "encounter_id": "SYN_OUT_003",
+        "start_time": 22.6,
+        "end_time": 27.1,
+        "speaker_id": "Speaker_0",
+        "speaker_role": "doctor",
+        "text": "Anh c\u00f3 bu\u1ed3n n\u00f4n, nh\u00ecn m\u1edd, n\u00f3i kh\u00f3 ho\u1eb7c y\u1ebfu li\u1ec7t tay ch\u00e2n kh\u00f4ng?",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 22.6,
+            "end_time": 27.1
+        },
+        "created_at": "2026-06-02T00:00:00+07:00",
+        "version": "v0.1.0"
+    },
+    {
+        "segment_id": "seg_008",
+        "encounter_id": "SYN_OUT_003",
+        "start_time": 27.2,
+        "end_time": 32.0,
+        "speaker_id": "Speaker_1",
+        "speaker_role": "patient",
+        "text": "D\u1ea1 kh\u00f4ng, em kh\u00f4ng nh\u00ecn m\u1edd, kh\u00f4ng n\u00f3i kh\u00f3 v\u00e0 kh\u00f4ng y\u1ebfu li\u1ec7t tay ch\u00e2n.",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 27.2,
+            "end_time": 32.0
+        },
+        "created_at": "2026-06-02T00:00:00+07:00",
+        "version": "v0.1.0"
+    },
+    {
+        "segment_id": "seg_009",
+        "encounter_id": "SYN_OUT_003",
+        "start_time": 32.1,
+        "end_time": 34.3,
+        "speaker_id": "Speaker_0",
+        "speaker_role": "doctor",
+        "text": "G\u1ea7n \u0111\u00e2y anh ng\u1ee7 th\u1ebf n\u00e0o?",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 32.1,
+            "end_time": 34.3
+        },
+        "created_at": "2026-06-02T00:00:00+07:00",
+        "version": "v0.1.0"
+    },
+    {
+        "segment_id": "seg_010",
+        "encounter_id": "SYN_OUT_003",
+        "start_time": 34.4,
+        "end_time": 38.7,
+        "speaker_id": "Speaker_1",
+        "speaker_role": "patient",
+        "text": "Em ng\u1ee7 k\u00e9m, m\u1ed7i \u0111\u00eam ch\u1ec9 kho\u1ea3ng b\u1ed1n \u0111\u1ebfn n\u0103m ti\u1ebfng.",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 34.4,
+            "end_time": 38.7
+        },
+        "created_at": "2026-06-02T00:00:00+07:00",
+        "version": "v0.1.0"
+    },
+    {
+        "segment_id": "seg_011",
+        "encounter_id": "SYN_OUT_003",
+        "start_time": 38.8,
+        "end_time": 42.0,
+        "speaker_id": "Speaker_0",
+        "speaker_role": "doctor",
+        "text": "Anh c\u00f3 u\u1ed1ng nhi\u1ec1u c\u00e0 ph\u00ea ho\u1eb7c th\u1ee9c khuya kh\u00f4ng?",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 38.8,
+            "end_time": 42.0
+        },
+        "created_at": "2026-06-02T00:00:00+07:00",
+        "version": "v0.1.0"
+    },
+    {
+        "segment_id": "seg_012",
+        "encounter_id": "SYN_OUT_003",
+        "start_time": 42.1,
+        "end_time": 46.5,
+        "speaker_id": "Speaker_1",
+        "speaker_role": "patient",
+        "text": "D\u1ea1 em hay u\u1ed1ng c\u00e0 ph\u00ea bu\u1ed5i t\u1ed1i v\u00e0 l\u00e0m vi\u1ec7c m\u00e1y t\u00ednh kh\u00e1 khuya.",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 42.1,
+            "end_time": 46.5
+        },
+        "created_at": "2026-06-02T00:00:00+07:00",
+        "version": "v0.1.0"
+    },
+    {
+        "segment_id": "seg_013",
+        "encounter_id": "SYN_OUT_003",
+        "start_time": 46.6,
+        "end_time": 52.0,
+        "speaker_id": "Speaker_0",
+        "speaker_role": "doctor",
+        "text": "Anh c\u00f3 b\u1ecb co gi\u1eadt, ng\u1ea5t ho\u1eb7c \u0111au \u0111\u1ea7u d\u1eef d\u1ed9i nh\u1ea5t t\u1eeb tr\u01b0\u1edbc \u0111\u1ebfn nay kh\u00f4ng?",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 46.6,
+            "end_time": 52.0
+        },
+        "created_at": "2026-06-02T00:00:00+07:00",
+        "version": "v0.1.0"
+    },
+    {
+        "segment_id": "seg_014",
+        "encounter_id": "SYN_OUT_003",
+        "start_time": 52.1,
+        "end_time": 57.0,
+        "speaker_id": "Speaker_1",
+        "speaker_role": "patient",
+        "text": "D\u1ea1 kh\u00f4ng c\u00f3 co gi\u1eadt, kh\u00f4ng ng\u1ea5t v\u00e0 c\u0169ng kh\u00f4ng ph\u1ea3i \u0111au d\u1eef d\u1ed9i nh\u1ea5t.",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 52.1,
+            "end_time": 57.0
+        },
+        "created_at": "2026-06-02T00:00:00+07:00",
+        "version": "v0.1.0"
+    },
+    {
+        "segment_id": "seg_015",
+        "encounter_id": "SYN_OUT_003",
+        "start_time": 57.1,
+        "end_time": 72.8,
+        "speaker_id": "Speaker_0",
+        "speaker_role": "doctor",
+        "text": "Tr\u01b0\u1edbc m\u1eaft anh n\u00ean ngh\u1ec9 ng\u01a1i, gi\u1ea3m c\u00e0 ph\u00ea bu\u1ed5i t\u1ed1i, h\u1ea1n ch\u1ebf th\u1ee9c khuya v\u00e0 theo d\u00f5i m\u1ee9c \u0111\u1ed9 \u0111au \u0111\u1ea7u. N\u1ebfu \u0111au \u0111\u1ea7u d\u1eef d\u1ed9i, y\u1ebfu li\u1ec7t, n\u00f3i kh\u00f3, nh\u00ecn m\u1edd, co gi\u1eadt ho\u1eb7c ng\u1ea5t th\u00ec c\u1ea7n \u0111i kh\u00e1m ngay.",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 57.1,
+            "end_time": 72.8
+        },
+        "created_at": "2026-06-02T00:00:00+07:00",
+        "version": "v0.1.0"
+    },
+    {
+        "segment_id": "seg_016",
+        "encounter_id": "SYN_OUT_003",
+        "start_time": 72.9,
+        "end_time": 75.4,
+        "speaker_id": "Speaker_1",
+        "speaker_role": "patient",
+        "text": "D\u1ea1 v\u00e2ng, em hi\u1ec3u r\u1ed3i.",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 72.9,
+            "end_time": 75.4
+        },
+        "created_at": "2026-06-02T00:00:00+07:00",
+        "version": "v0.1.0"
     }
-  },
-  {
-    "segment_id": "seg_002",
-    "encounter_id": "SYN_OUT_003",
-    "start_time": 3.3,
-    "end_time": 6.5,
-    "speaker_id": "Speaker_1",
-    "speaker_role": "patient",
-    "text": "Dạ em bị đau đầu khoảng một tuần nay.",
-    "source": "gold_transcript",
-    "confidence": 1.0,
-    "audio_span": {
-      "start_time": 3.3,
-      "end_time": 6.5
-    }
-  },
-  {
-    "segment_id": "seg_003",
-    "encounter_id": "SYN_OUT_003",
-    "start_time": 6.6,
-    "end_time": 10.0,
-    "speaker_id": "Speaker_0",
-    "speaker_role": "doctor",
-    "text": "Anh đau đầu kiểu như thế nào và đau ở đâu?",
-    "source": "gold_transcript",
-    "confidence": 1.0,
-    "audio_span": {
-      "start_time": 6.6,
-      "end_time": 10.0
-    }
-  },
-  {
-    "segment_id": "seg_004",
-    "encounter_id": "SYN_OUT_003",
-    "start_time": 10.1,
-    "end_time": 14.4,
-    "speaker_id": "Speaker_1",
-    "speaker_role": "patient",
-    "text": "Em đau âm ỉ hai bên thái dương, không đau dữ dội.",
-    "source": "gold_transcript",
-    "confidence": 1.0,
-    "audio_span": {
-      "start_time": 10.1,
-      "end_time": 14.4
-    }
-  },
-  {
-    "segment_id": "seg_005",
-    "encounter_id": "SYN_OUT_003",
-    "start_time": 14.5,
-    "end_time": 18.6,
-    "speaker_id": "Speaker_0",
-    "speaker_role": "doctor",
-    "text": "Cơn đau có tăng dần lên không, hay xuất hiện đột ngột không?",
-    "source": "gold_transcript",
-    "confidence": 1.0,
-    "audio_span": {
-      "start_time": 14.5,
-      "end_time": 18.6
-    }
-  },
-  {
-    "segment_id": "seg_006",
-    "encounter_id": "SYN_OUT_003",
-    "start_time": 18.7,
-    "end_time": 22.5,
-    "speaker_id": "Speaker_1",
-    "speaker_role": "patient",
-    "text": "Dạ không đột ngột. Nó âm ỉ, lúc tăng lúc giảm.",
-    "source": "gold_transcript",
-    "confidence": 1.0,
-    "audio_span": {
-      "start_time": 18.7,
-      "end_time": 22.5
-    }
-  },
-  {
-    "segment_id": "seg_007",
-    "encounter_id": "SYN_OUT_003",
-    "start_time": 22.6,
-    "end_time": 27.1,
-    "speaker_id": "Speaker_0",
-    "speaker_role": "doctor",
-    "text": "Anh có buồn nôn, nhìn mờ, nói khó hoặc yếu liệt tay chân không?",
-    "source": "gold_transcript",
-    "confidence": 1.0,
-    "audio_span": {
-      "start_time": 22.6,
-      "end_time": 27.1
-    }
-  },
-  {
-    "segment_id": "seg_008",
-    "encounter_id": "SYN_OUT_003",
-    "start_time": 27.2,
-    "end_time": 32.0,
-    "speaker_id": "Speaker_1",
-    "speaker_role": "patient",
-    "text": "Dạ không, em không nhìn mờ, không nói khó và không yếu liệt tay chân.",
-    "source": "gold_transcript",
-    "confidence": 1.0,
-    "audio_span": {
-      "start_time": 27.2,
-      "end_time": 32.0
-    }
-  },
-  {
-    "segment_id": "seg_009",
-    "encounter_id": "SYN_OUT_003",
-    "start_time": 32.1,
-    "end_time": 34.3,
-    "speaker_id": "Speaker_0",
-    "speaker_role": "doctor",
-    "text": "Gần đây anh ngủ thế nào?",
-    "source": "gold_transcript",
-    "confidence": 1.0,
-    "audio_span": {
-      "start_time": 32.1,
-      "end_time": 34.3
-    }
-  },
-  {
-    "segment_id": "seg_010",
-    "encounter_id": "SYN_OUT_003",
-    "start_time": 34.4,
-    "end_time": 38.7,
-    "speaker_id": "Speaker_1",
-    "speaker_role": "patient",
-    "text": "Em ngủ kém, mỗi đêm chỉ khoảng bốn đến năm tiếng.",
-    "source": "gold_transcript",
-    "confidence": 1.0,
-    "audio_span": {
-      "start_time": 34.4,
-      "end_time": 38.7
-    }
-  },
-  {
-    "segment_id": "seg_011",
-    "encounter_id": "SYN_OUT_003",
-    "start_time": 38.8,
-    "end_time": 42.0,
-    "speaker_id": "Speaker_0",
-    "speaker_role": "doctor",
-    "text": "Anh có uống nhiều cà phê hoặc thức khuya không?",
-    "source": "gold_transcript",
-    "confidence": 1.0,
-    "audio_span": {
-      "start_time": 38.8,
-      "end_time": 42.0
-    }
-  },
-  {
-    "segment_id": "seg_012",
-    "encounter_id": "SYN_OUT_003",
-    "start_time": 42.1,
-    "end_time": 46.5,
-    "speaker_id": "Speaker_1",
-    "speaker_role": "patient",
-    "text": "Dạ em hay uống cà phê buổi tối và làm việc máy tính khá khuya.",
-    "source": "gold_transcript",
-    "confidence": 1.0,
-    "audio_span": {
-      "start_time": 42.1,
-      "end_time": 46.5
-    }
-  },
-  {
-    "segment_id": "seg_013",
-    "encounter_id": "SYN_OUT_003",
-    "start_time": 46.6,
-    "end_time": 52.0,
-    "speaker_id": "Speaker_0",
-    "speaker_role": "doctor",
-    "text": "Anh có bị co giật, ngất hoặc đau đầu dữ dội nhất từ trước đến nay không?",
-    "source": "gold_transcript",
-    "confidence": 1.0,
-    "audio_span": {
-      "start_time": 46.6,
-      "end_time": 52.0
-    }
-  },
-  {
-    "segment_id": "seg_014",
-    "encounter_id": "SYN_OUT_003",
-    "start_time": 52.1,
-    "end_time": 57.0,
-    "speaker_id": "Speaker_1",
-    "speaker_role": "patient",
-    "text": "Dạ không có co giật, không ngất và cũng không phải đau dữ dội nhất.",
-    "source": "gold_transcript",
-    "confidence": 1.0,
-    "audio_span": {
-      "start_time": 52.1,
-      "end_time": 57.0
-    }
-  },
-  {
-    "segment_id": "seg_015",
-    "encounter_id": "SYN_OUT_003",
-    "start_time": 57.1,
-    "end_time": 72.8,
-    "speaker_id": "Speaker_0",
-    "speaker_role": "doctor",
-    "text": "Trước mắt anh nên nghỉ ngơi, giảm cà phê buổi tối, hạn chế thức khuya và theo dõi mức độ đau đầu. Nếu đau đầu dữ dội, yếu liệt, nói khó, nhìn mờ, co giật hoặc ngất thì cần đi khám ngay.",
-    "source": "gold_transcript",
-    "confidence": 1.0,
-    "audio_span": {
-      "start_time": 57.1,
-      "end_time": 72.8
-    }
-  },
-  {
-    "segment_id": "seg_016",
-    "encounter_id": "SYN_OUT_003",
-    "start_time": 72.9,
-    "end_time": 75.4,
-    "speaker_id": "Speaker_1",
-    "speaker_role": "patient",
-    "text": "Dạ vâng, em hiểu rồi.",
-    "source": "gold_transcript",
-    "confidence": 1.0,
-    "audio_span": {
-      "start_time": 72.9,
-      "end_time": 75.4
-    }
-  }
 ]

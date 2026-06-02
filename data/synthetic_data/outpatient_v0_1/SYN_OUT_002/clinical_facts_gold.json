@@ -1,385 +1,425 @@
 [
-  {
-    "fact_id": "fact_001",
-    "encounter_id": "SYN_OUT_002",
-    "fact_type": "symptom",
-    "original_text": "Dạ em bị đau bụng và đi ngoài lỏng khoảng hai ngày nay.",
-    "normalized_text": "đau bụng (duration: 2 ngày, source_start_time: 3.2, source_end_time: 7.4)",
-    "assertion": "present",
-    "speaker_role": "patient",
-    "clinical_subject": {
-      "subject_type": "patient",
-      "relationship_to_patient": "self"
+    {
+        "fact_id": "fact_001",
+        "encounter_id": "SYN_OUT_002",
+        "fact_type": "symptom",
+        "original_text": "D\u1ea1 em b\u1ecb \u0111au b\u1ee5ng v\u00e0 \u0111i ngo\u00e0i l\u1ecfng kho\u1ea3ng hai ng\u00e0y nay.",
+        "normalized_text": "\u0111au b\u1ee5ng (duration: 2 ng\u00e0y, source_start_time: 3.2, source_end_time: 7.4)",
+        "assertion": "present",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_002"
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [
+            {
+                "system": "local_mvp_dictionary",
+                "code": "SYM_ABDOMINAL_PAIN",
+                "display": "\u0110au b\u1ee5ng"
+            }
+        ],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-02T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-02T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
     },
-    "source_segment_ids": [
-      "seg_002"
-    ],
-    "requires_doctor_confirmation": true,
-    "doctor_confirmation_status": "accepted",
-    "coding_candidates": [
-      {
-        "system": "local_mvp_dictionary",
-        "code": "SYM_ABDOMINAL_PAIN",
-        "display": "Đau bụng"
-      }
-    ],
-    "reviewed_by": "synthetic_reviewer",
-    "reviewed_at": "2026-06-02T00:00:00+07:00",
-    "review_status": "gold"
-  },
-  {
-    "fact_id": "fact_002",
-    "encounter_id": "SYN_OUT_002",
-    "fact_type": "symptom",
-    "original_text": "Dạ em bị đau bụng và đi ngoài lỏng khoảng hai ngày nay.",
-    "normalized_text": "đi ngoài lỏng (duration: 2 ngày, source_start_time: 3.2, source_end_time: 7.4)",
-    "assertion": "present",
-    "speaker_role": "patient",
-    "clinical_subject": {
-      "subject_type": "patient",
-      "relationship_to_patient": "self"
+    {
+        "fact_id": "fact_002",
+        "encounter_id": "SYN_OUT_002",
+        "fact_type": "symptom",
+        "original_text": "D\u1ea1 em b\u1ecb \u0111au b\u1ee5ng v\u00e0 \u0111i ngo\u00e0i l\u1ecfng kho\u1ea3ng hai ng\u00e0y nay.",
+        "normalized_text": "\u0111i ngo\u00e0i l\u1ecfng (duration: 2 ng\u00e0y, source_start_time: 3.2, source_end_time: 7.4)",
+        "assertion": "present",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_002"
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [
+            {
+                "system": "local_mvp_dictionary",
+                "code": "SYM_DIARRHEA",
+                "display": "Ti\u00eau ch\u1ea3y/\u0111i ngo\u00e0i l\u1ecfng"
+            }
+        ],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-02T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-02T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
     },
-    "source_segment_ids": [
-      "seg_002"
-    ],
-    "requires_doctor_confirmation": true,
-    "doctor_confirmation_status": "accepted",
-    "coding_candidates": [
-      {
-        "system": "local_mvp_dictionary",
-        "code": "SYM_DIARRHEA",
-        "display": "Tiêu chảy/đi ngoài lỏng"
-      }
-    ],
-    "reviewed_by": "synthetic_reviewer",
-    "reviewed_at": "2026-06-02T00:00:00+07:00",
-    "review_status": "gold"
-  },
-  {
-    "fact_id": "fact_003",
-    "encounter_id": "SYN_OUT_002",
-    "fact_type": "symptom_detail",
-    "original_text": "Em đau quanh rốn, đau từng cơn chứ không đau liên tục.",
-    "normalized_text": "đau quanh rốn từng cơn (source_start_time: 9.8, source_end_time: 14.2)",
-    "assertion": "present",
-    "body_site": "quanh rốn",
-    "pattern": "từng cơn",
-    "speaker_role": "patient",
-    "clinical_subject": {
-      "subject_type": "patient",
-      "relationship_to_patient": "self"
+    {
+        "fact_id": "fact_003",
+        "encounter_id": "SYN_OUT_002",
+        "fact_type": "symptom",
+        "original_text": "Em \u0111au quanh r\u1ed1n, \u0111au t\u1eebng c\u01a1n ch\u1ee9 kh\u00f4ng \u0111au li\u00ean t\u1ee5c.",
+        "normalized_text": "\u0111au quanh r\u1ed1n t\u1eebng c\u01a1n (source_start_time: 9.8, source_end_time: 14.2)",
+        "assertion": "present",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_004"
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [
+            {
+                "system": "local_mvp_dictionary",
+                "code": "SYM_PERIUMBILICAL_PAIN",
+                "display": "\u0110au quanh r\u1ed1n"
+            }
+        ],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-02T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-02T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
     },
-    "source_segment_ids": [
-      "seg_004"
-    ],
-    "requires_doctor_confirmation": true,
-    "doctor_confirmation_status": "accepted",
-    "coding_candidates": [
-      {
-        "system": "local_mvp_dictionary",
-        "code": "SYM_PERIUMBILICAL_PAIN",
-        "display": "Đau quanh rốn"
-      }
-    ],
-    "reviewed_by": "synthetic_reviewer",
-    "reviewed_at": "2026-06-02T00:00:00+07:00",
-    "review_status": "gold"
-  },
-  {
-    "fact_id": "fact_004",
-    "encounter_id": "SYN_OUT_002",
-    "fact_type": "symptom_detail",
-    "original_text": "Em đau quanh rốn, đau từng cơn chứ không đau liên tục.",
-    "normalized_text": "đau liên tục (source_start_time: 9.8, source_end_time: 14.2)",
-    "assertion": "absent",
-    "speaker_role": "patient",
-    "clinical_subject": {
-      "subject_type": "patient",
-      "relationship_to_patient": "self"
+    {
+        "fact_id": "fact_004",
+        "encounter_id": "SYN_OUT_002",
+        "fact_type": "symptom",
+        "original_text": "Em \u0111au quanh r\u1ed1n, \u0111au t\u1eebng c\u01a1n ch\u1ee9 kh\u00f4ng \u0111au li\u00ean t\u1ee5c.",
+        "normalized_text": "\u0111au li\u00ean t\u1ee5c (source_start_time: 9.8, source_end_time: 14.2)",
+        "assertion": "absent",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_004"
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-02T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-02T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
     },
-    "source_segment_ids": [
-      "seg_004"
-    ],
-    "requires_doctor_confirmation": true,
-    "doctor_confirmation_status": "accepted",
-    "coding_candidates": [],
-    "reviewed_by": "synthetic_reviewer",
-    "reviewed_at": "2026-06-02T00:00:00+07:00",
-    "review_status": "gold"
-  },
-  {
-    "fact_id": "fact_005",
-    "encounter_id": "SYN_OUT_002",
-    "fact_type": "frequency",
-    "original_text": "Dạ khoảng bốn đến năm lần một ngày.",
-    "normalized_text": "đi ngoài 4-5 lần/ngày (source_start_time: 17.1, source_end_time: 20.6)",
-    "assertion": "present",
-    "value": "4-5",
-    "unit": "lần/ngày",
-    "speaker_role": "patient",
-    "clinical_subject": {
-      "subject_type": "patient",
-      "relationship_to_patient": "self"
+    {
+        "fact_id": "fact_005",
+        "encounter_id": "SYN_OUT_002",
+        "fact_type": "other",
+        "original_text": "D\u1ea1 kho\u1ea3ng b\u1ed1n \u0111\u1ebfn n\u0103m l\u1ea7n m\u1ed9t ng\u00e0y.",
+        "normalized_text": "\u0111i ngo\u00e0i 4-5 l\u1ea7n/ng\u00e0y (source_start_time: 17.1, source_end_time: 20.6)",
+        "assertion": "present",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_006"
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-02T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-02T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
     },
-    "source_segment_ids": [
-      "seg_006"
-    ],
-    "requires_doctor_confirmation": true,
-    "doctor_confirmation_status": "accepted",
-    "coding_candidates": [],
-    "reviewed_by": "synthetic_reviewer",
-    "reviewed_at": "2026-06-02T00:00:00+07:00",
-    "review_status": "gold"
-  },
-  {
-    "fact_id": "fact_006",
-    "encounter_id": "SYN_OUT_002",
-    "fact_type": "red_flag",
-    "original_text": "Dạ không, em không thấy máu và cũng không thấy phân đen.",
-    "normalized_text": "máu trong phân (source_start_time: 24.1, source_end_time: 28.2)",
-    "assertion": "absent",
-    "speaker_role": "patient",
-    "clinical_subject": {
-      "subject_type": "patient",
-      "relationship_to_patient": "self"
+    {
+        "fact_id": "fact_006",
+        "encounter_id": "SYN_OUT_002",
+        "fact_type": "red_flag",
+        "original_text": "D\u1ea1 kh\u00f4ng, em kh\u00f4ng th\u1ea5y m\u00e1u v\u00e0 c\u0169ng kh\u00f4ng th\u1ea5y ph\u00e2n \u0111en.",
+        "normalized_text": "m\u00e1u trong ph\u00e2n (source_start_time: 24.1, source_end_time: 28.2)",
+        "assertion": "absent",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_008"
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [
+            {
+                "system": "local_mvp_dictionary",
+                "code": "RF_BLOOD_IN_STOOL",
+                "display": "M\u00e1u trong ph\u00e2n"
+            }
+        ],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-02T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-02T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
     },
-    "source_segment_ids": [
-      "seg_008"
-    ],
-    "requires_doctor_confirmation": true,
-    "doctor_confirmation_status": "accepted",
-    "coding_candidates": [
-      {
-        "system": "local_mvp_dictionary",
-        "code": "RF_BLOOD_IN_STOOL",
-        "display": "Máu trong phân"
-      }
-    ],
-    "reviewed_by": "synthetic_reviewer",
-    "reviewed_at": "2026-06-02T00:00:00+07:00",
-    "review_status": "gold"
-  },
-  {
-    "fact_id": "fact_007",
-    "encounter_id": "SYN_OUT_002",
-    "fact_type": "red_flag",
-    "original_text": "Dạ không, em không thấy máu và cũng không thấy phân đen.",
-    "normalized_text": "phân đen (source_start_time: 24.1, source_end_time: 28.2)",
-    "assertion": "absent",
-    "speaker_role": "patient",
-    "clinical_subject": {
-      "subject_type": "patient",
-      "relationship_to_patient": "self"
+    {
+        "fact_id": "fact_007",
+        "encounter_id": "SYN_OUT_002",
+        "fact_type": "red_flag",
+        "original_text": "D\u1ea1 kh\u00f4ng, em kh\u00f4ng th\u1ea5y m\u00e1u v\u00e0 c\u0169ng kh\u00f4ng th\u1ea5y ph\u00e2n \u0111en.",
+        "normalized_text": "ph\u00e2n \u0111en (source_start_time: 24.1, source_end_time: 28.2)",
+        "assertion": "absent",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_008"
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [
+            {
+                "system": "local_mvp_dictionary",
+                "code": "RF_MELENA",
+                "display": "Ph\u00e2n \u0111en"
+            }
+        ],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-02T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-02T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
     },
-    "source_segment_ids": [
-      "seg_008"
-    ],
-    "requires_doctor_confirmation": true,
-    "doctor_confirmation_status": "accepted",
-    "coding_candidates": [
-      {
-        "system": "local_mvp_dictionary",
-        "code": "RF_MELENA",
-        "display": "Phân đen"
-      }
-    ],
-    "reviewed_by": "synthetic_reviewer",
-    "reviewed_at": "2026-06-02T00:00:00+07:00",
-    "review_status": "gold"
-  },
-  {
-    "fact_id": "fact_008",
-    "encounter_id": "SYN_OUT_002",
-    "fact_type": "red_flag",
-    "original_text": "Dạ không sốt cao, không nôn ra máu. Em chỉ hơi buồn nôn thôi.",
-    "normalized_text": "sốt cao (source_start_time: 32.1, source_end_time: 36.5)",
-    "assertion": "absent",
-    "speaker_role": "patient",
-    "clinical_subject": {
-      "subject_type": "patient",
-      "relationship_to_patient": "self"
+    {
+        "fact_id": "fact_008",
+        "encounter_id": "SYN_OUT_002",
+        "fact_type": "red_flag",
+        "original_text": "D\u1ea1 kh\u00f4ng s\u1ed1t cao, kh\u00f4ng n\u00f4n ra m\u00e1u. Em ch\u1ec9 h\u01a1i bu\u1ed3n n\u00f4n th\u00f4i.",
+        "normalized_text": "s\u1ed1t cao (source_start_time: 32.1, source_end_time: 36.5)",
+        "assertion": "absent",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_010"
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [
+            {
+                "system": "local_mvp_dictionary",
+                "code": "RF_HIGH_FEVER",
+                "display": "S\u1ed1t cao"
+            }
+        ],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-02T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-02T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
     },
-    "source_segment_ids": [
-      "seg_010"
-    ],
-    "requires_doctor_confirmation": true,
-    "doctor_confirmation_status": "accepted",
-    "coding_candidates": [
-      {
-        "system": "local_mvp_dictionary",
-        "code": "RF_HIGH_FEVER",
-        "display": "Sốt cao"
-      }
-    ],
-    "reviewed_by": "synthetic_reviewer",
-    "reviewed_at": "2026-06-02T00:00:00+07:00",
-    "review_status": "gold"
-  },
-  {
-    "fact_id": "fact_009",
-    "encounter_id": "SYN_OUT_002",
-    "fact_type": "red_flag",
-    "original_text": "Dạ không sốt cao, không nôn ra máu. Em chỉ hơi buồn nôn thôi.",
-    "normalized_text": "nôn ra máu (source_start_time: 32.1, source_end_time: 36.5)",
-    "assertion": "absent",
-    "speaker_role": "patient",
-    "clinical_subject": {
-      "subject_type": "patient",
-      "relationship_to_patient": "self"
+    {
+        "fact_id": "fact_009",
+        "encounter_id": "SYN_OUT_002",
+        "fact_type": "red_flag",
+        "original_text": "D\u1ea1 kh\u00f4ng s\u1ed1t cao, kh\u00f4ng n\u00f4n ra m\u00e1u. Em ch\u1ec9 h\u01a1i bu\u1ed3n n\u00f4n th\u00f4i.",
+        "normalized_text": "n\u00f4n ra m\u00e1u (source_start_time: 32.1, source_end_time: 36.5)",
+        "assertion": "absent",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_010"
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [
+            {
+                "system": "local_mvp_dictionary",
+                "code": "RF_HEMATEMESIS",
+                "display": "N\u00f4n ra m\u00e1u"
+            }
+        ],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-02T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-02T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
     },
-    "source_segment_ids": [
-      "seg_010"
-    ],
-    "requires_doctor_confirmation": true,
-    "doctor_confirmation_status": "accepted",
-    "coding_candidates": [
-      {
-        "system": "local_mvp_dictionary",
-        "code": "RF_HEMATEMESIS",
-        "display": "Nôn ra máu"
-      }
-    ],
-    "reviewed_by": "synthetic_reviewer",
-    "reviewed_at": "2026-06-02T00:00:00+07:00",
-    "review_status": "gold"
-  },
-  {
-    "fact_id": "fact_010",
-    "encounter_id": "SYN_OUT_002",
-    "fact_type": "symptom",
-    "original_text": "Dạ không sốt cao, không nôn ra máu. Em chỉ hơi buồn nôn thôi.",
-    "normalized_text": "buồn nôn nhẹ (severity: mild, source_start_time: 32.1, source_end_time: 36.5)",
-    "assertion": "present",
-    "speaker_role": "patient",
-    "clinical_subject": {
-      "subject_type": "patient",
-      "relationship_to_patient": "self"
+    {
+        "fact_id": "fact_010",
+        "encounter_id": "SYN_OUT_002",
+        "fact_type": "symptom",
+        "original_text": "D\u1ea1 kh\u00f4ng s\u1ed1t cao, kh\u00f4ng n\u00f4n ra m\u00e1u. Em ch\u1ec9 h\u01a1i bu\u1ed3n n\u00f4n th\u00f4i.",
+        "normalized_text": "bu\u1ed3n n\u00f4n nh\u1eb9 (severity: mild, source_start_time: 32.1, source_end_time: 36.5)",
+        "assertion": "present",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_010"
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [
+            {
+                "system": "local_mvp_dictionary",
+                "code": "SYM_NAUSEA",
+                "display": "Bu\u1ed3n n\u00f4n"
+            }
+        ],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-02T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-02T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
     },
-    "source_segment_ids": [
-      "seg_010"
-    ],
-    "requires_doctor_confirmation": true,
-    "doctor_confirmation_status": "accepted",
-    "coding_candidates": [
-      {
-        "system": "local_mvp_dictionary",
-        "code": "SYM_NAUSEA",
-        "display": "Buồn nôn"
-      }
-    ],
-    "reviewed_by": "synthetic_reviewer",
-    "reviewed_at": "2026-06-02T00:00:00+07:00",
-    "review_status": "gold"
-  },
-  {
-    "fact_id": "fact_011",
-    "encounter_id": "SYN_OUT_002",
-    "fact_type": "exposure",
-    "original_text": "Dạ hôm trước em có ăn hải sản ở ngoài với bạn.",
-    "normalized_text": "ăn hải sản ở ngoài (source_start_time: 40.7, source_end_time: 44.8)",
-    "assertion": "present",
-    "time": "hôm trước",
-    "speaker_role": "patient",
-    "clinical_subject": {
-      "subject_type": "patient",
-      "relationship_to_patient": "self"
+    {
+        "fact_id": "fact_011",
+        "encounter_id": "SYN_OUT_002",
+        "fact_type": "social_history",
+        "original_text": "D\u1ea1 h\u00f4m tr\u01b0\u1edbc em c\u00f3 \u0103n h\u1ea3i s\u1ea3n \u1edf ngo\u00e0i v\u1edbi b\u1ea1n.",
+        "normalized_text": "\u0103n h\u1ea3i s\u1ea3n \u1edf ngo\u00e0i (source_start_time: 40.7, source_end_time: 44.8)",
+        "assertion": "present",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_012"
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-02T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-02T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
     },
-    "source_segment_ids": [
-      "seg_012"
-    ],
-    "requires_doctor_confirmation": true,
-    "doctor_confirmation_status": "accepted",
-    "coding_candidates": [],
-    "reviewed_by": "synthetic_reviewer",
-    "reviewed_at": "2026-06-02T00:00:00+07:00",
-    "review_status": "gold"
-  },
-  {
-    "fact_id": "fact_012",
-    "encounter_id": "SYN_OUT_002",
-    "fact_type": "dehydration_sign",
-    "original_text": "Dạ em hơi khát nước hơn, nhưng chưa chóng mặt và vẫn đi tiểu bình thường.",
-    "normalized_text": "khát nước hơn (severity: mild, source_start_time: 49.6, source_end_time: 54.8)",
-    "assertion": "present",
-    "speaker_role": "patient",
-    "clinical_subject": {
-      "subject_type": "patient",
-      "relationship_to_patient": "self"
+    {
+        "fact_id": "fact_012",
+        "encounter_id": "SYN_OUT_002",
+        "fact_type": "symptom",
+        "original_text": "D\u1ea1 em h\u01a1i kh\u00e1t n\u01b0\u1edbc h\u01a1n, nh\u01b0ng ch\u01b0a ch\u00f3ng m\u1eb7t v\u00e0 v\u1eabn \u0111i ti\u1ec3u b\u00ecnh th\u01b0\u1eddng.",
+        "normalized_text": "kh\u00e1t n\u01b0\u1edbc h\u01a1n (severity: mild, source_start_time: 49.6, source_end_time: 54.8)",
+        "assertion": "present",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_014"
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-02T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-02T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
     },
-    "source_segment_ids": [
-      "seg_014"
-    ],
-    "requires_doctor_confirmation": true,
-    "doctor_confirmation_status": "accepted",
-    "coding_candidates": [],
-    "reviewed_by": "synthetic_reviewer",
-    "reviewed_at": "2026-06-02T00:00:00+07:00",
-    "review_status": "gold"
-  },
-  {
-    "fact_id": "fact_013",
-    "encounter_id": "SYN_OUT_002",
-    "fact_type": "dehydration_sign",
-    "original_text": "Dạ em hơi khát nước hơn, nhưng chưa chóng mặt và vẫn đi tiểu bình thường.",
-    "normalized_text": "chóng mặt (source_start_time: 49.6, source_end_time: 54.8)",
-    "assertion": "absent",
-    "speaker_role": "patient",
-    "clinical_subject": {
-      "subject_type": "patient",
-      "relationship_to_patient": "self"
+    {
+        "fact_id": "fact_013",
+        "encounter_id": "SYN_OUT_002",
+        "fact_type": "symptom",
+        "original_text": "D\u1ea1 em h\u01a1i kh\u00e1t n\u01b0\u1edbc h\u01a1n, nh\u01b0ng ch\u01b0a ch\u00f3ng m\u1eb7t v\u00e0 v\u1eabn \u0111i ti\u1ec3u b\u00ecnh th\u01b0\u1eddng.",
+        "normalized_text": "ch\u00f3ng m\u1eb7t (source_start_time: 49.6, source_end_time: 54.8)",
+        "assertion": "absent",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_014"
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-02T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-02T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
     },
-    "source_segment_ids": [
-      "seg_014"
-    ],
-    "requires_doctor_confirmation": true,
-    "doctor_confirmation_status": "accepted",
-    "coding_candidates": [],
-    "reviewed_by": "synthetic_reviewer",
-    "reviewed_at": "2026-06-02T00:00:00+07:00",
-    "review_status": "gold"
-  },
-  {
-    "fact_id": "fact_014",
-    "encounter_id": "SYN_OUT_002",
-    "fact_type": "dehydration_sign",
-    "original_text": "Dạ em hơi khát nước hơn, nhưng chưa chóng mặt và vẫn đi tiểu bình thường.",
-    "normalized_text": "tiểu ít (source_start_time: 49.6, source_end_time: 54.8)",
-    "assertion": "absent",
-    "speaker_role": "patient",
-    "clinical_subject": {
-      "subject_type": "patient",
-      "relationship_to_patient": "self"
+    {
+        "fact_id": "fact_014",
+        "encounter_id": "SYN_OUT_002",
+        "fact_type": "symptom",
+        "original_text": "D\u1ea1 em h\u01a1i kh\u00e1t n\u01b0\u1edbc h\u01a1n, nh\u01b0ng ch\u01b0a ch\u00f3ng m\u1eb7t v\u00e0 v\u1eabn \u0111i ti\u1ec3u b\u00ecnh th\u01b0\u1eddng.",
+        "normalized_text": "ti\u1ec3u \u00edt (source_start_time: 49.6, source_end_time: 54.8)",
+        "assertion": "absent",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_014"
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-02T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-02T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
     },
-    "source_segment_ids": [
-      "seg_014"
-    ],
-    "requires_doctor_confirmation": true,
-    "doctor_confirmation_status": "accepted",
-    "coding_candidates": [],
-    "reviewed_by": "synthetic_reviewer",
-    "reviewed_at": "2026-06-02T00:00:00+07:00",
-    "review_status": "gold"
-  },
-  {
-    "fact_id": "fact_015",
-    "encounter_id": "SYN_OUT_002",
-    "fact_type": "plan",
-    "original_text": "Trước mắt chị cần uống đủ nước, có thể dùng dung dịch bù nước nếu đi ngoài nhiều. Chị theo dõi thêm. Nếu đau bụng tăng, sốt cao, nôn nhiều, đi ngoài ra máu hoặc có dấu hiệu mất nước thì cần quay lại khám ngay.",
-    "normalized_text": "uống đủ nước, cân nhắc dung dịch bù nước, theo dõi, quay lại khám nếu có dấu hiệu nặng (source_start_time: 54.9, source_end_time: 70.0)",
-    "assertion": "instruction",
-    "speaker_role": "doctor",
-    "clinical_subject": {
-      "subject_type": "patient",
-      "relationship_to_patient": "self"
-    },
-    "source_segment_ids": [
-      "seg_015"
-    ],
-    "requires_doctor_confirmation": true,
-    "doctor_confirmation_status": "accepted",
-    "coding_candidates": [],
-    "reviewed_by": "synthetic_reviewer",
-    "reviewed_at": "2026-06-02T00:00:00+07:00",
-    "review_status": "gold"
-  }
+    {
+        "fact_id": "fact_015",
+        "encounter_id": "SYN_OUT_002",
+        "fact_type": "plan",
+        "original_text": "Tr\u01b0\u1edbc m\u1eaft ch\u1ecb c\u1ea7n u\u1ed1ng \u0111\u1ee7 n\u01b0\u1edbc, c\u00f3 th\u1ec3 d\u00f9ng dung d\u1ecbch b\u00f9 n\u01b0\u1edbc n\u1ebfu \u0111i ngo\u00e0i nhi\u1ec1u. Ch\u1ecb theo d\u00f5i th\u00eam. N\u1ebfu \u0111au b\u1ee5ng t\u0103ng, s\u1ed1t cao, n\u00f4n nhi\u1ec1u, \u0111i ngo\u00e0i ra m\u00e1u ho\u1eb7c c\u00f3 d\u1ea5u hi\u1ec7u m\u1ea5t n\u01b0\u1edbc th\u00ec c\u1ea7n quay l\u1ea1i kh\u00e1m ngay.",
+        "normalized_text": "u\u1ed1ng \u0111\u1ee7 n\u01b0\u1edbc, c\u00e2n nh\u1eafc dung d\u1ecbch b\u00f9 n\u01b0\u1edbc, theo d\u00f5i, quay l\u1ea1i kh\u00e1m n\u1ebfu c\u00f3 d\u1ea5u hi\u1ec7u n\u1eb7ng (source_start_time: 54.9, source_end_time: 70.0)",
+        "assertion": "recommended",
+        "speaker_role": "doctor",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_015"
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-02T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-02T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
+    }
 ]
