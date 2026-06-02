@@ -1,0 +1,55 @@
+{
+  "encounter_id": "SYN_OUT_001",
+  "dataset_id": "A_SYNTHETIC_VI_OUTPATIENT_ENCOUNTERS",
+  "source_type": "synthetic",
+  "setting": "outpatient",
+  "specialty": "internal_medicine",
+  "language": "vi-VN",
+  "version": "v0.1",
+  "case_title": "Ho, sốt nhẹ, không đau ngực",
+  "clinical_scenario": "Bệnh nhân nam trưởng thành đi khám ngoại trú vì ho 3 ngày và sốt nhẹ. Bệnh nhân phủ nhận đau ngực, khó thở và dị ứng thuốc.",
+  "roles": [
+    "Doctor",
+    "Patient"
+  ],
+  "speaker_map": {
+    "Speaker_0": "Doctor",
+    "Speaker_1": "Patient"
+  },
+  "audio": {
+    "has_audio": false,
+    "raw_audio_path": null,
+    "duration_seconds_estimated": 240,
+    "sample_rate": null,
+    "recording_environment": "synthetic_script_only"
+  },
+  "governance": {
+    "contains_phi": false,
+    "contains_real_patient_data": false,
+    "consent_status": "synthetic",
+    "license_status": "internal",
+    "allowed_use": [
+      "training",
+      "evaluation",
+      "demo"
+    ],
+    "retention_policy": "keep_versioned",
+    "governance_status": "approved_internal"
+  },
+  "annotations": {
+    "has_gold_transcript": true,
+    "has_speaker_roles": true,
+    "has_clinical_facts": true,
+    "has_soap_note": true,
+    "review_status": "synthetic_gold"
+  },
+  "safety_focus": [
+    "negation",
+    "medical_term",
+    "medication",
+    "allergy",
+    "source_attribution"
+  ],
+  "created_by": "Duy",
+  "created_at": "2026-06-02"
+}

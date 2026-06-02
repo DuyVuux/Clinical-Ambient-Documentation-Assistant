@@ -1,0 +1,580 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local-first-clinical-ai.example/schemas/dataset_metadata.schema.json",
+  "title": "Dataset Metadata Schema",
+  "description": "Canonical metadata schema for datasets used by a local-first Vietnamese outpatient clinical ambient documentation MVP.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "dataset_id",
+    "source_name",
+    "source_type",
+    "setting",
+    "specialty",
+    "language",
+    "audio_path",
+    "transcript_path",
+    "contains_phi",
+    "consent_status",
+    "license_status",
+    "allowed_use",
+    "review_status",
+    "version",
+    "governance_status",
+    "created_at",
+    "updated_at"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "2020-12"
+    },
+    "dataset_id": {
+      "$ref": "#/$defs/id"
+    },
+    "source_name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 256
+    },
+    "source_type": {
+      "$ref": "#/$defs/source_type"
+    },
+    "setting": {
+      "$ref": "#/$defs/setting"
+    },
+    "specialty": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "examples": [
+        "general_internal_medicine",
+        "pediatrics",
+        "cardiology"
+      ]
+    },
+    "language": {
+      "$ref": "#/$defs/language"
+    },
+    "audio_path": {
+      "$ref": "#/$defs/local_path"
+    },
+    "transcript_path": {
+      "$ref": "#/$defs/local_path"
+    },
+    "contains_phi": {
+      "$ref": "#/$defs/contains_phi"
+    },
+    "consent_status": {
+      "$ref": "#/$defs/consent_status"
+    },
+    "license_status": {
+      "$ref": "#/$defs/license_status"
+    },
+    "allowed_use": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/allowed_use_item"
+      }
+    },
+    "review_status": {
+      "$ref": "#/$defs/review_status"
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64,
+      "examples": [
+        "v0.1.0"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "created_by": {
+      "$ref": "#/$defs/created_by"
+    },
+    "owner": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128
+    },
+    "governance_status": {
+      "$ref": "#/$defs/governance_status"
+    },
+    "retention_policy": {
+      "type": "string",
+      "enum": [
+        "keep_versioned",
+        "delete_after_30_days",
+        "short_retention_required",
+        "follow_hospital_policy",
+        "quarantine_until_review"
+      ]
+    },
+    "access_control_policy": {
+      "type": "string",
+      "enum": [
+        "local_owner_only",
+        "project_team",
+        "doctor_reviewer_only",
+        "governance_team_only",
+        "hospital_policy"
+      ]
+    },
+    "audit_log_required": {
+      "type": "boolean"
+    },
+    "is_holdout": {
+      "type": "boolean",
+      "default": false
+    },
+    "commercial_pilot_status": {
+      "type": "string",
+      "enum": [
+        "not_safe",
+        "needs_review",
+        "internal_demo_only",
+        "pilot_eligible",
+        "production_eligible"
+      ],
+      "default": "not_safe"
+    },
+    "target_zone": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "bronze",
+          "silver",
+          "gold",
+          "evaluation",
+          "dictionary",
+          "audit",
+          "quarantine"
+        ]
+      }
+    },
+    "data_sensitivity": {
+      "type": "string",
+      "enum": [
+        "low",
+        "moderate",
+        "high",
+        "restricted_phi"
+      ],
+      "default": "high"
+    },
+    "source_uri": {
+      "type": "string",
+      "maxLength": 2048
+    },
+    "license_snapshot_path": {
+      "$ref": "#/$defs/local_path"
+    },
+    "source_checksum_sha256": {
+      "$ref": "#/$defs/sha256"
+    },
+    "manifest_checksum_sha256": {
+      "$ref": "#/$defs/sha256"
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "origin",
+        "collection_method"
+      ],
+      "properties": {
+        "origin": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256
+        },
+        "collection_method": {
+          "type": "string",
+          "enum": [
+            "script_generated",
+            "tts_generated",
+            "volunteer_recorded",
+            "public_download",
+            "manual_annotation",
+            "derived_from_review",
+            "other"
+          ]
+        },
+        "annotation_method": {
+          "type": "string",
+          "enum": [
+            "none",
+            "manual",
+            "model_assisted",
+            "doctor_reviewed",
+            "synthetic_gold",
+            "mixed"
+          ]
+        },
+        "notes": {
+          "type": "string",
+          "maxLength": 2048
+        }
+      }
+    },
+    "fhir_readiness": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "encounter_mappable": {
+          "type": "boolean"
+        },
+        "observation_mappable": {
+          "type": "boolean"
+        },
+        "condition_mappable": {
+          "type": "boolean"
+        },
+        "medication_mappable": {
+          "type": "boolean"
+        },
+        "allergy_mappable": {
+          "type": "boolean"
+        },
+        "procedure_mappable": {
+          "type": "boolean"
+        },
+        "composition_document_reference_mappable": {
+          "type": "boolean"
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "allowed_use": {
+            "contains": {
+              "const": "training"
+            }
+          }
+        },
+        "required": [
+          "allowed_use"
+        ]
+      },
+      "then": {
+        "properties": {
+          "license_status": {
+            "enum": [
+              "internal",
+              "clear"
+            ]
+          },
+          "consent_status": {
+            "enum": [
+              "synthetic",
+              "not_applicable",
+              "consented"
+            ]
+          },
+          "governance_status": {
+            "enum": [
+              "approved_internal",
+              "legal_approved"
+            ]
+          }
+        },
+        "required": [
+          "license_status",
+          "consent_status",
+          "governance_status"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "allowed_use": {
+            "contains": {
+              "const": "holdout_only"
+            }
+          }
+        },
+        "required": [
+          "allowed_use"
+        ]
+      },
+      "then": {
+        "not": {
+          "properties": {
+            "allowed_use": {
+              "contains": {
+                "const": "training"
+              }
+            }
+          }
+        },
+        "properties": {
+          "is_holdout": {
+            "const": true
+          }
+        },
+        "required": [
+          "is_holdout"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "is_holdout": {
+            "const": true
+          }
+        },
+        "required": [
+          "is_holdout"
+        ]
+      },
+      "then": {
+        "properties": {
+          "allowed_use": {
+            "contains": {
+              "const": "holdout_only"
+            }
+          }
+        },
+        "not": {
+          "properties": {
+            "allowed_use": {
+              "contains": {
+                "const": "training"
+              }
+            }
+          }
+        },
+        "required": [
+          "allowed_use"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "commercial_pilot_status": {
+            "enum": [
+              "pilot_eligible",
+              "production_eligible"
+            ]
+          }
+        },
+        "required": [
+          "commercial_pilot_status"
+        ]
+      },
+      "then": {
+        "properties": {
+          "license_status": {
+            "enum": [
+              "internal",
+              "clear"
+            ]
+          },
+          "consent_status": {
+            "enum": [
+              "synthetic",
+              "not_applicable",
+              "consented"
+            ]
+          },
+          "governance_status": {
+            "enum": [
+              "approved_internal",
+              "legal_approved"
+            ]
+          }
+        },
+        "required": [
+          "license_status",
+          "consent_status",
+          "governance_status"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "source_type": {
+            "const": "real_patient"
+          }
+        },
+        "required": [
+          "source_type"
+        ]
+      },
+      "then": {
+        "properties": {
+          "contains_phi": {
+            "enum": [
+              "yes",
+              "depends_on_source"
+            ]
+          },
+          "consent_status": {
+            "enum": [
+              "consented"
+            ]
+          }
+        },
+        "required": [
+          "contains_phi",
+          "consent_status",
+          "retention_policy",
+          "access_control_policy",
+          "audit_log_required"
+        ]
+      }
+    }
+  ],
+  "$defs": {
+    "id": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 128,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$"
+    },
+    "local_path": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^(?!https?://)(?!s3://)(?!gs://).+"
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[A-Fa-f0-9]{64}$"
+    },
+    "created_by": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 128
+    },
+    "source_type": {
+      "type": "string",
+      "enum": [
+        "synthetic",
+        "public",
+        "volunteer_simulated",
+        "real_patient",
+        "derived_gold",
+        "derived_evaluation",
+        "terminology",
+        "mixed",
+        "unknown"
+      ]
+    },
+    "setting": {
+      "type": "string",
+      "enum": [
+        "outpatient",
+        "inpatient",
+        "emergency",
+        "telemedicine",
+        "post_visit_recording",
+        "simulated",
+        "other"
+      ]
+    },
+    "language": {
+      "type": "string",
+      "enum": [
+        "vi",
+        "vi-VN",
+        "en",
+        "en-US",
+        "mixed",
+        "unknown"
+      ]
+    },
+    "contains_phi": {
+      "type": "string",
+      "enum": [
+        "yes",
+        "no",
+        "unknown",
+        "no_or_simulated",
+        "depends_on_source"
+      ]
+    },
+    "consent_status": {
+      "type": "string",
+      "enum": [
+        "synthetic",
+        "not_applicable",
+        "consent_required",
+        "consented",
+        "withdrawn",
+        "clinical_consent_required",
+        "expired",
+        "unknown"
+      ]
+    },
+    "license_status": {
+      "type": "string",
+      "enum": [
+        "internal",
+        "clear",
+        "needs_review",
+        "non_commercial",
+        "research_only",
+        "approval_required",
+        "unknown",
+        "prohibited"
+      ]
+    },
+    "allowed_use_item": {
+      "type": "string",
+      "enum": [
+        "training",
+        "evaluation",
+        "demo",
+        "dictionary",
+        "reference_only",
+        "not_allowed_yet",
+        "holdout_only"
+      ]
+    },
+    "governance_status": {
+      "type": "string",
+      "enum": [
+        "approved_internal",
+        "legal_approved",
+        "pending_review",
+        "needs_legal_review",
+        "not_approved",
+        "rejected"
+      ]
+    },
+    "review_status": {
+      "type": "string",
+      "enum": [
+        "raw",
+        "transcribed",
+        "diarized",
+        "facts_extracted",
+        "draft_generated",
+        "doctor_review_pending",
+        "doctor_reviewed",
+        "gold",
+        "rejected",
+        "quarantined"
+      ]
+    }
+  }
+}

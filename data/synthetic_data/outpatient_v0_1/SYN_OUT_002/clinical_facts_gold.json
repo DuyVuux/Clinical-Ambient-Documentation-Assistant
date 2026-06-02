@@ -1,0 +1,301 @@
+[
+  {
+    "fact_id": "fact_001",
+    "encounter_id": "SYN_OUT_002",
+    "fact_type": "symptom",
+    "original_text": "Dạ em bị đau bụng và đi ngoài lỏng khoảng hai ngày nay.",
+    "normalized_text": "đau bụng",
+    "assertion": "present",
+    "duration": "2 ngày",
+    "severity": null,
+    "speaker_role": "Patient",
+    "clinical_subject": "Patient",
+    "source_segment_ids": ["seg_002"],
+    "source_start_time": 3.2,
+    "source_end_time": 7.4,
+    "requires_doctor_confirmation": true,
+    "doctor_confirmation_status": "accepted",
+    "coding_candidates": [
+      {
+        "system": "local_dictionary",
+        "code": "SYM_ABDOMINAL_PAIN",
+        "display": "Đau bụng"
+      }
+    ]
+  },
+  {
+    "fact_id": "fact_002",
+    "encounter_id": "SYN_OUT_002",
+    "fact_type": "symptom",
+    "original_text": "Dạ em bị đau bụng và đi ngoài lỏng khoảng hai ngày nay.",
+    "normalized_text": "đi ngoài lỏng",
+    "assertion": "present",
+    "duration": "2 ngày",
+    "severity": null,
+    "speaker_role": "Patient",
+    "clinical_subject": "Patient",
+    "source_segment_ids": ["seg_002"],
+    "source_start_time": 3.2,
+    "source_end_time": 7.4,
+    "requires_doctor_confirmation": true,
+    "doctor_confirmation_status": "accepted",
+    "coding_candidates": [
+      {
+        "system": "local_dictionary",
+        "code": "SYM_DIARRHEA",
+        "display": "Tiêu chảy/đi ngoài lỏng"
+      }
+    ]
+  },
+  {
+    "fact_id": "fact_003",
+    "encounter_id": "SYN_OUT_002",
+    "fact_type": "symptom_detail",
+    "original_text": "Em đau quanh rốn, đau từng cơn chứ không đau liên tục.",
+    "normalized_text": "đau quanh rốn từng cơn",
+    "assertion": "present",
+    "body_site": "quanh rốn",
+    "pattern": "từng cơn",
+    "speaker_role": "Patient",
+    "clinical_subject": "Patient",
+    "source_segment_ids": ["seg_004"],
+    "source_start_time": 9.8,
+    "source_end_time": 14.2,
+    "requires_doctor_confirmation": true,
+    "doctor_confirmation_status": "accepted",
+    "coding_candidates": [
+      {
+        "system": "local_dictionary",
+        "code": "SYM_PERIUMBILICAL_PAIN",
+        "display": "Đau quanh rốn"
+      }
+    ]
+  },
+  {
+    "fact_id": "fact_004",
+    "encounter_id": "SYN_OUT_002",
+    "fact_type": "symptom_detail",
+    "original_text": "Em đau quanh rốn, đau từng cơn chứ không đau liên tục.",
+    "normalized_text": "đau liên tục",
+    "assertion": "negated",
+    "speaker_role": "Patient",
+    "clinical_subject": "Patient",
+    "source_segment_ids": ["seg_004"],
+    "source_start_time": 9.8,
+    "source_end_time": 14.2,
+    "requires_doctor_confirmation": true,
+    "doctor_confirmation_status": "accepted",
+    "coding_candidates": []
+  },
+  {
+    "fact_id": "fact_005",
+    "encounter_id": "SYN_OUT_002",
+    "fact_type": "frequency",
+    "original_text": "Dạ khoảng bốn đến năm lần một ngày.",
+    "normalized_text": "đi ngoài 4-5 lần/ngày",
+    "assertion": "present",
+    "value": "4-5",
+    "unit": "lần/ngày",
+    "speaker_role": "Patient",
+    "clinical_subject": "Patient",
+    "source_segment_ids": ["seg_006"],
+    "source_start_time": 17.1,
+    "source_end_time": 20.6,
+    "requires_doctor_confirmation": true,
+    "doctor_confirmation_status": "accepted",
+    "coding_candidates": []
+  },
+  {
+    "fact_id": "fact_006",
+    "encounter_id": "SYN_OUT_002",
+    "fact_type": "red_flag",
+    "original_text": "Dạ không, em không thấy máu và cũng không thấy phân đen.",
+    "normalized_text": "máu trong phân",
+    "assertion": "negated",
+    "speaker_role": "Patient",
+    "clinical_subject": "Patient",
+    "source_segment_ids": ["seg_008"],
+    "source_start_time": 24.1,
+    "source_end_time": 28.2,
+    "requires_doctor_confirmation": true,
+    "doctor_confirmation_status": "accepted",
+    "coding_candidates": [
+      {
+        "system": "local_dictionary",
+        "code": "RF_BLOOD_IN_STOOL",
+        "display": "Máu trong phân"
+      }
+    ]
+  },
+  {
+    "fact_id": "fact_007",
+    "encounter_id": "SYN_OUT_002",
+    "fact_type": "red_flag",
+    "original_text": "Dạ không, em không thấy máu và cũng không thấy phân đen.",
+    "normalized_text": "phân đen",
+    "assertion": "negated",
+    "speaker_role": "Patient",
+    "clinical_subject": "Patient",
+    "source_segment_ids": ["seg_008"],
+    "source_start_time": 24.1,
+    "source_end_time": 28.2,
+    "requires_doctor_confirmation": true,
+    "doctor_confirmation_status": "accepted",
+    "coding_candidates": [
+      {
+        "system": "local_dictionary",
+        "code": "RF_MELENA",
+        "display": "Phân đen"
+      }
+    ]
+  },
+  {
+    "fact_id": "fact_008",
+    "encounter_id": "SYN_OUT_002",
+    "fact_type": "red_flag",
+    "original_text": "Dạ không sốt cao, không nôn ra máu. Em chỉ hơi buồn nôn thôi.",
+    "normalized_text": "sốt cao",
+    "assertion": "negated",
+    "speaker_role": "Patient",
+    "clinical_subject": "Patient",
+    "source_segment_ids": ["seg_010"],
+    "source_start_time": 32.1,
+    "source_end_time": 36.5,
+    "requires_doctor_confirmation": true,
+    "doctor_confirmation_status": "accepted",
+    "coding_candidates": [
+      {
+        "system": "local_dictionary",
+        "code": "RF_HIGH_FEVER",
+        "display": "Sốt cao"
+      }
+    ]
+  },
+  {
+    "fact_id": "fact_009",
+    "encounter_id": "SYN_OUT_002",
+    "fact_type": "red_flag",
+    "original_text": "Dạ không sốt cao, không nôn ra máu. Em chỉ hơi buồn nôn thôi.",
+    "normalized_text": "nôn ra máu",
+    "assertion": "negated",
+    "speaker_role": "Patient",
+    "clinical_subject": "Patient",
+    "source_segment_ids": ["seg_010"],
+    "source_start_time": 32.1,
+    "source_end_time": 36.5,
+    "requires_doctor_confirmation": true,
+    "doctor_confirmation_status": "accepted",
+    "coding_candidates": [
+      {
+        "system": "local_dictionary",
+        "code": "RF_HEMATEMESIS",
+        "display": "Nôn ra máu"
+      }
+    ]
+  },
+  {
+    "fact_id": "fact_010",
+    "encounter_id": "SYN_OUT_002",
+    "fact_type": "symptom",
+    "original_text": "Dạ không sốt cao, không nôn ra máu. Em chỉ hơi buồn nôn thôi.",
+    "normalized_text": "buồn nôn nhẹ",
+    "assertion": "present",
+    "severity": "mild",
+    "speaker_role": "Patient",
+    "clinical_subject": "Patient",
+    "source_segment_ids": ["seg_010"],
+    "source_start_time": 32.1,
+    "source_end_time": 36.5,
+    "requires_doctor_confirmation": true,
+    "doctor_confirmation_status": "accepted",
+    "coding_candidates": [
+      {
+        "system": "local_dictionary",
+        "code": "SYM_NAUSEA",
+        "display": "Buồn nôn"
+      }
+    ]
+  },
+  {
+    "fact_id": "fact_011",
+    "encounter_id": "SYN_OUT_002",
+    "fact_type": "exposure",
+    "original_text": "Dạ hôm trước em có ăn hải sản ở ngoài với bạn.",
+    "normalized_text": "ăn hải sản ở ngoài",
+    "assertion": "present",
+    "time": "hôm trước",
+    "speaker_role": "Patient",
+    "clinical_subject": "Patient",
+    "source_segment_ids": ["seg_012"],
+    "source_start_time": 40.7,
+    "source_end_time": 44.8,
+    "requires_doctor_confirmation": true,
+    "doctor_confirmation_status": "accepted",
+    "coding_candidates": []
+  },
+  {
+    "fact_id": "fact_012",
+    "encounter_id": "SYN_OUT_002",
+    "fact_type": "dehydration_sign",
+    "original_text": "Dạ em hơi khát nước hơn, nhưng chưa chóng mặt và vẫn đi tiểu bình thường.",
+    "normalized_text": "khát nước hơn",
+    "assertion": "present",
+    "severity": "mild",
+    "speaker_role": "Patient",
+    "clinical_subject": "Patient",
+    "source_segment_ids": ["seg_014"],
+    "source_start_time": 49.6,
+    "source_end_time": 54.8,
+    "requires_doctor_confirmation": true,
+    "doctor_confirmation_status": "accepted",
+    "coding_candidates": []
+  },
+  {
+    "fact_id": "fact_013",
+    "encounter_id": "SYN_OUT_002",
+    "fact_type": "dehydration_sign",
+    "original_text": "Dạ em hơi khát nước hơn, nhưng chưa chóng mặt và vẫn đi tiểu bình thường.",
+    "normalized_text": "chóng mặt",
+    "assertion": "negated",
+    "speaker_role": "Patient",
+    "clinical_subject": "Patient",
+    "source_segment_ids": ["seg_014"],
+    "source_start_time": 49.6,
+    "source_end_time": 54.8,
+    "requires_doctor_confirmation": true,
+    "doctor_confirmation_status": "accepted",
+    "coding_candidates": []
+  },
+  {
+    "fact_id": "fact_014",
+    "encounter_id": "SYN_OUT_002",
+    "fact_type": "dehydration_sign",
+    "original_text": "Dạ em hơi khát nước hơn, nhưng chưa chóng mặt và vẫn đi tiểu bình thường.",
+    "normalized_text": "tiểu ít",
+    "assertion": "negated",
+    "speaker_role": "Patient",
+    "clinical_subject": "Patient",
+    "source_segment_ids": ["seg_014"],
+    "source_start_time": 49.6,
+    "source_end_time": 54.8,
+    "requires_doctor_confirmation": true,
+    "doctor_confirmation_status": "accepted",
+    "coding_candidates": []
+  },
+  {
+    "fact_id": "fact_015",
+    "encounter_id": "SYN_OUT_002",
+    "fact_type": "plan",
+    "original_text": "Trước mắt chị cần uống đủ nước, có thể dùng dung dịch bù nước nếu đi ngoài nhiều. Chị theo dõi thêm. Nếu đau bụng tăng, sốt cao, nôn nhiều, đi ngoài ra máu hoặc có dấu hiệu mất nước thì cần quay lại khám ngay.",
+    "normalized_text": "uống đủ nước, cân nhắc dung dịch bù nước, theo dõi, quay lại khám nếu có dấu hiệu nặng",
+    "assertion": "instruction",
+    "speaker_role": "Doctor",
+    "clinical_subject": "Patient",
+    "source_segment_ids": ["seg_015"],
+    "source_start_time": 54.9,
+    "source_end_time": 70.0,
+    "requires_doctor_confirmation": true,
+    "doctor_confirmation_status": "accepted",
+    "coding_candidates": []
+  }
+]

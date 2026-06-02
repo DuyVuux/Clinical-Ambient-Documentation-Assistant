@@ -1,0 +1,694 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local-first-clinical-ai.example/schemas/encounter.schema.json",
+  "title": "Encounter Schema",
+  "description": "Canonical metadata schema for one outpatient/simulated clinical encounter.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "encounter_id",
+    "source_type",
+    "setting",
+    "specialty",
+    "language",
+    "audio_path",
+    "transcript_path",
+    "contains_phi",
+    "consent_status",
+    "license_status",
+    "allowed_use",
+    "review_status",
+    "version",
+    "created_at",
+    "updated_at",
+    "governance_status"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "2020-12"
+    },
+    "encounter_id": {
+      "$ref": "#/$defs/id"
+    },
+    "dataset_id": {
+      "$ref": "#/$defs/id"
+    },
+    "source_type": {
+      "$ref": "#/$defs/source_type"
+    },
+    "setting": {
+      "$ref": "#/$defs/setting"
+    },
+    "specialty": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128
+    },
+    "language": {
+      "$ref": "#/$defs/language"
+    },
+    "audio_path": {
+      "$ref": "#/$defs/local_path"
+    },
+    "transcript_path": {
+      "$ref": "#/$defs/local_path"
+    },
+    "contains_phi": {
+      "$ref": "#/$defs/contains_phi"
+    },
+    "consent_status": {
+      "$ref": "#/$defs/consent_status"
+    },
+    "license_status": {
+      "$ref": "#/$defs/license_status"
+    },
+    "allowed_use": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/allowed_use_item"
+      }
+    },
+    "review_status": {
+      "$ref": "#/$defs/review_status"
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "recorded_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "created_by": {
+      "$ref": "#/$defs/created_by"
+    },
+    "governance_status": {
+      "$ref": "#/$defs/governance_status"
+    },
+    "retention_policy": {
+      "type": "string",
+      "enum": [
+        "keep_versioned",
+        "delete_after_30_days",
+        "short_retention_required",
+        "follow_hospital_policy",
+        "quarantine_until_review"
+      ]
+    },
+    "access_control_policy": {
+      "type": "string",
+      "enum": [
+        "local_owner_only",
+        "project_team",
+        "doctor_reviewer_only",
+        "governance_team_only",
+        "hospital_policy"
+      ]
+    },
+    "audit_log_required": {
+      "type": "boolean"
+    },
+    "is_holdout": {
+      "type": "boolean",
+      "default": false
+    },
+    "commercial_pilot_status": {
+      "type": "string",
+      "enum": [
+        "not_safe",
+        "needs_review",
+        "internal_demo_only",
+        "pilot_eligible",
+        "production_eligible"
+      ],
+      "default": "not_safe"
+    },
+    "data_sensitivity": {
+      "type": "string",
+      "enum": [
+        "low",
+        "moderate",
+        "high",
+        "restricted_phi"
+      ],
+      "default": "high"
+    },
+    "audio": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "duration_seconds": {
+          "type": "number",
+          "minimum": 0
+        },
+        "format": {
+          "type": "string",
+          "enum": [
+            "wav",
+            "mp3",
+            "m4a",
+            "flac",
+            "ogg",
+            "unknown"
+          ]
+        },
+        "sample_rate_hz": {
+          "type": "integer",
+          "minimum": 8000
+        },
+        "channels": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 8
+        },
+        "checksum_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "storage_class": {
+          "type": "string",
+          "enum": [
+            "local_encrypted",
+            "local_plain_for_synthetic_only",
+            "quarantine",
+            "not_available"
+          ]
+        }
+      }
+    },
+    "transcript": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "asr_engine": {
+          "type": "string",
+          "maxLength": 128
+        },
+        "asr_model_version": {
+          "type": "string",
+          "maxLength": 128
+        },
+        "diarization_engine": {
+          "type": "string",
+          "maxLength": 128
+        },
+        "diarization_model_version": {
+          "type": "string",
+          "maxLength": 128
+        },
+        "segment_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "word_timestamp_available": {
+          "type": "boolean"
+        },
+        "checksum_sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      }
+    },
+    "clinical_note": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "note_format": {
+          "type": "string",
+          "enum": [
+            "soap_lite",
+            "soap",
+            "outpatient_note",
+            "hospital_template",
+            "none"
+          ]
+        },
+        "draft_path": {
+          "$ref": "#/$defs/local_path"
+        },
+        "reviewed_note_path": {
+          "$ref": "#/$defs/local_path"
+        },
+        "doctor_confirmation_status": {
+          "$ref": "#/$defs/doctor_confirmation_status"
+        },
+        "reviewed_by": {
+          "type": "string",
+          "maxLength": 128
+        },
+        "reviewed_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "capture_device": {
+          "type": "string",
+          "maxLength": 128
+        },
+        "recording_environment": {
+          "type": "string",
+          "enum": [
+            "clinic_room",
+            "home",
+            "telemedicine",
+            "simulated",
+            "unknown"
+          ]
+        },
+        "collection_method": {
+          "type": "string",
+          "enum": [
+            "script_generated",
+            "tts_generated",
+            "volunteer_recorded",
+            "public_download",
+            "real_clinic_recording",
+            "other"
+          ]
+        },
+        "deidentification_status": {
+          "type": "string",
+          "enum": [
+            "not_deidentified",
+            "deidentified",
+            "not_required_synthetic",
+            "unknown"
+          ]
+        }
+      }
+    },
+    "fhir_mapping_hint": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "target_resource": {
+          "type": "string",
+          "const": "Encounter"
+        },
+        "future_patient_reference_strategy": {
+          "type": "string",
+          "enum": [
+            "pseudonymous_local_subject",
+            "hospital_patient_id_after_approval",
+            "not_applicable_synthetic"
+          ]
+        },
+        "future_document_reference": {
+          "type": "boolean"
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "allowed_use": {
+            "contains": {
+              "const": "training"
+            }
+          }
+        },
+        "required": [
+          "allowed_use"
+        ]
+      },
+      "then": {
+        "properties": {
+          "license_status": {
+            "enum": [
+              "internal",
+              "clear"
+            ]
+          },
+          "consent_status": {
+            "enum": [
+              "synthetic",
+              "not_applicable",
+              "consented"
+            ]
+          },
+          "governance_status": {
+            "enum": [
+              "approved_internal",
+              "legal_approved"
+            ]
+          }
+        },
+        "required": [
+          "license_status",
+          "consent_status",
+          "governance_status"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "allowed_use": {
+            "contains": {
+              "const": "holdout_only"
+            }
+          }
+        },
+        "required": [
+          "allowed_use"
+        ]
+      },
+      "then": {
+        "not": {
+          "properties": {
+            "allowed_use": {
+              "contains": {
+                "const": "training"
+              }
+            }
+          }
+        },
+        "properties": {
+          "is_holdout": {
+            "const": true
+          }
+        },
+        "required": [
+          "is_holdout"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "is_holdout": {
+            "const": true
+          }
+        },
+        "required": [
+          "is_holdout"
+        ]
+      },
+      "then": {
+        "properties": {
+          "allowed_use": {
+            "contains": {
+              "const": "holdout_only"
+            }
+          }
+        },
+        "not": {
+          "properties": {
+            "allowed_use": {
+              "contains": {
+                "const": "training"
+              }
+            }
+          }
+        },
+        "required": [
+          "allowed_use"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "commercial_pilot_status": {
+            "enum": [
+              "pilot_eligible",
+              "production_eligible"
+            ]
+          }
+        },
+        "required": [
+          "commercial_pilot_status"
+        ]
+      },
+      "then": {
+        "properties": {
+          "license_status": {
+            "enum": [
+              "internal",
+              "clear"
+            ]
+          },
+          "consent_status": {
+            "enum": [
+              "synthetic",
+              "not_applicable",
+              "consented"
+            ]
+          },
+          "governance_status": {
+            "enum": [
+              "approved_internal",
+              "legal_approved"
+            ]
+          }
+        },
+        "required": [
+          "license_status",
+          "consent_status",
+          "governance_status"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "source_type": {
+            "const": "real_patient"
+          }
+        },
+        "required": [
+          "source_type"
+        ]
+      },
+      "then": {
+        "properties": {
+          "contains_phi": {
+            "enum": [
+              "yes",
+              "depends_on_source"
+            ]
+          },
+          "consent_status": {
+            "enum": [
+              "consented"
+            ]
+          }
+        },
+        "required": [
+          "contains_phi",
+          "consent_status",
+          "retention_policy",
+          "access_control_policy",
+          "audit_log_required"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "review_status": {
+            "const": "gold"
+          }
+        },
+        "required": [
+          "review_status"
+        ]
+      },
+      "then": {
+        "properties": {
+          "clinical_note": {
+            "type": "object",
+            "required": [
+              "doctor_confirmation_status",
+              "reviewed_by",
+              "reviewed_at"
+            ],
+            "properties": {
+              "doctor_confirmation_status": {
+                "enum": [
+                  "accepted",
+                  "edited"
+                ]
+              }
+            }
+          }
+        },
+        "required": [
+          "clinical_note"
+        ]
+      }
+    }
+  ],
+  "$defs": {
+    "id": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 128,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$"
+    },
+    "local_path": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^(?!https?://)(?!s3://)(?!gs://).+"
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[A-Fa-f0-9]{64}$"
+    },
+    "created_by": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 128
+    },
+    "source_type": {
+      "type": "string",
+      "enum": [
+        "synthetic",
+        "public",
+        "volunteer_simulated",
+        "real_patient",
+        "derived_gold",
+        "derived_evaluation",
+        "terminology",
+        "mixed",
+        "unknown"
+      ]
+    },
+    "setting": {
+      "type": "string",
+      "enum": [
+        "outpatient",
+        "inpatient",
+        "emergency",
+        "telemedicine",
+        "post_visit_recording",
+        "simulated",
+        "other"
+      ]
+    },
+    "language": {
+      "type": "string",
+      "enum": [
+        "vi",
+        "vi-VN",
+        "en",
+        "en-US",
+        "mixed",
+        "unknown"
+      ]
+    },
+    "contains_phi": {
+      "type": "string",
+      "enum": [
+        "yes",
+        "no",
+        "unknown",
+        "no_or_simulated",
+        "depends_on_source"
+      ]
+    },
+    "consent_status": {
+      "type": "string",
+      "enum": [
+        "synthetic",
+        "not_applicable",
+        "consent_required",
+        "consented",
+        "withdrawn",
+        "clinical_consent_required",
+        "expired",
+        "unknown"
+      ]
+    },
+    "license_status": {
+      "type": "string",
+      "enum": [
+        "internal",
+        "clear",
+        "needs_review",
+        "non_commercial",
+        "research_only",
+        "approval_required",
+        "unknown",
+        "prohibited"
+      ]
+    },
+    "allowed_use_item": {
+      "type": "string",
+      "enum": [
+        "training",
+        "evaluation",
+        "demo",
+        "dictionary",
+        "reference_only",
+        "not_allowed_yet",
+        "holdout_only"
+      ]
+    },
+    "governance_status": {
+      "type": "string",
+      "enum": [
+        "approved_internal",
+        "legal_approved",
+        "pending_review",
+        "needs_legal_review",
+        "not_approved",
+        "rejected"
+      ]
+    },
+    "review_status": {
+      "type": "string",
+      "enum": [
+        "raw",
+        "transcribed",
+        "diarized",
+        "facts_extracted",
+        "draft_generated",
+        "doctor_review_pending",
+        "doctor_reviewed",
+        "gold",
+        "rejected",
+        "quarantined"
+      ]
+    },
+    "speaker_role": {
+      "type": "string",
+      "enum": [
+        "doctor",
+        "patient",
+        "caregiver",
+        "nurse",
+        "interpreter",
+        "admin_staff",
+        "unknown"
+      ]
+    },
+    "doctor_confirmation_status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "accepted",
+        "edited",
+        "rejected",
+        "not_required_for_non_clinical"
+      ]
+    }
+  }
+}

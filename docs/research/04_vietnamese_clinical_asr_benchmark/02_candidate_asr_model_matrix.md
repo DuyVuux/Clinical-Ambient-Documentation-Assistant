@@ -1,0 +1,19 @@
+# 02. Ma trận Cảnh quan Mô hình Ứng viên ASR (Candidate ASR Model Matrix)
+
+Việc lựa chọn mô hình nền tảng là bài toán đánh đổi đa chiều giữa độ chính xác nhận diện tiếng Việt tổng quát, khả năng bắt thuật ngữ y tế đa ngôn ngữ, độ bền bỉ trước tiếng ồn, và tính khả thi trong triển khai bảo mật tại chỗ (on-premise).
+
+## Bảng Phân tích Cảnh quan Mô hình Ứng viên
+
+| Mô hình / Họ Mô hình | Hỗ trợ Tiếng Việt / Kết quả Benchmark Công cộng | Điểm Mạnh cốt lõi | Điểm Yếu cốt lõi / Độ bền bỉ với Nhiễu | Mức độ Sẵn sàng Lâm sàng & Khả năng Triển khai (Privacy) | Vai trò Đề xuất |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **OpenAI Whisper** *(tiny đến large-v3, turbo)* | Hỗ trợ Zero-shot rất tốt. **WER 34.47%, CS-WER 46.69%** (trên ViMedCSS, bản Large-v3). | Tự động tạo dấu câu, viết hoa định dạng số xuất sắc. Chống chịu tốt Code-switching nhờ dữ liệu đa ngôn ngữ lớn. | Chậm ở phiên bản lớn. Dễ rơi vào **ảo giác (hallucination)** khi gặp nhiễu/khoảng lặng. Khá bền bỉ với nhiễu. | Trung bình (cần tinh chỉnh định dạng y khoa). Yêu cầu GPU VRAM lớn cho on-premise. | **Baseline đối sánh / Ứng viên lõi** |
+| **PhoWhisper** *(tiny đến large)* | Cực kỳ xuất sắc. **WER 31.24%, CS-WER 55.05%** (ViMedCSS, bản Large). SOTA trên VIVOS, VLSP. | Xử lý cực tốt phương ngữ và luyến âm tiếng Việt. Cải thiện đáng kể với nhiễu. | Kém nhận diện thuật ngữ tiếng Anh y khoa xen kẽ (CS-WER cao - catastrophic forgetting). | Tiềm năng rất cao nhưng vướng điểm mù Code-switching. Tương đương Whisper gốc về bảo mật. | **Ứng viên Hàng đầu cho Tinh chỉnh** |
+| **VietASR** *(Kiến trúc Zipformer, 68M params)* | Rất tốt. **WER 27.56%, CS-WER 58.38%** (ViMedCSS). | Siêu nhẹ (68M tham số). Đánh bại Whisper Large-v3 trên tiếng Việt thực tế. Tự học biểu diễn (Self-supervised) kháng nhiễu tốt. | Gặp khó khăn với Code-switching. Cần môi trường triển khai riêng (như Sherpa-ONNX), thiếu khả năng tạo dấu câu thông minh. | Cần nghiên cứu thêm. Rất lý tưởng cho máy chủ biên (edge servers) với chi phí thấp. | **Ứng viên Đột phá (Explore)** |
+| **faster-whisper / CTranslate2** | Kế thừa hoàn toàn PhoWhisper/Whisper lượng hóa. | Tốc độ suy luận **tăng đột biến (4x)**, giảm VRAM (int8, fp16). Hệ thống VAD loại bỏ khoảng lặng, ảo giác. | Thỉnh thoảng mất từ ở đầu/cuối câu do VAD cắt xén quá mức. Phụ thuộc mô hình cơ sở. | Sẵn sàng cao. Rất lý tưởng. Tiêu chuẩn công nghiệp triển khai LLM/ASR on-premise quy mô lớn. | **Kiến trúc Triển khai Bắt buộc** |
+| **wav2vec2-base-vi / XLSR-53-Viet** | Tốt. **WER 29.6%** trên VietMed Test. Kiến trúc CTC. | Nhạy bén với đặc trưng âm học tiếng Việt. Ít ảo giác, bám sát âm thanh thực. | Không có Language Model mạnh. **Không tự sinh dấu câu**, viết hoa. Yếu hơn trong môi trường quá nhiễu. | Trung bình thấp. Bắt buộc phải ghép nối với LM bên ngoài, làm phức tạp pipeline. | **Baseline Nghiên cứu Trọng tâm** |
+| **MMS (Massively Multilingual Speech)** | Hỗ trợ >1000 ngôn ngữ nhưng tỷ trọng dữ liệu tiếng Việt thấp. **WER 58.30%** (ViMedCSS). | Phủ sóng ngôn ngữ rộng, dễ triển khai đa ngôn ngữ. | Độ chính xác tiếng Việt kém, lỗi chèn/xóa rất cao. Rất kém trong môi trường tạp âm. | Không sẵn sàng. Chất lượng không đạt yêu cầu lâm sàng. | **Không Khuyến nghị** |
+
+## Phân tích Kiến trúc Nền tảng
+
+*   **Kiến trúc CTC (wav2vec2, MMS):** Ánh xạ trực tiếp âm thanh sang ký tự. **Ưu điểm:** Nhanh, ít ảo giác (hallucination). **Nhược điểm:** Thiếu Language Model nội tại nên vấp ngã trước từ đồng âm/thuật ngữ y khoa; xuất văn bản thô không dấu câu, tạo gánh nặng lớn cho các khâu NLP phía sau.
+*   **Kiến trúc Encoder-Decoder (Whisper, PhoWhisper):** Cơ chế chú ý chéo (cross-attention) nhìn lại toàn bộ ngữ cảnh. **Ưu điểm:** Tự động chèn dấu câu, viết hoa, sửa lỗi phát âm dựa trên xác suất. Vượt trội trong hội thoại dài. **Nhược điểm:** Cơ chế tự hồi quy (autoregressive) dễ gây ảo giác (lặp từ, bịa câu) khi gặp khoảng lặng hoặc tiếng ồn chồng lấp trong môi trường phòng khám. Bắt buộc kết hợp VAD.

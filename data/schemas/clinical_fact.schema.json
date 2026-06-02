@@ -1,0 +1,386 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local-first-clinical-ai.example/schemas/clinical_fact.schema.json",
+  "title": "Clinical Fact Schema",
+  "description": "Source-attributed clinical fact schema. Every fact must link back to transcript/audio segments and require doctor confirmation before Gold use.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "fact_id",
+    "encounter_id",
+    "fact_type",
+    "original_text",
+    "normalized_text",
+    "assertion",
+    "speaker_role",
+    "clinical_subject",
+    "source_segment_ids",
+    "doctor_confirmation_status",
+    "confidence",
+    "created_at",
+    "created_by",
+    "version"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "2020-12"
+    },
+    "fact_id": {
+      "$ref": "#/$defs/id"
+    },
+    "encounter_id": {
+      "$ref": "#/$defs/id"
+    },
+    "fact_type": {
+      "type": "string",
+      "enum": [
+        "symptom",
+        "diagnosis",
+        "medication",
+        "allergy",
+        "procedure",
+        "vital_sign",
+        "lab_result",
+        "history",
+        "family_history",
+        "social_history",
+        "assessment",
+        "plan",
+        "instruction",
+        "follow_up",
+        "red_flag",
+        "administrative",
+        "other"
+      ]
+    },
+    "original_text": {
+      "type": "string",
+      "minLength": 1
+    },
+    "normalized_text": {
+      "type": "string",
+      "minLength": 1
+    },
+    "assertion": {
+      "type": "string",
+      "enum": [
+        "present",
+        "absent",
+        "possible",
+        "conditional",
+        "historical",
+        "family_history",
+        "planned",
+        "ordered",
+        "recommended",
+        "unknown",
+        "not_applicable"
+      ]
+    },
+    "speaker_role": {
+      "$ref": "#/$defs/speaker_role"
+    },
+    "clinical_subject": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "subject_type"
+      ],
+      "properties": {
+        "subject_type": {
+          "type": "string",
+          "enum": [
+            "patient",
+            "caregiver",
+            "family_member",
+            "fetus",
+            "other",
+            "unknown"
+          ]
+        },
+        "subject_id": {
+          "type": "string",
+          "maxLength": 128
+        },
+        "relationship_to_patient": {
+          "type": "string",
+          "enum": [
+            "self",
+            "parent",
+            "child",
+            "spouse",
+            "sibling",
+            "caregiver",
+            "unknown",
+            "not_applicable"
+          ]
+        }
+      }
+    },
+    "source_segment_ids": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/id"
+      }
+    },
+    "source_evidence": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "segment_id"
+        ],
+        "properties": {
+          "segment_id": {
+            "$ref": "#/$defs/id"
+          },
+          "quote": {
+            "type": "string",
+            "minLength": 1
+          },
+          "start_time": {
+            "type": "number",
+            "minimum": 0
+          },
+          "end_time": {
+            "type": "number",
+            "minimum": 0
+          },
+          "char_start": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "char_end": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "coding_candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "system",
+          "display"
+        ],
+        "properties": {
+          "system": {
+            "type": "string",
+            "enum": [
+              "local_mvp_dictionary",
+              "icd_10",
+              "rxnorm",
+              "atc",
+              "loinc",
+              "snomed_ct",
+              "dav_drugbank_vn",
+              "hl7_fhir_tho",
+              "unknown"
+            ]
+          },
+          "code": {
+            "type": "string",
+            "maxLength": 128
+          },
+          "display": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 256
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "version": {
+            "type": "string",
+            "maxLength": 64
+          },
+          "review_status": {
+            "type": "string",
+            "enum": [
+              "candidate",
+              "accepted",
+              "edited",
+              "rejected",
+              "needs_review"
+            ]
+          }
+        }
+      }
+    },
+    "fhir_target_resource": {
+      "type": "string",
+      "enum": [
+        "Observation",
+        "Condition",
+        "MedicationStatement",
+        "MedicationRequest",
+        "AllergyIntolerance",
+        "Procedure",
+        "Composition",
+        "DocumentReference",
+        "Encounter",
+        "None"
+      ]
+    },
+    "doctor_confirmation_status": {
+      "$ref": "#/$defs/doctor_confirmation_status",
+      "default": "pending"
+    },
+    "review_status": {
+      "type": "string",
+      "enum": [
+        "candidate",
+        "pending_review",
+        "accepted",
+        "edited",
+        "rejected",
+        "gold",
+        "deprecated"
+      ],
+      "default": "candidate"
+    },
+    "reviewed_by": {
+      "type": "string",
+      "maxLength": 128
+    },
+    "reviewed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "review_comment": {
+      "type": "string",
+      "maxLength": 2048
+    },
+    "created_by": {
+      "$ref": "#/$defs/created_by"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "model_name": {
+      "type": "string",
+      "maxLength": 128
+    },
+    "model_version": {
+      "type": "string",
+      "maxLength": 128
+    },
+    "prompt_version": {
+      "type": "string",
+      "maxLength": 128
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64
+    },
+    "is_sensitive": {
+      "type": "boolean",
+      "const": true
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "review_status": {
+            "const": "gold"
+          }
+        },
+        "required": [
+          "review_status"
+        ]
+      },
+      "then": {
+        "properties": {
+          "doctor_confirmation_status": {
+            "enum": [
+              "accepted",
+              "edited"
+            ]
+          }
+        },
+        "required": [
+          "reviewed_by",
+          "reviewed_at"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "doctor_confirmation_status": {
+            "enum": [
+              "accepted",
+              "edited"
+            ]
+          }
+        },
+        "required": [
+          "doctor_confirmation_status"
+        ]
+      },
+      "then": {
+        "required": [
+          "reviewed_by",
+          "reviewed_at"
+        ]
+      }
+    }
+  ],
+  "$defs": {
+    "id": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 128,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$"
+    },
+    "created_by": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 128
+    },
+    "speaker_role": {
+      "type": "string",
+      "enum": [
+        "doctor",
+        "patient",
+        "caregiver",
+        "nurse",
+        "interpreter",
+        "admin_staff",
+        "unknown"
+      ]
+    },
+    "doctor_confirmation_status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "accepted",
+        "edited",
+        "rejected",
+        "not_required_for_non_clinical"
+      ]
+    }
+  }
+}

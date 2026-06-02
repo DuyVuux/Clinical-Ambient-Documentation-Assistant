@@ -1,0 +1,299 @@
+[
+  {
+    "fact_id": "fact_001",
+    "encounter_id": "SYN_OUT_003",
+    "fact_type": "symptom",
+    "original_text": "Dạ em bị đau đầu khoảng một tuần nay.",
+    "normalized_text": "đau đầu",
+    "assertion": "present",
+    "duration": "1 tuần",
+    "severity": null,
+    "speaker_role": "Patient",
+    "clinical_subject": "Patient",
+    "source_segment_ids": ["seg_002"],
+    "source_start_time": 3.3,
+    "source_end_time": 6.5,
+    "requires_doctor_confirmation": true,
+    "doctor_confirmation_status": "accepted",
+    "coding_candidates": [
+      {
+        "system": "local_dictionary",
+        "code": "SYM_HEADACHE",
+        "display": "Đau đầu"
+      }
+    ]
+  },
+  {
+    "fact_id": "fact_002",
+    "encounter_id": "SYN_OUT_003",
+    "fact_type": "symptom_detail",
+    "original_text": "Em đau âm ỉ hai bên thái dương, không đau dữ dội.",
+    "normalized_text": "đau âm ỉ hai bên thái dương",
+    "assertion": "present",
+    "body_site": "hai bên thái dương",
+    "pattern": "âm ỉ",
+    "speaker_role": "Patient",
+    "clinical_subject": "Patient",
+    "source_segment_ids": ["seg_004"],
+    "source_start_time": 10.1,
+    "source_end_time": 14.4,
+    "requires_doctor_confirmation": true,
+    "doctor_confirmation_status": "accepted",
+    "coding_candidates": [
+      {
+        "system": "local_dictionary",
+        "code": "SYM_TEMPORAL_HEADACHE",
+        "display": "Đau vùng thái dương"
+      }
+    ]
+  },
+  {
+    "fact_id": "fact_003",
+    "encounter_id": "SYN_OUT_003",
+    "fact_type": "red_flag",
+    "original_text": "Em đau âm ỉ hai bên thái dương, không đau dữ dội.",
+    "normalized_text": "đau đầu dữ dội",
+    "assertion": "negated",
+    "speaker_role": "Patient",
+    "clinical_subject": "Patient",
+    "source_segment_ids": ["seg_004"],
+    "source_start_time": 10.1,
+    "source_end_time": 14.4,
+    "requires_doctor_confirmation": true,
+    "doctor_confirmation_status": "accepted",
+    "coding_candidates": [
+      {
+        "system": "local_dictionary",
+        "code": "RF_SEVERE_HEADACHE",
+        "display": "Đau đầu dữ dội"
+      }
+    ]
+  },
+  {
+    "fact_id": "fact_004",
+    "encounter_id": "SYN_OUT_003",
+    "fact_type": "red_flag",
+    "original_text": "Dạ không đột ngột. Nó âm ỉ, lúc tăng lúc giảm.",
+    "normalized_text": "đau đầu khởi phát đột ngột",
+    "assertion": "negated",
+    "speaker_role": "Patient",
+    "clinical_subject": "Patient",
+    "source_segment_ids": ["seg_006"],
+    "source_start_time": 18.7,
+    "source_end_time": 22.5,
+    "requires_doctor_confirmation": true,
+    "doctor_confirmation_status": "accepted",
+    "coding_candidates": [
+      {
+        "system": "local_dictionary",
+        "code": "RF_SUDDEN_ONSET_HEADACHE",
+        "display": "Đau đầu khởi phát đột ngột"
+      }
+    ]
+  },
+  {
+    "fact_id": "fact_005",
+    "encounter_id": "SYN_OUT_003",
+    "fact_type": "red_flag",
+    "original_text": "Dạ không, em không nhìn mờ, không nói khó và không yếu liệt tay chân.",
+    "normalized_text": "nhìn mờ",
+    "assertion": "negated",
+    "speaker_role": "Patient",
+    "clinical_subject": "Patient",
+    "source_segment_ids": ["seg_008"],
+    "source_start_time": 27.2,
+    "source_end_time": 32.0,
+    "requires_doctor_confirmation": true,
+    "doctor_confirmation_status": "accepted",
+    "coding_candidates": [
+      {
+        "system": "local_dictionary",
+        "code": "RF_BLURRED_VISION",
+        "display": "Nhìn mờ"
+      }
+    ]
+  },
+  {
+    "fact_id": "fact_006",
+    "encounter_id": "SYN_OUT_003",
+    "fact_type": "red_flag",
+    "original_text": "Dạ không, em không nhìn mờ, không nói khó và không yếu liệt tay chân.",
+    "normalized_text": "nói khó",
+    "assertion": "negated",
+    "speaker_role": "Patient",
+    "clinical_subject": "Patient",
+    "source_segment_ids": ["seg_008"],
+    "source_start_time": 27.2,
+    "source_end_time": 32.0,
+    "requires_doctor_confirmation": true,
+    "doctor_confirmation_status": "accepted",
+    "coding_candidates": [
+      {
+        "system": "local_dictionary",
+        "code": "RF_DYSARTHRIA",
+        "display": "Nói khó"
+      }
+    ]
+  },
+  {
+    "fact_id": "fact_007",
+    "encounter_id": "SYN_OUT_003",
+    "fact_type": "red_flag",
+    "original_text": "Dạ không, em không nhìn mờ, không nói khó và không yếu liệt tay chân.",
+    "normalized_text": "yếu liệt tay chân",
+    "assertion": "negated",
+    "speaker_role": "Patient",
+    "clinical_subject": "Patient",
+    "source_segment_ids": ["seg_008"],
+    "source_start_time": 27.2,
+    "source_end_time": 32.0,
+    "requires_doctor_confirmation": true,
+    "doctor_confirmation_status": "accepted",
+    "coding_candidates": [
+      {
+        "system": "local_dictionary",
+        "code": "RF_LIMB_WEAKNESS",
+        "display": "Yếu liệt tay chân"
+      }
+    ]
+  },
+  {
+    "fact_id": "fact_008",
+    "encounter_id": "SYN_OUT_003",
+    "fact_type": "symptom",
+    "original_text": "Em ngủ kém, mỗi đêm chỉ khoảng bốn đến năm tiếng.",
+    "normalized_text": "ngủ kém",
+    "assertion": "present",
+    "duration": null,
+    "value": "4-5",
+    "unit": "giờ/đêm",
+    "speaker_role": "Patient",
+    "clinical_subject": "Patient",
+    "source_segment_ids": ["seg_010"],
+    "source_start_time": 34.4,
+    "source_end_time": 38.7,
+    "requires_doctor_confirmation": true,
+    "doctor_confirmation_status": "accepted",
+    "coding_candidates": [
+      {
+        "system": "local_dictionary",
+        "code": "SYM_POOR_SLEEP",
+        "display": "Ngủ kém"
+      }
+    ]
+  },
+  {
+    "fact_id": "fact_009",
+    "encounter_id": "SYN_OUT_003",
+    "fact_type": "lifestyle_factor",
+    "original_text": "Dạ em hay uống cà phê buổi tối và làm việc máy tính khá khuya.",
+    "normalized_text": "uống cà phê buổi tối",
+    "assertion": "present",
+    "speaker_role": "Patient",
+    "clinical_subject": "Patient",
+    "source_segment_ids": ["seg_012"],
+    "source_start_time": 42.1,
+    "source_end_time": 46.5,
+    "requires_doctor_confirmation": true,
+    "doctor_confirmation_status": "accepted",
+    "coding_candidates": []
+  },
+  {
+    "fact_id": "fact_010",
+    "encounter_id": "SYN_OUT_003",
+    "fact_type": "lifestyle_factor",
+    "original_text": "Dạ em hay uống cà phê buổi tối và làm việc máy tính khá khuya.",
+    "normalized_text": "thức khuya/làm việc máy tính khuya",
+    "assertion": "present",
+    "speaker_role": "Patient",
+    "clinical_subject": "Patient",
+    "source_segment_ids": ["seg_012"],
+    "source_start_time": 42.1,
+    "source_end_time": 46.5,
+    "requires_doctor_confirmation": true,
+    "doctor_confirmation_status": "accepted",
+    "coding_candidates": []
+  },
+  {
+    "fact_id": "fact_011",
+    "encounter_id": "SYN_OUT_003",
+    "fact_type": "red_flag",
+    "original_text": "Dạ không có co giật, không ngất và cũng không phải đau dữ dội nhất.",
+    "normalized_text": "co giật",
+    "assertion": "negated",
+    "speaker_role": "Patient",
+    "clinical_subject": "Patient",
+    "source_segment_ids": ["seg_014"],
+    "source_start_time": 52.1,
+    "source_end_time": 57.0,
+    "requires_doctor_confirmation": true,
+    "doctor_confirmation_status": "accepted",
+    "coding_candidates": [
+      {
+        "system": "local_dictionary",
+        "code": "RF_SEIZURE",
+        "display": "Co giật"
+      }
+    ]
+  },
+  {
+    "fact_id": "fact_012",
+    "encounter_id": "SYN_OUT_003",
+    "fact_type": "red_flag",
+    "original_text": "Dạ không có co giật, không ngất và cũng không phải đau dữ dội nhất.",
+    "normalized_text": "ngất",
+    "assertion": "negated",
+    "speaker_role": "Patient",
+    "clinical_subject": "Patient",
+    "source_segment_ids": ["seg_014"],
+    "source_start_time": 52.1,
+    "source_end_time": 57.0,
+    "requires_doctor_confirmation": true,
+    "doctor_confirmation_status": "accepted",
+    "coding_candidates": [
+      {
+        "system": "local_dictionary",
+        "code": "RF_SYNCOPE",
+        "display": "Ngất"
+      }
+    ]
+  },
+  {
+    "fact_id": "fact_013",
+    "encounter_id": "SYN_OUT_003",
+    "fact_type": "red_flag",
+    "original_text": "Dạ không có co giật, không ngất và cũng không phải đau dữ dội nhất.",
+    "normalized_text": "đau đầu dữ dội nhất từ trước đến nay",
+    "assertion": "negated",
+    "speaker_role": "Patient",
+    "clinical_subject": "Patient",
+    "source_segment_ids": ["seg_014"],
+    "source_start_time": 52.1,
+    "source_end_time": 57.0,
+    "requires_doctor_confirmation": true,
+    "doctor_confirmation_status": "accepted",
+    "coding_candidates": [
+      {
+        "system": "local_dictionary",
+        "code": "RF_WORST_HEADACHE",
+        "display": "Đau đầu dữ dội nhất từ trước đến nay"
+      }
+    ]
+  },
+  {
+    "fact_id": "fact_014",
+    "encounter_id": "SYN_OUT_003",
+    "fact_type": "plan",
+    "original_text": "Trước mắt anh nên nghỉ ngơi, giảm cà phê buổi tối, hạn chế thức khuya và theo dõi mức độ đau đầu. Nếu đau đầu dữ dội, yếu liệt, nói khó, nhìn mờ, co giật hoặc ngất thì cần đi khám ngay.",
+    "normalized_text": "nghỉ ngơi, giảm cà phê buổi tối, hạn chế thức khuya, theo dõi đau đầu, đi khám ngay nếu có dấu hiệu cảnh báo",
+    "assertion": "instruction",
+    "speaker_role": "Doctor",
+    "clinical_subject": "Patient",
+    "source_segment_ids": ["seg_015"],
+    "source_start_time": 57.1,
+    "source_end_time": 72.8,
+    "requires_doctor_confirmation": true,
+    "doctor_confirmation_status": "accepted",
+    "coding_candidates": []
+  }
+]

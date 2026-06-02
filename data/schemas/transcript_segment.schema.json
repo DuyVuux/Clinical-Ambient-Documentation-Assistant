@@ -1,0 +1,173 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local-first-clinical-ai.example/schemas/transcript_segment.schema.json",
+  "title": "Transcript Segment Schema",
+  "description": "Schema for timestamped transcript/diarization segments with speaker role.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "segment_id",
+    "encounter_id",
+    "start_time",
+    "end_time",
+    "speaker_id",
+    "speaker_role",
+    "text",
+    "confidence",
+    "audio_span",
+    "created_at",
+    "version"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "2020-12"
+    },
+    "segment_id": {
+      "$ref": "#/$defs/id"
+    },
+    "encounter_id": {
+      "$ref": "#/$defs/id"
+    },
+    "start_time": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Start offset in seconds from beginning of encounter audio."
+    },
+    "end_time": {
+      "type": "number",
+      "minimum": 0,
+      "description": "End offset in seconds from beginning of encounter audio."
+    },
+    "speaker_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64,
+      "examples": [
+        "speaker_0"
+      ]
+    },
+    "speaker_role": {
+      "$ref": "#/$defs/speaker_role"
+    },
+    "text": {
+      "type": "string",
+      "minLength": 1
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "audio_span": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "start_time",
+        "end_time"
+      ],
+      "properties": {
+        "start_time": {
+          "type": "number",
+          "minimum": 0
+        },
+        "end_time": {
+          "type": "number",
+          "minimum": 0
+        },
+        "audio_path": {
+          "$ref": "#/$defs/local_path"
+        },
+        "checksum_sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      }
+    },
+    "contains_phi": {
+      "$ref": "#/$defs/contains_phi"
+    },
+    "asr_engine": {
+      "type": "string",
+      "maxLength": 128
+    },
+    "asr_model_version": {
+      "type": "string",
+      "maxLength": 128
+    },
+    "diarization_engine": {
+      "type": "string",
+      "maxLength": 128
+    },
+    "role_label_source": {
+      "type": "string",
+      "enum": [
+        "manual",
+        "model",
+        "rule_based",
+        "synthetic_gold",
+        "unknown"
+      ]
+    },
+    "segment_status": {
+      "type": "string",
+      "enum": [
+        "raw_asr",
+        "corrected",
+        "reviewed",
+        "rejected"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64
+    }
+  },
+  "$defs": {
+    "id": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 128,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$"
+    },
+    "local_path": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^(?!https?://)(?!s3://)(?!gs://).+"
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[A-Fa-f0-9]{64}$"
+    },
+    "contains_phi": {
+      "type": "string",
+      "enum": [
+        "yes",
+        "no",
+        "unknown",
+        "no_or_simulated",
+        "depends_on_source"
+      ]
+    },
+    "speaker_role": {
+      "type": "string",
+      "enum": [
+        "doctor",
+        "patient",
+        "caregiver",
+        "nurse",
+        "interpreter",
+        "admin_staff",
+        "unknown"
+      ]
+    }
+  }
+}
