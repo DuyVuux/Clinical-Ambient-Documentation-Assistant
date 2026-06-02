@@ -1,2 +1,27 @@
 .agent/
+.gemini/
+.understand-anything/
 report/
+
+__pycache__/
+*.pyc
+.venv/
+.env
+.DS_Store
+
+data/data_lake/bronze/public/**/raw/
+data/data_lake/silver/audio_clean/
+*.wav
+*.mp3
+*.flac
+*.m4a
+*.ogg
+
+Clinical ASR_NLP Evaluation Metrics and International Benchmarks for Ambient Clinical Documentation Assistants.md
+Future-Proof Canonical Clinical Schema Design.md
+Khung an toàn AI cho tài liệu Y tế.md
+Nghiên cứu pháp lý AI Y tế tại Việt Nam.md
+Vietnamese ASR Clinical Documentation Research.md
+docs/research/technical/
+docs/research/architecture/
+docs/research_data_source/
