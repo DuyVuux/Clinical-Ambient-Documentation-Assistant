@@ -3,10 +3,10 @@
 Source: leduckhai/VietMed
 Config: None
 Split: train
-Ingested at: 2026-06-04T03:57:21.838373+00:00
+Ingested at: 2026-06-04T06:15:09.459405+00:00
 
-License status in this MVP registry: needs_review
-Governance status: needs_legal_review
+License status in this MVP registry: clear
+Governance status: approved_internal
 
 Notes:
 - This is a local Bronze/Silver ingest.

@@ -2,6 +2,7 @@ import os
 import json
 import hashlib
 import random
+import argparse
 from itertools import islice
 from pathlib import Path
 from datetime import datetime, timezone
@@ -68,7 +69,7 @@ def ingest_hf_streaming_dataset(
     dataset_id: str,
     domain: str,
     output_name: str,
-    n_samples: int,
+    n_samples: int | str,
     license_status: str,
     governance_status: str,
     allowed_use: list[str],
@@ -103,7 +104,9 @@ def ingest_hf_streaming_dataset(
     rows = []
     checksum_lines = []
 
-    for idx, sample in enumerate(islice(dataset, n_samples), start=1):
+    iterator = dataset if n_samples == "all" else islice(dataset, int(n_samples))
+
+    for idx, sample in enumerate(iterator, start=1):
         sample_id = f"public_{output_name}_{idx:04d}"
 
         audio_path = raw_dir / f"{sample_id}.wav"
@@ -178,6 +181,10 @@ Notes:
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--n_samples", default="50", help="Number of samples to ingest, or 'all'")
+    args = parser.parse_args()
+
     hf_token = os.environ.get("HF_TOKEN")
 
     # 1. VietMed smoke subset
@@ -189,10 +196,10 @@ def main():
         dataset_id="asr_vietmed_001",
         domain="medical_speech",
         output_name="vietmed",
-        n_samples=50,
-        license_status="needs_review",
-        governance_status="needs_legal_review",
-        allowed_use=["evaluation", "reference_only"],
+        n_samples=args.n_samples,
+        license_status="clear",
+        governance_status="approved_internal",
+        allowed_use=["training", "evaluation", "demo"],
         token=hf_token,
     )
 
