@@ -1,0 +1,162 @@
+[
+    {
+        "segment_id": "seg_001",
+        "encounter_id": "SYN_OUT_010",
+        "start_time": 0.0,
+        "end_time": 5.0,
+        "speaker_id": "Speaker_0",
+        "speaker_role": "doctor",
+        "text": "Chào chú. Chú đến khám định kỳ lấy thuốc huyết áp đúng không ạ? Chú uống thuốc Amlodipine 5mg được 6 tháng rồi nhỉ.",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 0.0,
+            "end_time": 5.0
+        },
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "version": "v0.1.0"
+    },
+    {
+        "segment_id": "seg_002",
+        "encounter_id": "SYN_OUT_010",
+        "start_time": 5.5,
+        "end_time": 10.5,
+        "speaker_id": "Speaker_1",
+        "speaker_role": "patient",
+        "text": "Đúng rồi bác sĩ. Tôi uống thuốc đều đặn mỗi sáng. Huyết áp đo ở nhà thường loanh quanh 130 trên 80.",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 5.5,
+            "end_time": 10.5
+        },
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "version": "v0.1.0"
+    },
+    {
+        "segment_id": "seg_003",
+        "encounter_id": "SYN_OUT_010",
+        "start_time": 11.0,
+        "end_time": 16.0,
+        "speaker_id": "Speaker_0",
+        "speaker_role": "doctor",
+        "text": "Mức 130/80 là đạt mục tiêu rồi chú ạ. Gần đây chú có thấy nặng ngực, khó thở hay nhức đầu gì không?",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 11.0,
+            "end_time": 16.0
+        },
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "version": "v0.1.0"
+    },
+    {
+        "segment_id": "seg_004",
+        "encounter_id": "SYN_OUT_010",
+        "start_time": 16.5,
+        "end_time": 20.0,
+        "speaker_id": "Speaker_1",
+        "speaker_role": "patient",
+        "text": "Dạ không. Tôi thấy bình thường, đi bộ tập thể dục cũng không đau ngực.",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 16.5,
+            "end_time": 20.0
+        },
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "version": "v0.1.0"
+    },
+    {
+        "segment_id": "seg_005",
+        "encounter_id": "SYN_OUT_010",
+        "start_time": 20.5,
+        "end_time": 26.0,
+        "speaker_id": "Speaker_0",
+        "speaker_role": "doctor",
+        "text": "À, tôi thấy chú bị sưng nhẹ ở cổ chân. Chú để ý cái này bị lâu chưa?",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 20.5,
+            "end_time": 26.0
+        },
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "version": "v0.1.0"
+    },
+    {
+        "segment_id": "seg_006",
+        "encounter_id": "SYN_OUT_010",
+        "start_time": 26.5,
+        "end_time": 30.0,
+        "speaker_id": "Speaker_1",
+        "speaker_role": "patient",
+        "text": "Cổ chân hơi phù đó hả bác sĩ? Tôi thấy cũng bị vài tuần nay, chiều tối là nó sưng lên chút xíu.",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 26.5,
+            "end_time": 30.0
+        },
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "version": "v0.1.0"
+    },
+    {
+        "segment_id": "seg_007",
+        "encounter_id": "SYN_OUT_010",
+        "start_time": 30.5,
+        "end_time": 38.0,
+        "speaker_id": "Speaker_0",
+        "speaker_role": "doctor",
+        "text": "Đây có thể là tác dụng phụ của thuốc Amlodipine. Chú có bị dị ứng với loại thuốc nào khác không, ví dụ như nhóm ức chế men chuyển?",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 30.5,
+            "end_time": 38.0
+        },
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "version": "v0.1.0"
+    },
+    {
+        "segment_id": "seg_008",
+        "encounter_id": "SYN_OUT_010",
+        "start_time": 38.5,
+        "end_time": 44.0,
+        "speaker_id": "Speaker_1",
+        "speaker_role": "patient",
+        "text": "Tôi không nhớ tên thuốc huyết áp khác, nhưng hồi xưa tôi uống Penicillin là bị nổi mề đay ngứa ngáy khắp người.",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 38.5,
+            "end_time": 44.0
+        },
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "version": "v0.1.0"
+    },
+    {
+        "segment_id": "seg_009",
+        "encounter_id": "SYN_OUT_010",
+        "start_time": 44.5,
+        "end_time": 52.0,
+        "speaker_id": "Speaker_0",
+        "speaker_role": "doctor",
+        "text": "Dạ dị ứng Penicillin thì tôi sẽ ghi chú lại vào hồ sơ. Còn huyết áp thì tôi sẽ đổi sang nhóm Telmisartan để xem chú có đỡ phù chân không nhé.",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 44.5,
+            "end_time": 52.0
+        },
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "version": "v0.1.0"
+    },
+    {
+        "segment_id": "seg_010",
+        "encounter_id": "SYN_OUT_010",
+        "start_time": 52.5,
+        "end_time": 55.0,
+        "speaker_id": "Speaker_1",
+        "speaker_role": "patient",
+        "text": "Cám ơn bác sĩ.",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 52.5,
+            "end_time": 55.0
+        },
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "version": "v0.1.0"
+    }
+]

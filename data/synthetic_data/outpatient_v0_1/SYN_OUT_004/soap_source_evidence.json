@@ -1,0 +1,161 @@
+{
+    "schema_version": "2020-12",
+    "encounter_id": "SYN_OUT_004",
+    "note_id": "note_004",
+    "note_format": "soap_lite",
+    "overall_verification_status": "verified",
+    "unsupported_claim_count": 0,
+    "contradicted_claim_count": 0,
+    "created_at": "2026-06-03T00:00:00+07:00",
+    "created_by": "Duy",
+    "version": "v0.1.0",
+    "claims": [
+        {
+            "claim_id": "claim_001",
+            "section": "S",
+            "claim_text": "Bệnh nhân đau họng và ho nhẹ khoảng 2 ngày",
+            "claim_type": "subjective_history",
+            "source_segment_ids": [
+                "seg_002"
+            ],
+            "source_evidence": [
+                {
+                    "segment_id": "seg_002",
+                    "quote": "Dạ em bị đau họng và ho nhẹ khoảng hai ngày nay.",
+                    "start_time": 3.1,
+                    "end_time": 7.4
+                }
+            ],
+            "evidence_status": "supported",
+            "verification_status": "verified",
+            "risk_if_wrong": "moderate",
+            "requires_doctor_confirmation": false
+        },
+        {
+            "claim_id": "claim_002",
+            "section": "S",
+            "claim_text": "Bệnh nhân chỉ hơi ấm người, chưa ghi nhận sốt cao",
+            "claim_type": "subjective_history",
+            "source_segment_ids": [
+                "seg_004"
+            ],
+            "source_evidence": [
+                {
+                    "segment_id": "seg_004",
+                    "quote": "Dạ em chỉ hơi ấm người, chưa đo thấy sốt cao.",
+                    "start_time": 9.1,
+                    "end_time": 12.8
+                }
+            ],
+            "evidence_status": "supported",
+            "verification_status": "verified",
+            "risk_if_wrong": "moderate",
+            "requires_doctor_confirmation": false
+        },
+        {
+            "claim_id": "claim_003",
+            "section": "S",
+            "claim_text": "Bệnh nhân phủ nhận đau ngực, khó thở",
+            "claim_type": "subjective_history",
+            "source_segment_ids": [
+                "seg_006"
+            ],
+            "source_evidence": [
+                {
+                    "segment_id": "seg_006",
+                    "quote": "Dạ không, em không đau ngực và không khó thở.",
+                    "start_time": 16.1,
+                    "end_time": 20.0
+                }
+            ],
+            "evidence_status": "supported",
+            "verification_status": "verified",
+            "risk_if_wrong": "moderate",
+            "requires_doctor_confirmation": false
+        },
+        {
+            "claim_id": "claim_004",
+            "section": "S",
+            "claim_text": "Bệnh nhân phủ nhận ho ra máu",
+            "claim_type": "subjective_history",
+            "source_segment_ids": [
+                "seg_008"
+            ],
+            "source_evidence": [
+                {
+                    "segment_id": "seg_008",
+                    "quote": "Dạ không, em không ho ra máu. Đờm cũng không nhiều.",
+                    "start_time": 24.1,
+                    "end_time": 28.0
+                }
+            ],
+            "evidence_status": "supported",
+            "verification_status": "verified",
+            "risk_if_wrong": "moderate",
+            "requires_doctor_confirmation": false
+        },
+        {
+            "claim_id": "claim_005",
+            "section": "S",
+            "claim_text": "Chưa từng dị ứng thuốc",
+            "claim_type": "subjective_history",
+            "source_segment_ids": [
+                "seg_010"
+            ],
+            "source_evidence": [
+                {
+                    "segment_id": "seg_010",
+                    "quote": "Dạ em chưa từng dị ứng thuốc.",
+                    "start_time": 31.1,
+                    "end_time": 33.8
+                }
+            ],
+            "evidence_status": "supported",
+            "verification_status": "verified",
+            "risk_if_wrong": "moderate",
+            "requires_doctor_confirmation": false
+        },
+        {
+            "claim_id": "claim_006",
+            "section": "S",
+            "claim_text": "Đã dùng viên ngậm đau họng và chưa uống kháng sinh",
+            "claim_type": "subjective_history",
+            "source_segment_ids": [
+                "seg_012"
+            ],
+            "source_evidence": [
+                {
+                    "segment_id": "seg_012",
+                    "quote": "Em mới ngậm viên ngậm đau họng, chưa uống kháng sinh.",
+                    "start_time": 36.1,
+                    "end_time": 40.0
+                }
+            ],
+            "evidence_status": "supported",
+            "verification_status": "verified",
+            "risk_if_wrong": "moderate",
+            "requires_doctor_confirmation": false
+        },
+        {
+            "claim_id": "claim_007",
+            "section": "P",
+            "claim_text": "Theo dõi thêm, uống đủ nước, súc họng nước muối ấm. Cần quay lại khám ngay nếu sốt cao, khó thở, đau ngực hoặc ho ra máu",
+            "claim_type": "subjective_history",
+            "source_segment_ids": [
+                "seg_013"
+            ],
+            "source_evidence": [
+                {
+                    "segment_id": "seg_013",
+                    "quote": "Hiện tại anh theo dõi thêm, uống đủ nước, súc họng nước muối ấm. Nếu sốt cao, khó thở, đau ngực hoặc ho ra máu thì cần quay lại khám ngay.",
+                    "start_time": 40.1,
+                    "end_time": 59.0
+                }
+            ],
+            "evidence_status": "supported",
+            "verification_status": "verified",
+            "risk_if_wrong": "moderate",
+            "requires_doctor_confirmation": false
+        }
+    ]
+}

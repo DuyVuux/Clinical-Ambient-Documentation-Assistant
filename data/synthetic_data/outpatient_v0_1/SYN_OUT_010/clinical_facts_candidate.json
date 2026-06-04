@@ -1,0 +1,207 @@
+[
+    {
+        "fact_id": "fact_001",
+        "encounter_id": "SYN_OUT_010",
+        "fact_type": "medication",
+        "original_text": "Chú uống thuốc Amlodipine 5mg được 6 tháng rồi nhỉ.",
+        "normalized_text": "Amlodipine 5mg",
+        "assertion": "present",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_001"
+        ],
+        "source_evidence": [
+            {
+                "segment_id": "seg_001",
+                "start_time": 0.0,
+                "end_time": 5.0,
+                "quote": "Chú uống thuốc Amlodipine 5mg được 6 tháng rồi nhỉ."
+            }
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-03T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
+    },
+    {
+        "fact_id": "fact_002",
+        "encounter_id": "SYN_OUT_010",
+        "fact_type": "numeric",
+        "original_text": "Huyết áp đo ở nhà thường loanh quanh 130 trên 80",
+        "normalized_text": "130/80",
+        "assertion": "present",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_002"
+        ],
+        "source_evidence": [
+            {
+                "segment_id": "seg_002",
+                "start_time": 5.5,
+                "end_time": 10.5,
+                "quote": "Huyết áp đo ở nhà thường loanh quanh 130 trên 80"
+            }
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-03T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
+    },
+    {
+        "fact_id": "fact_003",
+        "encounter_id": "SYN_OUT_010",
+        "fact_type": "red_flag",
+        "original_text": "đi bộ tập thể dục cũng không đau ngực",
+        "normalized_text": "đau ngực",
+        "assertion": "absent",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_004"
+        ],
+        "source_evidence": [
+            {
+                "segment_id": "seg_004",
+                "start_time": 16.5,
+                "end_time": 20.0,
+                "quote": "đi bộ tập thể dục cũng không đau ngực"
+            }
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-03T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
+    },
+    {
+        "fact_id": "fact_004",
+        "encounter_id": "SYN_OUT_010",
+        "fact_type": "symptom",
+        "original_text": "chú bị sưng nhẹ ở cổ chân",
+        "normalized_text": "phù cổ chân",
+        "assertion": "present",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_005",
+            "seg_006"
+        ],
+        "source_evidence": [
+            {
+                "segment_id": "seg_005",
+                "start_time": 20.5,
+                "end_time": 26.0,
+                "quote": "chú bị sưng nhẹ ở cổ chân"
+            },
+            {
+                "segment_id": "seg_006",
+                "start_time": 26.5,
+                "end_time": 30.0,
+                "quote": "Cổ chân hơi phù đó hả bác sĩ?"
+            }
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-03T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
+    },
+    {
+        "fact_id": "fact_005",
+        "encounter_id": "SYN_OUT_010",
+        "fact_type": "allergy",
+        "original_text": "tôi uống Penicillin là bị nổi mề đay ngứa ngáy khắp người",
+        "normalized_text": "Penicillin",
+        "assertion": "present",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_008"
+        ],
+        "source_evidence": [
+            {
+                "segment_id": "seg_008",
+                "start_time": 38.5,
+                "end_time": 44.0,
+                "quote": "tôi uống Penicillin là bị nổi mề đay ngứa ngáy khắp người"
+            }
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-03T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
+    },
+    {
+        "fact_id": "fact_006",
+        "encounter_id": "SYN_OUT_010",
+        "fact_type": "plan",
+        "original_text": "đổi sang nhóm Telmisartan để xem chú có đỡ phù chân không nhé",
+        "normalized_text": "đổi thuốc",
+        "assertion": "present",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_009"
+        ],
+        "source_evidence": [
+            {
+                "segment_id": "seg_009",
+                "start_time": 44.5,
+                "end_time": 52.0,
+                "quote": "đổi sang nhóm Telmisartan để xem chú có đỡ phù chân không nhé"
+            }
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-03T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
+    }
+]

@@ -1,0 +1,168 @@
+{
+    "schema_version": "2020-12",
+    "encounter_id": "SYN_OUT_008",
+    "note_id": "note_008",
+    "note_format": "soap_lite",
+    "overall_verification_status": "verified",
+    "unsupported_claim_count": 0,
+    "contradicted_claim_count": 0,
+    "created_at": "2026-06-03T00:00:00+07:00",
+    "created_by": "Duy",
+    "version": "v0.1.0",
+    "claims": [
+        {
+            "claim_id": "claim_001",
+            "section": "S",
+            "claim_text": "Bệnh nhân tái khám định kỳ bệnh đái tháo đường",
+            "claim_type": "subjective_history",
+            "source_segment_ids": [
+                "seg_001"
+            ],
+            "source_evidence": [
+                {
+                    "segment_id": "seg_001",
+                    "start_time": 0.0,
+                    "end_time": 5.0,
+                    "quote": "Hôm nay cô đến tái khám định kỳ bệnh tiểu đường đúng không ạ?"
+                }
+            ],
+            "evidence_status": "supported",
+            "verification_status": "verified",
+            "risk_if_wrong": "moderate",
+            "requires_doctor_confirmation": false
+        },
+        {
+            "claim_id": "claim_002",
+            "section": "S",
+            "claim_text": "Đường huyết lúc đói tự đo ở nhà dao động từ 6.0 đến 7.0 mmol/L",
+            "claim_type": "subjective_history",
+            "source_segment_ids": [
+                "seg_002"
+            ],
+            "source_evidence": [
+                {
+                    "segment_id": "seg_002",
+                    "start_time": 5.5,
+                    "end_time": 10.5,
+                    "quote": "Mấy tuần nay tôi đo đường huyết buổi sáng lúc đói khoảng từ 6 phẩy đến 7 phẩy."
+                }
+            ],
+            "evidence_status": "supported",
+            "verification_status": "verified",
+            "risk_if_wrong": "moderate",
+            "requires_doctor_confirmation": false
+        },
+        {
+            "claim_id": "claim_003",
+            "section": "S",
+            "claim_text": "Đang tuân thủ điều trị tiêm Insulin 15 đơn vị buổi tối và uống Metformin 1 viên buổi sáng",
+            "claim_type": "subjective_history",
+            "source_segment_ids": [
+                "seg_004"
+            ],
+            "source_evidence": [
+                {
+                    "segment_id": "seg_004",
+                    "start_time": 16.5,
+                    "end_time": 23.0,
+                    "quote": "Dạ tôi vẫn tiêm Insulin 15 đơn vị buổi tối, sáng thì uống một viên Metformin. Thuốc men thì tôi dùng đều đặn."
+                }
+            ],
+            "evidence_status": "supported",
+            "verification_status": "verified",
+            "risk_if_wrong": "moderate",
+            "requires_doctor_confirmation": false
+        },
+        {
+            "claim_id": "claim_004",
+            "section": "S",
+            "claim_text": "Bệnh nhân phủ nhận các cơn hạ đường huyết (không mệt lả, không vã mồ hôi)",
+            "claim_type": "subjective_history",
+            "source_segment_ids": [
+                "seg_006"
+            ],
+            "source_evidence": [
+                {
+                    "segment_id": "seg_006",
+                    "start_time": 29.0,
+                    "end_time": 33.5,
+                    "quote": "May quá không bị bác sĩ ơi. Tôi ăn uống cũng kỹ nên không bị tụt đường huyết lần nào."
+                }
+            ],
+            "evidence_status": "supported",
+            "verification_status": "verified",
+            "risk_if_wrong": "moderate",
+            "requires_doctor_confirmation": false
+        },
+        {
+            "claim_id": "claim_005",
+            "section": "A",
+            "claim_text": "Đái tháo đường type 2 đang kiểm soát tốt đường huyết lúc đói",
+            "claim_type": "subjective_history",
+            "source_segment_ids": [
+                "seg_003",
+                "seg_007"
+            ],
+            "source_evidence": [
+                {
+                    "segment_id": "seg_003",
+                    "start_time": 11.0,
+                    "end_time": 16.0,
+                    "quote": "Đường huyết lúc đói tầm 6 đến 7 mmol/L là khá ổn."
+                },
+                {
+                    "segment_id": "seg_007",
+                    "start_time": 34.0,
+                    "end_time": 40.0,
+                    "quote": "Vậy là phác đồ này đang hợp với cô."
+                }
+            ],
+            "evidence_status": "supported",
+            "verification_status": "verified",
+            "risk_if_wrong": "moderate",
+            "requires_doctor_confirmation": false
+        },
+        {
+            "claim_id": "claim_006",
+            "section": "P",
+            "claim_text": "Chỉ định xét nghiệm HbA1c",
+            "claim_type": "subjective_history",
+            "source_segment_ids": [
+                "seg_007"
+            ],
+            "source_evidence": [
+                {
+                    "segment_id": "seg_007",
+                    "start_time": 34.0,
+                    "end_time": 40.0,
+                    "quote": "Hôm nay tôi cho cô đi xét nghiệm HbA1c để xem đường huyết trung bình 3 tháng qua nhé."
+                }
+            ],
+            "evidence_status": "supported",
+            "verification_status": "verified",
+            "risk_if_wrong": "moderate",
+            "requires_doctor_confirmation": false
+        },
+        {
+            "claim_id": "claim_007",
+            "section": "P",
+            "claim_text": "Dự kiến duy trì liều thuốc hiện tại nếu kết quả xét nghiệm ổn định",
+            "claim_type": "subjective_history",
+            "source_segment_ids": [
+                "seg_009"
+            ],
+            "source_evidence": [
+                {
+                    "segment_id": "seg_009",
+                    "start_time": 44.5,
+                    "end_time": 50.0,
+                    "quote": "nếu kết quả tốt thì mình vẫn giữ nguyên liều thuốc hiện tại."
+                }
+            ],
+            "evidence_status": "supported",
+            "verification_status": "verified",
+            "risk_if_wrong": "moderate",
+            "requires_doctor_confirmation": false
+        }
+    ]
+}

@@ -1,0 +1,167 @@
+[
+    {
+        "fact_id": "fact_001",
+        "encounter_id": "SYN_OUT_008",
+        "fact_type": "numeric",
+        "original_text": "tôi đo đường huyết buổi sáng lúc đói khoảng từ 6 phẩy đến 7 phẩy",
+        "normalized_text": "6 đến 7 mmol/L",
+        "assertion": "present",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_002"
+        ],
+        "source_evidence": [
+            {
+                "segment_id": "seg_002",
+                "start_time": 5.5,
+                "end_time": 10.5,
+                "quote": "tôi đo đường huyết buổi sáng lúc đói khoảng từ 6 phẩy đến 7 phẩy"
+            }
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-03T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
+    },
+    {
+        "fact_id": "fact_002",
+        "encounter_id": "SYN_OUT_008",
+        "fact_type": "medication",
+        "original_text": "tôi vẫn tiêm Insulin 15 đơn vị buổi tối",
+        "normalized_text": "Insulin 15 đơn vị",
+        "assertion": "present",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_004"
+        ],
+        "source_evidence": [
+            {
+                "segment_id": "seg_004",
+                "start_time": 16.5,
+                "end_time": 23.0,
+                "quote": "tôi vẫn tiêm Insulin 15 đơn vị buổi tối"
+            }
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-03T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
+    },
+    {
+        "fact_id": "fact_003",
+        "encounter_id": "SYN_OUT_008",
+        "fact_type": "medication",
+        "original_text": "sáng thì uống một viên Metformin",
+        "normalized_text": "Metformin",
+        "assertion": "present",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_004"
+        ],
+        "source_evidence": [
+            {
+                "segment_id": "seg_004",
+                "start_time": 16.5,
+                "end_time": 23.0,
+                "quote": "sáng thì uống một viên Metformin"
+            }
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-03T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
+    },
+    {
+        "fact_id": "fact_004",
+        "encounter_id": "SYN_OUT_008",
+        "fact_type": "red_flag",
+        "original_text": "không bị tụt đường huyết lần nào",
+        "normalized_text": "hạ đường huyết",
+        "assertion": "absent",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_006"
+        ],
+        "source_evidence": [
+            {
+                "segment_id": "seg_006",
+                "start_time": 29.0,
+                "end_time": 33.5,
+                "quote": "không bị tụt đường huyết lần nào"
+            }
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-03T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
+    },
+    {
+        "fact_id": "fact_005",
+        "encounter_id": "SYN_OUT_008",
+        "fact_type": "plan",
+        "original_text": "Hôm nay tôi cho cô đi xét nghiệm HbA1c",
+        "normalized_text": "xét nghiệm HbA1c",
+        "assertion": "present",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_007"
+        ],
+        "source_evidence": [
+            {
+                "segment_id": "seg_007",
+                "start_time": 34.0,
+                "end_time": 40.0,
+                "quote": "Hôm nay tôi cho cô đi xét nghiệm HbA1c"
+            }
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-03T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
+    }
+]

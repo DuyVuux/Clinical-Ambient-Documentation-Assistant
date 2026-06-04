@@ -1,0 +1,182 @@
+{
+    "schema_version": "2020-12",
+    "encounter_id": "SYN_OUT_005",
+    "note_id": "note_005",
+    "note_format": "soap_lite",
+    "overall_verification_status": "verified",
+    "unsupported_claim_count": 0,
+    "contradicted_claim_count": 0,
+    "created_at": "2026-06-03T00:00:00+07:00",
+    "created_by": "Duy",
+    "version": "v0.1.0",
+    "claims": [
+        {
+            "claim_id": "claim_001",
+            "section": "S",
+            "claim_text": "Đau vùng thượng vị từ tối qua",
+            "claim_type": "subjective_history",
+            "source_segment_ids": [
+                "seg_002"
+            ],
+            "source_evidence": [
+                {
+                    "segment_id": "seg_002",
+                    "quote": "Dạ em đau vùng trên rốn, hơi lệch giữa, từ tối qua đến giờ.",
+                    "start_time": 3.1,
+                    "end_time": 8.0
+                }
+            ],
+            "evidence_status": "supported",
+            "verification_status": "verified",
+            "risk_if_wrong": "moderate",
+            "requires_doctor_confirmation": false
+        },
+        {
+            "claim_id": "claim_002",
+            "section": "S",
+            "claim_text": "Buồn nôn nhưng không nôn",
+            "claim_type": "subjective_history",
+            "source_segment_ids": [
+                "seg_004"
+            ],
+            "source_evidence": [
+                {
+                    "segment_id": "seg_004",
+                    "quote": "Dạ em buồn nôn nhưng không nôn.",
+                    "start_time": 11.1,
+                    "end_time": 14.0
+                }
+            ],
+            "evidence_status": "supported",
+            "verification_status": "verified",
+            "risk_if_wrong": "moderate",
+            "requires_doctor_confirmation": false
+        },
+        {
+            "claim_id": "claim_003",
+            "section": "S",
+            "claim_text": "Không nôn ra máu",
+            "claim_type": "subjective_history",
+            "source_segment_ids": [
+                "seg_006"
+            ],
+            "source_evidence": [
+                {
+                    "segment_id": "seg_006",
+                    "quote": "Dạ không, em không nôn ra máu.",
+                    "start_time": 17.1,
+                    "end_time": 20.0
+                }
+            ],
+            "evidence_status": "supported",
+            "verification_status": "verified",
+            "risk_if_wrong": "moderate",
+            "requires_doctor_confirmation": false
+        },
+        {
+            "claim_id": "claim_004",
+            "section": "S",
+            "claim_text": "Không đi ngoài ra máu, không phân đen",
+            "claim_type": "subjective_history",
+            "source_segment_ids": [
+                "seg_008"
+            ],
+            "source_evidence": [
+                {
+                    "segment_id": "seg_008",
+                    "quote": "Dạ không, em không đi ngoài ra máu và cũng không có phân đen.",
+                    "start_time": 24.1,
+                    "end_time": 29.0
+                }
+            ],
+            "evidence_status": "supported",
+            "verification_status": "verified",
+            "risk_if_wrong": "moderate",
+            "requires_doctor_confirmation": false
+        },
+        {
+            "claim_id": "claim_005",
+            "section": "S",
+            "claim_text": "Không sốt, không đau dữ dội",
+            "claim_type": "subjective_history",
+            "source_segment_ids": [
+                "seg_010"
+            ],
+            "source_evidence": [
+                {
+                    "segment_id": "seg_010",
+                    "quote": "Dạ không sốt, đau âm ỉ thôi chứ không dữ dội.",
+                    "start_time": 33.1,
+                    "end_time": 37.0
+                }
+            ],
+            "evidence_status": "supported",
+            "verification_status": "verified",
+            "risk_if_wrong": "moderate",
+            "requires_doctor_confirmation": false
+        },
+        {
+            "claim_id": "claim_006",
+            "section": "S",
+            "claim_text": "Chưa từng dị ứng thuốc",
+            "claim_type": "subjective_history",
+            "source_segment_ids": [
+                "seg_012"
+            ],
+            "source_evidence": [
+                {
+                    "segment_id": "seg_012",
+                    "quote": "Dạ em chưa từng dị ứng thuốc.",
+                    "start_time": 40.1,
+                    "end_time": 43.0
+                }
+            ],
+            "evidence_status": "supported",
+            "verification_status": "verified",
+            "risk_if_wrong": "moderate",
+            "requires_doctor_confirmation": false
+        },
+        {
+            "claim_id": "claim_007",
+            "section": "S",
+            "claim_text": "Chưa dùng thuốc, chỉ uống nước ấm",
+            "claim_type": "subjective_history",
+            "source_segment_ids": [
+                "seg_014"
+            ],
+            "source_evidence": [
+                {
+                    "segment_id": "seg_014",
+                    "quote": "Dạ em chưa uống thuốc gì, chỉ uống nước ấm.",
+                    "start_time": 48.1,
+                    "end_time": 52.0
+                }
+            ],
+            "evidence_status": "supported",
+            "verification_status": "verified",
+            "risk_if_wrong": "moderate",
+            "requires_doctor_confirmation": false
+        },
+        {
+            "claim_id": "claim_008",
+            "section": "P",
+            "claim_text": "Ăn nhẹ, tránh đồ cay chua, tái khám nếu red flags",
+            "claim_type": "subjective_history",
+            "source_segment_ids": [
+                "seg_015"
+            ],
+            "source_evidence": [
+                {
+                    "segment_id": "seg_015",
+                    "quote": "Tạm thời chị ăn nhẹ, tránh đồ cay chua, theo dõi thêm. Nếu đau tăng, nôn ra máu, đi ngoài ra máu, phân đen hoặc choáng thì cần đi khám ngay.",
+                    "start_time": 52.1,
+                    "end_time": 68.0
+                }
+            ],
+            "evidence_status": "supported",
+            "verification_status": "verified",
+            "risk_if_wrong": "moderate",
+            "requires_doctor_confirmation": false
+        }
+    ]
+}

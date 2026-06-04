@@ -1,0 +1,146 @@
+[
+    {
+        "segment_id": "seg_001",
+        "encounter_id": "SYN_OUT_009",
+        "start_time": 0.0,
+        "end_time": 5.0,
+        "speaker_id": "Speaker_0",
+        "speaker_role": "doctor",
+        "text": "Chào chị. Bé nhà mình hôm nay bị sao mà mẹ bế đi khám vậy?",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 0.0,
+            "end_time": 5.0
+        },
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "version": "v0.1.0"
+    },
+    {
+        "segment_id": "seg_002",
+        "encounter_id": "SYN_OUT_009",
+        "start_time": 5.5,
+        "end_time": 10.5,
+        "speaker_id": "Speaker_1",
+        "speaker_role": "patient",
+        "text": "Dạ thưa bác sĩ, cháu nó bị sốt từ tối hôm qua. Sáng nay đo nhiệt độ lên tới 39 độ.",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 5.5,
+            "end_time": 10.5
+        },
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "version": "v0.1.0"
+    },
+    {
+        "segment_id": "seg_003",
+        "encounter_id": "SYN_OUT_009",
+        "start_time": 11.0,
+        "end_time": 16.0,
+        "speaker_id": "Speaker_0",
+        "speaker_role": "doctor",
+        "text": "Bé sốt 39 độ. Mẹ đã cho cháu uống thuốc hạ sốt gì chưa? Cháu được mấy ký rồi?",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 11.0,
+            "end_time": 16.0
+        },
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "version": "v0.1.0"
+    },
+    {
+        "segment_id": "seg_004",
+        "encounter_id": "SYN_OUT_009",
+        "start_time": 16.5,
+        "end_time": 22.0,
+        "speaker_id": "Speaker_1",
+        "speaker_role": "patient",
+        "text": "Cháu 12 ký ạ. Hồi sáng em có cho cháu uống một gói Paracetamol 150mg nhưng mới hạ được một lúc lại sốt lại.",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 16.5,
+            "end_time": 22.0
+        },
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "version": "v0.1.0"
+    },
+    {
+        "segment_id": "seg_005",
+        "encounter_id": "SYN_OUT_009",
+        "start_time": 22.5,
+        "end_time": 27.5,
+        "speaker_id": "Speaker_0",
+        "speaker_role": "doctor",
+        "text": "Bé 12 ký thì uống gói 150mg là đúng liều rồi. Bé có biểu hiện co giật tay chân hay trợn mắt không chị?",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 22.5,
+            "end_time": 27.5
+        },
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "version": "v0.1.0"
+    },
+    {
+        "segment_id": "seg_006",
+        "encounter_id": "SYN_OUT_009",
+        "start_time": 28.0,
+        "end_time": 30.0,
+        "speaker_id": "Speaker_1",
+        "speaker_role": "patient",
+        "text": "Dạ không có co giật ạ, cháu chỉ nằm mệt thôi.",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 28.0,
+            "end_time": 30.0
+        },
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "version": "v0.1.0"
+    },
+    {
+        "segment_id": "seg_007",
+        "encounter_id": "SYN_OUT_009",
+        "start_time": 30.5,
+        "end_time": 36.0,
+        "speaker_id": "Speaker_0",
+        "speaker_role": "doctor",
+        "text": "Để tôi khám họng cho bé. Há miệng ra nào con... À họng bé hơi đỏ. Chắc là viêm họng cấp rồi.",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 30.5,
+            "end_time": 36.0
+        },
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "version": "v0.1.0"
+    },
+    {
+        "segment_id": "seg_008",
+        "encounter_id": "SYN_OUT_009",
+        "start_time": 36.5,
+        "end_time": 39.5,
+        "speaker_id": "Speaker_1",
+        "speaker_role": "patient",
+        "text": "Dạ, hèn chi sáng nay cháu không chịu ăn gì hết.",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 36.5,
+            "end_time": 39.5
+        },
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "version": "v0.1.0"
+    },
+    {
+        "segment_id": "seg_009",
+        "encounter_id": "SYN_OUT_009",
+        "start_time": 40.0,
+        "end_time": 46.0,
+        "speaker_id": "Speaker_0",
+        "speaker_role": "doctor",
+        "text": "Tôi sẽ kê thêm siro ho và vitamin C. Mẹ nhớ cho bé uống nhiều nước và tiếp tục theo dõi nhiệt độ nhé.",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 40.0,
+            "end_time": 46.0
+        },
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "version": "v0.1.0"
+    }
+]

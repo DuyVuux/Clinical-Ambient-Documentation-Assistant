@@ -1,0 +1,266 @@
+[
+    {
+        "fact_id": "fact_001",
+        "encounter_id": "SYN_OUT_009",
+        "fact_type": "symptom",
+        "original_text": "cháu nó bị sốt từ tối hôm qua",
+        "normalized_text": "sốt",
+        "assertion": "present",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_002"
+        ],
+        "source_evidence": [
+            {
+                "segment_id": "seg_002",
+                "start_time": 5.5,
+                "end_time": 10.5,
+                "quote": "cháu nó bị sốt từ tối hôm qua"
+            }
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-03T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
+    },
+    {
+        "fact_id": "fact_002",
+        "encounter_id": "SYN_OUT_009",
+        "fact_type": "numeric",
+        "original_text": "đo nhiệt độ lên tới 39 độ",
+        "normalized_text": "39 độ",
+        "assertion": "present",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_002"
+        ],
+        "source_evidence": [
+            {
+                "segment_id": "seg_002",
+                "start_time": 5.5,
+                "end_time": 10.5,
+                "quote": "đo nhiệt độ lên tới 39 độ"
+            }
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-03T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
+    },
+    {
+        "fact_id": "fact_003",
+        "encounter_id": "SYN_OUT_009",
+        "fact_type": "numeric",
+        "original_text": "Cháu 12 ký ạ",
+        "normalized_text": "12 ký",
+        "assertion": "present",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_004"
+        ],
+        "source_evidence": [
+            {
+                "segment_id": "seg_004",
+                "start_time": 16.5,
+                "end_time": 22.0,
+                "quote": "Cháu 12 ký ạ"
+            }
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-03T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
+    },
+    {
+        "fact_id": "fact_004",
+        "encounter_id": "SYN_OUT_009",
+        "fact_type": "medication",
+        "original_text": "uống một gói Paracetamol 150mg",
+        "normalized_text": "Paracetamol 150mg",
+        "assertion": "present",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_004"
+        ],
+        "source_evidence": [
+            {
+                "segment_id": "seg_004",
+                "start_time": 16.5,
+                "end_time": 22.0,
+                "quote": "uống một gói Paracetamol 150mg"
+            }
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-03T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
+    },
+    {
+        "fact_id": "fact_005",
+        "encounter_id": "SYN_OUT_009",
+        "fact_type": "red_flag",
+        "original_text": "Dạ không có co giật ạ",
+        "normalized_text": "co giật",
+        "assertion": "absent",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_006"
+        ],
+        "source_evidence": [
+            {
+                "segment_id": "seg_006",
+                "start_time": 28.0,
+                "end_time": 30.0,
+                "quote": "Dạ không có co giật ạ"
+            }
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-03T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
+    },
+    {
+        "fact_id": "fact_006",
+        "encounter_id": "SYN_OUT_009",
+        "fact_type": "symptom",
+        "original_text": "À họng bé hơi đỏ",
+        "normalized_text": "họng đỏ",
+        "assertion": "present",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_007"
+        ],
+        "source_evidence": [
+            {
+                "segment_id": "seg_007",
+                "start_time": 30.5,
+                "end_time": 36.0,
+                "quote": "À họng bé hơi đỏ"
+            }
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-03T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
+    },
+    {
+        "fact_id": "fact_007",
+        "encounter_id": "SYN_OUT_009",
+        "fact_type": "symptom",
+        "original_text": "sáng nay cháu không chịu ăn gì hết",
+        "normalized_text": "biếng ăn",
+        "assertion": "present",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_008"
+        ],
+        "source_evidence": [
+            {
+                "segment_id": "seg_008",
+                "start_time": 36.5,
+                "end_time": 39.5,
+                "quote": "sáng nay cháu không chịu ăn gì hết"
+            }
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-03T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
+    },
+    {
+        "fact_id": "fact_008",
+        "encounter_id": "SYN_OUT_009",
+        "fact_type": "plan",
+        "original_text": "kê thêm siro ho",
+        "normalized_text": "siro ho",
+        "assertion": "present",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_009"
+        ],
+        "source_evidence": [
+            {
+                "segment_id": "seg_009",
+                "start_time": 40.0,
+                "end_time": 46.0,
+                "quote": "kê thêm siro ho"
+            }
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-03T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
+    }
+]

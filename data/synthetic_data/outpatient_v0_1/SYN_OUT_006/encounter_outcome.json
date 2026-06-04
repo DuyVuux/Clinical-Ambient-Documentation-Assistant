@@ -1,0 +1,48 @@
+{
+    "schema_version": "2020-12",
+    "outcome_id": "OUT_SYN_OUT_006",
+    "encounter_id": "SYN_OUT_006",
+    "primary_assessment": "Rối loạn thần kinh thực vật / Hồi hộp do căng thẳng",
+    "secondary_assessments": [],
+    "recommended_action": "Theo dõi và điều trị triệu chứng",
+    "follow_up_required": true,
+    "follow_up_timeframe": "PRN (khi có dấu hiệu cảnh báo)",
+    "red_flags_to_watch": [
+        {
+            "red_flag_text": "đau ngực thật sự",
+            "review_status": "pending_review"
+        },
+        {
+            "red_flag_text": "khó thở",
+            "review_status": "pending_review"
+        },
+        {
+            "red_flag_text": "ngất",
+            "review_status": "pending_review"
+        },
+        {
+            "red_flag_text": "vã mồ hôi lạnh",
+            "review_status": "pending_review"
+        },
+        {
+            "red_flag_text": "đau lan tay trái",
+            "review_status": "pending_review"
+        }
+    ],
+    "disposition": "outpatient_follow_up",
+    "source_segment_ids": [
+        "seg_002",
+        "seg_004",
+        "seg_006",
+        "seg_008",
+        "seg_010",
+        "seg_012",
+        "seg_013"
+    ],
+    "doctor_confirmation_status": "pending",
+    "review_status": "pending_review",
+    "safety_critical": false,
+    "created_at": "2026-06-03T00:00:00+07:00",
+    "created_by": "Duy",
+    "version": "v0.1.0"
+}

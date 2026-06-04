@@ -1,0 +1,488 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local-first-clinical-ai.example/schemas/soap_source_evidence.json",
+  "title": "SOAP Source Evidence Schema",
+  "description": "Schema for verifying each SOAP-lite or outpatient note claim against source transcript/audio segments. It supports claim-to-segment traceability, citation verification, and unsupported statement detection.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "encounter_id",
+    "note_id",
+    "note_format",
+    "claims",
+    "overall_verification_status",
+    "created_at",
+    "created_by",
+    "version"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "2020-12"
+    },
+    "encounter_id": {
+      "$ref": "#/$defs/id"
+    },
+    "note_id": {
+      "$ref": "#/$defs/id"
+    },
+    "note_path": {
+      "$ref": "#/$defs/local_path"
+    },
+    "note_format": {
+      "type": "string",
+      "enum": [
+        "soap_lite",
+        "soap",
+        "outpatient_note",
+        "hospital_template",
+        "other"
+      ]
+    },
+    "claims": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/soap_claim"
+      }
+    },
+    "overall_verification_status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "verified",
+        "needs_review",
+        "failed",
+        "partially_verified"
+      ]
+    },
+    "unsupported_claim_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "contradicted_claim_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "high_risk_claim_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "doctor_confirmation_status": {
+      "$ref": "#/$defs/doctor_confirmation_status",
+      "default": "pending"
+    },
+    "review_status": {
+      "$ref": "#/$defs/review_status",
+      "default": "pending_review"
+    },
+    "reviewed_by": {
+      "type": "string",
+      "maxLength": 128
+    },
+    "reviewed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "review_comment": {
+      "type": "string",
+      "maxLength": 2048
+    },
+    "created_by": {
+      "$ref": "#/$defs/created_by"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "model_name": {
+      "type": "string",
+      "maxLength": 128
+    },
+    "model_version": {
+      "type": "string",
+      "maxLength": 128
+    },
+    "prompt_version": {
+      "type": "string",
+      "maxLength": 128
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64
+    },
+    "is_sensitive": {
+      "type": "boolean",
+      "const": true
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "overall_verification_status": {
+            "const": "verified"
+          }
+        },
+        "required": [
+          "overall_verification_status"
+        ]
+      },
+      "then": {
+        "properties": {
+          "unsupported_claim_count": {
+            "const": 0
+          },
+          "contradicted_claim_count": {
+            "const": 0
+          }
+        },
+        "required": [
+          "unsupported_claim_count",
+          "contradicted_claim_count"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "review_status": {
+            "const": "gold"
+          }
+        },
+        "required": [
+          "review_status"
+        ]
+      },
+      "then": {
+        "properties": {
+          "doctor_confirmation_status": {
+            "enum": [
+              "accepted",
+              "edited"
+            ]
+          }
+        },
+        "required": [
+          "reviewed_by",
+          "reviewed_at"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "doctor_confirmation_status": {
+            "enum": [
+              "accepted",
+              "edited"
+            ]
+          }
+        },
+        "required": [
+          "doctor_confirmation_status"
+        ]
+      },
+      "then": {
+        "required": [
+          "reviewed_by",
+          "reviewed_at"
+        ]
+      }
+    }
+  ],
+  "$defs": {
+    "id": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 128,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$"
+    },
+    "created_by": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 128
+    },
+    "speaker_role": {
+      "type": "string",
+      "enum": [
+        "doctor",
+        "patient",
+        "caregiver",
+        "nurse",
+        "interpreter",
+        "admin_staff",
+        "unknown"
+      ]
+    },
+    "doctor_confirmation_status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "accepted",
+        "edited",
+        "rejected",
+        "not_required_for_non_clinical"
+      ]
+    },
+    "review_status": {
+      "type": "string",
+      "enum": [
+        "candidate",
+        "pending_review",
+        "accepted",
+        "edited",
+        "rejected",
+        "gold",
+        "deprecated"
+      ]
+    },
+    "source_evidence_item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "segment_id"
+      ],
+      "properties": {
+        "segment_id": {
+          "$ref": "#/$defs/id"
+        },
+        "quote": {
+          "type": "string",
+          "minLength": 1
+        },
+        "start_time": {
+          "type": "number",
+          "minimum": 0
+        },
+        "end_time": {
+          "type": "number",
+          "minimum": 0
+        },
+        "speaker_role": {
+          "$ref": "#/$defs/speaker_role"
+        },
+        "evidence_note": {
+          "type": "string",
+          "maxLength": 1024
+        }
+      }
+    },
+    "local_path": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^(?!https?://)(?!s3://)(?!gs://).+"
+    },
+    "soap_claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "claim_id",
+        "section",
+        "claim_text",
+        "claim_type",
+        "source_segment_ids",
+        "source_evidence",
+        "evidence_status",
+        "verification_status",
+        "risk_if_wrong",
+        "requires_doctor_confirmation"
+      ],
+      "properties": {
+        "claim_id": {
+          "$ref": "#/$defs/id"
+        },
+        "section": {
+          "type": "string",
+          "enum": [
+            "S",
+            "O",
+            "A",
+            "P",
+            "Other"
+          ]
+        },
+        "claim_text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4096
+        },
+        "claim_type": {
+          "type": "string",
+          "enum": [
+            "subjective_history",
+            "objective_finding",
+            "assessment",
+            "plan",
+            "instruction",
+            "follow_up",
+            "medication",
+            "allergy",
+            "red_flag",
+            "administrative",
+            "other"
+          ]
+        },
+        "source_segment_ids": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/id"
+          }
+        },
+        "source_evidence": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/source_evidence_item"
+          }
+        },
+        "clinical_fact_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/id"
+          }
+        },
+        "encounter_outcome_fields": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "enum": [
+              "primary_assessment",
+              "secondary_assessments",
+              "recommended_action",
+              "follow_up_required",
+              "follow_up_timeframe",
+              "red_flags_to_watch",
+              "disposition"
+            ]
+          }
+        },
+        "evidence_status": {
+          "type": "string",
+          "enum": [
+            "supported",
+            "inferred_from_supported_evidence",
+            "unsupported",
+            "contradicted",
+            "needs_review"
+          ]
+        },
+        "verification_status": {
+          "type": "string",
+          "enum": [
+            "pending",
+            "verified",
+            "failed",
+            "needs_review"
+          ]
+        },
+        "unsupported_reason": {
+          "type": "string",
+          "maxLength": 2048
+        },
+        "risk_if_wrong": {
+          "type": "string",
+          "enum": [
+            "low",
+            "moderate",
+            "high",
+            "critical"
+          ]
+        },
+        "safety_error_group": {
+          "type": "string",
+          "enum": [
+            "negation_error",
+            "allergy_error",
+            "medication_dose_error",
+            "source_attribution_error",
+            "temporal_error",
+            "speaker_attribution_error",
+            "missing_critical_finding",
+            "unit_numeric_error",
+            "none",
+            "other"
+          ]
+        },
+        "requires_doctor_confirmation": {
+          "type": "boolean"
+        },
+        "doctor_confirmation_status": {
+          "$ref": "#/$defs/doctor_confirmation_status",
+          "default": "pending"
+        },
+        "review_status": {
+          "$ref": "#/$defs/review_status",
+          "default": "pending_review"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "evidence_status": {
+                "enum": [
+                  "unsupported",
+                  "contradicted"
+                ]
+              }
+            },
+            "required": [
+              "evidence_status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "verification_status": {
+                "enum": [
+                  "failed",
+                  "needs_review",
+                  "pending"
+                ]
+              }
+            },
+            "required": [
+              "unsupported_reason"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "evidence_status": {
+                "enum": [
+                  "supported",
+                  "inferred_from_supported_evidence"
+                ]
+              }
+            },
+            "required": [
+              "evidence_status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "verification_status": {
+                "enum": [
+                  "verified",
+                  "needs_review",
+                  "pending"
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+    "schema_version": "2020-12",
+    "outcome_id": "OUT_SYN_OUT_010",
+    "encounter_id": "SYN_OUT_010",
+    "primary_assessment": "Tăng huyết áp vô căn (nguyên phát)",
+    "secondary_assessments": [],
+    "recommended_action": "Theo dõi và điều trị",
+    "follow_up_required": true,
+    "follow_up_timeframe": "14",
+    "red_flags_to_watch": [
+        {
+            "red_flag_text": "Huyết áp tăng đột ngột > 180/110 mmHg",
+            "review_status": "pending_review"
+        },
+        {
+            "red_flag_text": "Đau thắt ngực hoặc khó thở",
+            "review_status": "pending_review"
+        }
+    ],
+    "disposition": "outpatient_follow_up",
+    "source_segment_ids": [
+        "seg_001",
+        "seg_002",
+        "seg_004",
+        "seg_005",
+        "seg_006",
+        "seg_008",
+        "seg_009"
+    ],
+    "doctor_confirmation_status": "pending",
+    "review_status": "pending_review",
+    "safety_critical": false,
+    "created_at": "2026-06-03T00:00:00+07:00",
+    "created_by": "Duy",
+    "version": "v0.1.0"
+}

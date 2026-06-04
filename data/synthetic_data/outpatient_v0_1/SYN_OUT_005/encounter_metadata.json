@@ -1,59 +1,39 @@
 {
-  "schema_version": "2020-12",
-  "encounter_id": "SYN_OUT_005",
-  "dataset_id": "A_SYNTHETIC_VI_OUTPATIENT_ENCOUNTERS",
-  "source_type": "synthetic",
-  "setting": "outpatient",
-  "specialty": "gastroenterology",
-  "language": "vi-VN",
-  "audio_path": "synthetic_data/outpatient_v0_1/SYN_OUT_005/audio_not_available.wav",
-  "transcript_path": "synthetic_data/outpatient_v0_1/SYN_OUT_005/transcript_segments_gold.json",
-  "contains_phi": "no_or_simulated",
-  "consent_status": "synthetic",
-  "license_status": "internal",
-  "allowed_use": ["training", "evaluation", "demo"],
-  "review_status": "gold",
-  "version": "v0.1.0",
-  "created_at": "2026-06-02T00:00:00+07:00",
-  "updated_at": "2026-06-02T00:00:00+07:00",
-  "created_by": "Duy",
-  "governance_status": "approved_internal",
-  "retention_policy": "keep_versioned",
-  "access_control_policy": "local_owner_only",
-  "audit_log_required": true,
-  "is_holdout": false,
-  "commercial_pilot_status": "internal_demo_only",
-  "data_sensitivity": "moderate",
-  "audio": {
-    "duration_seconds": 72.0,
-    "format": "unknown",
-    "storage_class": "not_available"
-  },
-  "transcript": {
-    "asr_engine": "none_synthetic_gold",
-    "asr_model_version": "not_applicable",
-    "diarization_engine": "manual_synthetic",
-    "diarization_model_version": "not_applicable",
-    "segment_count": 16,
-    "word_timestamp_available": false
-  },
-  "clinical_note": {
-    "note_format": "soap_lite",
-    "draft_path": "synthetic_data/outpatient_v0_1/SYN_OUT_005/soap_note_gold.md",
-    "reviewed_note_path": "synthetic_data/outpatient_v0_1/SYN_OUT_005/soap_note_gold.md",
-    "doctor_confirmation_status": "accepted",
-    "reviewed_by": "synthetic_reviewer",
-    "reviewed_at": "2026-06-02T00:00:00+07:00"
-  },
-  "provenance": {
-    "capture_device": "not_applicable",
-    "recording_environment": "simulated",
-    "collection_method": "script_generated",
-    "deidentification_status": "not_required_synthetic"
-  },
-  "fhir_mapping_hint": {
-    "target_resource": "Encounter",
-    "future_patient_reference_strategy": "not_applicable_synthetic",
-    "future_document_reference": true
-  }
+    "encounter_id": "SYN_OUT_005",
+    "dataset_id": "A_SYNTHETIC_VI_OUTPATIENT_ENCOUNTERS",
+    "source_type": "synthetic",
+    "setting": "outpatient",
+    "specialty": "internal_medicine",
+    "language": "vi-VN",
+    "audio_path": "not_applicable",
+    "transcript_path": "transcript_segments_gold.json",
+    "contains_phi": "no",
+    "consent_status": "synthetic",
+    "license_status": "internal",
+    "allowed_use": [
+        "training",
+        "evaluation",
+        "demo"
+    ],
+    "review_status": "gold",
+    "version": "v0.1",
+    "created_at": "2026-06-03T00:00:00Z",
+    "updated_at": "2026-06-03T00:00:00Z",
+    "governance_status": "approved_internal",
+    "created_by": "Duy",
+    "retention_policy": "keep_versioned",
+    "access_control_policy": "project_team",
+    "audit_log_required": false,
+    "provenance": {
+        "recording_environment": "simulated",
+        "collection_method": "script_generated",
+        "deidentification_status": "not_required_synthetic"
+    },
+    "clinical_note": {
+        "note_format": "soap",
+        "reviewed_note_path": "soap_note_gold.md",
+        "doctor_confirmation_status": "accepted",
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-03T00:00:00Z"
+    }
 }

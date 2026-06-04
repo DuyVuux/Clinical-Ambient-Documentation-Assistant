@@ -1,0 +1,44 @@
+{
+    "schema_version": "2020-12",
+    "outcome_id": "OUT_SYN_OUT_004",
+    "encounter_id": "SYN_OUT_004",
+    "primary_assessment": "Triệu chứng hô hấp trên mức độ nhẹ",
+    "secondary_assessments": [],
+    "recommended_action": "Theo dõi và điều trị triệu chứng",
+    "follow_up_required": true,
+    "follow_up_timeframe": "PRN (khi có dấu hiệu cảnh báo)",
+    "red_flags_to_watch": [
+        {
+            "red_flag_text": "sốt cao",
+            "review_status": "pending_review"
+        },
+        {
+            "red_flag_text": "khó thở",
+            "review_status": "pending_review"
+        },
+        {
+            "red_flag_text": "đau ngực",
+            "review_status": "pending_review"
+        },
+        {
+            "red_flag_text": "ho ra máu",
+            "review_status": "pending_review"
+        }
+    ],
+    "disposition": "outpatient_follow_up",
+    "source_segment_ids": [
+        "seg_002",
+        "seg_004",
+        "seg_006",
+        "seg_008",
+        "seg_010",
+        "seg_012",
+        "seg_013"
+    ],
+    "doctor_confirmation_status": "pending",
+    "review_status": "pending_review",
+    "safety_critical": false,
+    "created_at": "2026-06-03T00:00:00+07:00",
+    "created_by": "Duy",
+    "version": "v0.1.0"
+}

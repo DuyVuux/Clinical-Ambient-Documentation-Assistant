@@ -1,0 +1,39 @@
+{
+    "schema_version": "2020-12",
+    "outcome_id": "OUT_SYN_OUT_009",
+    "encounter_id": "SYN_OUT_009",
+    "primary_assessment": "Viêm họng cấp, không xác định",
+    "secondary_assessments": [],
+    "recommended_action": "Theo dõi và điều trị",
+    "follow_up_required": true,
+    "follow_up_timeframe": "3",
+    "red_flags_to_watch": [
+        {
+            "red_flag_text": "Sốt cao liên tục không hạ sau khi dùng thuốc",
+            "review_status": "pending_review"
+        },
+        {
+            "red_flag_text": "Co giật",
+            "review_status": "pending_review"
+        },
+        {
+            "red_flag_text": "Bé li bì, khó đánh thức",
+            "review_status": "pending_review"
+        }
+    ],
+    "disposition": "outpatient_follow_up",
+    "source_segment_ids": [
+        "seg_002",
+        "seg_004",
+        "seg_006",
+        "seg_007",
+        "seg_008",
+        "seg_009"
+    ],
+    "doctor_confirmation_status": "pending",
+    "review_status": "pending_review",
+    "safety_critical": false,
+    "created_at": "2026-06-03T00:00:00+07:00",
+    "created_by": "Duy",
+    "version": "v0.1.0"
+}

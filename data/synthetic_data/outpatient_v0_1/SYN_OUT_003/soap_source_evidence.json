@@ -1,0 +1,182 @@
+{
+    "schema_version": "2020-12",
+    "encounter_id": "SYN_OUT_003",
+    "note_id": "note_003",
+    "note_format": "soap_lite",
+    "overall_verification_status": "verified",
+    "unsupported_claim_count": 0,
+    "contradicted_claim_count": 0,
+    "created_at": "2026-06-03T00:00:00+07:00",
+    "created_by": "Duy",
+    "version": "v0.1.0",
+    "claims": [
+        {
+            "claim_id": "claim_001",
+            "section": "S",
+            "claim_text": "",
+            "claim_type": "subjective_history",
+            "source_segment_ids": [
+                "seg_002"
+            ],
+            "source_evidence": [
+                {
+                    "segment_id": "seg_002",
+                    "quote": "Dạ em bị đau đầu khoảng một tuần nay.",
+                    "start_time": 3.3,
+                    "end_time": 6.5
+                }
+            ],
+            "evidence_status": "supported",
+            "verification_status": "verified",
+            "risk_if_wrong": "moderate",
+            "requires_doctor_confirmation": false
+        },
+        {
+            "claim_id": "claim_002",
+            "section": "S",
+            "claim_text": "",
+            "claim_type": "subjective_history",
+            "source_segment_ids": [
+                "seg_004"
+            ],
+            "source_evidence": [
+                {
+                    "segment_id": "seg_004",
+                    "quote": "Em đau âm ỉ hai bên thái dương, không đau dữ dội.",
+                    "start_time": 10.1,
+                    "end_time": 14.4
+                }
+            ],
+            "evidence_status": "supported",
+            "verification_status": "verified",
+            "risk_if_wrong": "moderate",
+            "requires_doctor_confirmation": false
+        },
+        {
+            "claim_id": "claim_003",
+            "section": "S",
+            "claim_text": "",
+            "claim_type": "subjective_history",
+            "source_segment_ids": [
+                "seg_006"
+            ],
+            "source_evidence": [
+                {
+                    "segment_id": "seg_006",
+                    "quote": "Dạ không đột ngột. Nó âm ỉ, lúc tăng lúc giảm.",
+                    "start_time": 18.7,
+                    "end_time": 22.5
+                }
+            ],
+            "evidence_status": "supported",
+            "verification_status": "verified",
+            "risk_if_wrong": "moderate",
+            "requires_doctor_confirmation": false
+        },
+        {
+            "claim_id": "claim_004",
+            "section": "S",
+            "claim_text": "",
+            "claim_type": "subjective_history",
+            "source_segment_ids": [
+                "seg_008"
+            ],
+            "source_evidence": [
+                {
+                    "segment_id": "seg_008",
+                    "quote": "Dạ không, em không nhìn mờ, không nói khó và không yếu liệt tay chân.",
+                    "start_time": 27.2,
+                    "end_time": 32.0
+                }
+            ],
+            "evidence_status": "supported",
+            "verification_status": "verified",
+            "risk_if_wrong": "moderate",
+            "requires_doctor_confirmation": false
+        },
+        {
+            "claim_id": "claim_005",
+            "section": "S",
+            "claim_text": "",
+            "claim_type": "subjective_history",
+            "source_segment_ids": [
+                "seg_010"
+            ],
+            "source_evidence": [
+                {
+                    "segment_id": "seg_010",
+                    "quote": "Em ngủ kém, mỗi đêm chỉ khoảng bốn đến năm tiếng.",
+                    "start_time": 34.4,
+                    "end_time": 38.7
+                }
+            ],
+            "evidence_status": "supported",
+            "verification_status": "verified",
+            "risk_if_wrong": "moderate",
+            "requires_doctor_confirmation": false
+        },
+        {
+            "claim_id": "claim_006",
+            "section": "S",
+            "claim_text": "",
+            "claim_type": "subjective_history",
+            "source_segment_ids": [
+                "seg_012"
+            ],
+            "source_evidence": [
+                {
+                    "segment_id": "seg_012",
+                    "quote": "Dạ em hay uống cà phê buổi tối và làm việc máy tính khá khuya.",
+                    "start_time": 42.1,
+                    "end_time": 46.5
+                }
+            ],
+            "evidence_status": "supported",
+            "verification_status": "verified",
+            "risk_if_wrong": "moderate",
+            "requires_doctor_confirmation": false
+        },
+        {
+            "claim_id": "claim_007",
+            "section": "S",
+            "claim_text": "",
+            "claim_type": "subjective_history",
+            "source_segment_ids": [
+                "seg_014"
+            ],
+            "source_evidence": [
+                {
+                    "segment_id": "seg_014",
+                    "quote": "Dạ không có co giật, không ngất và cũng không phải đau dữ dội nhất.",
+                    "start_time": 52.1,
+                    "end_time": 57.0
+                }
+            ],
+            "evidence_status": "supported",
+            "verification_status": "verified",
+            "risk_if_wrong": "moderate",
+            "requires_doctor_confirmation": false
+        },
+        {
+            "claim_id": "claim_008",
+            "section": "P",
+            "claim_text": "",
+            "claim_type": "subjective_history",
+            "source_segment_ids": [
+                "seg_015"
+            ],
+            "source_evidence": [
+                {
+                    "segment_id": "seg_015",
+                    "quote": "Trước mắt anh nên nghỉ ngơi, giảm cà phê buổi tối, hạn chế thức khuya và theo dõi mức độ đau đầu. Nếu đau đầu dữ dội, yếu liệt, nói khó, nhìn mờ, co giật hoặc ngất thì cần đi khám ngay.",
+                    "start_time": 57.1,
+                    "end_time": 72.8
+                }
+            ],
+            "evidence_status": "supported",
+            "verification_status": "verified",
+            "risk_if_wrong": "moderate",
+            "requires_doctor_confirmation": false
+        }
+    ]
+}

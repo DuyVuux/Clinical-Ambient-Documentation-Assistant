@@ -238,10 +238,12 @@
       ]
     },
     "doctor_confirmation_status": {
+      "description": "Status mapping: pending -> pending; confirmed -> accepted; rejected -> rejected; gold -> accepted|edited.",
       "$ref": "#/$defs/doctor_confirmation_status",
       "default": "pending"
     },
     "review_status": {
+      "description": "Status mapping: pending -> pending_review; confirmed -> accepted; rejected -> rejected; gold -> gold (requires reviewed_by/at).",
       "type": "string",
       "enum": [
         "candidate",
@@ -297,9 +299,67 @@
     "is_sensitive": {
       "type": "boolean",
       "const": true
+    },
+    "medication_details": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "drug_name": { "type": "string" },
+        "status": {
+          "type": "string",
+          "enum": [
+            "currently_taking",
+            "taken_prior_to_visit",
+            "prescribed",
+            "recommended",
+            "stopped",
+            "unknown"
+          ]
+        },
+        "dose_value": { "type": "number" },
+        "dose_unit": { "type": "string" },
+        "dose_text": { "type": "string" },
+        "quantity_value": { "type": "number" },
+        "quantity_unit": { "type": "string" },
+        "quantity_text": { "type": "string" },
+        "route": { "type": "string" },
+        "frequency": { "type": "string" },
+        "timing_text": { "type": "string" },
+        "indication_text": { "type": "string" }
+      }
     }
   },
   "allOf": [
+    {
+      "if": {
+        "required": ["medication_details"]
+      },
+      "then": {
+        "properties": {
+          "fact_type": {
+            "const": "medication"
+          }
+        },
+        "required": ["fact_type"]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "fact_type": {
+            "not": {
+              "const": "medication"
+            }
+          }
+        },
+        "required": ["fact_type"]
+      },
+      "then": {
+        "not": {
+          "required": ["medication_details"]
+        }
+      }
+    },
     {
       "if": {
         "properties": {

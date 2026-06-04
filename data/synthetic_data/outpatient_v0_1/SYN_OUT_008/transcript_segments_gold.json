@@ -1,0 +1,146 @@
+[
+    {
+        "segment_id": "seg_001",
+        "encounter_id": "SYN_OUT_008",
+        "start_time": 0.0,
+        "end_time": 5.0,
+        "speaker_id": "Speaker_0",
+        "speaker_role": "doctor",
+        "text": "Chào cô. Hôm nay cô đến tái khám định kỳ bệnh tiểu đường đúng không ạ? Cô có mang sổ theo dõi đường huyết ở nhà không?",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 0.0,
+            "end_time": 5.0
+        },
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "version": "v0.1.0"
+    },
+    {
+        "segment_id": "seg_002",
+        "encounter_id": "SYN_OUT_008",
+        "start_time": 5.5,
+        "end_time": 10.5,
+        "speaker_id": "Speaker_1",
+        "speaker_role": "patient",
+        "text": "Dạ chào bác sĩ. Sổ của tôi đây. Mấy tuần nay tôi đo đường huyết buổi sáng lúc đói khoảng từ 6 phẩy đến 7 phẩy.",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 5.5,
+            "end_time": 10.5
+        },
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "version": "v0.1.0"
+    },
+    {
+        "segment_id": "seg_003",
+        "encounter_id": "SYN_OUT_008",
+        "start_time": 11.0,
+        "end_time": 16.0,
+        "speaker_id": "Speaker_0",
+        "speaker_role": "doctor",
+        "text": "Đường huyết lúc đói tầm 6 đến 7 mmol/L là khá ổn. Cô vẫn đang tiêm Insulin và uống Metformin như toa cũ chứ?",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 11.0,
+            "end_time": 16.0
+        },
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "version": "v0.1.0"
+    },
+    {
+        "segment_id": "seg_004",
+        "encounter_id": "SYN_OUT_008",
+        "start_time": 16.5,
+        "end_time": 23.0,
+        "speaker_id": "Speaker_1",
+        "speaker_role": "patient",
+        "text": "Dạ tôi vẫn tiêm Insulin 15 đơn vị buổi tối, sáng thì uống một viên Metformin. Thuốc men thì tôi dùng đều đặn.",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 16.5,
+            "end_time": 23.0
+        },
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "version": "v0.1.0"
+    },
+    {
+        "segment_id": "seg_005",
+        "encounter_id": "SYN_OUT_008",
+        "start_time": 23.5,
+        "end_time": 28.5,
+        "speaker_id": "Speaker_0",
+        "speaker_role": "doctor",
+        "text": "Tốt lắm. Trong tháng vừa rồi, có khi nào cô thấy mệt lả, đổ mồ hôi hột, hay bị hạ đường huyết tay chân bủn rủn không?",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 23.5,
+            "end_time": 28.5
+        },
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "version": "v0.1.0"
+    },
+    {
+        "segment_id": "seg_006",
+        "encounter_id": "SYN_OUT_008",
+        "start_time": 29.0,
+        "end_time": 33.5,
+        "speaker_id": "Speaker_1",
+        "speaker_role": "patient",
+        "text": "May quá không bị bác sĩ ơi. Tôi ăn uống cũng kỹ nên không bị tụt đường huyết lần nào.",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 29.0,
+            "end_time": 33.5
+        },
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "version": "v0.1.0"
+    },
+    {
+        "segment_id": "seg_007",
+        "encounter_id": "SYN_OUT_008",
+        "start_time": 34.0,
+        "end_time": 40.0,
+        "speaker_id": "Speaker_0",
+        "speaker_role": "doctor",
+        "text": "Vậy là phác đồ này đang hợp với cô. Hôm nay tôi cho cô đi xét nghiệm HbA1c để xem đường huyết trung bình 3 tháng qua nhé.",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 34.0,
+            "end_time": 40.0
+        },
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "version": "v0.1.0"
+    },
+    {
+        "segment_id": "seg_008",
+        "encounter_id": "SYN_OUT_008",
+        "start_time": 40.5,
+        "end_time": 44.0,
+        "speaker_id": "Speaker_1",
+        "speaker_role": "patient",
+        "text": "Dạ vâng, xét nghiệm xong thì tôi quay lại phòng này gặp bác sĩ phải không?",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 40.5,
+            "end_time": 44.0
+        },
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "version": "v0.1.0"
+    },
+    {
+        "segment_id": "seg_009",
+        "encounter_id": "SYN_OUT_008",
+        "start_time": 44.5,
+        "end_time": 50.0,
+        "speaker_id": "Speaker_0",
+        "speaker_role": "doctor",
+        "text": "Đúng rồi cô, nếu kết quả tốt thì mình vẫn giữ nguyên liều thuốc hiện tại. Cô cầm giấy này qua phòng lấy máu nha.",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 44.5,
+            "end_time": 50.0
+        },
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "version": "v0.1.0"
+    }
+]

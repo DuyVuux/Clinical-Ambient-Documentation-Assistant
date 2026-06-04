@@ -1,0 +1,530 @@
+[
+    {
+        "fact_id": "fact_001",
+        "encounter_id": "SYN_OUT_003",
+        "fact_type": "symptom",
+        "original_text": "Dạ em bị đau đầu khoảng một tuần nay.",
+        "normalized_text": "đau đầu",
+        "assertion": "present",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_002"
+        ],
+        "source_evidence": [
+            {
+                "segment_id": "seg_002",
+                "quote": "Dạ em bị đau đầu khoảng một tuần nay.",
+                "start_time": 3.3,
+                "end_time": 6.5
+            }
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [
+            {
+                "system": "local_mvp_dictionary",
+                "code": "SYM_HEADACHE",
+                "display": "Đau đầu"
+            }
+        ],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-03T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
+    },
+    {
+        "fact_id": "fact_002",
+        "encounter_id": "SYN_OUT_003",
+        "fact_type": "symptom",
+        "original_text": "Em đau âm ỉ hai bên thái dương, không đau dữ dội.",
+        "normalized_text": "đau âm ỉ hai bên thái dương",
+        "assertion": "present",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_004"
+        ],
+        "source_evidence": [
+            {
+                "segment_id": "seg_004",
+                "quote": "Em đau âm ỉ hai bên thái dương, không đau dữ dội.",
+                "start_time": 10.1,
+                "end_time": 14.4
+            }
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [
+            {
+                "system": "local_mvp_dictionary",
+                "code": "SYM_TEMPORAL_HEADACHE",
+                "display": "Đau vùng thái dương"
+            }
+        ],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-03T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
+    },
+    {
+        "fact_id": "fact_003",
+        "encounter_id": "SYN_OUT_003",
+        "fact_type": "red_flag",
+        "original_text": "Em đau âm ỉ hai bên thái dương, không đau dữ dội.",
+        "normalized_text": "đau đầu dữ dội",
+        "assertion": "absent",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_004"
+        ],
+        "source_evidence": [
+            {
+                "segment_id": "seg_004",
+                "quote": "Em đau âm ỉ hai bên thái dương, không đau dữ dội.",
+                "start_time": 10.1,
+                "end_time": 14.4
+            }
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [
+            {
+                "system": "local_mvp_dictionary",
+                "code": "RF_SEVERE_HEADACHE",
+                "display": "Đau đầu dữ dội"
+            }
+        ],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-03T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
+    },
+    {
+        "fact_id": "fact_004",
+        "encounter_id": "SYN_OUT_003",
+        "fact_type": "red_flag",
+        "original_text": "Dạ không đột ngột. Nó âm ỉ, lúc tăng lúc giảm.",
+        "normalized_text": "đau đầu khởi phát đột ngột",
+        "assertion": "absent",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_006"
+        ],
+        "source_evidence": [
+            {
+                "segment_id": "seg_006",
+                "quote": "Dạ không đột ngột. Nó âm ỉ, lúc tăng lúc giảm.",
+                "start_time": 18.7,
+                "end_time": 22.5
+            }
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [
+            {
+                "system": "local_mvp_dictionary",
+                "code": "RF_SUDDEN_ONSET_HEADACHE",
+                "display": "Đau đầu khởi phát đột ngột"
+            }
+        ],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-03T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
+    },
+    {
+        "fact_id": "fact_005",
+        "encounter_id": "SYN_OUT_003",
+        "fact_type": "red_flag",
+        "original_text": "Dạ không, em không nhìn mờ, không nói khó và không yếu liệt tay chân.",
+        "normalized_text": "nhìn mờ",
+        "assertion": "absent",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_008"
+        ],
+        "source_evidence": [
+            {
+                "segment_id": "seg_008",
+                "quote": "Dạ không, em không nhìn mờ, không nói khó và không yếu liệt tay chân.",
+                "start_time": 27.2,
+                "end_time": 32.0
+            }
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [
+            {
+                "system": "local_mvp_dictionary",
+                "code": "RF_BLURRED_VISION",
+                "display": "Nhìn mờ"
+            }
+        ],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-03T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
+    },
+    {
+        "fact_id": "fact_006",
+        "encounter_id": "SYN_OUT_003",
+        "fact_type": "red_flag",
+        "original_text": "Dạ không, em không nhìn mờ, không nói khó và không yếu liệt tay chân.",
+        "normalized_text": "nói khó",
+        "assertion": "absent",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_008"
+        ],
+        "source_evidence": [
+            {
+                "segment_id": "seg_008",
+                "quote": "Dạ không, em không nhìn mờ, không nói khó và không yếu liệt tay chân.",
+                "start_time": 27.2,
+                "end_time": 32.0
+            }
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [
+            {
+                "system": "local_mvp_dictionary",
+                "code": "RF_DYSARTHRIA",
+                "display": "Nói khó"
+            }
+        ],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-03T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
+    },
+    {
+        "fact_id": "fact_007",
+        "encounter_id": "SYN_OUT_003",
+        "fact_type": "red_flag",
+        "original_text": "Dạ không, em không nhìn mờ, không nói khó và không yếu liệt tay chân.",
+        "normalized_text": "yếu liệt tay chân",
+        "assertion": "absent",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_008"
+        ],
+        "source_evidence": [
+            {
+                "segment_id": "seg_008",
+                "quote": "Dạ không, em không nhìn mờ, không nói khó và không yếu liệt tay chân.",
+                "start_time": 27.2,
+                "end_time": 32.0
+            }
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [
+            {
+                "system": "local_mvp_dictionary",
+                "code": "RF_LIMB_WEAKNESS",
+                "display": "Yếu liệt tay chân"
+            }
+        ],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-03T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
+    },
+    {
+        "fact_id": "fact_008",
+        "encounter_id": "SYN_OUT_003",
+        "fact_type": "symptom",
+        "original_text": "Em ngủ kém, mỗi đêm chỉ khoảng bốn đến năm tiếng.",
+        "normalized_text": "ngủ kém",
+        "assertion": "present",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_010"
+        ],
+        "source_evidence": [
+            {
+                "segment_id": "seg_010",
+                "quote": "Em ngủ kém, mỗi đêm chỉ khoảng bốn đến năm tiếng.",
+                "start_time": 34.4,
+                "end_time": 38.7
+            }
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [
+            {
+                "system": "local_mvp_dictionary",
+                "code": "SYM_POOR_SLEEP",
+                "display": "Ngủ kém"
+            }
+        ],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-03T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
+    },
+    {
+        "fact_id": "fact_009",
+        "encounter_id": "SYN_OUT_003",
+        "fact_type": "social_history",
+        "original_text": "Dạ em hay uống cà phê buổi tối và làm việc máy tính khá khuya.",
+        "normalized_text": "uống cà phê buổi tối",
+        "assertion": "present",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_012"
+        ],
+        "source_evidence": [
+            {
+                "segment_id": "seg_012",
+                "quote": "Dạ em hay uống cà phê buổi tối và làm việc máy tính khá khuya.",
+                "start_time": 42.1,
+                "end_time": 46.5
+            }
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-03T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
+    },
+    {
+        "fact_id": "fact_010",
+        "encounter_id": "SYN_OUT_003",
+        "fact_type": "social_history",
+        "original_text": "Dạ em hay uống cà phê buổi tối và làm việc máy tính khá khuya.",
+        "normalized_text": "thức khuya/làm việc máy tính khuya",
+        "assertion": "present",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_012"
+        ],
+        "source_evidence": [
+            {
+                "segment_id": "seg_012",
+                "quote": "Dạ em hay uống cà phê buổi tối và làm việc máy tính khá khuya.",
+                "start_time": 42.1,
+                "end_time": 46.5
+            }
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-03T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
+    },
+    {
+        "fact_id": "fact_011",
+        "encounter_id": "SYN_OUT_003",
+        "fact_type": "red_flag",
+        "original_text": "Dạ không có co giật, không ngất và cũng không phải đau dữ dội nhất.",
+        "normalized_text": "co giật",
+        "assertion": "absent",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_014"
+        ],
+        "source_evidence": [
+            {
+                "segment_id": "seg_014",
+                "quote": "Dạ không có co giật, không ngất và cũng không phải đau dữ dội nhất.",
+                "start_time": 52.1,
+                "end_time": 57.0
+            }
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [
+            {
+                "system": "local_mvp_dictionary",
+                "code": "RF_SEIZURE",
+                "display": "Co giật"
+            }
+        ],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-03T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
+    },
+    {
+        "fact_id": "fact_012",
+        "encounter_id": "SYN_OUT_003",
+        "fact_type": "red_flag",
+        "original_text": "Dạ không có co giật, không ngất và cũng không phải đau dữ dội nhất.",
+        "normalized_text": "ngất",
+        "assertion": "absent",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_014"
+        ],
+        "source_evidence": [
+            {
+                "segment_id": "seg_014",
+                "quote": "Dạ không có co giật, không ngất và cũng không phải đau dữ dội nhất.",
+                "start_time": 52.1,
+                "end_time": 57.0
+            }
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [
+            {
+                "system": "local_mvp_dictionary",
+                "code": "RF_SYNCOPE",
+                "display": "Ngất"
+            }
+        ],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-03T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
+    },
+    {
+        "fact_id": "fact_013",
+        "encounter_id": "SYN_OUT_003",
+        "fact_type": "red_flag",
+        "original_text": "Dạ không có co giật, không ngất và cũng không phải đau dữ dội nhất.",
+        "normalized_text": "đau đầu dữ dội nhất từ trước đến nay",
+        "assertion": "absent",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_014"
+        ],
+        "source_evidence": [
+            {
+                "segment_id": "seg_014",
+                "quote": "Dạ không có co giật, không ngất và cũng không phải đau dữ dội nhất.",
+                "start_time": 52.1,
+                "end_time": 57.0
+            }
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [
+            {
+                "system": "local_mvp_dictionary",
+                "code": "RF_WORST_HEADACHE",
+                "display": "Đau đầu dữ dội nhất từ trước đến nay"
+            }
+        ],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-03T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
+    },
+    {
+        "fact_id": "fact_014",
+        "encounter_id": "SYN_OUT_003",
+        "fact_type": "plan",
+        "original_text": "Trước mắt anh nên nghỉ ngơi, giảm cà phê buổi tối, hạn chế thức khuya và theo dõi mức độ đau đầu. Nếu đau đầu dữ dội, yếu liệt, nói khó, nhìn mờ, co giật hoặc ngất thì cần đi khám ngay.",
+        "normalized_text": "nghỉ ngơi, giảm cà phê buổi tối, hạn chế thức khuya, theo dõi đau đầu, đi khám ngay nếu có dấu hiệu cảnh báo",
+        "assertion": "recommended",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_015"
+        ],
+        "source_evidence": [
+            {
+                "segment_id": "seg_015",
+                "quote": "Trước mắt anh nên nghỉ ngơi, giảm cà phê buổi tối, hạn chế thức khuya và theo dõi mức độ đau đầu. Nếu đau đầu dữ dội, yếu liệt, nói khó, nhìn mờ, co giật hoặc ngất thì cần đi khám ngay.",
+                "start_time": 57.1,
+                "end_time": 72.8
+            }
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-03T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
+    }
+]

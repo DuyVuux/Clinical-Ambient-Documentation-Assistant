@@ -1,39 +1,39 @@
 {
-  "encounter_id": "SYN_OUT_002",
-  "dataset_id": "A_SYNTHETIC_VI_OUTPATIENT_ENCOUNTERS",
-  "source_type": "synthetic",
-  "setting": "outpatient",
-  "specialty": "gastroenterology",
-  "language": "vi-VN",
-  "audio_path": "not_applicable",
-  "transcript_path": "transcript_segments_gold.json",
-  "contains_phi": "no",
-  "consent_status": "synthetic",
-  "license_status": "internal",
-  "allowed_use": [
-    "training",
-    "evaluation",
-    "demo"
-  ],
-  "review_status": "gold",
-  "version": "v0.1",
-  "created_at": "2026-06-02T00:00:00Z",
-  "updated_at": "2026-06-02T00:00:00Z",
-  "governance_status": "approved_internal",
-  "created_by": "Duy",
-  "retention_policy": "keep_versioned",
-  "access_control_policy": "project_team",
-  "audit_log_required": false,
-  "provenance": {
-    "recording_environment": "simulated",
-    "collection_method": "script_generated",
-    "deidentification_status": "not_required_synthetic"
-  },
-  "clinical_note": {
-    "note_format": "soap",
-    "reviewed_note_path": "soap_note_gold.md",
-    "doctor_confirmation_status": "accepted",
-    "reviewed_by": "synthetic_reviewer",
-    "reviewed_at": "2026-06-02T00:00:00Z"
-  }
+    "encounter_id": "SYN_OUT_002",
+    "dataset_id": "A_SYNTHETIC_VI_OUTPATIENT_ENCOUNTERS",
+    "source_type": "synthetic",
+    "setting": "outpatient",
+    "specialty": "internal_medicine",
+    "language": "vi-VN",
+    "audio_path": "not_applicable",
+    "transcript_path": "transcript_segments_gold.json",
+    "contains_phi": "no",
+    "consent_status": "synthetic",
+    "license_status": "internal",
+    "allowed_use": [
+        "training",
+        "evaluation",
+        "demo"
+    ],
+    "review_status": "gold",
+    "version": "v0.1",
+    "created_at": "2026-06-03T00:00:00Z",
+    "updated_at": "2026-06-03T00:00:00Z",
+    "governance_status": "approved_internal",
+    "created_by": "Duy",
+    "retention_policy": "keep_versioned",
+    "access_control_policy": "project_team",
+    "audit_log_required": false,
+    "provenance": {
+        "recording_environment": "simulated",
+        "collection_method": "script_generated",
+        "deidentification_status": "not_required_synthetic"
+    },
+    "clinical_note": {
+        "note_format": "soap",
+        "reviewed_note_path": "soap_note_gold.md",
+        "doctor_confirmation_status": "accepted",
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-03T00:00:00Z"
+    }
 }

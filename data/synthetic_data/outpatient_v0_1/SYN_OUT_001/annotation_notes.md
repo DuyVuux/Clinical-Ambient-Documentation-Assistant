@@ -9,6 +9,19 @@
 - Test source attribution from fact to segment.
 - Test SOAP-lite note generation.
 
+## Required clinical facts
+
+| Fact | Assertion | Source segment | Safety group |
+|---|---|---|---|
+| ho khoảng 3 ngày | present | seg_002 | Temporal Error |
+| ho khan, rát họng | present | seg_004 | Clinical Fact |
+| sốt nhẹ tối qua, khoảng 37.8°C | present | seg_006 | Temporal / Numeric Error |
+| đau ngực | absent | seg_008 | Negation Error |
+| khó thở | absent | seg_008 | Missing Critical Finding / Negation Error |
+| dị ứng thuốc | absent | seg_010 | Allergy Error |
+| paracetamol 500mg, một viên, tối qua | present | seg_012 | Medication Dose / Unit Numeric Error |
+| nghỉ ngơi, uống nước, theo dõi, tái khám nếu nặng | recommended | seg_013 | Plan / Follow-up |
+
 ## Important safety points
 
 1. "Không đau ngực" must be extracted as:

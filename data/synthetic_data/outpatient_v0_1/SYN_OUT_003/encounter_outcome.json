@@ -1,0 +1,53 @@
+{
+    "schema_version": "2020-12",
+    "outcome_id": "OUT_SYN_OUT_003",
+    "encounter_id": "SYN_OUT_003",
+    "primary_assessment": "Đau đầu nghi do căng thẳng, không có dấu hiệu cảnh báo nguy hiểm",
+    "secondary_assessments": [],
+    "recommended_action": "Theo dõi và điều trị triệu chứng",
+    "follow_up_required": true,
+    "follow_up_timeframe": "Đi khám ngay nếu xuất hiện các dấu hiệu cảnh báo nguy hiểm",
+    "red_flags_to_watch": [
+        {
+            "red_flag_text": "đau đầu dữ dội",
+            "review_status": "pending_review"
+        },
+        {
+            "red_flag_text": "yếu liệt",
+            "review_status": "pending_review"
+        },
+        {
+            "red_flag_text": "nói khó",
+            "review_status": "pending_review"
+        },
+        {
+            "red_flag_text": "nhìn mờ",
+            "review_status": "pending_review"
+        },
+        {
+            "red_flag_text": "co giật",
+            "review_status": "pending_review"
+        },
+        {
+            "red_flag_text": "ngất",
+            "review_status": "pending_review"
+        }
+    ],
+    "disposition": "outpatient_follow_up",
+    "source_segment_ids": [
+        "seg_002",
+        "seg_004",
+        "seg_006",
+        "seg_008",
+        "seg_010",
+        "seg_012",
+        "seg_014",
+        "seg_015"
+    ],
+    "doctor_confirmation_status": "pending",
+    "review_status": "pending_review",
+    "safety_critical": false,
+    "created_at": "2026-06-03T00:00:00+07:00",
+    "created_by": "Duy",
+    "version": "v0.1.0"
+}

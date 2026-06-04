@@ -1,0 +1,203 @@
+{
+    "schema_version": "2020-12",
+    "encounter_id": "SYN_OUT_007",
+    "note_id": "note_007",
+    "note_format": "soap_lite",
+    "overall_verification_status": "verified",
+    "unsupported_claim_count": 0,
+    "contradicted_claim_count": 0,
+    "created_at": "2026-06-03T00:00:00+07:00",
+    "created_by": "Duy",
+    "version": "v0.1.0",
+    "claims": [
+        {
+            "claim_id": "claim_001",
+            "section": "S",
+            "claim_text": "Bệnh nhân khó thở, khò khè từ hôm qua",
+            "claim_type": "subjective_history",
+            "source_segment_ids": [
+                "seg_002"
+            ],
+            "source_evidence": [
+                {
+                    "segment_id": "seg_002",
+                    "start_time": 5.0,
+                    "end_time": 10.2,
+                    "quote": "Tự nhiên từ hôm qua tới giờ em bị khó thở lại, thở nghe nó cứ khò khè trong ngực á bác."
+                }
+            ],
+            "evidence_status": "supported",
+            "verification_status": "verified",
+            "risk_if_wrong": "moderate",
+            "requires_doctor_confirmation": false
+        },
+        {
+            "claim_id": "claim_002",
+            "section": "S",
+            "claim_text": "Đã dùng xịt cắt cơn Salbutamol (Ventolin) một nhát tối qua có đáp ứng, nhưng sáng nay khò khè trở lại",
+            "claim_type": "subjective_history",
+            "source_segment_ids": [
+                "seg_004"
+            ],
+            "source_evidence": [
+                {
+                    "segment_id": "seg_004",
+                    "start_time": 14.0,
+                    "end_time": 19.5,
+                    "quote": "tối qua em xịt một nhát Salbutamol thì thấy đỡ, ngủ được. Nhưng sáng nay dậy lại thấy hơi khò khè tiếp."
+                }
+            ],
+            "evidence_status": "supported",
+            "verification_status": "verified",
+            "risk_if_wrong": "moderate",
+            "requires_doctor_confirmation": false
+        },
+        {
+            "claim_id": "claim_003",
+            "section": "S",
+            "claim_text": "Bệnh nhân không có dấu hiệu tím tái",
+            "claim_type": "subjective_history",
+            "source_segment_ids": [
+                "seg_006"
+            ],
+            "source_evidence": [
+                {
+                    "segment_id": "seg_006",
+                    "start_time": 26.0,
+                    "end_time": 29.0,
+                    "quote": "Dạ không tím tái bác ơi."
+                }
+            ],
+            "evidence_status": "supported",
+            "verification_status": "verified",
+            "risk_if_wrong": "moderate",
+            "requires_doctor_confirmation": false
+        },
+        {
+            "claim_id": "claim_004",
+            "section": "S",
+            "claim_text": "Đã bỏ hút thuốc lá",
+            "claim_type": "subjective_history",
+            "source_segment_ids": [
+                "seg_008"
+            ],
+            "source_evidence": [
+                {
+                    "segment_id": "seg_008",
+                    "start_time": 37.5,
+                    "end_time": 42.0,
+                    "quote": "Em bỏ thuốc lá lâu rồi bác."
+                }
+            ],
+            "evidence_status": "supported",
+            "verification_status": "verified",
+            "risk_if_wrong": "moderate",
+            "requires_doctor_confirmation": false
+        },
+        {
+            "claim_id": "claim_005",
+            "section": "S",
+            "claim_text": "Nghi ngờ thay đổi thời tiết lạnh là yếu tố khởi phát",
+            "claim_type": "subjective_history",
+            "source_segment_ids": [
+                "seg_008"
+            ],
+            "source_evidence": [
+                {
+                    "segment_id": "seg_008",
+                    "start_time": 37.5,
+                    "end_time": 42.0,
+                    "quote": "Chắc do mấy bữa nay chuyển trời lạnh nên em dễ bị lên cơn hen."
+                }
+            ],
+            "evidence_status": "supported",
+            "verification_status": "verified",
+            "risk_if_wrong": "moderate",
+            "requires_doctor_confirmation": false
+        },
+        {
+            "claim_id": "claim_006",
+            "section": "O",
+            "claim_text": "Phổi nghe rải rác rít",
+            "claim_type": "subjective_history",
+            "source_segment_ids": [
+                "seg_007"
+            ],
+            "source_evidence": [
+                {
+                    "segment_id": "seg_007",
+                    "start_time": 29.5,
+                    "end_time": 37.0,
+                    "quote": "Phổi anh nghe còn rải rác rít."
+                }
+            ],
+            "evidence_status": "supported",
+            "verification_status": "verified",
+            "risk_if_wrong": "moderate",
+            "requires_doctor_confirmation": false
+        },
+        {
+            "claim_id": "claim_007",
+            "section": "P",
+            "claim_text": "Tiếp tục xịt thuốc dự phòng hàng ngày",
+            "claim_type": "subjective_history",
+            "source_segment_ids": [
+                "seg_009"
+            ],
+            "source_evidence": [
+                {
+                    "segment_id": "seg_009",
+                    "start_time": 42.5,
+                    "end_time": 52.0,
+                    "quote": "Bây giờ anh tiếp tục duy trì xịt thuốc dự phòng hàng ngày nhé."
+                }
+            ],
+            "evidence_status": "supported",
+            "verification_status": "verified",
+            "risk_if_wrong": "moderate",
+            "requires_doctor_confirmation": false
+        },
+        {
+            "claim_id": "claim_008",
+            "section": "P",
+            "claim_text": "Dùng thuốc xịt cắt cơn khi khó thở",
+            "claim_type": "subjective_history",
+            "source_segment_ids": [
+                "seg_009"
+            ],
+            "source_evidence": [
+                {
+                    "segment_id": "seg_009",
+                    "start_time": 42.5,
+                    "end_time": 52.0,
+                    "quote": "Nếu thấy khó thở thì xịt cắt cơn."
+                }
+            ],
+            "evidence_status": "supported",
+            "verification_status": "verified",
+            "risk_if_wrong": "moderate",
+            "requires_doctor_confirmation": false
+        },
+        {
+            "claim_id": "claim_009",
+            "section": "P",
+            "claim_text": "Hẹn tái khám sau 1 tuần",
+            "claim_type": "subjective_history",
+            "source_segment_ids": [
+                "seg_009"
+            ],
+            "source_evidence": [
+                {
+                    "segment_id": "seg_009",
+                    "start_time": 42.5,
+                    "end_time": 52.0,
+                    "quote": "Hẹn tuần sau tái khám."
+                }
+            ],
+            "evidence_status": "supported",
+            "verification_status": "verified",
+            "risk_if_wrong": "moderate",
+            "requires_doctor_confirmation": false
+        }
+    ]
+}

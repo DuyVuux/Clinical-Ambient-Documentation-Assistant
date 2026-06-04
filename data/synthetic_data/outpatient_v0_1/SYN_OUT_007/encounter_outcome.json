@@ -1,0 +1,37 @@
+{
+    "schema_version": "2020-12",
+    "outcome_id": "OUT_SYN_OUT_007",
+    "encounter_id": "SYN_OUT_007",
+    "primary_assessment": "Hen phế quản không xác định, không có biến chứng",
+    "secondary_assessments": [],
+    "recommended_action": "Theo dõi và điều trị",
+    "follow_up_required": true,
+    "follow_up_timeframe": "7",
+    "red_flags_to_watch": [
+        {
+            "red_flag_text": "Khó thở dữ dội không đáp ứng thuốc cắt cơn",
+            "review_status": "pending_review"
+        },
+        {
+            "red_flag_text": "Tím tái môi hoặc đầu ngón tay",
+            "review_status": "pending_review"
+        },
+        {
+            "red_flag_text": "Thở co kéo cơ hô hấp phụ",
+            "review_status": "pending_review"
+        }
+    ],
+    "disposition": "outpatient_follow_up",
+    "source_segment_ids": [
+        "seg_002",
+        "seg_004",
+        "seg_006",
+        "seg_008"
+    ],
+    "doctor_confirmation_status": "pending",
+    "review_status": "pending_review",
+    "safety_critical": false,
+    "created_at": "2026-06-03T00:00:00+07:00",
+    "created_by": "Duy",
+    "version": "v0.1.0"
+}

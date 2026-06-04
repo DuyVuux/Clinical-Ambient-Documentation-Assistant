@@ -1,0 +1,434 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local-first-clinical-ai.example/schemas/encounter_outcome.json",
+  "title": "Encounter Outcome Schema",
+  "description": "Outcome-level target schema for one synthetic/outpatient encounter. It supports summary completeness, recommended action evaluation, follow-up assessment, and source-attributed outcome verification.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "outcome_id",
+    "encounter_id",
+    "primary_assessment",
+    "recommended_action",
+    "follow_up_required",
+    "disposition",
+    "source_segment_ids",
+    "doctor_confirmation_status",
+    "review_status",
+    "safety_critical",
+    "created_at",
+    "created_by",
+    "version"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "2020-12"
+    },
+    "outcome_id": {
+      "$ref": "#/$defs/id"
+    },
+    "encounter_id": {
+      "$ref": "#/$defs/id"
+    },
+    "primary_assessment": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2048
+    },
+    "secondary_assessments": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 1024
+      }
+    },
+    "assessment_status": {
+      "type": "string",
+      "enum": [
+        "working_assessment",
+        "confirmed_by_doctor",
+        "rule_out",
+        "uncertain_requires_review",
+        "not_applicable"
+      ],
+      "default": "working_assessment"
+    },
+    "recommended_action": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4096
+    },
+    "action_category": {
+      "type": "string",
+      "enum": [
+        "self_care",
+        "symptomatic_treatment",
+        "medication_start_or_continue",
+        "medication_adjustment",
+        "lab_or_test_ordered",
+        "imaging_or_procedure_ordered",
+        "specialist_referral",
+        "urgent_referral",
+        "emergency_referral",
+        "follow_up_only",
+        "doctor_review_required",
+        "other"
+      ]
+    },
+    "follow_up_required": {
+      "type": "boolean"
+    },
+    "follow_up_timeframe": {
+      "type": "string",
+      "maxLength": 512
+    },
+    "disposition": {
+      "type": "string",
+      "enum": [
+        "self_care",
+        "outpatient_follow_up",
+        "medication_adjustment",
+        "lab_or_test_ordered",
+        "specialist_referral",
+        "urgent_referral",
+        "emergency_referral",
+        "unclear_requires_doctor_review",
+        "not_applicable"
+      ]
+    },
+    "red_flags_to_watch": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "red_flag_text",
+          "review_status"
+        ],
+        "properties": {
+          "red_flag_text": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512
+          },
+          "source_segment_ids": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "$ref": "#/$defs/id"
+            }
+          },
+          "assertion": {
+            "type": "string",
+            "enum": [
+              "present",
+              "absent",
+              "possible",
+              "conditional",
+              "recommended",
+              "unknown"
+            ]
+          },
+          "review_status": {
+            "$ref": "#/$defs/review_status"
+          }
+        }
+      }
+    },
+    "summary_completeness_targets": {
+      "type": "array",
+      "description": "Key items that a generated summary should include for this encounter.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "target_id",
+          "target_text",
+          "source_segment_ids",
+          "priority"
+        ],
+        "properties": {
+          "target_id": {
+            "$ref": "#/$defs/id"
+          },
+          "target_text": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1024
+          },
+          "source_segment_ids": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "$ref": "#/$defs/id"
+            }
+          },
+          "priority": {
+            "type": "string",
+            "enum": [
+              "low",
+              "medium",
+              "high",
+              "critical"
+            ]
+          },
+          "safety_error_group": {
+            "type": "string",
+            "enum": [
+              "negation_error",
+              "allergy_error",
+              "medication_dose_error",
+              "source_attribution_error",
+              "temporal_error",
+              "speaker_attribution_error",
+              "missing_critical_finding",
+              "unit_numeric_error",
+              "none",
+              "other"
+            ]
+          }
+        }
+      }
+    },
+    "source_segment_ids": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/id"
+      }
+    },
+    "source_evidence": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/source_evidence_item"
+      }
+    },
+    "linked_clinical_fact_ids": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/id"
+      }
+    },
+    "linked_soap_claim_ids": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/id"
+      }
+    },
+    "safety_critical": {
+      "type": "boolean"
+    },
+    "safety_risk_level": {
+      "type": "string",
+      "enum": [
+        "low",
+        "moderate",
+        "high",
+        "critical"
+      ],
+      "default": "moderate"
+    },
+    "doctor_confirmation_status": {
+      "$ref": "#/$defs/doctor_confirmation_status",
+      "default": "pending"
+    },
+    "review_status": {
+      "$ref": "#/$defs/review_status",
+      "default": "pending_review"
+    },
+    "reviewed_by": {
+      "type": "string",
+      "maxLength": 128
+    },
+    "reviewed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "review_comment": {
+      "type": "string",
+      "maxLength": 2048
+    },
+    "created_by": {
+      "$ref": "#/$defs/created_by"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64
+    },
+    "is_sensitive": {
+      "type": "boolean",
+      "const": true
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "review_status": {
+            "const": "gold"
+          }
+        },
+        "required": [
+          "review_status"
+        ]
+      },
+      "then": {
+        "properties": {
+          "doctor_confirmation_status": {
+            "enum": [
+              "accepted",
+              "edited"
+            ]
+          }
+        },
+        "required": [
+          "reviewed_by",
+          "reviewed_at",
+          "source_evidence"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "doctor_confirmation_status": {
+            "enum": [
+              "accepted",
+              "edited"
+            ]
+          }
+        },
+        "required": [
+          "doctor_confirmation_status"
+        ]
+      },
+      "then": {
+        "required": [
+          "reviewed_by",
+          "reviewed_at"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "disposition": {
+            "enum": [
+              "urgent_referral",
+              "emergency_referral"
+            ]
+          }
+        },
+        "required": [
+          "disposition"
+        ]
+      },
+      "then": {
+        "properties": {
+          "safety_critical": {
+            "const": true
+          }
+        },
+        "required": [
+          "red_flags_to_watch"
+        ]
+      }
+    }
+  ],
+  "$defs": {
+    "id": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 128,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$"
+    },
+    "created_by": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 128
+    },
+    "speaker_role": {
+      "type": "string",
+      "enum": [
+        "doctor",
+        "patient",
+        "caregiver",
+        "nurse",
+        "interpreter",
+        "admin_staff",
+        "unknown"
+      ]
+    },
+    "doctor_confirmation_status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "accepted",
+        "edited",
+        "rejected",
+        "not_required_for_non_clinical"
+      ]
+    },
+    "review_status": {
+      "type": "string",
+      "enum": [
+        "candidate",
+        "pending_review",
+        "accepted",
+        "edited",
+        "rejected",
+        "gold",
+        "deprecated"
+      ]
+    },
+    "source_evidence_item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "segment_id"
+      ],
+      "properties": {
+        "segment_id": {
+          "$ref": "#/$defs/id"
+        },
+        "quote": {
+          "type": "string",
+          "minLength": 1
+        },
+        "start_time": {
+          "type": "number",
+          "minimum": 0
+        },
+        "end_time": {
+          "type": "number",
+          "minimum": 0
+        },
+        "speaker_role": {
+          "$ref": "#/$defs/speaker_role"
+        },
+        "evidence_note": {
+          "type": "string",
+          "maxLength": 1024
+        }
+      }
+    }
+  }
+}

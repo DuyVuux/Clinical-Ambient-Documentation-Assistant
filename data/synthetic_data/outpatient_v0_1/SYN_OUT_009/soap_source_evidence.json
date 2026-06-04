@@ -1,0 +1,189 @@
+{
+    "schema_version": "2020-12",
+    "encounter_id": "SYN_OUT_009",
+    "note_id": "note_009",
+    "note_format": "soap_lite",
+    "overall_verification_status": "verified",
+    "unsupported_claim_count": 0,
+    "contradicted_claim_count": 0,
+    "created_at": "2026-06-03T00:00:00+07:00",
+    "created_by": "Duy",
+    "version": "v0.1.0",
+    "claims": [
+        {
+            "claim_id": "claim_001",
+            "section": "S",
+            "claim_text": "Bệnh nhi sốt từ tối qua, sáng nay đo nhiệt độ lên tới 39 độ",
+            "claim_type": "subjective_history",
+            "source_segment_ids": [
+                "seg_002"
+            ],
+            "source_evidence": [
+                {
+                    "segment_id": "seg_002",
+                    "start_time": 5.5,
+                    "end_time": 10.5,
+                    "quote": "Dạ thưa bác sĩ, cháu nó bị sốt từ tối hôm qua. Sáng nay đo nhiệt độ lên tới 39 độ."
+                }
+            ],
+            "evidence_status": "supported",
+            "verification_status": "verified",
+            "risk_if_wrong": "moderate",
+            "requires_doctor_confirmation": false
+        },
+        {
+            "claim_id": "claim_002",
+            "section": "S",
+            "claim_text": "Cân nặng bệnh nhi là 12 kg",
+            "claim_type": "subjective_history",
+            "source_segment_ids": [
+                "seg_004"
+            ],
+            "source_evidence": [
+                {
+                    "segment_id": "seg_004",
+                    "start_time": 16.5,
+                    "end_time": 22.0,
+                    "quote": "Cháu 12 ký ạ."
+                }
+            ],
+            "evidence_status": "supported",
+            "verification_status": "verified",
+            "risk_if_wrong": "moderate",
+            "requires_doctor_confirmation": false
+        },
+        {
+            "claim_id": "claim_003",
+            "section": "S",
+            "claim_text": "Người nhà đã cho dùng 1 gói Paracetamol 150mg nhưng trẻ sốt lại sau khi hạ",
+            "claim_type": "subjective_history",
+            "source_segment_ids": [
+                "seg_004"
+            ],
+            "source_evidence": [
+                {
+                    "segment_id": "seg_004",
+                    "start_time": 16.5,
+                    "end_time": 22.0,
+                    "quote": "Hồi sáng em có cho cháu uống một gói Paracetamol 150mg nhưng mới hạ được một lúc lại sốt lại."
+                }
+            ],
+            "evidence_status": "supported",
+            "verification_status": "verified",
+            "risk_if_wrong": "moderate",
+            "requires_doctor_confirmation": false
+        },
+        {
+            "claim_id": "claim_004",
+            "section": "S",
+            "claim_text": "Không có dấu hiệu co giật, trẻ mệt mỏi và biếng ăn",
+            "claim_type": "subjective_history",
+            "source_segment_ids": [
+                "seg_006",
+                "seg_008"
+            ],
+            "source_evidence": [
+                {
+                    "segment_id": "seg_006",
+                    "start_time": 28.0,
+                    "end_time": 30.0,
+                    "quote": "Dạ không có co giật ạ, cháu chỉ nằm mệt thôi."
+                },
+                {
+                    "segment_id": "seg_008",
+                    "start_time": 36.5,
+                    "end_time": 39.5,
+                    "quote": "Dạ, hèn chi sáng nay cháu không chịu ăn gì hết."
+                }
+            ],
+            "evidence_status": "supported",
+            "verification_status": "verified",
+            "risk_if_wrong": "moderate",
+            "requires_doctor_confirmation": false
+        },
+        {
+            "claim_id": "claim_005",
+            "section": "O",
+            "claim_text": "Khám họng thấy hơi đỏ",
+            "claim_type": "subjective_history",
+            "source_segment_ids": [
+                "seg_007"
+            ],
+            "source_evidence": [
+                {
+                    "segment_id": "seg_007",
+                    "start_time": 30.5,
+                    "end_time": 36.0,
+                    "quote": "À họng bé hơi đỏ."
+                }
+            ],
+            "evidence_status": "supported",
+            "verification_status": "verified",
+            "risk_if_wrong": "moderate",
+            "requires_doctor_confirmation": false
+        },
+        {
+            "claim_id": "claim_006",
+            "section": "A",
+            "claim_text": "Nghi ngờ viêm họng cấp",
+            "claim_type": "subjective_history",
+            "source_segment_ids": [
+                "seg_007"
+            ],
+            "source_evidence": [
+                {
+                    "segment_id": "seg_007",
+                    "start_time": 30.5,
+                    "end_time": 36.0,
+                    "quote": "Chắc là viêm họng cấp rồi."
+                }
+            ],
+            "evidence_status": "supported",
+            "verification_status": "verified",
+            "risk_if_wrong": "moderate",
+            "requires_doctor_confirmation": false
+        },
+        {
+            "claim_id": "claim_007",
+            "section": "P",
+            "claim_text": "Kê thêm siro ho và vitamin C",
+            "claim_type": "subjective_history",
+            "source_segment_ids": [
+                "seg_009"
+            ],
+            "source_evidence": [
+                {
+                    "segment_id": "seg_009",
+                    "start_time": 40.0,
+                    "end_time": 46.0,
+                    "quote": "Tôi sẽ kê thêm siro ho và vitamin C."
+                }
+            ],
+            "evidence_status": "supported",
+            "verification_status": "verified",
+            "risk_if_wrong": "moderate",
+            "requires_doctor_confirmation": false
+        },
+        {
+            "claim_id": "claim_008",
+            "section": "P",
+            "claim_text": "Dặn dò người nhà cho trẻ uống nhiều nước và theo dõi nhiệt độ",
+            "claim_type": "subjective_history",
+            "source_segment_ids": [
+                "seg_009"
+            ],
+            "source_evidence": [
+                {
+                    "segment_id": "seg_009",
+                    "start_time": 40.0,
+                    "end_time": 46.0,
+                    "quote": "Mẹ nhớ cho bé uống nhiều nước và tiếp tục theo dõi nhiệt độ nhé."
+                }
+            ],
+            "evidence_status": "supported",
+            "verification_status": "verified",
+            "risk_if_wrong": "moderate",
+            "requires_doctor_confirmation": false
+        }
+    ]
+}

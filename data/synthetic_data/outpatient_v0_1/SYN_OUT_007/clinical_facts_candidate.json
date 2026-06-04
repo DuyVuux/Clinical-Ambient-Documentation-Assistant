@@ -1,0 +1,233 @@
+[
+    {
+        "fact_id": "fact_001",
+        "encounter_id": "SYN_OUT_007",
+        "fact_type": "symptom",
+        "original_text": "Tự nhiên từ hôm qua tới giờ em bị khó thở lại",
+        "normalized_text": "khó thở",
+        "assertion": "present",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_002"
+        ],
+        "source_evidence": [
+            {
+                "segment_id": "seg_002",
+                "start_time": 5.0,
+                "end_time": 10.2,
+                "quote": "Tự nhiên từ hôm qua tới giờ em bị khó thở lại"
+            }
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-03T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
+    },
+    {
+        "fact_id": "fact_002",
+        "encounter_id": "SYN_OUT_007",
+        "fact_type": "symptom",
+        "original_text": "thở nghe nó cứ khò khè trong ngực á bác",
+        "normalized_text": "khò khè",
+        "assertion": "present",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_002"
+        ],
+        "source_evidence": [
+            {
+                "segment_id": "seg_002",
+                "start_time": 5.0,
+                "end_time": 10.2,
+                "quote": "thở nghe nó cứ khò khè trong ngực á bác"
+            }
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-03T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
+    },
+    {
+        "fact_id": "fact_003",
+        "encounter_id": "SYN_OUT_007",
+        "fact_type": "temporal",
+        "original_text": "từ hôm qua tới giờ",
+        "normalized_text": "1 ngày",
+        "assertion": "present",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_002"
+        ],
+        "source_evidence": [
+            {
+                "segment_id": "seg_002",
+                "start_time": 5.0,
+                "end_time": 10.2,
+                "quote": "từ hôm qua tới giờ"
+            }
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-03T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
+    },
+    {
+        "fact_id": "fact_004",
+        "encounter_id": "SYN_OUT_007",
+        "fact_type": "medication",
+        "original_text": "tối qua em xịt một nhát Salbutamol thì thấy đỡ",
+        "normalized_text": "Salbutamol",
+        "assertion": "present",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_004"
+        ],
+        "source_evidence": [
+            {
+                "segment_id": "seg_004",
+                "start_time": 14.0,
+                "end_time": 19.5,
+                "quote": "tối qua em xịt một nhát Salbutamol thì thấy đỡ"
+            }
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-03T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
+    },
+    {
+        "fact_id": "fact_005",
+        "encounter_id": "SYN_OUT_007",
+        "fact_type": "red_flag",
+        "original_text": "Dạ không tím tái bác ơi",
+        "normalized_text": "tím tái",
+        "assertion": "absent",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_006"
+        ],
+        "source_evidence": [
+            {
+                "segment_id": "seg_006",
+                "start_time": 26.0,
+                "end_time": 29.0,
+                "quote": "Dạ không tím tái bác ơi"
+            }
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-03T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
+    },
+    {
+        "fact_id": "fact_006",
+        "encounter_id": "SYN_OUT_007",
+        "fact_type": "condition",
+        "original_text": "mấy bữa nay chuyển trời lạnh nên em dễ bị lên cơn hen",
+        "normalized_text": "hen",
+        "assertion": "present",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_008"
+        ],
+        "source_evidence": [
+            {
+                "segment_id": "seg_008",
+                "start_time": 37.5,
+                "end_time": 42.0,
+                "quote": "mấy bữa nay chuyển trời lạnh nên em dễ bị lên cơn hen"
+            }
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-03T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
+    },
+    {
+        "fact_id": "fact_007",
+        "encounter_id": "SYN_OUT_007",
+        "fact_type": "social_history",
+        "original_text": "Em bỏ thuốc lá lâu rồi bác",
+        "normalized_text": "hút thuốc",
+        "assertion": "absent",
+        "speaker_role": "patient",
+        "clinical_subject": {
+            "subject_type": "patient",
+            "relationship_to_patient": "self"
+        },
+        "source_segment_ids": [
+            "seg_008"
+        ],
+        "source_evidence": [
+            {
+                "segment_id": "seg_008",
+                "start_time": 37.5,
+                "end_time": 42.0,
+                "quote": "Em bỏ thuốc lá lâu rồi bác"
+            }
+        ],
+        "doctor_confirmation_status": "accepted",
+        "coding_candidates": [],
+        "reviewed_by": "synthetic_reviewer",
+        "reviewed_at": "2026-06-03T00:00:00+07:00",
+        "review_status": "gold",
+        "confidence": 1.0,
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "created_by": "Duy",
+        "version": "v0.1.0"
+    }
+]

@@ -1,0 +1,162 @@
+[
+    {
+        "segment_id": "seg_001",
+        "encounter_id": "SYN_OUT_007",
+        "start_time": 0.0,
+        "end_time": 4.5,
+        "speaker_id": "Speaker_0",
+        "speaker_role": "doctor",
+        "text": "Chào anh. Bữa nay anh quay lại tái khám, thấy trong người sao rồi? Vẫn còn khó thở hả?",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 0.0,
+            "end_time": 4.5
+        },
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "version": "v0.1.0"
+    },
+    {
+        "segment_id": "seg_002",
+        "encounter_id": "SYN_OUT_007",
+        "start_time": 5.0,
+        "end_time": 10.2,
+        "speaker_id": "Speaker_1",
+        "speaker_role": "patient",
+        "text": "Dạ chào bác sĩ. Tự nhiên từ hôm qua tới giờ em bị khó thở lại, thở nghe nó cứ khò khè trong ngực á bác.",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 5.0,
+            "end_time": 10.2
+        },
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "version": "v0.1.0"
+    },
+    {
+        "segment_id": "seg_003",
+        "encounter_id": "SYN_OUT_007",
+        "start_time": 10.5,
+        "end_time": 13.8,
+        "speaker_id": "Speaker_0",
+        "speaker_role": "doctor",
+        "text": "Khó thở từ hôm qua. Vậy anh có xịt thuốc cắt cơn Ventolin không?",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 10.5,
+            "end_time": 13.8
+        },
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "version": "v0.1.0"
+    },
+    {
+        "segment_id": "seg_004",
+        "encounter_id": "SYN_OUT_007",
+        "start_time": 14.0,
+        "end_time": 19.5,
+        "speaker_id": "Speaker_1",
+        "speaker_role": "patient",
+        "text": "Dạ có, tối qua em xịt một nhát Salbutamol thì thấy đỡ, ngủ được. Nhưng sáng nay dậy lại thấy hơi khò khè tiếp.",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 14.0,
+            "end_time": 19.5
+        },
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "version": "v0.1.0"
+    },
+    {
+        "segment_id": "seg_005",
+        "encounter_id": "SYN_OUT_007",
+        "start_time": 20.0,
+        "end_time": 25.5,
+        "speaker_id": "Speaker_0",
+        "speaker_role": "doctor",
+        "text": "Rồi, để tôi nghe phổi cho. Hít sâu vô... Thở ra... Anh có thấy môi hay đầu ngón tay bị tím tái không?",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 20.0,
+            "end_time": 25.5
+        },
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "version": "v0.1.0"
+    },
+    {
+        "segment_id": "seg_006",
+        "encounter_id": "SYN_OUT_007",
+        "start_time": 26.0,
+        "end_time": 29.0,
+        "speaker_id": "Speaker_1",
+        "speaker_role": "patient",
+        "text": "Dạ không tím tái bác ơi. Chỉ mệt với nặng ngực thôi.",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 26.0,
+            "end_time": 29.0
+        },
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "version": "v0.1.0"
+    },
+    {
+        "segment_id": "seg_007",
+        "encounter_id": "SYN_OUT_007",
+        "start_time": 29.5,
+        "end_time": 37.0,
+        "speaker_id": "Speaker_0",
+        "speaker_role": "doctor",
+        "text": "Không tím tái là tốt. Phổi anh nghe còn rải rác rít. Mấy ngày nay có hút thuốc hay ngửi thấy khói bụi gì không?",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 29.5,
+            "end_time": 37.0
+        },
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "version": "v0.1.0"
+    },
+    {
+        "segment_id": "seg_008",
+        "encounter_id": "SYN_OUT_007",
+        "start_time": 37.5,
+        "end_time": 42.0,
+        "speaker_id": "Speaker_1",
+        "speaker_role": "patient",
+        "text": "Em bỏ thuốc lá lâu rồi bác. Chắc do mấy bữa nay chuyển trời lạnh nên em dễ bị lên cơn hen.",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 37.5,
+            "end_time": 42.0
+        },
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "version": "v0.1.0"
+    },
+    {
+        "segment_id": "seg_009",
+        "encounter_id": "SYN_OUT_007",
+        "start_time": 42.5,
+        "end_time": 52.0,
+        "speaker_id": "Speaker_0",
+        "speaker_role": "doctor",
+        "text": "Đúng rồi, thời tiết lạnh dễ kích phát hen. Bây giờ anh tiếp tục duy trì xịt thuốc dự phòng hàng ngày nhé. Nếu thấy khó thở thì xịt cắt cơn. Hẹn tuần sau tái khám.",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 42.5,
+            "end_time": 52.0
+        },
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "version": "v0.1.0"
+    },
+    {
+        "segment_id": "seg_010",
+        "encounter_id": "SYN_OUT_007",
+        "start_time": 52.5,
+        "end_time": 54.0,
+        "speaker_id": "Speaker_1",
+        "speaker_role": "patient",
+        "text": "Dạ, cám ơn bác sĩ.",
+        "confidence": 1.0,
+        "audio_span": {
+            "start_time": 52.5,
+            "end_time": 54.0
+        },
+        "created_at": "2026-06-03T00:00:00+07:00",
+        "version": "v0.1.0"
+    }
+]

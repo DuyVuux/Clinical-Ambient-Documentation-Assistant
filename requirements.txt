@@ -1,0 +1,4 @@
+datasets>=4.8.5
+soundfile>=0.13.1
+pandas>=3.0.3
+kaggle>=2.2.0

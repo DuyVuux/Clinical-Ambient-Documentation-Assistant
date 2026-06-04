@@ -36,3 +36,10 @@ v0.1
 | SYN_OUT_001 | Internal Medicine | Ho, sốt nhẹ, không đau ngực | symptom, negation, medication, allergy |
 | SYN_OUT_002 | Gastroenterology | Đau bụng, tiêu chảy | symptom, negation, duration, plan |
 | SYN_OUT_003 | Neurology/Internal Medicine | Đau đầu, mất ngủ | symptom, negation, red flag |
+| SYN_OUT_004 | Respiratory/Internal Medicine | Viêm đường hô hấp trên mức độ nhẹ | symptom, negation, red flag |
+| SYN_OUT_005 | Gastroenterology | Đau thượng vị nghi do viêm dạ dày | symptom, negation, duration, red flag |
+| SYN_OUT_006 | Cardiology/Internal Medicine | Rối loạn thần kinh thực vật / Hồi hộp do căng thẳng | symptom, negation, social_history, red flag |
+| SYN_OUT_007 | Respiratory/Internal Medicine | Hen phế quản, khò khè, khó thở 1 ngày | symptom, medication, red_flag, negation |
+| SYN_OUT_008 | Endocrinology/Internal Medicine | Đái tháo đường, theo dõi đường huyết | condition, medication, numeric, negation |
+| SYN_OUT_009 | Pediatrics | Trẻ em sốt, mẹ khai bệnh thay | symptom, caregiver, numeric, negation |
+| SYN_OUT_010 | Cardiology/Internal Medicine | Tăng huyết áp tái khám, ghi nhận tiền sử dị ứng | condition, medication, allergy, negation |
