@@ -85,6 +85,11 @@ def ffprobe_duration(path: Path) -> float | None:
 
 
 def main():
+    existing_silver = {}
+    if SILVER_MANIFEST.exists():
+        for row in read_jsonl(SILVER_MANIFEST):
+            existing_silver[row["sample_id"]] = row
+
     silver_rows = []
 
     for dataset_name in DATASETS:
@@ -101,6 +106,11 @@ def main():
 
             clean_audio_name = f"{sample_id}_audio_clean_v0.wav"
             clean_audio_path = SILVER_AUDIO / clean_audio_name
+
+            if sample_id in existing_silver and clean_audio_path.exists():
+                silver_rows.append(existing_silver[sample_id])
+                print(f"[SKIP] {sample_id} already processed -> {clean_audio_path.name}")
+                continue
 
             try:
                 ffmpeg_normalize(raw_audio_path, clean_audio_path)
