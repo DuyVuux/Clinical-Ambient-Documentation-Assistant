@@ -1,22 +1,51 @@
+# ==============================================================================
+# IDEs and Editors
+# ==============================================================================
+.vscode/
+.idea/
+.DS_Store
+
+# ==============================================================================
+# Virtual Environments and Python
+# ==============================================================================
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.pytest_cache/
+
+# ==============================================================================
+# Agent and System Data
+# ==============================================================================
 .agent/
 .gemini/
 .understand-anything/
-report/
 
-__pycache__/
-*.pyc
-.venv/
-.env
-.DS_Store
-
+# ==============================================================================
+# Data Lake & Large Assets
+# ==============================================================================
 data/data_lake/bronze/public/**/raw/
+data/data_lake/bronze/public/common_voice_vi/raw_download/
 data/data_lake/silver/audio_clean/
 *.wav
 *.mp3
 *.flac
 *.m4a
 *.ogg
+*.tar.gz
+*.zip
+*.tgz
 
+# ==============================================================================
+# Reports & Temporary Files
+# ==============================================================================
+report/
+
+# ==============================================================================
+# Research Documents
+# ==============================================================================
 Clinical ASR_NLP Evaluation Metrics and International Benchmarks for Ambient Clinical Documentation Assistants.md
 Future-Proof Canonical Clinical Schema Design.md
 Khung an toàn AI cho tài liệu Y tế.md

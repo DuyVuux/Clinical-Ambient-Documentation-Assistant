@@ -1,0 +1,44 @@
+{
+  "schema_version": "2020-12",
+  "dataset_id": "asr_common_voice_vi_001",
+  "source_name": "Common Voice vi",
+  "source_type": "public",
+  "setting": "other",
+  "specialty": "general_speech",
+  "language": "vi-VN",
+  "audio_path": "data/data_lake/bronze/public/common_voice_vi/raw",
+  "transcript_path": "data/data_lake/bronze/public/common_voice_vi/raw",
+  "contains_phi": "unknown",
+  "consent_status": "not_applicable",
+  "license_status": "clear",
+  "allowed_use": [
+    "training",
+    "evaluation",
+    "reference_only"
+  ],
+  "review_status": "raw",
+  "version": "v0.1.0",
+  "governance_status": "approved_internal",
+  "created_at": "2026-06-04T04:38:10.416263+00:00",
+  "updated_at": "2026-06-04T04:38:10.416276+00:00",
+  "created_by": "Duy",
+  "owner": "Duy",
+  "retention_policy": "keep_versioned",
+  "access_control_policy": "local_owner_only",
+  "audit_log_required": true,
+  "is_holdout": false,
+  "commercial_pilot_status": "needs_review",
+  "target_zone": [
+    "bronze",
+    "silver"
+  ],
+  "data_sensitivity": "moderate",
+  "source_uri": "Mozilla Data Collective Common Voice Scripted Speech Vietnamese",
+  "license_snapshot_path": "data/data_lake/bronze/public/common_voice_vi/license_snapshot/LICENSE_SNAPSHOT.md",
+  "provenance": {
+    "origin": "Mozilla Data Collective",
+    "collection_method": "public_download",
+    "annotation_method": "none",
+    "notes": "Official Common Voice vi dataset. Use only as auxiliary ASR robustness data. Not a clinical dataset. Not Gold. Do not attempt speaker identification."
+  }
+}
