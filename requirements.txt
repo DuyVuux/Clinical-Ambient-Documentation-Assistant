@@ -2,3 +2,8 @@ datasets>=4.8.5
 soundfile>=0.13.1
 pandas>=3.0.3
 kaggle>=2.2.0
+torch>=2.1.0
+transformers
+accelerate
+librosa
+jiwer>=4.0.0
