@@ -3,7 +3,7 @@ import random
 from pathlib import Path
 
 
-PROJECT_ROOT = Path("/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant")
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 DATA_ROOT = PROJECT_ROOT / "data"
 
 INPUT_MANIFEST = DATA_ROOT / "data_lake" / "silver" / "asr_manifests" / "asr_silver_manifest_v0_1.jsonl"

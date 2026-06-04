@@ -6,7 +6,7 @@ import torch
 from transformers import pipeline
 
 
-PROJECT_ROOT = Path("/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant")
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 
 
 def read_jsonl(path):

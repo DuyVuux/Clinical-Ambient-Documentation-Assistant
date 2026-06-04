@@ -17,7 +17,7 @@ while True:
     except OverflowError:
         max_csv_field_size = int(max_csv_field_size / 10)
 
-PROJECT_ROOT = Path("/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant")
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 DATA_ROOT = PROJECT_ROOT / "data"
 
 CV_ROOT = DATA_ROOT / "data_lake" / "bronze" / "public" / "common_voice_vi"

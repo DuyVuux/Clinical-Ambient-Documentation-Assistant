@@ -3,7 +3,7 @@ import argparse
 from pathlib import Path
 
 
-PROJECT_ROOT = Path("/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant")
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 
 
 def read_jsonl(path: Path):

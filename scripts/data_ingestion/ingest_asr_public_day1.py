@@ -11,7 +11,7 @@ import soundfile as sf
 from datasets import load_dataset
 
 
-PROJECT_ROOT = Path("/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant")
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 DATA_ROOT = PROJECT_ROOT / "data"
 BRONZE_ROOT = DATA_ROOT / "data_lake" / "bronze" / "public"
 

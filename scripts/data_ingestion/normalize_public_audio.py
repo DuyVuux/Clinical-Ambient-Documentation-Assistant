@@ -5,7 +5,7 @@ from pathlib import Path
 from datetime import datetime, timezone
 
 
-PROJECT_ROOT = Path("/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant")
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 DATA_ROOT = PROJECT_ROOT / "data"
 
 BRONZE_PUBLIC = DATA_ROOT / "data_lake" / "bronze" / "public"
