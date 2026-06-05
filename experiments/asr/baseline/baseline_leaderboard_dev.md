@@ -23,10 +23,10 @@ Our target:
 
 | Rank | Model | Strict WER | Normalized WER | Strict CER | Normalized CER | Runtime note | Decision |
 |---:|---|---:|---:|---:|---:|---|---|
-| 1 | vinai/PhoWhisper-medium | 24.64% | 21.51% | 19.83% | 19.54% | ~0.42s/sample (T4) | keep |
-| 2 | vinai/PhoWhisper-base | 26.75% | 24.11% | 21.05% | 20.73% | ~0.14s/sample (T4) | keep |
-| 3 | openai/whisper-small | 58.58% | 53.23% | 46.69% | 44.85% | ~0.26s/sample (T4) | drop |
-| 4 | khanhld/chunkformer-ctc-large-vie | TBD | TBD | TBD | TBD | TBD | keep/drop |
+| 1 | khanhld/chunkformer-ctc-large-vie | 12.90% | 12.90% | 12.03% | 12.03% |  ~1.23s/sample | keep |
+| 2 | vinai/PhoWhisper-medium | 24.64% | 21.51% | 19.83% | 19.54% | ~0.42s/sample (T4) | keep |
+| 3 | vinai/PhoWhisper-base | 26.75% | 24.11% | 21.05% | 20.73% | ~0.14s/sample (T4) | keep |
+| 4 | openai/whisper-small | 58.58% | 53.23% | 46.69% | 44.85% | ~0.26s/sample (T4) | drop |
 
 ## Rule
 
