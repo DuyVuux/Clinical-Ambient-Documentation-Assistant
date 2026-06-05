@@ -1,0 +1,119 @@
+{
+  "n_samples": 10,
+  "strict_wer": 0.14901960784313725,
+  "normalized_wer": 0.14901960784313725,
+  "strict_cer": 0.14681440443213298,
+  "normalized_cer": 0.14681440443213298,
+  "items": [
+    {
+      "sample_id": "public_vietmed_0884",
+      "reference_text": "nó sẽ giúp cải thiện được rất là nhiều các triệu chứng của người bệnh parkinson đặc biệt là các cái triệu chứng về vận",
+      "prediction_text": "thích não sâu nó sẽ giúp cải thiện được rất là nhiều các triệu chứng của người bệnh parkinson đặc biệt là các cái triệu chứng",
+      "reference_text_normalized": "nó sẽ giúp cải thiện được rất là nhiều các triệu chứng của người bệnh parkinson đặc biệt là các cái triệu chứng về vận",
+      "prediction_text_normalized": "thích não sâu nó sẽ giúp cải thiện được rất là nhiều các triệu chứng của người bệnh parkinson đặc biệt là các cái triệu chứng",
+      "strict_wer": 0.2,
+      "normalized_wer": 0.2,
+      "strict_cer": 0.17796610169491525,
+      "normalized_cer": 0.17796610169491525
+    },
+    {
+      "sample_id": "public_vietmed_0174",
+      "reference_text": "đấy thì cái câu chuyện là gì ạ đạp xe ở trong nhà nó rất là an toàn nhưng mà đạp xe ra ngoài thì nó lại rất nhiều chuyện",
+      "prediction_text": "ngoài đấy thì cái câu chuyện là gì ạ đạp xe ở trong nhà nó rất là an toàn nhưng mà đạp xe ra ngoài thì nó lại rất nhiều cái",
+      "reference_text_normalized": "đấy thì cái câu chuyện là gì ạ đạp xe ở trong nhà nó rất là an toàn nhưng mà đạp xe ra ngoài thì nó lại rất nhiều chuyện",
+      "prediction_text_normalized": "ngoài đấy thì cái câu chuyện là gì ạ đạp xe ở trong nhà nó rất là an toàn nhưng mà đạp xe ra ngoài thì nó lại rất nhiều cái",
+      "strict_wer": 0.06666666666666667,
+      "normalized_wer": 0.06666666666666667,
+      "strict_cer": 0.09166666666666666,
+      "normalized_cer": 0.09166666666666666
+    },
+    {
+      "sample_id": "public_vietmed_0148",
+      "reference_text": "với tất cả những cái biểu hiện như vậy thì chúng tôi thấy khá là rõ ràng là nó có khả năng là cái biểu hiện của một cái",
+      "prediction_text": "với tất cả những cái biểu hiện như vậy thì chúng tôi thấy khá là rõ ràng là nó có khả năng là cái biểu hiện của nó",
+      "reference_text_normalized": "với tất cả những cái biểu hiện như vậy thì chúng tôi thấy khá là rõ ràng là nó có khả năng là cái biểu hiện của một cái",
+      "prediction_text_normalized": "với tất cả những cái biểu hiện như vậy thì chúng tôi thấy khá là rõ ràng là nó có khả năng là cái biểu hiện của nó",
+      "strict_wer": 0.06896551724137931,
+      "normalized_wer": 0.06896551724137931,
+      "strict_cer": 0.058823529411764705,
+      "normalized_cer": 0.058823529411764705
+    },
+    {
+      "sample_id": "public_vietmed_0420",
+      "reference_text": "tổng đài này thì sẽ có cơ hội nhận được ưu đãi của chương trình vâng và sẽ quay trở lại với chương trình của chúng ta",
+      "prediction_text": "số tổng đài này thì sẽ có cơ hội nhận được ưu đãi của chương trình vâng và sẽ quay trở lại",
+      "reference_text_normalized": "tổng đài này thì sẽ có cơ hội nhận được ưu đãi của chương trình vâng và sẽ quay trở lại với chương trình của chúng ta",
+      "prediction_text_normalized": "số tổng đài này thì sẽ có cơ hội nhận được ưu đãi của chương trình vâng và sẽ quay trở lại",
+      "strict_wer": 0.25925925925925924,
+      "normalized_wer": 0.25925925925925924,
+      "strict_cer": 0.28205128205128205,
+      "normalized_cer": 0.28205128205128205
+    },
+    {
+      "sample_id": "public_vietmed_0962",
+      "reference_text": "bình luận bên dưới các bác sĩ của chương trình sẽ giải đáp câu hỏi của quý vị trong phần cuối của chương trình quý vị nha thưa tất cả quý vị khi nói đến",
+      "prediction_text": "ngay phần bình luận bên dưới các bác sĩ của chương trình sẽ giải đáp câu hỏi của quý vị trong phần cuối của chương trình quý vị nha thưa tất cả quý vị khi nói đến",
+      "reference_text_normalized": "bình luận bên dưới các bác sĩ của chương trình sẽ giải đáp câu hỏi của quý vị trong phần cuối của chương trình quý vị nha thưa tất cả quý vị khi nói đến",
+      "prediction_text_normalized": "ngay phần bình luận bên dưới các bác sĩ của chương trình sẽ giải đáp câu hỏi của quý vị trong phần cuối của chương trình quý vị nha thưa tất cả quý vị khi nói đến",
+      "strict_wer": 0.05714285714285714,
+      "normalized_wer": 0.05714285714285714,
+      "strict_cer": 0.06578947368421052,
+      "normalized_cer": 0.06578947368421052
+    },
+    {
+      "sample_id": "public_vietmed_0149",
+      "reference_text": "biểu hiện tê bì dọc theo tay hoặc là cái vùng cổ vai gáy này cái thứ ba nữa là nó lại còn liên quan đến cái câu chuyện là",
+      "prediction_text": "biểu hiện tê bì dọc theo tay hoặc là cái vùng cổ vai gáy này cái thứ ba nữa là nó lại còn liên quan",
+      "reference_text_normalized": "biểu hiện tê bì dọc theo tay hoặc là cái vùng cổ vai gáy này cái thứ ba nữa là nó lại còn liên quan đến cái câu chuyện là",
+      "prediction_text_normalized": "biểu hiện tê bì dọc theo tay hoặc là cái vùng cổ vai gáy này cái thứ ba nữa là nó lại còn liên quan",
+      "strict_wer": 0.16666666666666666,
+      "normalized_wer": 0.16666666666666666,
+      "strict_cer": 0.18181818181818182,
+      "normalized_cer": 0.18181818181818182
+    },
+    {
+      "sample_id": "public_vietmed_0976",
+      "reference_text": "thôi do đó thì những cái triệu chứng mà nó sẽ giúp cho người bệnh",
+      "prediction_text": "bệnh do đó thì những cái triệu chứng mà nó sẽ giúp cho người bệnh",
+      "reference_text_normalized": "thôi do đó thì những cái triệu chứng mà nó sẽ giúp cho người bệnh",
+      "prediction_text_normalized": "bệnh do đó thì những cái triệu chứng mà nó sẽ giúp cho người bệnh",
+      "strict_wer": 0.06666666666666667,
+      "normalized_wer": 0.06666666666666667,
+      "strict_cer": 0.06153846153846154,
+      "normalized_cer": 0.06153846153846154
+    },
+    {
+      "sample_id": "public_vietmed_0080",
+      "reference_text": "rất là nặng và càng về sau mà mình càng muộn phát hiện thì cái việc điều trị nó lại càng khó khăn hơn chính vì thế cho",
+      "prediction_text": "sẽ rất là nặng và càng về sau mà mình càng muộn phát hiện thì cái việc điều trị nó lại càng khó khăn hơn thì chính cái",
+      "reference_text_normalized": "rất là nặng và càng về sau mà mình càng muộn phát hiện thì cái việc điều trị nó lại càng khó khăn hơn chính vì thế cho",
+      "prediction_text_normalized": "sẽ rất là nặng và càng về sau mà mình càng muộn phát hiện thì cái việc điều trị nó lại càng khó khăn hơn thì chính cái",
+      "strict_wer": 0.17857142857142858,
+      "normalized_wer": 0.17857142857142858,
+      "strict_cer": 0.11864406779661017,
+      "normalized_cer": 0.11864406779661017
+    },
+    {
+      "sample_id": "public_vietmed_0776",
+      "reference_text": "của mình nó có đảm bảo được cái việc như những tài liệu người ta nói không",
+      "prediction_text": "nơi điều trị của mình nó có đảm bảo được cái việc mà như những tài liệu người ta nói hay không tất",
+      "reference_text_normalized": "của mình nó có đảm bảo được cái việc như những tài liệu người ta nói không",
+      "prediction_text_normalized": "nơi điều trị của mình nó có đảm bảo được cái việc mà như những tài liệu người ta nói hay không tất",
+      "strict_wer": 0.35294117647058826,
+      "normalized_wer": 0.35294117647058826,
+      "strict_cer": 0.32432432432432434,
+      "normalized_cer": 0.32432432432432434
+    },
+    {
+      "sample_id": "public_vietmed_0303",
+      "reference_text": "như thế này và chúng tôi khuyên là bác cũng nên đi thăm khám với các cái bác sĩ",
+      "prediction_text": "cái việc như thế này và chúng tôi khuyên là bác cũng nên đi thăm khám với các cái sĩ",
+      "reference_text_normalized": "như thế này và chúng tôi khuyên là bác cũng nên đi thăm khám với các cái bác sĩ",
+      "prediction_text_normalized": "cái việc như thế này và chúng tôi khuyên là bác cũng nên đi thăm khám với các cái sĩ",
+      "strict_wer": 0.15789473684210525,
+      "normalized_wer": 0.15789473684210525,
+      "strict_cer": 0.16455696202531644,
+      "normalized_cer": 0.16455696202531644
+    }
+  ]
+}

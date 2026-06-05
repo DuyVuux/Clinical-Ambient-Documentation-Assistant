@@ -3,8 +3,8 @@ soundfile>=0.13.1
 pandas>=3.0.3
 kaggle>=2.2.0
 torch>=2.1.0
-transformers
-accelerate
-librosa
+transformers>=4.40.0
+accelerate>=0.28.0
+librosa>=0.10.0
 jiwer>=4.0.0
-chunkformer
+chunkformer>=1.2.0
