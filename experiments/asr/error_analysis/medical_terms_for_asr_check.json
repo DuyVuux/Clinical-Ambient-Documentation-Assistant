@@ -1,0 +1,75 @@
+{
+  "negation": [
+    "không",
+    "chưa",
+    "phủ nhận",
+    "không ghi nhận",
+    "chưa từng",
+    "không có"
+  ],
+  "symptom": [
+    "ho",
+    "sốt",
+    "đau ngực",
+    "khó thở",
+    "đau bụng",
+    "tiêu chảy",
+    "đau đầu",
+    "mất ngủ",
+    "rát họng",
+    "buồn nôn",
+    "nôn",
+    "chóng mặt",
+    "mệt mỏi"
+  ],
+  "medication": [
+    "paracetamol",
+    "amoxicillin",
+    "amlodipine",
+    "insulin",
+    "omeprazole",
+    "ibuprofen",
+    "metformin"
+  ],
+  "allergy": [
+    "dị ứng",
+    "dị ứng thuốc",
+    "dị ứng penicillin",
+    "dị ứng hải sản",
+    "chưa từng dị ứng thuốc",
+    "không dị ứng thuốc"
+  ],
+  "dose_unit": [
+    "mg",
+    "miligam",
+    "ml",
+    "viên",
+    "gói",
+    "lần",
+    "ngày",
+    "mỗi ngày",
+    "mỗi sáng",
+    "mỗi tối"
+  ],
+  "number": [
+    "37.8",
+    "37 độ 8",
+    "ba mươi bảy độ tám",
+    "500",
+    "năm trăm",
+    "3 ngày",
+    "ba ngày",
+    "một viên",
+    "hai viên"
+  ],
+  "red_flag": [
+    "đau ngực",
+    "khó thở",
+    "sốt cao",
+    "spo2",
+    "nôn ra máu",
+    "đi ngoài ra máu",
+    "lú lẫn",
+    "yếu liệt"
+  ]
+}
