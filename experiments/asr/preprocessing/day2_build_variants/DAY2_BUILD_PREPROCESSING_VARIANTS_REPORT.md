@@ -19,16 +19,6 @@ Create versioned audio preprocessing variants for VietMed dev set.
 - Each variant has its own manifest.
 - Each preprocessed file has checksum metadata.
 
-## Day 2 Notes
-
-VAD-padding variants (`p03`, `p04`, `p05`) were prioritized because Day 1 showed:
-- Dev edge_loss_risk: 29/200
-- Train edge_loss_risk: 110/600
-- too_quiet: 0
-- clipping_detected: 0
-
-Therefore, this run focuses on boundary context rather than global loudness normalization.
-
 ## Next step
 
 Run `audit_audio_quality.py` on each variant manifest in Day 3.

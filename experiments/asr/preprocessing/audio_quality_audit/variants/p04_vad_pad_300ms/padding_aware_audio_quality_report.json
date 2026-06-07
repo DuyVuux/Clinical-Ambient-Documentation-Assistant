@@ -1,0 +1,813 @@
+{
+  "manifest": "/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/asr_manifests/preprocessing_variants/vietmed_dev_p04_vad_pad_300ms.jsonl",
+  "summary": {
+    "n_samples": 0,
+    "speech_edge_loss_risk": 0,
+    "speech_edge_loss_risk_rate": null,
+    "speech_min_edge_to_middle_ratio_mean": null,
+    "speech_min_edge_to_middle_ratio_median": null
+  },
+  "items": [],
+  "failed": [
+    {
+      "sample_id": "public_vietmed_0884",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0884_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0174",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0174_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0148",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0148_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0420",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0420_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0962",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0962_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0149",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0149_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0976",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0976_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0080",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0080_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0776",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0776_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0303",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0303_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0996",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0996_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0526",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0526_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0775",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0775_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0232",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0232_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0626",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0626_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0801",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0801_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0562",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0562_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0510",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0510_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0841",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0841_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0495",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0495_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0120",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0120_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0478",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0478_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0145",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0145_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0030",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0030_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0911",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0911_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0122",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0122_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0606",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0606_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0062",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0062_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0872",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0872_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0573",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0573_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0006",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0006_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0927",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0927_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0640",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0640_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0440",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0440_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0730",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0730_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0194",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0194_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0753",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0753_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0627",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0627_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0572",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0572_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0018",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0018_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0743",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0743_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0915",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0915_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0511",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0511_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0574",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0574_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0139",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0139_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0192",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0192_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0005",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0005_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0444",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0444_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0021",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0021_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0214",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0214_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0065",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0065_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0412",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0412_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0302",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0302_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0334",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0334_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0193",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0193_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0665",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0665_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0263",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0263_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0648",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0648_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0811",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0811_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0233",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0233_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0796",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0796_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0682",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0682_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0805",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0805_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0483",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0483_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0361",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0361_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0839",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0839_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0237",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0237_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0628",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0628_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0958",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0958_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0583",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0583_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0273",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0273_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0202",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0202_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0014",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0014_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0428",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0428_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0240",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0240_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0085",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0085_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0533",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0533_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0173",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0173_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0290",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0290_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0486",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0486_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0330",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0330_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0684",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0684_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0319",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0319_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0455",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0455_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0250",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0250_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0847",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0847_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0280",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0280_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0456",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0456_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0902",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0902_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0762",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0762_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0548",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0548_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0181",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0181_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0558",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0558_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0629",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0629_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0424",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0424_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0844",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0844_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0011",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0011_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0200",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0200_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0426",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0426_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0535",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0535_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0032",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0032_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0580",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0580_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0405",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0405_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0278",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0278_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0445",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0445_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0772",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0772_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0373",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0373_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0723",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0723_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0401",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0401_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0079",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0079_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0538",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0538_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0576",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0576_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0549",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0549_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0711",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0711_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0042",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0042_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0886",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0886_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0633",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0633_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0859",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0859_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0140",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0140_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0386",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0386_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0457",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0457_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0933",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0933_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0814",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0814_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0141",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0141_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0625",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0625_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0321",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0321_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0709",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0709_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0458",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0458_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0874",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0874_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0327",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0327_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0127",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0127_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0133",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0133_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0818",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0818_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0398",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0398_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0916",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0916_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0994",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0994_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0416",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0416_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0596",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0596_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0259",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0259_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0314",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0314_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0410",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0410_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0163",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0163_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0305",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0305_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0287",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0287_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0645",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0645_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0636",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0636_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0354",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0354_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0069",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0069_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0679",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0679_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0834",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0834_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0936",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0936_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0680",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0680_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0720",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0720_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0238",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0238_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0266",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0266_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0091",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0091_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0836",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0836_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0863",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0863_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0055",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0055_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0658",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0658_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0944",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0944_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0407",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0407_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0381",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0381_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0125",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0125_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0492",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0492_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0803",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0803_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0901",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0901_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0431",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0431_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0946",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0946_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0704",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0704_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0295",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0295_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0879",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0879_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0213",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0213_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0919",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0919_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0038",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0038_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0861",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0861_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0899",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0899_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0126",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0126_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0024",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0024_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0840",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0840_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0977",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0977_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0102",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0102_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0116",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0116_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0436",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0436_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0951",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0951_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0121",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0121_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0385",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0385_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0048",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0048_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0172",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0172_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0318",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0318_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0325",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0325_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0881",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0881_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0264",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0264_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0146",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0146_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0044",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0044_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0505",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0505_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0087",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0087_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0377",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0377_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0531",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0531_p04_vad_pad_300ms.wav': System error."
+    },
+    {
+      "sample_id": "public_vietmed_0985",
+      "error": "Error opening '/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p04_vad_pad_300ms/public_vietmed_0985_p04_vad_pad_300ms.wav': System error."
+    }
+  ]
+}

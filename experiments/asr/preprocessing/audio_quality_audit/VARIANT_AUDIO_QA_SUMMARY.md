@@ -29,6 +29,22 @@ This table compares the old metric (file edge) against the new metric (speech ed
 | p04_vad_pad_300ms | 200 | 39 | 0 | 0 | 0 | 0 | 0 | 6.0023 | 0.667 | drop_edge_worse |
 | p05_vad_pad_500ms | 200 | 35 | 0 | 0 | 0 | 0 | 0 | 6.0266 | 0.6807 | drop_edge_worse |
 
+**Định nghĩa metric:**
+- `file_edge_loss_risk` = metric cũ, đo đầu/cuối file
+- `speech_edge_loss_risk` = metric mới, bỏ qua phần silence padding rồi mới đo đầu/cuối speech
+
+**Ý tưởng metric mới:**
+
+Với mỗi audio:
+
+1. Tìm `speech_start` bằng ngưỡng năng lượng frame RMS.
+2. Tìm `speech_end`.
+3. Đo 300ms đầu tiên sau `speech_start`.
+4. Đo 300ms cuối cùng trước `speech_end`.
+5. So với middle speech region.
+
+Như vậy nếu bạn thêm 300ms silence ở đầu, metric mới sẽ không phạt phần silence đó.
+
 ## Interpretation rules
 
 - Keep a variant if `edge_loss_risk` decreases and no new serious warning appears.

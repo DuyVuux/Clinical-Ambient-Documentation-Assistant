@@ -2,7 +2,7 @@
   {
     "variant": "original",
     "missing_report": false,
-    "report_path": "/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/experiments/asr/preprocessing/audio_quality_audit/variants/original/audio_quality_report.json",
+    "report_path": "experiments/asr/preprocessing/audio_quality_audit/variants/original/audio_quality_report.json",
     "n_samples": 200,
     "warnings": {
       "edge_loss_risk": 29,
@@ -38,12 +38,13 @@
       "last_300ms_db": -24.3013,
       "middle_db": -23.6086,
       "min_edge_to_middle_ratio": 0.7114
-    }
+    },
+    "speech_edge_loss_risk": null
   },
   {
     "variant": "p03_vad_pad_200ms",
     "missing_report": false,
-    "report_path": "/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/experiments/asr/preprocessing/audio_quality_audit/variants/p03_vad_pad_200ms/audio_quality_report.json",
+    "report_path": "experiments/asr/preprocessing/audio_quality_audit/variants/p03_vad_pad_200ms/audio_quality_report.json",
     "n_samples": 200,
     "warnings": {
       "edge_loss_risk": 27,
@@ -79,12 +80,13 @@
       "last_300ms_db": -24.5338,
       "middle_db": -23.5638,
       "min_edge_to_middle_ratio": 0.7169
-    }
+    },
+    "speech_edge_loss_risk": null
   },
   {
     "variant": "p04_vad_pad_300ms",
     "missing_report": false,
-    "report_path": "/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/experiments/asr/preprocessing/audio_quality_audit/variants/p04_vad_pad_300ms/audio_quality_report.json",
+    "report_path": "experiments/asr/preprocessing/audio_quality_audit/variants/p04_vad_pad_300ms/audio_quality_report.json",
     "n_samples": 200,
     "warnings": {
       "edge_loss_risk": 39,
@@ -120,12 +122,13 @@
       "last_300ms_db": -24.474,
       "middle_db": -23.5767,
       "min_edge_to_middle_ratio": 0.6935
-    }
+    },
+    "speech_edge_loss_risk": null
   },
   {
     "variant": "p05_vad_pad_500ms",
     "missing_report": false,
-    "report_path": "/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/experiments/asr/preprocessing/audio_quality_audit/variants/p05_vad_pad_500ms/audio_quality_report.json",
+    "report_path": "experiments/asr/preprocessing/audio_quality_audit/variants/p05_vad_pad_500ms/audio_quality_report.json",
     "n_samples": 200,
     "warnings": {
       "edge_loss_risk": 35,
@@ -161,6 +164,7 @@
       "last_300ms_db": -24.3243,
       "middle_db": -23.5962,
       "min_edge_to_middle_ratio": 0.7037
-    }
+    },
+    "speech_edge_loss_risk": null
   }
 ]
