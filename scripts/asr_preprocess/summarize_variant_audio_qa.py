@@ -87,6 +87,7 @@ def build_summary(variants_root: Path) -> list[dict[str, Any]]:
 
     for variant in VARIANTS:
         report_path = variants_root / variant / "audio_quality_report.json"
+        padding_aware_path = variants_root / variant / "padding_aware_audio_quality_report.json"
 
         if not report_path.exists():
             rows.append({
@@ -97,6 +98,11 @@ def build_summary(variants_root: Path) -> list[dict[str, Any]]:
             continue
 
         report = read_json(report_path)
+
+        speech_edge_loss_risk = None
+        if padding_aware_path.exists():
+            padding_report = read_json(padding_aware_path)
+            speech_edge_loss_risk = padding_report.get("summary", {}).get("speech_edge_loss_risk")
 
         row = {
             "variant": variant,
@@ -115,6 +121,7 @@ def build_summary(variants_root: Path) -> list[dict[str, Any]]:
                 metric: get_numeric_median(report, metric)
                 for metric in IMPORTANT_NUMERIC
             },
+            "speech_edge_loss_risk": speech_edge_loss_risk,
         }
 
         rows.append(row)
@@ -164,6 +171,35 @@ def render_markdown(summary_rows: list[dict[str, Any]]) -> str:
     lines.append("## Objective")
     lines.append("")
     lines.append("Audit VAD-padding preprocessing variants before ASR A/B testing.")
+    lines.append("")
+    lines.append("## Padding-Aware Edge Loss Comparison")
+    lines.append("")
+    lines.append("This table compares the old metric (file edge) against the new metric (speech edge).")
+    lines.append("`speech_edge_loss_risk` ignores inserted silence padding and measures energy at the actual speech start/end.")
+    lines.append("")
+    lines.append("| Variant | N | file_edge_loss_risk | speech_edge_loss_risk | Difference |")
+    lines.append("|---|---:|---:|---:|---:|")
+
+    for row in summary_rows:
+        if row.get("missing_report"):
+            lines.append(f"| {row['variant']} | - | - | - | - |")
+            continue
+            
+        file_edge = row["warnings"].get("edge_loss_risk", 0)
+        speech_edge = row.get("speech_edge_loss_risk")
+        
+        if speech_edge is not None:
+            diff = speech_edge - file_edge
+            diff_str = f"+{diff}" if diff > 0 else str(diff)
+            speech_edge_str = str(speech_edge)
+        else:
+            speech_edge_str = "N/A"
+            diff_str = "N/A"
+            
+        lines.append(
+            f"| {row['variant']} | {row['n_samples']} | {file_edge} | {speech_edge_str} | {diff_str} |"
+        )
+        
     lines.append("")
     lines.append("## Baseline")
     lines.append("")

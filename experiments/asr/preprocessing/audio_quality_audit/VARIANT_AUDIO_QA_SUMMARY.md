@@ -4,6 +4,18 @@
 
 Audit VAD-padding preprocessing variants before ASR A/B testing.
 
+## Padding-Aware Edge Loss Comparison
+
+This table compares the old metric (file edge) against the new metric (speech edge).
+`speech_edge_loss_risk` ignores inserted silence padding and measures energy at the actual speech start/end.
+
+| Variant | N | file_edge_loss_risk | speech_edge_loss_risk | Difference |
+|---|---:|---:|---:|---:|
+| original | 200 | 29 | N/A | N/A |
+| p03_vad_pad_200ms | 200 | 27 | N/A | N/A |
+| p04_vad_pad_300ms | 200 | 39 | N/A | N/A |
+| p05_vad_pad_500ms | 200 | 35 | N/A | N/A |
+
 ## Baseline
 
 - Baseline original dev edge_loss_risk: **29**
