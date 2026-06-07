@@ -1,0 +1,166 @@
+[
+  {
+    "variant": "original",
+    "missing_report": false,
+    "report_path": "/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/experiments/asr/preprocessing/audio_quality_audit/variants/original/audio_quality_report.json",
+    "n_samples": 200,
+    "warnings": {
+      "edge_loss_risk": 29,
+      "long_leading_silence": 1,
+      "long_trailing_silence": 1,
+      "too_quiet": 0,
+      "too_loud": 0,
+      "clipping_detected": 0,
+      "peak_near_0db_clipping_risk": 0,
+      "too_short": 0,
+      "long_audio_may_need_chunking": 0,
+      "non_16khz": 0,
+      "non_mono": 0
+    },
+    "numeric_mean": {
+      "duration_seconds": 6.055,
+      "rms_db": -23.4399,
+      "peak_db": -4.5651,
+      "leading_silence_ms": 39.2,
+      "trailing_silence_ms": 28.7,
+      "first_300ms_db": -26.3862,
+      "last_300ms_db": -25.3452,
+      "middle_db": -23.4906,
+      "min_edge_to_middle_ratio": 0.6939
+    },
+    "numeric_median": {
+      "duration_seconds": 6.0,
+      "rms_db": -23.5146,
+      "peak_db": -4.6405,
+      "leading_silence_ms": 0.0,
+      "trailing_silence_ms": 0.0,
+      "first_300ms_db": -24.4763,
+      "last_300ms_db": -24.3013,
+      "middle_db": -23.6086,
+      "min_edge_to_middle_ratio": 0.7114
+    }
+  },
+  {
+    "variant": "p03_vad_pad_200ms",
+    "missing_report": false,
+    "report_path": "/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/experiments/asr/preprocessing/audio_quality_audit/variants/p03_vad_pad_200ms/audio_quality_report.json",
+    "n_samples": 200,
+    "warnings": {
+      "edge_loss_risk": 27,
+      "long_leading_silence": 0,
+      "long_trailing_silence": 0,
+      "too_quiet": 0,
+      "too_loud": 0,
+      "clipping_detected": 0,
+      "peak_near_0db_clipping_risk": 0,
+      "too_short": 0,
+      "long_audio_may_need_chunking": 0,
+      "non_16khz": 0,
+      "non_mono": 0
+    },
+    "numeric_mean": {
+      "duration_seconds": 5.9826,
+      "rms_db": -23.3964,
+      "peak_db": -4.5651,
+      "leading_silence_ms": 29.4,
+      "trailing_silence_ms": 37.3,
+      "first_300ms_db": -24.4264,
+      "last_300ms_db": -26.4539,
+      "middle_db": -23.4523,
+      "min_edge_to_middle_ratio": 0.7069
+    },
+    "numeric_median": {
+      "duration_seconds": 6.0,
+      "rms_db": -23.5104,
+      "peak_db": -4.6405,
+      "leading_silence_ms": 0.0,
+      "trailing_silence_ms": 0.0,
+      "first_300ms_db": -24.0956,
+      "last_300ms_db": -24.5338,
+      "middle_db": -23.5638,
+      "min_edge_to_middle_ratio": 0.7169
+    }
+  },
+  {
+    "variant": "p04_vad_pad_300ms",
+    "missing_report": false,
+    "report_path": "/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/experiments/asr/preprocessing/audio_quality_audit/variants/p04_vad_pad_300ms/audio_quality_report.json",
+    "n_samples": 200,
+    "warnings": {
+      "edge_loss_risk": 39,
+      "long_leading_silence": 0,
+      "long_trailing_silence": 0,
+      "too_quiet": 0,
+      "too_loud": 0,
+      "clipping_detected": 0,
+      "peak_near_0db_clipping_risk": 0,
+      "too_short": 0,
+      "long_audio_may_need_chunking": 0,
+      "non_16khz": 0,
+      "non_mono": 0
+    },
+    "numeric_mean": {
+      "duration_seconds": 6.0023,
+      "rms_db": -23.4089,
+      "peak_db": -4.5651,
+      "leading_silence_ms": 34.8,
+      "trailing_silence_ms": 35.8,
+      "first_300ms_db": -26.2312,
+      "last_300ms_db": -26.1481,
+      "middle_db": -23.4472,
+      "min_edge_to_middle_ratio": 0.667
+    },
+    "numeric_median": {
+      "duration_seconds": 6.0,
+      "rms_db": -23.5104,
+      "peak_db": -4.6405,
+      "leading_silence_ms": 0.0,
+      "trailing_silence_ms": 0.0,
+      "first_300ms_db": -24.6081,
+      "last_300ms_db": -24.474,
+      "middle_db": -23.5767,
+      "min_edge_to_middle_ratio": 0.6935
+    }
+  },
+  {
+    "variant": "p05_vad_pad_500ms",
+    "missing_report": false,
+    "report_path": "/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/experiments/asr/preprocessing/audio_quality_audit/variants/p05_vad_pad_500ms/audio_quality_report.json",
+    "n_samples": 200,
+    "warnings": {
+      "edge_loss_risk": 35,
+      "long_leading_silence": 0,
+      "long_trailing_silence": 0,
+      "too_quiet": 0,
+      "too_loud": 0,
+      "clipping_detected": 0,
+      "peak_near_0db_clipping_risk": 0,
+      "too_short": 0,
+      "long_audio_may_need_chunking": 0,
+      "non_16khz": 0,
+      "non_mono": 0
+    },
+    "numeric_mean": {
+      "duration_seconds": 6.0266,
+      "rms_db": -23.422,
+      "peak_db": -4.5651,
+      "leading_silence_ms": 35.3,
+      "trailing_silence_ms": 32.5,
+      "first_300ms_db": -26.3158,
+      "last_300ms_db": -25.6952,
+      "middle_db": -23.4672,
+      "min_edge_to_middle_ratio": 0.6807
+    },
+    "numeric_median": {
+      "duration_seconds": 6.0,
+      "rms_db": -23.5146,
+      "peak_db": -4.6405,
+      "leading_silence_ms": 0.0,
+      "trailing_silence_ms": 0.0,
+      "first_300ms_db": -24.4763,
+      "last_300ms_db": -24.3243,
+      "middle_db": -23.5962,
+      "min_edge_to_middle_ratio": 0.7037
+    }
+  }
+]
