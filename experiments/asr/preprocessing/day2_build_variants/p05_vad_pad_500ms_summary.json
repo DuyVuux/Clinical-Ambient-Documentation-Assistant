@@ -1,0 +1,9 @@
+{
+  "variant": "p05_vad_pad_500ms",
+  "input_manifest": "data/data_lake/silver/asr_manifests/splits/vietmed_dev_v0_1.jsonl",
+  "output_manifest": "data/data_lake/silver/asr_manifests/preprocessing_variants/vietmed_dev_p05_vad_pad_500ms.jsonl",
+  "n_input_rows": 200,
+  "n_output_rows": 200,
+  "n_failures": 0,
+  "failure_path": "experiments/asr/preprocessing/day2_build_variants/p05_vad_pad_500ms_failures.jsonl"
+}

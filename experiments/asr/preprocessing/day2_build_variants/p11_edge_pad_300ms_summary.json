@@ -1,0 +1,9 @@
+{
+  "variant": "p11_edge_pad_300ms",
+  "input_manifest": "data/data_lake/silver/asr_manifests/splits/vietmed_dev_v0_1.jsonl",
+  "output_manifest": "data/data_lake/silver/asr_manifests/preprocessing_variants/vietmed_dev_p11_edge_pad_300ms.jsonl",
+  "n_input_rows": 200,
+  "n_output_rows": 200,
+  "n_failures": 0,
+  "failure_path": "experiments/asr/preprocessing/day2_build_variants/p11_edge_pad_300ms_failures.jsonl"
+}
