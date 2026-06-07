@@ -2,6 +2,28 @@
 
 Báo cáo này phân tích các lỗi nghiêm trọng trong y tế: bỏ sót/tự thêm từ phủ định, từ khóa y khoa, và lỗi ảo giác lặp từ.
 
+## Mô hình: `khanhld/chunkformer-ctc-large-vie`
+- **Tổng số mẫu:** 200
+- **Bỏ sót Phủ định (Missed Negation):** 7 lỗi
+- **Ảo giác Phủ định (Hallucinated Negation):** 1 lỗi
+- **Bỏ sót Từ khóa Y khoa (Missed Medical Term):** 7 lỗi
+- **Ảo giác Từ khóa Y khoa (Hallucinated Medical Term):** 1 lỗi
+- **Ảo giác lặp từ (Loop Hallucination):** 0 lỗi
+
+### Cảnh báo: Lỗi Phủ định (Nguy hiểm)
+| Loại | Từ khóa | Reference | Prediction |
+|---|---|---|---|
+| Bỏ sót | `không` | xưa cái đôi tay của mình và cái vai của mình nó đau đớn thế nào thì bây giờ nó không | xưa cái đôi tay của mình và cái vai của mình nó đau đớn thế nào thì bây giờ nó |
+| Bỏ sót | `không` | ta không nên sờ nắn bóp vào đấy đấy có một cái câu chuyện rất là nhiều người đấy là khi chúng ta đau ở đâu chúng ta hãy bóp vào đấy nhưng mà trong trường | ta nên sờ nắn bóp vào đấy có một cái câu chuyện rất là nhiều người đấy là khi chúng ta đau ở đâu chúng ta hay bóp vào đấy |
+| Bỏ sót | `không` | trình và chúc bác thật là nhiều sức khỏe vâng vừa rồi thì chúng ta thấy là rất là nhiều người bệnh cao tuổi đúng không ạ | chương trình và chúc bác thật là nhiều sức khỏe vâng vừa rồi thì chúng ta thấy là rất là nhiều người bị bệnh |
+| Bỏ sót | `không` | này chúng ta sẽ có thể có thông tin về sản phẩm vâng và tôi cũng xin được nhắc lại tổng đài của chương trình không hai | mã này chúng ta sẽ có thể có thông tin về sản phẩm vâng và tôi cũng xin được nhắc lại tổng đài của chương trình |
+| Bỏ sót | `không` | giai đoạn sau mười năm cái việc mà phẫu thuật kích thích não sâu nó trở nên kém hiệu quả hơn tuy nhiên điều đó không có | giai đoạn sau mười năm cái việc mà phẫu thuật kích thích não sâu nó trở nên kém hiệu quả hơn tuy nhiên điều đó |
+| Bỏ sót | `không có` | giai đoạn sau mười năm cái việc mà phẫu thuật kích thích não sâu nó trở nên kém hiệu quả hơn tuy nhiên điều đó không có | giai đoạn sau mười năm cái việc mà phẫu thuật kích thích não sâu nó trở nên kém hiệu quả hơn tuy nhiên điều đó |
+| Bỏ sót | `không` | của chúng ta thì khi đó rõ ràng chúng ta biết rằng là chúng ta cần phải điều chỉnh cái bệnh của chúng ta chứ không | chúng ta thì khi đó rõ ràng chúng ta biết rằng là chúng ta cần phải điều chỉnh cái bệnh của chúng ta |
+| Tự thêm | `không` | trình đó mình có thể vứt bỏ điện cực cùng mình tắt cái máy đi thì cái những cái tế bào não mà mình đi tới kích thích đó | trình đó mình có thể rút bỏ điện cực không mình tắt cái máy đi thì cái những cái tế bào não mà mình đi tới mình kích thích |
+
+---
+
 ## Mô hình: `phowhisper_base`
 - **Tổng số mẫu:** 200
 - **Bỏ sót Phủ định (Missed Negation):** 6 lỗi
