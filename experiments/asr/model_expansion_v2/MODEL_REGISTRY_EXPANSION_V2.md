@@ -16,8 +16,8 @@ Extend ASR benchmark with additional Vietnamese ASR models before further fine-t
 | Model ID | Source | Architecture | License | Intended benchmark role | Status |
 |---|---|---|---|---|---|
 | dangvansam/viet-asr | GitHub | NeMo/QuartzNet CTC | Apache-2.0 | lightweight legacy baseline | planned |
-| nguyenvulebinh/ViStreamASR | GitHub/PyPI | streaming ASR / U2-style | MIT | real-time streaming candidate | planned |
-| hynt/Zipformer-30M-RNNT-6000h | Hugging Face | ZipFormer RNNT ONNX | CC-BY-NC-ND-4.0 | fast CPU RNNT candidate | planned |
+| nguyenvulebinh/ViStreamASR | GitHub/PyPI | streaming ASR / U2-style | MIT | real-time streaming candidate | evaluated |
+| hynt/Zipformer-30M-RNNT-6000h | Hugging Face | ZipFormer RNNT ONNX | CC-BY-NC-ND-4.0 | fast CPU RNNT candidate | evaluated |
 
 ## Guardrails
 

@@ -1,0 +1,119 @@
+{
+  "n_samples": 10,
+  "strict_wer": 1.0705882352941176,
+  "normalized_wer": 0.24705882352941178,
+  "strict_cer": 0.8781163434903048,
+  "normalized_cer": 0.24376731301939059,
+  "items": [
+    {
+      "sample_id": "public_vietmed_0884",
+      "reference_text": "nó sẽ giúp cải thiện được rất là nhiều các triệu chứng của người bệnh parkinson đặc biệt là các cái triệu chứng về vận",
+      "prediction_text": "THÍCH NÓI SÂU NÓ SẼ GIÚP CẢI THIỆN ĐƯỢC RẤT LÀ NHIỀU CÁC CÁI TRIỆU CHỨNG CỦA NGƯỜI BỆNH VÃ CÂN XANH ĐẶC BIỆT LÀ CÁC TRIỆU CHỨNG",
+      "reference_text_normalized": "nó sẽ giúp cải thiện được rất là nhiều các triệu chứng của người bệnh parkinson đặc biệt là các cái triệu chứng về vận",
+      "prediction_text_normalized": "thích nói sâu nó sẽ giúp cải thiện được rất là nhiều các cái triệu chứng của người bệnh vã cân xanh đặc biệt là các triệu chứng",
+      "strict_wer": 1.12,
+      "normalized_wer": 0.4,
+      "strict_cer": 0.923728813559322,
+      "normalized_cer": 0.3220338983050847
+    },
+    {
+      "sample_id": "public_vietmed_0174",
+      "reference_text": "đấy thì cái câu chuyện là gì ạ đạp xe ở trong nhà nó rất là an toàn nhưng mà đạp xe ra ngoài thì nó lại rất nhiều chuyện",
+      "prediction_text": "ĐẤY THÌ CÁI CÂU CHUYỆN LÀ GÌ Ạ ĐẠP XE Ở TRONG NHÀ NÓ RẤT LÀ AN TOÀN NHƯNG MÀ ĐẠP XE RA NGOÀI THÌ NÓ LẠI RẤT NHIỀU",
+      "reference_text_normalized": "đấy thì cái câu chuyện là gì ạ đạp xe ở trong nhà nó rất là an toàn nhưng mà đạp xe ra ngoài thì nó lại rất nhiều chuyện",
+      "prediction_text_normalized": "đấy thì cái câu chuyện là gì ạ đạp xe ở trong nhà nó rất là an toàn nhưng mà đạp xe ra ngoài thì nó lại rất nhiều",
+      "strict_wer": 1.0,
+      "normalized_wer": 0.03333333333333333,
+      "strict_cer": 0.7666666666666667,
+      "normalized_cer": 0.058333333333333334
+    },
+    {
+      "sample_id": "public_vietmed_0148",
+      "reference_text": "với tất cả những cái biểu hiện như vậy thì chúng tôi thấy khá là rõ ràng là nó có khả năng là cái biểu hiện của một cái",
+      "prediction_text": "THÌ VỚI TẤT CẢ NHỮNG CÁI BIỂU HIỆN NHƯ VẬY THÌ CHÚNG TÔI THẤY KHÁ LÀ RÕ RẰNG LÀ NÓ CÓ KHẢ NĂNG LÀ CÁI BIỂU HIỆN CỦA",
+      "reference_text_normalized": "với tất cả những cái biểu hiện như vậy thì chúng tôi thấy khá là rõ ràng là nó có khả năng là cái biểu hiện của một cái",
+      "prediction_text_normalized": "thì với tất cả những cái biểu hiện như vậy thì chúng tôi thấy khá là rõ rằng là nó có khả năng là cái biểu hiện của",
+      "strict_wer": 1.0,
+      "normalized_wer": 0.13793103448275862,
+      "strict_cer": 0.8151260504201681,
+      "normalized_cer": 0.1092436974789916
+    },
+    {
+      "sample_id": "public_vietmed_0420",
+      "reference_text": "tổng đài này thì sẽ có cơ hội nhận được ưu đãi của chương trình vâng và sẽ quay trở lại với chương trình của chúng ta",
+      "prediction_text": "CHỊ GỌI VỀ HAI SỐ TỔNG ĐÀI NÀY THÌ SẼ CÓ CƠ HỘI NHẬN ĐƯỢC ƯU ĐÃI CỦA CHƯƠNG TRÌNH VÂNG VÀ SẼ QUAY TRỞ LẠI",
+      "reference_text_normalized": "tổng đài này thì sẽ có cơ hội nhận được ưu đãi của chương trình vâng và sẽ quay trở lại với chương trình của chúng ta",
+      "prediction_text_normalized": "chị gọi về hai số tổng đài này thì sẽ có cơ hội nhận được ưu đãi của chương trình vâng và sẽ quay trở lại",
+      "strict_wer": 1.0,
+      "normalized_wer": 0.4074074074074074,
+      "strict_cer": 0.8290598290598291,
+      "normalized_cer": 0.41025641025641024
+    },
+    {
+      "sample_id": "public_vietmed_0962",
+      "reference_text": "bình luận bên dưới các bác sĩ của chương trình sẽ giải đáp câu hỏi của quý vị trong phần cuối của chương trình quý vị nha thưa tất cả quý vị khi nói đến",
+      "prediction_text": "NGAY PHẦN BÌNH LUẬN BÊN DƯỚI CÁC BÁC SĨ CỦA CHƯƠNG TRÌNH SẼ GIẢI ĐÁP CÂU HỎI CỦA QUÝ VỊ TRONG PHẦN CUỐI CỦA CHƯƠNG TRÌNH QUÝ VỊ NHA THƯA TẤT CẢ QUÝ VỊ KHI NÓI ĐẾN",
+      "reference_text_normalized": "bình luận bên dưới các bác sĩ của chương trình sẽ giải đáp câu hỏi của quý vị trong phần cuối của chương trình quý vị nha thưa tất cả quý vị khi nói đến",
+      "prediction_text_normalized": "ngay phần bình luận bên dưới các bác sĩ của chương trình sẽ giải đáp câu hỏi của quý vị trong phần cuối của chương trình quý vị nha thưa tất cả quý vị khi nói đến",
+      "strict_wer": 1.0571428571428572,
+      "normalized_wer": 0.05714285714285714,
+      "strict_cer": 0.8421052631578947,
+      "normalized_cer": 0.06578947368421052
+    },
+    {
+      "sample_id": "public_vietmed_0149",
+      "reference_text": "biểu hiện tê bì dọc theo tay hoặc là cái vùng cổ vai gáy này cái thứ ba nữa là nó lại còn liên quan đến cái câu chuyện là",
+      "prediction_text": "ĐỘNG NÀY CÁC BIỂU HIỆN TÊ BÌ DỌC THEO TAY HOẶC LÀ CÁI VÙNG CỔ VAI GÁY NÀY CÁI THỨ BA NỮA LÀ NÓ LẠI CÒN LIÊN",
+      "reference_text_normalized": "biểu hiện tê bì dọc theo tay hoặc là cái vùng cổ vai gáy này cái thứ ba nữa là nó lại còn liên quan đến cái câu chuyện là",
+      "prediction_text_normalized": "động này các biểu hiện tê bì dọc theo tay hoặc là cái vùng cổ vai gáy này cái thứ ba nữa là nó lại còn liên",
+      "strict_wer": 1.0,
+      "normalized_wer": 0.3,
+      "strict_cer": 0.8347107438016529,
+      "normalized_cer": 0.3305785123966942
+    },
+    {
+      "sample_id": "public_vietmed_0976",
+      "reference_text": "thôi do đó thì những cái triệu chứng mà nó sẽ giúp cho người bệnh",
+      "prediction_text": "DO ĐÓ THÌ NHỮNG CÁI TRIỆU CHỨNG MÀ NÓ SẼ GIÚP CHO NGƯỜI BỆNH",
+      "reference_text_normalized": "thôi do đó thì những cái triệu chứng mà nó sẽ giúp cho người bệnh",
+      "prediction_text_normalized": "do đó thì những cái triệu chứng mà nó sẽ giúp cho người bệnh",
+      "strict_wer": 1.0,
+      "normalized_wer": 0.06666666666666667,
+      "strict_cer": 0.8,
+      "normalized_cer": 0.07692307692307693
+    },
+    {
+      "sample_id": "public_vietmed_0080",
+      "reference_text": "rất là nặng và càng về sau mà mình càng muộn phát hiện thì cái việc điều trị nó lại càng khó khăn hơn chính vì thế cho",
+      "prediction_text": "NHỮNG LẦN SAU NÓ SẼ RẤT LÀ NẶNG VÀ CÀNG VỀ SAU MÀ MÌNH CÀNG MUỘN PHÁT HIỆN THÌ CÁI VIỆC ĐIỀU TRỊ NÓ LẠI CÀNG KHÓ KHĂN HƠN",
+      "reference_text_normalized": "rất là nặng và càng về sau mà mình càng muộn phát hiện thì cái việc điều trị nó lại càng khó khăn hơn chính vì thế cho",
+      "prediction_text_normalized": "những lần sau nó sẽ rất là nặng và càng về sau mà mình càng muộn phát hiện thì cái việc điều trị nó lại càng khó khăn hơn",
+      "strict_wer": 1.0357142857142858,
+      "normalized_wer": 0.32142857142857145,
+      "strict_cer": 0.8728813559322034,
+      "normalized_cer": 0.3135593220338983
+    },
+    {
+      "sample_id": "public_vietmed_0776",
+      "reference_text": "của mình nó có đảm bảo được cái việc như những tài liệu người ta nói không",
+      "prediction_text": "NƠI ĐIỀU TRỊ CỦA MÌNH NÓ CÓ ĐẢM BẢO ĐƯỢC CÁI VIỆC MÀ NHƯ NHƯ NHỮNG TÀI LIỆU NGƯỜI TA NÓI HAY KHÔNG TỨC LÀ",
+      "reference_text_normalized": "của mình nó có đảm bảo được cái việc như những tài liệu người ta nói không",
+      "prediction_text_normalized": "nơi điều trị của mình nó có đảm bảo được cái việc mà như như những tài liệu người ta nói hay không tức là",
+      "strict_wer": 1.4705882352941178,
+      "normalized_wer": 0.47058823529411764,
+      "strict_cer": 1.2027027027027026,
+      "normalized_cer": 0.4189189189189189
+    },
+    {
+      "sample_id": "public_vietmed_0303",
+      "reference_text": "như thế này và chúng tôi khuyên là bác cũng nên đi thăm khám với các cái bác sĩ",
+      "prediction_text": "PHẢI NHẬN ĐỊNH HAI CÁI VIỆC NHƯ THẾ NÀY VÀ CHÚNG TÔI KHUYÊN LÀ BÁC CŨNG NÊN ĐI THĂM KHÁM VỚI CÁC CÁI",
+      "reference_text_normalized": "như thế này và chúng tôi khuyên là bác cũng nên đi thăm khám với các cái bác sĩ",
+      "prediction_text_normalized": "phải nhận định hai cái việc như thế này và chúng tôi khuyên là bác cũng nên đi thăm khám với các cái",
+      "strict_wer": 1.2105263157894737,
+      "normalized_wer": 0.42105263157894735,
+      "strict_cer": 1.0506329113924051,
+      "normalized_cer": 0.4430379746835443
+    }
+  ]
+}
