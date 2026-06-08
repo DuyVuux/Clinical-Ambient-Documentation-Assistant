@@ -1,0 +1,2712 @@
+{
+  "model_name": "unknown_model",
+  "prediction_file": "experiments/asr/preprocessing/clinical_error_ablation/edge_subset_original_predictions.jsonl",
+  "term_groups": {
+    "negation": [
+      "không",
+      "chưa",
+      "phủ nhận",
+      "không ghi nhận",
+      "chưa từng",
+      "không có"
+    ],
+    "symptom": [
+      "ho",
+      "sốt",
+      "đau ngực",
+      "khó thở",
+      "đau bụng",
+      "tiêu chảy",
+      "đau đầu",
+      "mất ngủ",
+      "rát họng",
+      "buồn nôn",
+      "nôn",
+      "chóng mặt",
+      "mệt mỏi"
+    ],
+    "medication": [
+      "paracetamol",
+      "amoxicillin",
+      "amlodipine",
+      "insulin",
+      "omeprazole",
+      "ibuprofen",
+      "metformin"
+    ],
+    "allergy": [
+      "dị ứng",
+      "dị ứng thuốc",
+      "dị ứng penicillin",
+      "dị ứng hải sản",
+      "chưa từng dị ứng thuốc",
+      "không dị ứng thuốc"
+    ],
+    "dose_unit": [
+      "mg",
+      "miligam",
+      "ml",
+      "viên",
+      "gói",
+      "lần",
+      "ngày",
+      "mỗi ngày",
+      "mỗi sáng",
+      "mỗi tối"
+    ],
+    "number": [
+      "37.8",
+      "37 độ 8",
+      "ba mươi bảy độ tám",
+      "500",
+      "năm trăm",
+      "3 ngày",
+      "ba ngày",
+      "một viên",
+      "hai viên"
+    ],
+    "red_flag": [
+      "đau ngực",
+      "khó thở",
+      "sốt cao",
+      "spo2",
+      "nôn ra máu",
+      "đi ngoài ra máu",
+      "lú lẫn",
+      "yếu liệt"
+    ]
+  },
+  "summary": {
+    "n_samples": 29,
+    "n_samples_with_critical_or_high_missing_error": 1,
+    "groups": {
+      "negation": {
+        "severity": "critical",
+        "samples_with_reference_terms": 8,
+        "samples_with_missing_terms": 1,
+        "samples_with_inserted_terms": 0,
+        "missing_terms_total": 1,
+        "inserted_terms_total": 0,
+        "top_missing_terms": [
+          [
+            "không",
+            1
+          ]
+        ],
+        "top_inserted_terms": []
+      },
+      "symptom": {
+        "severity": "moderate",
+        "samples_with_reference_terms": 10,
+        "samples_with_missing_terms": 1,
+        "samples_with_inserted_terms": 0,
+        "missing_terms_total": 1,
+        "inserted_terms_total": 0,
+        "top_missing_terms": [
+          [
+            "ho",
+            1
+          ]
+        ],
+        "top_inserted_terms": []
+      },
+      "medication": {
+        "severity": "high",
+        "samples_with_reference_terms": 0,
+        "samples_with_missing_terms": 0,
+        "samples_with_inserted_terms": 0,
+        "missing_terms_total": 0,
+        "inserted_terms_total": 0,
+        "top_missing_terms": [],
+        "top_inserted_terms": []
+      },
+      "allergy": {
+        "severity": "critical",
+        "samples_with_reference_terms": 0,
+        "samples_with_missing_terms": 0,
+        "samples_with_inserted_terms": 0,
+        "missing_terms_total": 0,
+        "inserted_terms_total": 0,
+        "top_missing_terms": [],
+        "top_inserted_terms": []
+      },
+      "dose_unit": {
+        "severity": "high",
+        "samples_with_reference_terms": 0,
+        "samples_with_missing_terms": 0,
+        "samples_with_inserted_terms": 0,
+        "missing_terms_total": 0,
+        "inserted_terms_total": 0,
+        "top_missing_terms": [],
+        "top_inserted_terms": []
+      },
+      "number": {
+        "severity": "moderate",
+        "samples_with_reference_terms": 0,
+        "samples_with_missing_terms": 0,
+        "samples_with_inserted_terms": 0,
+        "missing_terms_total": 0,
+        "inserted_terms_total": 0,
+        "top_missing_terms": [],
+        "top_inserted_terms": []
+      },
+      "red_flag": {
+        "severity": "high",
+        "samples_with_reference_terms": 0,
+        "samples_with_missing_terms": 0,
+        "samples_with_inserted_terms": 0,
+        "missing_terms_total": 0,
+        "inserted_terms_total": 0,
+        "top_missing_terms": [],
+        "top_inserted_terms": []
+      }
+    }
+  },
+  "items": [
+    {
+      "sample_id": "public_vietmed_0976",
+      "model_name": null,
+      "source_name": null,
+      "split_role": null,
+      "clean_audio_path": null,
+      "reference_text": "thôi do đó thì những cái triệu chứng mà nó sẽ giúp cho người bệnh",
+      "prediction_text": "bệnh do đó thì những cái triệu chứng mà nó sẽ giúp cho người bệnh",
+      "reference_normalized": "thôi do đó thì những cái triệu chứng mà nó sẽ giúp cho người bệnh",
+      "prediction_normalized": "bệnh do đó thì những cái triệu chứng mà nó sẽ giúp cho người bệnh",
+      "group_errors": {
+        "negation": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "symptom": {
+          "severity": "moderate",
+          "reference_terms": [
+            "ho"
+          ],
+          "prediction_terms": [
+            "ho"
+          ],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": true,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "medication": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "allergy": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "dose_unit": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "number": {
+          "severity": "moderate",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "red_flag": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        }
+      },
+      "critical_flags": [],
+      "has_critical_or_high_missing_error": false
+    },
+    {
+      "sample_id": "public_vietmed_0526",
+      "model_name": null,
+      "source_name": null,
+      "split_role": null,
+      "clean_audio_path": null,
+      "reference_text": "người bệnh của chúng ta cũng đang có một cái tha thiết là mình tìm được một cái giải pháp gì đó mà chúng ta điều trị có",
+      "prediction_text": "cái người bệnh của chúng ta cũng đang có một cái tha thiết là mình tìm được một cái giải pháp gì đó mà chúng ta điều trị cái",
+      "reference_normalized": "người bệnh của chúng ta cũng đang có một cái tha thiết là mình tìm được một cái giải pháp gì đó mà chúng ta điều trị có",
+      "prediction_normalized": "cái người bệnh của chúng ta cũng đang có một cái tha thiết là mình tìm được một cái giải pháp gì đó mà chúng ta điều trị cái",
+      "group_errors": {
+        "negation": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "symptom": {
+          "severity": "moderate",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "medication": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "allergy": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "dose_unit": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "number": {
+          "severity": "moderate",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "red_flag": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        }
+      },
+      "critical_flags": [],
+      "has_critical_or_high_missing_error": false
+    },
+    {
+      "sample_id": "public_vietmed_0510",
+      "model_name": null,
+      "source_name": null,
+      "split_role": null,
+      "clean_audio_path": null,
+      "reference_text": "mừng là bác đã có đi thăm khám ở bệnh viện cũng đã có những cái chụp chiếu để có cái khẳng định và cái triệu chứng của",
+      "prediction_text": "là mừng là bác đã có đi thăm khám ở bệnh viện cũng đã có những cái chụp chiếu để có cái khẳng định cái",
+      "reference_normalized": "mừng là bác đã có đi thăm khám ở bệnh viện cũng đã có những cái chụp chiếu để có cái khẳng định và cái triệu chứng của",
+      "prediction_normalized": "là mừng là bác đã có đi thăm khám ở bệnh viện cũng đã có những cái chụp chiếu để có cái khẳng định cái",
+      "group_errors": {
+        "negation": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "symptom": {
+          "severity": "moderate",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "medication": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "allergy": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "dose_unit": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "number": {
+          "severity": "moderate",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "red_flag": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        }
+      },
+      "critical_flags": [],
+      "has_critical_or_high_missing_error": false
+    },
+    {
+      "sample_id": "public_vietmed_0122",
+      "model_name": null,
+      "source_name": null,
+      "split_role": null,
+      "clean_audio_path": null,
+      "reference_text": "ta không nên sờ nắn bóp vào đấy đấy có một cái câu chuyện rất là nhiều người đấy là khi chúng ta đau ở đâu chúng ta hãy bóp vào đấy nhưng mà trong trường",
+      "prediction_text": "ta nên sờ nắn bóp vào đấy có một cái câu chuyện rất là nhiều người đấy là khi chúng ta đau ở đâu chúng ta hay bóp vào đấy",
+      "reference_normalized": "ta không nên sờ nắn bóp vào đấy đấy có một cái câu chuyện rất là nhiều người đấy là khi chúng ta đau ở đâu chúng ta hãy bóp vào đấy nhưng mà trong trường",
+      "prediction_normalized": "ta nên sờ nắn bóp vào đấy có một cái câu chuyện rất là nhiều người đấy là khi chúng ta đau ở đâu chúng ta hay bóp vào đấy",
+      "group_errors": {
+        "negation": {
+          "severity": "critical",
+          "reference_terms": [
+            "không"
+          ],
+          "prediction_terms": [],
+          "missing_terms": [
+            "không"
+          ],
+          "inserted_terms": [],
+          "has_reference_terms": true,
+          "has_missing_terms": true,
+          "has_inserted_terms": false
+        },
+        "symptom": {
+          "severity": "moderate",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "medication": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "allergy": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "dose_unit": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "number": {
+          "severity": "moderate",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "red_flag": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        }
+      },
+      "critical_flags": [
+        {
+          "group": "negation",
+          "severity": "critical",
+          "missing_terms": [
+            "không"
+          ]
+        }
+      ],
+      "has_critical_or_high_missing_error": true
+    },
+    {
+      "sample_id": "public_vietmed_0192",
+      "model_name": null,
+      "source_name": null,
+      "split_role": null,
+      "clean_audio_path": null,
+      "reference_text": "dạ vâng và cái việc mà bác nói khó như này nó đã có lâu chưa ạ",
+      "prediction_text": "vâng dạ vâng và cái việc mà bác nói khó như này nó đã có lâu chưa ạ",
+      "reference_normalized": "dạ vâng và cái việc mà bác nói khó như này nó đã có lâu chưa ạ",
+      "prediction_normalized": "vâng dạ vâng và cái việc mà bác nói khó như này nó đã có lâu chưa ạ",
+      "group_errors": {
+        "negation": {
+          "severity": "critical",
+          "reference_terms": [
+            "chưa"
+          ],
+          "prediction_terms": [
+            "chưa"
+          ],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": true,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "symptom": {
+          "severity": "moderate",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "medication": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "allergy": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "dose_unit": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "number": {
+          "severity": "moderate",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "red_flag": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        }
+      },
+      "critical_flags": [],
+      "has_critical_or_high_missing_error": false
+    },
+    {
+      "sample_id": "public_vietmed_0648",
+      "model_name": null,
+      "source_name": null,
+      "split_role": null,
+      "clean_audio_path": null,
+      "reference_text": "thưa tất cả quý vị trong suốt thời gian phát sóng chương trình nếu như quý vị có những thắc mắc có những câu hỏi băn",
+      "prediction_text": "và thưa tất cả quý vị trong suốt thời gian phát sóng chương trình nếu như quý vị có những thắc mắc có những câu hỏi bằng",
+      "reference_normalized": "thưa tất cả quý vị trong suốt thời gian phát sóng chương trình nếu như quý vị có những thắc mắc có những câu hỏi băn",
+      "prediction_normalized": "và thưa tất cả quý vị trong suốt thời gian phát sóng chương trình nếu như quý vị có những thắc mắc có những câu hỏi bằng",
+      "group_errors": {
+        "negation": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "symptom": {
+          "severity": "moderate",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "medication": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "allergy": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "dose_unit": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "number": {
+          "severity": "moderate",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "red_flag": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        }
+      },
+      "critical_flags": [],
+      "has_critical_or_high_missing_error": false
+    },
+    {
+      "sample_id": "public_vietmed_0839",
+      "model_name": null,
+      "source_name": null,
+      "split_role": null,
+      "clean_audio_path": null,
+      "reference_text": "thưa quý vị chúng ta đã cùng theo dõi chương trình tư vấn sống khỏe sẻ chia với chủ đề phương pháp điều trị bệnh parkinson",
+      "prediction_text": "thưa quý vị chúng ta đã cùng theo dõi chương trình tư vấn sống khỏe sẻ chia với chủ đề phương pháp điều trị bệnh parkinson",
+      "reference_normalized": "thưa quý vị chúng ta đã cùng theo dõi chương trình tư vấn sống khỏe sẻ chia với chủ đề phương pháp điều trị bệnh parkinson",
+      "prediction_normalized": "thưa quý vị chúng ta đã cùng theo dõi chương trình tư vấn sống khỏe sẻ chia với chủ đề phương pháp điều trị bệnh parkinson",
+      "group_errors": {
+        "negation": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "symptom": {
+          "severity": "moderate",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "medication": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "allergy": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "dose_unit": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "number": {
+          "severity": "moderate",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "red_flag": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        }
+      },
+      "critical_flags": [],
+      "has_critical_or_high_missing_error": false
+    },
+    {
+      "sample_id": "public_vietmed_0628",
+      "model_name": null,
+      "source_name": null,
+      "split_role": null,
+      "clean_audio_path": null,
+      "reference_text": "là bác bị đau lưng cũng đã lâu rồi và đau cả hai đầu gối nữa đúng không ạ vâng dạ vâng vậy thì với những cái triệu",
+      "prediction_text": "là bác bị đau lưng cũng đã lâu rồi và đau cả hai đầu gối nữa đúng không ạ vâng dạ vâng vậy thì",
+      "reference_normalized": "là bác bị đau lưng cũng đã lâu rồi và đau cả hai đầu gối nữa đúng không ạ vâng dạ vâng vậy thì với những cái triệu",
+      "prediction_normalized": "là bác bị đau lưng cũng đã lâu rồi và đau cả hai đầu gối nữa đúng không ạ vâng dạ vâng vậy thì",
+      "group_errors": {
+        "negation": {
+          "severity": "critical",
+          "reference_terms": [
+            "không"
+          ],
+          "prediction_terms": [
+            "không"
+          ],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": true,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "symptom": {
+          "severity": "moderate",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "medication": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "allergy": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "dose_unit": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "number": {
+          "severity": "moderate",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "red_flag": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        }
+      },
+      "critical_flags": [],
+      "has_critical_or_high_missing_error": false
+    },
+    {
+      "sample_id": "public_vietmed_0428",
+      "model_name": null,
+      "source_name": null,
+      "split_role": null,
+      "clean_audio_path": null,
+      "reference_text": "những cái thuốc mà ức chế được cái quá trình viêm đó khi mà nó chống được quá trình viêm thì nó vừa hạn chế được cái",
+      "prediction_text": "cần những cái thuốc mà ức chế được cái quá trình viêm đó khi mà nó chống được quá trình viêm thì nó vừa",
+      "reference_normalized": "những cái thuốc mà ức chế được cái quá trình viêm đó khi mà nó chống được quá trình viêm thì nó vừa hạn chế được cái",
+      "prediction_normalized": "cần những cái thuốc mà ức chế được cái quá trình viêm đó khi mà nó chống được quá trình viêm thì nó vừa",
+      "group_errors": {
+        "negation": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "symptom": {
+          "severity": "moderate",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "medication": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "allergy": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "dose_unit": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "number": {
+          "severity": "moderate",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "red_flag": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        }
+      },
+      "critical_flags": [],
+      "has_critical_or_high_missing_error": false
+    },
+    {
+      "sample_id": "public_vietmed_0173",
+      "model_name": null,
+      "source_name": null,
+      "split_role": null,
+      "clean_audio_path": null,
+      "reference_text": "theo như bộ phận tiếp nhận của chúng tôi vừa mới chia sẻ thì có vẻ là anh bị thoái hóa đốt sống đúng không ạ vâng vậy",
+      "prediction_text": "theo như bộ phận tiếp nhận của chúng tôi vừa mới chia sẻ thì có vẻ là anh bị thoái hóa đốt sống đúng không ạ vâng",
+      "reference_normalized": "theo như bộ phận tiếp nhận của chúng tôi vừa mới chia sẻ thì có vẻ là anh bị thoái hóa đốt sống đúng không ạ vâng vậy",
+      "prediction_normalized": "theo như bộ phận tiếp nhận của chúng tôi vừa mới chia sẻ thì có vẻ là anh bị thoái hóa đốt sống đúng không ạ vâng",
+      "group_errors": {
+        "negation": {
+          "severity": "critical",
+          "reference_terms": [
+            "không"
+          ],
+          "prediction_terms": [
+            "không"
+          ],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": true,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "symptom": {
+          "severity": "moderate",
+          "reference_terms": [
+            "ho"
+          ],
+          "prediction_terms": [
+            "ho"
+          ],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": true,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "medication": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "allergy": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "dose_unit": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "number": {
+          "severity": "moderate",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "red_flag": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        }
+      },
+      "critical_flags": [],
+      "has_critical_or_high_missing_error": false
+    },
+    {
+      "sample_id": "public_vietmed_0250",
+      "model_name": null,
+      "source_name": null,
+      "split_role": null,
+      "clean_audio_path": null,
+      "reference_text": "cái người bệnh được một cái câu chuyện là chúng ta ta lại không phải lo cái câu chuyện mà tác dụng phụ lên các cái nội tạng và",
+      "prediction_text": "người bệnh được một cái câu chuyện là chúng ta lại không phải lo cái câu chuyện mà tác dụng phụ lên các cái nội tạng các cái",
+      "reference_normalized": "cái người bệnh được một cái câu chuyện là chúng ta ta lại không phải lo cái câu chuyện mà tác dụng phụ lên các cái nội tạng và",
+      "prediction_normalized": "người bệnh được một cái câu chuyện là chúng ta lại không phải lo cái câu chuyện mà tác dụng phụ lên các cái nội tạng các cái",
+      "group_errors": {
+        "negation": {
+          "severity": "critical",
+          "reference_terms": [
+            "không"
+          ],
+          "prediction_terms": [
+            "không"
+          ],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": true,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "symptom": {
+          "severity": "moderate",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "medication": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "allergy": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "dose_unit": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "number": {
+          "severity": "moderate",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "red_flag": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        }
+      },
+      "critical_flags": [],
+      "has_critical_or_high_missing_error": false
+    },
+    {
+      "sample_id": "public_vietmed_0772",
+      "model_name": null,
+      "source_name": null,
+      "split_role": null,
+      "clean_audio_path": null,
+      "reference_text": "thần kinh cao cấp đó là những những cái trách nhiệm về tâm lý những được được",
+      "prediction_text": "thần kinh cao cấp đó là những cái những cái trách nhiệm về tâm lý những được",
+      "reference_normalized": "thần kinh cao cấp đó là những những cái trách nhiệm về tâm lý những được được",
+      "prediction_normalized": "thần kinh cao cấp đó là những cái những cái trách nhiệm về tâm lý những được",
+      "group_errors": {
+        "negation": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "symptom": {
+          "severity": "moderate",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "medication": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "allergy": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "dose_unit": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "number": {
+          "severity": "moderate",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "red_flag": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        }
+      },
+      "critical_flags": [],
+      "has_critical_or_high_missing_error": false
+    },
+    {
+      "sample_id": "public_vietmed_0723",
+      "model_name": null,
+      "source_name": null,
+      "split_role": null,
+      "clean_audio_path": null,
+      "reference_text": "các nghiên cứu mà người ta đánh giá ta thấy rằng là với một cái khoảng",
+      "prediction_text": "tất cả các nghiên cứu mà người ta đánh giá ta thấy rằng là với một cái khoảng",
+      "reference_normalized": "các nghiên cứu mà người ta đánh giá ta thấy rằng là với một cái khoảng",
+      "prediction_normalized": "tất cả các nghiên cứu mà người ta đánh giá ta thấy rằng là với một cái khoảng",
+      "group_errors": {
+        "negation": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "symptom": {
+          "severity": "moderate",
+          "reference_terms": [
+            "ho"
+          ],
+          "prediction_terms": [
+            "ho"
+          ],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": true,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "medication": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "allergy": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "dose_unit": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "number": {
+          "severity": "moderate",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "red_flag": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        }
+      },
+      "critical_flags": [],
+      "has_critical_or_high_missing_error": false
+    },
+    {
+      "sample_id": "public_vietmed_0079",
+      "model_name": null,
+      "source_name": null,
+      "split_role": null,
+      "clean_audio_path": null,
+      "reference_text": "bác sĩ và sau đây thì xin được kết nối ngắn với vị khán giả tiếp theo xin kết",
+      "prediction_text": "vấn của bác sĩ và sau đây thì xin được kết nối ngắn với vị khán giả tiếp theo xin mời",
+      "reference_normalized": "bác sĩ và sau đây thì xin được kết nối ngắn với vị khán giả tiếp theo xin kết",
+      "prediction_normalized": "vấn của bác sĩ và sau đây thì xin được kết nối ngắn với vị khán giả tiếp theo xin mời",
+      "group_errors": {
+        "negation": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "symptom": {
+          "severity": "moderate",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "medication": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "allergy": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "dose_unit": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "number": {
+          "severity": "moderate",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "red_flag": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        }
+      },
+      "critical_flags": [],
+      "has_critical_or_high_missing_error": false
+    },
+    {
+      "sample_id": "public_vietmed_0538",
+      "model_name": null,
+      "source_name": null,
+      "split_role": null,
+      "clean_audio_path": null,
+      "reference_text": "rất là cao và cái cái rủi ro mà nó có thể xảy ra nó là cũng lại rất là đáng lưu ý có thể ngay lập tức bây giờ bác",
+      "prediction_text": "rất là cao và cái rủi ro mà nó có thể xảy ra nó là cũng lại rất là đáng lưu ý có thể ngay lập tức",
+      "reference_normalized": "rất là cao và cái cái rủi ro mà nó có thể xảy ra nó là cũng lại rất là đáng lưu ý có thể ngay lập tức bây giờ bác",
+      "prediction_normalized": "rất là cao và cái rủi ro mà nó có thể xảy ra nó là cũng lại rất là đáng lưu ý có thể ngay lập tức",
+      "group_errors": {
+        "negation": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "symptom": {
+          "severity": "moderate",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "medication": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "allergy": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "dose_unit": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "number": {
+          "severity": "moderate",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "red_flag": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        }
+      },
+      "critical_flags": [],
+      "has_critical_or_high_missing_error": false
+    },
+    {
+      "sample_id": "public_vietmed_0042",
+      "model_name": null,
+      "source_name": null,
+      "split_role": null,
+      "clean_audio_path": null,
+      "reference_text": "các nhà khoa học khi mà người ta nghiên cứu chính là để đi tìm câu trả lời cho cái câu hỏi này thì người ta cũng bắt",
+      "prediction_text": "các nhà khoa học khi mà người ta nghiên cứu chính là để đi tìm câu trả lời cho cái câu hỏi này thì người ta cũng",
+      "reference_normalized": "các nhà khoa học khi mà người ta nghiên cứu chính là để đi tìm câu trả lời cho cái câu hỏi này thì người ta cũng bắt",
+      "prediction_normalized": "các nhà khoa học khi mà người ta nghiên cứu chính là để đi tìm câu trả lời cho cái câu hỏi này thì người ta cũng",
+      "group_errors": {
+        "negation": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "symptom": {
+          "severity": "moderate",
+          "reference_terms": [
+            "ho"
+          ],
+          "prediction_terms": [
+            "ho"
+          ],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": true,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "medication": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "allergy": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "dose_unit": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "number": {
+          "severity": "moderate",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "red_flag": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        }
+      },
+      "critical_flags": [],
+      "has_critical_or_high_missing_error": false
+    },
+    {
+      "sample_id": "public_vietmed_0859",
+      "model_name": null,
+      "source_name": null,
+      "split_role": null,
+      "clean_audio_path": null,
+      "reference_text": "và cái vấn đề cuối cùng là thuốc mà người bệnh người bệnh vẫn nên uống thuốc",
+      "prediction_text": "và cái vấn đề cuối cùng là thuốc mà người bệnh người bệnh vẫn nên",
+      "reference_normalized": "và cái vấn đề cuối cùng là thuốc mà người bệnh người bệnh vẫn nên uống thuốc",
+      "prediction_normalized": "và cái vấn đề cuối cùng là thuốc mà người bệnh người bệnh vẫn nên",
+      "group_errors": {
+        "negation": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "symptom": {
+          "severity": "moderate",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "medication": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "allergy": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "dose_unit": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "number": {
+          "severity": "moderate",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "red_flag": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        }
+      },
+      "critical_flags": [],
+      "has_critical_or_high_missing_error": false
+    },
+    {
+      "sample_id": "public_vietmed_0709",
+      "model_name": null,
+      "source_name": null,
+      "split_role": null,
+      "clean_audio_path": null,
+      "reference_text": "phải thực hiện vì những cái bệnh lý khác hoặc là những cái thăm khám định kỳ ví dụ những cái siêu âm ví dụ như những cái",
+      "prediction_text": "phải thực hiện vì những cái bệnh lý khác hoặc là những cái thăm khám định kỳ ví dụ như những cái siêu âm ví dụ như những cái",
+      "reference_normalized": "phải thực hiện vì những cái bệnh lý khác hoặc là những cái thăm khám định kỳ ví dụ những cái siêu âm ví dụ như những cái",
+      "prediction_normalized": "phải thực hiện vì những cái bệnh lý khác hoặc là những cái thăm khám định kỳ ví dụ như những cái siêu âm ví dụ như những cái",
+      "group_errors": {
+        "negation": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "symptom": {
+          "severity": "moderate",
+          "reference_terms": [
+            "ho"
+          ],
+          "prediction_terms": [
+            "ho"
+          ],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": true,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "medication": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "allergy": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "dose_unit": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "number": {
+          "severity": "moderate",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "red_flag": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        }
+      },
+      "critical_flags": [],
+      "has_critical_or_high_missing_error": false
+    },
+    {
+      "sample_id": "public_vietmed_0645",
+      "model_name": null,
+      "source_name": null,
+      "split_role": null,
+      "clean_audio_path": null,
+      "reference_text": "thì cứng đờ thì triệu chứng những triệu chứng này kích não sâu nó sẽ giúp cải thiện được và",
+      "prediction_text": "người thì cứng đờ thì triệu chứng những triệu chứng này kích thích não sâu nó sẽ giúp cải thiện được",
+      "reference_normalized": "thì cứng đờ thì triệu chứng những triệu chứng này kích não sâu nó sẽ giúp cải thiện được và",
+      "prediction_normalized": "người thì cứng đờ thì triệu chứng những triệu chứng này kích thích não sâu nó sẽ giúp cải thiện được",
+      "group_errors": {
+        "negation": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "symptom": {
+          "severity": "moderate",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "medication": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "allergy": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "dose_unit": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "number": {
+          "severity": "moderate",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "red_flag": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        }
+      },
+      "critical_flags": [],
+      "has_critical_or_high_missing_error": false
+    },
+    {
+      "sample_id": "public_vietmed_0069",
+      "model_name": null,
+      "source_name": null,
+      "split_role": null,
+      "clean_audio_path": null,
+      "reference_text": "chúng ta ngồi nhiều thứ hai nữa là chúng ta phải gần như là khi mà chúng ta làm việc với máy tính hoặc là các cái công",
+      "prediction_text": "chúng ta ngồi nhiều thứ hai nữa là chúng ta phải gần như là khi mà chúng ta làm việc với máy tính hoặc là các cái",
+      "reference_normalized": "chúng ta ngồi nhiều thứ hai nữa là chúng ta phải gần như là khi mà chúng ta làm việc với máy tính hoặc là các cái công",
+      "prediction_normalized": "chúng ta ngồi nhiều thứ hai nữa là chúng ta phải gần như là khi mà chúng ta làm việc với máy tính hoặc là các cái",
+      "group_errors": {
+        "negation": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "symptom": {
+          "severity": "moderate",
+          "reference_terms": [
+            "ho"
+          ],
+          "prediction_terms": [
+            "ho"
+          ],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": true,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "medication": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "allergy": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "dose_unit": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "number": {
+          "severity": "moderate",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "red_flag": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        }
+      },
+      "critical_flags": [],
+      "has_critical_or_high_missing_error": false
+    },
+    {
+      "sample_id": "public_vietmed_0936",
+      "model_name": null,
+      "source_name": null,
+      "split_role": null,
+      "clean_audio_path": null,
+      "reference_text": "nó không giúp ích bằng các cái thuốc các thuốc điều trị bệnh parkinson nó vẫn gây ra vẫn bệnh người bệnh vẫn có táo",
+      "prediction_text": "mà nó không giúp ích bằng các cái thuốc các cái thuốc điều trị bệnh parkinson nó vẫn gây ra vẫn bị người bệnh",
+      "reference_normalized": "nó không giúp ích bằng các cái thuốc các thuốc điều trị bệnh parkinson nó vẫn gây ra vẫn bệnh người bệnh vẫn có táo",
+      "prediction_normalized": "mà nó không giúp ích bằng các cái thuốc các cái thuốc điều trị bệnh parkinson nó vẫn gây ra vẫn bị người bệnh",
+      "group_errors": {
+        "negation": {
+          "severity": "critical",
+          "reference_terms": [
+            "không"
+          ],
+          "prediction_terms": [
+            "không"
+          ],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": true,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "symptom": {
+          "severity": "moderate",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "medication": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "allergy": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "dose_unit": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "number": {
+          "severity": "moderate",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "red_flag": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        }
+      },
+      "critical_flags": [],
+      "has_critical_or_high_missing_error": false
+    },
+    {
+      "sample_id": "public_vietmed_0266",
+      "model_name": null,
+      "source_name": null,
+      "split_role": null,
+      "clean_audio_path": null,
+      "reference_text": "nên vận động tại chỗ mà thôi ví dụ như bác nằm ở trên giường bác dùng các cái động tác như đạp xe đạp này hoặc là nâng",
+      "prediction_text": "chỉ nên vận động tại chỗ mà thôi ví dụ như bác nằm ở trên giường bác dùng các cái động tác như đạp xe đạp này là",
+      "reference_normalized": "nên vận động tại chỗ mà thôi ví dụ như bác nằm ở trên giường bác dùng các cái động tác như đạp xe đạp này hoặc là nâng",
+      "prediction_normalized": "chỉ nên vận động tại chỗ mà thôi ví dụ như bác nằm ở trên giường bác dùng các cái động tác như đạp xe đạp này là",
+      "group_errors": {
+        "negation": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "symptom": {
+          "severity": "moderate",
+          "reference_terms": [
+            "ho"
+          ],
+          "prediction_terms": [],
+          "missing_terms": [
+            "ho"
+          ],
+          "inserted_terms": [],
+          "has_reference_terms": true,
+          "has_missing_terms": true,
+          "has_inserted_terms": false
+        },
+        "medication": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "allergy": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "dose_unit": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "number": {
+          "severity": "moderate",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "red_flag": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        }
+      },
+      "critical_flags": [],
+      "has_critical_or_high_missing_error": false
+    },
+    {
+      "sample_id": "public_vietmed_0863",
+      "model_name": null,
+      "source_name": null,
+      "split_role": null,
+      "clean_audio_path": null,
+      "reference_text": "định huấn luyện triệu chứng kéo dài và cải thiện triệu chứng tốt hơn cho",
+      "prediction_text": "ổn định triệu chứng kéo dài và cải thiện triệu chứng tốt hơn cho",
+      "reference_normalized": "định huấn luyện triệu chứng kéo dài và cải thiện triệu chứng tốt hơn cho",
+      "prediction_normalized": "ổn định triệu chứng kéo dài và cải thiện triệu chứng tốt hơn cho",
+      "group_errors": {
+        "negation": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "symptom": {
+          "severity": "moderate",
+          "reference_terms": [
+            "ho"
+          ],
+          "prediction_terms": [
+            "ho"
+          ],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": true,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "medication": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "allergy": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "dose_unit": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "number": {
+          "severity": "moderate",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "red_flag": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        }
+      },
+      "critical_flags": [],
+      "has_critical_or_high_missing_error": false
+    },
+    {
+      "sample_id": "public_vietmed_0803",
+      "model_name": null,
+      "source_name": null,
+      "split_role": null,
+      "clean_audio_path": null,
+      "reference_text": "sẽ tiến triển nặng hơn người bệnh cần phải có sự trợ giúp của người thân cũng",
+      "prediction_text": "phát triển nặng hơn người bệnh cần phải có sự trợ giúp của người thân của",
+      "reference_normalized": "sẽ tiến triển nặng hơn người bệnh cần phải có sự trợ giúp của người thân cũng",
+      "prediction_normalized": "phát triển nặng hơn người bệnh cần phải có sự trợ giúp của người thân của",
+      "group_errors": {
+        "negation": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "symptom": {
+          "severity": "moderate",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "medication": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "allergy": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "dose_unit": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "number": {
+          "severity": "moderate",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "red_flag": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        }
+      },
+      "critical_flags": [],
+      "has_critical_or_high_missing_error": false
+    },
+    {
+      "sample_id": "public_vietmed_0946",
+      "model_name": null,
+      "source_name": null,
+      "split_role": null,
+      "clean_audio_path": null,
+      "reference_text": "ta cũng được biết rằng là sau phẫu thuật kích thích não sau người bệnh còn được lập chương trình cho máy hoạt động nữa vậy",
+      "prediction_text": "chúng ta cũng được biết rằng là sau phẫu thuật kích thích não sâu người bệnh còn được lập chương trình cho máy hoạt động nữa",
+      "reference_normalized": "ta cũng được biết rằng là sau phẫu thuật kích thích não sau người bệnh còn được lập chương trình cho máy hoạt động nữa vậy",
+      "prediction_normalized": "chúng ta cũng được biết rằng là sau phẫu thuật kích thích não sâu người bệnh còn được lập chương trình cho máy hoạt động nữa",
+      "group_errors": {
+        "negation": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "symptom": {
+          "severity": "moderate",
+          "reference_terms": [
+            "ho"
+          ],
+          "prediction_terms": [
+            "ho"
+          ],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": true,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "medication": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "allergy": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "dose_unit": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "number": {
+          "severity": "moderate",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "red_flag": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        }
+      },
+      "critical_flags": [],
+      "has_critical_or_high_missing_error": false
+    },
+    {
+      "sample_id": "public_vietmed_0840",
+      "model_name": null,
+      "source_name": null,
+      "split_role": null,
+      "clean_audio_path": null,
+      "reference_text": "và táo bón cũng là một trong những cái tác dụng phụ mà do thuốc điều trị bệnh",
+      "prediction_text": "và táo bón cũng là một trong những cái tác dụng phụ mà do thuốc điều trị",
+      "reference_normalized": "và táo bón cũng là một trong những cái tác dụng phụ mà do thuốc điều trị bệnh",
+      "prediction_normalized": "và táo bón cũng là một trong những cái tác dụng phụ mà do thuốc điều trị",
+      "group_errors": {
+        "negation": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "symptom": {
+          "severity": "moderate",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "medication": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "allergy": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "dose_unit": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "number": {
+          "severity": "moderate",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "red_flag": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        }
+      },
+      "critical_flags": [],
+      "has_critical_or_high_missing_error": false
+    },
+    {
+      "sample_id": "public_vietmed_0436",
+      "model_name": null,
+      "source_name": null,
+      "split_role": null,
+      "clean_audio_path": null,
+      "reference_text": "nó lại rất là khó khăn cho nên là và tôi cứ đi ra ngoài mà tôi ngửi thấy cái",
+      "prediction_text": "đấy nó lại rất là khó khăn cho nên là vâng dịch bệnh hai nữa tôi cứ đi ra ngoài tôi đi cái",
+      "reference_normalized": "nó lại rất là khó khăn cho nên là và tôi cứ đi ra ngoài mà tôi ngửi thấy cái",
+      "prediction_normalized": "đấy nó lại rất là khó khăn cho nên là vâng dịch bệnh hai nữa tôi cứ đi ra ngoài tôi đi cái",
+      "group_errors": {
+        "negation": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "symptom": {
+          "severity": "moderate",
+          "reference_terms": [
+            "ho"
+          ],
+          "prediction_terms": [
+            "ho"
+          ],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": true,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "medication": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "allergy": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "dose_unit": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "number": {
+          "severity": "moderate",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "red_flag": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        }
+      },
+      "critical_flags": [],
+      "has_critical_or_high_missing_error": false
+    },
+    {
+      "sample_id": "public_vietmed_0385",
+      "model_name": null,
+      "source_name": null,
+      "split_role": null,
+      "clean_audio_path": null,
+      "reference_text": "dù bác bảo là nó chưa phá ra nhưng mà chúng tôi thấy là nó phá ra rất nhiều phá ra cái gì ạ bác đã dùng corticoid",
+      "prediction_text": "dù bác bảo là nó chưa phá ra nhưng mà chúng tôi thấy là nó phá ra rất nhiều phá ra cái gì ạ bác đã dùng cortico",
+      "reference_normalized": "dù bác bảo là nó chưa phá ra nhưng mà chúng tôi thấy là nó phá ra rất nhiều phá ra cái gì ạ bác đã dùng corticoid",
+      "prediction_normalized": "dù bác bảo là nó chưa phá ra nhưng mà chúng tôi thấy là nó phá ra rất nhiều phá ra cái gì ạ bác đã dùng cortico",
+      "group_errors": {
+        "negation": {
+          "severity": "critical",
+          "reference_terms": [
+            "chưa"
+          ],
+          "prediction_terms": [
+            "chưa"
+          ],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": true,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "symptom": {
+          "severity": "moderate",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "medication": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "allergy": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "dose_unit": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "number": {
+          "severity": "moderate",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "red_flag": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        }
+      },
+      "critical_flags": [],
+      "has_critical_or_high_missing_error": false
+    },
+    {
+      "sample_id": "public_vietmed_0087",
+      "model_name": null,
+      "source_name": null,
+      "split_role": null,
+      "clean_audio_path": null,
+      "reference_text": "điều trị thời ban đầu và sau này khi mà nó muộn rồi cột sống nó dính rồi thì chúng ta lại không thể làm thế nào mà nó",
+      "prediction_text": "gian điều trị ban đầu và sau này khi mà nó muộn rồi cột sống nó dính rồi thì chúng ta lại không thể làm thế nào mà",
+      "reference_normalized": "điều trị thời ban đầu và sau này khi mà nó muộn rồi cột sống nó dính rồi thì chúng ta lại không thể làm thế nào mà nó",
+      "prediction_normalized": "gian điều trị ban đầu và sau này khi mà nó muộn rồi cột sống nó dính rồi thì chúng ta lại không thể làm thế nào mà",
+      "group_errors": {
+        "negation": {
+          "severity": "critical",
+          "reference_terms": [
+            "không"
+          ],
+          "prediction_terms": [
+            "không"
+          ],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": true,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "symptom": {
+          "severity": "moderate",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "medication": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "allergy": {
+          "severity": "critical",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "dose_unit": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "number": {
+          "severity": "moderate",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        },
+        "red_flag": {
+          "severity": "high",
+          "reference_terms": [],
+          "prediction_terms": [],
+          "missing_terms": [],
+          "inserted_terms": [],
+          "has_reference_terms": false,
+          "has_missing_terms": false,
+          "has_inserted_terms": false
+        }
+      },
+      "critical_flags": [],
+      "has_critical_or_high_missing_error": false
+    }
+  ]
+}
