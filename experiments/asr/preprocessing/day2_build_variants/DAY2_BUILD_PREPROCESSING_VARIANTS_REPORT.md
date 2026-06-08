@@ -8,9 +8,7 @@ Create versioned audio preprocessing variants for VietMed dev set.
 
 | Variant | Input rows | Output rows | Failures | Manifest |
 |---|---:|---:|---:|---|
-| p03_vad_pad_200ms | 200 | 200 | 0 | `data/data_lake/silver/asr_manifests/preprocessing_variants/vietmed_dev_p03_vad_pad_200ms.jsonl` |
-| p04_vad_pad_300ms | 200 | 200 | 0 | `data/data_lake/silver/asr_manifests/preprocessing_variants/vietmed_dev_p04_vad_pad_300ms.jsonl` |
-| p05_vad_pad_500ms | 200 | 200 | 0 | `data/data_lake/silver/asr_manifests/preprocessing_variants/vietmed_dev_p05_vad_pad_500ms.jsonl` |
+| p03_vad_pad_200ms | 600 | 600 | 0 | `data/data_lake/silver/asr_manifests/preprocessing_variants/vietmed_train_candidate_p03_vad_pad_200ms.jsonl` |
 
 ## Guardrails
 

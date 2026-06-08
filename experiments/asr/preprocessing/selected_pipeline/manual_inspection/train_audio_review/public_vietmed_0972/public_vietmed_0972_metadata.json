@@ -1,0 +1,20 @@
+{
+  "sample_id": "public_vietmed_0972",
+  "split_role": "train_candidate",
+  "transcript_text": "cuộc đời của người bệnh cũng giống như là quá trình điều trị thuốc vậy",
+  "source_clean_audio_path": "/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_clean/public_vietmed_0972_audio_clean_v0.wav",
+  "selected_audio_path": "/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p03_vad_pad_200ms/public_vietmed_0972_p03_vad_pad_200ms.wav",
+  "original_duration_seconds": 9.0,
+  "processed_duration_seconds": 9.4,
+  "duration_delta_seconds": 0.40000000000000036,
+  "shrink_ratio": 1.0444444444444445,
+  "vad_fallback": true,
+  "vad_reason": "kept_ratio_too_low:0.4738",
+  "speech_start_sample": 0,
+  "speech_end_sample": 65024,
+  "trim_start_sample": null,
+  "trim_end_sample": null,
+  "kept_ratio": 0.4737777777777778,
+  "review_decision": "pending_manual_review",
+  "recommended_action": "inspect_original_vs_p03"
+}

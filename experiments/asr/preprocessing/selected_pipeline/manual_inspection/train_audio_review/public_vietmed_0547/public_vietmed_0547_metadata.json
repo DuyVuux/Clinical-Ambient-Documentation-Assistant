@@ -1,0 +1,20 @@
+{
+  "sample_id": "public_vietmed_0547",
+  "split_role": "train_candidate",
+  "transcript_text": "vâng thế và cái hiện tượng mà cái bàn tay mình mình",
+  "source_clean_audio_path": "/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_clean/public_vietmed_0547_audio_clean_v0.wav",
+  "selected_audio_path": "/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p03_vad_pad_200ms/public_vietmed_0547_p03_vad_pad_200ms.wav",
+  "original_duration_seconds": 5.0,
+  "processed_duration_seconds": 3.728,
+  "duration_delta_seconds": -1.2719999999999998,
+  "shrink_ratio": 0.7456,
+  "vad_fallback": false,
+  "vad_reason": "ok",
+  "speech_start_sample": 23552,
+  "speech_end_sample": 80000,
+  "trim_start_sample": 20352,
+  "trim_end_sample": 80000,
+  "kept_ratio": 0.7456,
+  "review_decision": "pending_manual_review",
+  "recommended_action": "inspect_original_vs_p03"
+}

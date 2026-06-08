@@ -1,0 +1,20 @@
+{
+  "sample_id": "public_vietmed_0176",
+  "split_role": "train_candidate",
+  "transcript_text": "còn phục hồi sụn khớp thoái hóa hiệu quả cứ mười người dùng thì chín người thấy hiệu quả",
+  "source_clean_audio_path": "/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_clean/public_vietmed_0176_audio_clean_v0.wav",
+  "selected_audio_path": "/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p03_vad_pad_200ms/public_vietmed_0176_p03_vad_pad_200ms.wav",
+  "original_duration_seconds": 7.0,
+  "processed_duration_seconds": 4.944,
+  "duration_delta_seconds": -2.056,
+  "shrink_ratio": 0.7062857142857143,
+  "vad_fallback": false,
+  "vad_reason": "ok",
+  "speech_start_sample": 5120,
+  "speech_end_sample": 77824,
+  "trim_start_sample": 1920,
+  "trim_end_sample": 81024,
+  "kept_ratio": 0.7062857142857143,
+  "review_decision": "pending_manual_review",
+  "recommended_action": "inspect_original_vs_p03"
+}

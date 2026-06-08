@@ -1,0 +1,20 @@
+{
+  "sample_id": "public_vietmed_0152",
+  "split_role": "train_candidate",
+  "transcript_text": "kính chào quý vị và các bạn đang theo dõi chương trình tư vấn sức khỏe trực tiếp sống khỏe mỗi ngày được phát vào",
+  "source_clean_audio_path": "/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_clean/public_vietmed_0152_audio_clean_v0.wav",
+  "selected_audio_path": "/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p03_vad_pad_200ms/public_vietmed_0152_p03_vad_pad_200ms.wav",
+  "original_duration_seconds": 5.0,
+  "processed_duration_seconds": 3.568,
+  "duration_delta_seconds": -1.432,
+  "shrink_ratio": 0.7136,
+  "vad_fallback": false,
+  "vad_reason": "ok",
+  "speech_start_sample": 26112,
+  "speech_end_sample": 80000,
+  "trim_start_sample": 22912,
+  "trim_end_sample": 80000,
+  "kept_ratio": 0.7136,
+  "review_decision": "pending_manual_review",
+  "recommended_action": "inspect_original_vs_p03"
+}

@@ -1,0 +1,20 @@
+{
+  "sample_id": "public_vietmed_0007",
+  "split_role": "train_candidate",
+  "transcript_text": "giận nó hay đau đau cả cả ngày đêm nhưng",
+  "source_clean_audio_path": "/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_clean/public_vietmed_0007_audio_clean_v0.wav",
+  "selected_audio_path": "/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p03_vad_pad_200ms/public_vietmed_0007_p03_vad_pad_200ms.wav",
+  "original_duration_seconds": 6.0,
+  "processed_duration_seconds": 4.408,
+  "duration_delta_seconds": -1.5919999999999996,
+  "shrink_ratio": 0.7346666666666667,
+  "vad_fallback": false,
+  "vad_reason": "ok",
+  "speech_start_sample": 28672,
+  "speech_end_sample": 96000,
+  "trim_start_sample": 25472,
+  "trim_end_sample": 96000,
+  "kept_ratio": 0.7346666666666667,
+  "review_decision": "pending_manual_review",
+  "recommended_action": "inspect_original_vs_p03"
+}

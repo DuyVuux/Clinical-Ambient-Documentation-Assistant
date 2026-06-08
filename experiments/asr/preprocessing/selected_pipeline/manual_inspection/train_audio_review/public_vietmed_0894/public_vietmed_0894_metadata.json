@@ -1,0 +1,20 @@
+{
+  "sample_id": "public_vietmed_0894",
+  "split_role": "train_candidate",
+  "transcript_text": "hiểu ở phần đầu chương trình ngay sau đây",
+  "source_clean_audio_path": "/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_clean/public_vietmed_0894_audio_clean_v0.wav",
+  "selected_audio_path": "/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/audio_preprocessed/p03_vad_pad_200ms/public_vietmed_0894_p03_vad_pad_200ms.wav",
+  "original_duration_seconds": 5.0,
+  "processed_duration_seconds": 5.4,
+  "duration_delta_seconds": 0.40000000000000036,
+  "shrink_ratio": 1.08,
+  "vad_fallback": true,
+  "vad_reason": "kept_ratio_too_low:0.3536",
+  "speech_start_sample": 0,
+  "speech_end_sample": 25088,
+  "trim_start_sample": null,
+  "trim_end_sample": null,
+  "kept_ratio": 0.3536,
+  "review_decision": "pending_manual_review",
+  "recommended_action": "inspect_original_vs_p03"
+}
