@@ -39,7 +39,7 @@ Hệ thống **không phải AI doctor**, **không tự chẩn đoán**, **khôn
 
 ## 1. Trạng thái nghiên cứu hiện tại
 
-### 1.1. Tuần 1–2: Synthetic outpatient data v0.1
+### 1.1. Giai đoạn 1: Synthetic outpatient data v0.1
 
 Đã xây dựng bộ synthetic outpatient encounters để kiểm thử end-to-end downstream clinical NLP/SOAP.
 
@@ -87,9 +87,9 @@ Ví dụ nhóm lỗi safety đã được đưa vào synthetic cases:
 
 ---
 
-### 1.2. Tuần 3: ASR ingestion + benchmark foundation
+### 1.2. Giai đoạn 2: ASR ingestion + benchmark foundation
 
-Tuần 3 đã chuyển từ “ingest public data” sang **ASR benchmark track** vì mục tiêu thực tế là:
+Dự án đã chuyển từ “ingest public data” sang **ASR benchmark track** vì mục tiêu thực tế là:
 
 ```text
 Baseline sếp báo: Whisper-small trên VietMed WER khoảng 31%
@@ -115,7 +115,7 @@ dev: dùng chọn model / chọn preprocessing / chọn checkpoint
 test_holdout: chỉ dùng đánh giá cuối cùng, không dùng để tune
 ```
 
-Kết quả dev đáng chú ý từ tuần 3:
+Kết quả dev đánh giá đáng chú ý:
 
 ```text
 openai/whisper-small: WER rất cao, bị loại khỏi nhóm candidate chính
@@ -124,7 +124,7 @@ vinai/PhoWhisper-medium: WER khoảng 24.64% trên dev
 khanhld/chunkformer-ctc-large-vie: WER khoảng 12.90% trên dev
 ```
 
-Kết luận tuần 3:
+Kết luận từ đánh giá baseline:
 
 ```text
 ChunkFormer là primary inference baseline vì WER tốt nhất.
@@ -134,9 +134,9 @@ WER thấp chưa đủ vì vẫn còn lỗi lâm sàng như missing negation, sy
 
 ---
 
-### 1.3. Tuần 4: Data preprocessing trước fine-tune
+### 1.3. Giai đoạn 3: Data preprocessing trước fine-tune
 
-Sau phân tích lỗi, quyết định **không fine-tune ngay** mà dành tuần 4 để tiền xử lý dữ liệu.
+Sau phân tích lỗi, quyết định **không fine-tune ngay** mà dành thời gian để tiền xử lý dữ liệu trước.
 
 Lý do:
 
@@ -149,7 +149,7 @@ Một phần lỗi ASR đến từ dữ liệu audio:
 - VAD/chunking/padding cần được kiểm chứng
 ```
 
-Kết quả Day 1 Week 4 audio QA:
+Kết quả kiểm tra Audio QA:
 
 ```text
 Train 600:
@@ -185,7 +185,7 @@ p11_edge_pad_300ms
 p12_edge_pad_500ms
 ```
 
-Sau padding-aware audit và ASR/clinical error analysis, quyết định Day 5:
+Sau padding-aware audit và ASR/clinical error analysis, quyết định:
 
 ```text
 Selected preprocessing: p03_vad_pad_200ms
@@ -210,7 +210,7 @@ Clinical errors:
 - p03 không làm tăng medication/dose/numeric error
 ```
 
-Lưu ý Day 6:
+Lưu ý về bước rà soát:
 
 ```text
 p03 có một số mẫu duration_shrink_risky:
@@ -624,9 +624,9 @@ python scripts/asr_eval/asr_medical_error_analysis.py \
 
 ---
 
-## 7. Chạy Week 4 preprocessing pipeline
+## 7. Chạy Preprocessing Pipeline
 
-### 7.1. Day 1 — Audio QA
+### 7.1. Bước 1: Audio QA
 
 Chạy audit cho train:
 
@@ -668,7 +668,7 @@ clipping_detected: 0
 
 ---
 
-### 7.2. Day 2 — Build preprocessing variants
+### 7.2. Bước 2: Build preprocessing variants
 
 Tạo VAD-padding variants:
 
@@ -699,7 +699,7 @@ Kỳ vọng mỗi dev variant có 200 dòng.
 
 ---
 
-### 7.3. Day 3 — Audit variants
+### 7.3. Bước 3: Audit variants
 
 Audit từng variant:
 
@@ -746,7 +746,7 @@ p04/p05 300–500ms không được chọn.
 
 ---
 
-### 7.4. Day 4 — ASR preprocessing A/B test
+### 7.4. Bước 4: ASR preprocessing A/B test
 
 Chạy ChunkFormer cho original:
 
@@ -793,7 +793,7 @@ python scripts/asr_eval/compute_wer.py \
 
 ---
 
-### 7.5. Day 5 — Clinical error + edge-risk subset analysis
+### 7.5. Bước 5: Clinical error + edge-risk subset analysis
 
 Chạy medical error analysis:
 
@@ -822,7 +822,7 @@ Selected preprocessing = p03_vad_pad_200ms
 
 ---
 
-### 7.6. Day 6 — Apply selected preprocessing
+### 7.6. Bước 6: Apply selected preprocessing
 
 Apply p03 cho train:
 
@@ -911,7 +911,7 @@ Chỉ sample bị VAD cắt speech mới quay về original clean audio.
 
 ---
 
-## 9. Fine-tune readiness cho tuần 5
+## 9. Điều kiện sẵn sàng để Fine-tune
 
 Trước khi fine-tune, cần có:
 
@@ -935,7 +935,7 @@ data/data_lake/evaluation/asr_eval_v0_1/vietmed_test_holdout_v0_1.jsonl
 
 ---
 
-## 10. Hướng dẫn Week 5 — Fine-tune
+## 10. Hướng dẫn quy trình Fine-tune
 
 ### 10.1. Mục tiêu
 
@@ -1066,75 +1066,69 @@ Nếu p03 cắt speech → fallback sample đó về original.
 ### Dữ liệu
 
 ```text
-[ ] VietMed 1050 samples đã có trong Silver
-[ ] train/dev/test = 600/200/200
-[ ] test_holdout chưa dùng để tune
-[ ] selected train/dev manifest đã có
-[ ] raw audio không bị overwrite
+[x] VietMed 1050 samples đã có trong Silver
+[x] train/dev/test = 600/200/200
+[x] test_holdout chưa dùng để tune
+[x] selected train/dev manifest đã có
+[x] raw audio không bị overwrite
 ```
 
 ### Benchmark
 
 ```text
-[ ] ChunkFormer baseline dev WER khoảng 12.90%
-[ ] Có WER/CER JSON
-[ ] Có medical error analysis
-[ ] Có leakage check
+[x] ChunkFormer baseline dev WER khoảng 12.90%
+[x] Có WER/CER JSON
+[x] Có medical error analysis
+[x] Có leakage check
 ```
 
 ### Preprocessing
 
 ```text
-[ ] Audio QA train/dev
-[ ] Variant QA
-[ ] Padding-aware QA
-[ ] ASR ablation original/p10/p03
-[ ] Selected preprocessing = p03_vad_pad_200ms hoặc p03_safe_hybrid_v0_1
-[ ] Manual inspection cho duration_shrink_risky
+[x] Audio QA train/dev
+[x] Variant QA
+[x] Padding-aware QA
+[x] ASR ablation original/p10/p03
+[x] Selected preprocessing = p03_vad_pad_200ms hoặc p03_safe_hybrid_v0_1
+[x] Manual inspection cho duration_shrink_risky
 ```
 
 ### Fine-tune readiness
 
 ```text
-[ ] selected train manifest ready
-[ ] selected dev manifest ready
-[ ] fine-tune config ready
-[ ] test_holdout untouched
+[x] selected train manifest ready
+[x] selected dev manifest ready
+[x] fine-tune config ready
+[x] test_holdout untouched
 ```
 
 ---
 
 ## 14. Lộ trình tiếp theo
 
-### Week 5 — Fine-tune
+### Giai đoạn: Fine-tune
 
 ```text
-Day 1:
+Bước 1: Chuẩn bị
 - kiểm tra selected manifests
 - tạo HF train/dev format
 - chạy smoke fine-tune
 
-Day 2:
+Bước 2: Huấn luyện
 - fine-tune PhoWhisper-base/medium
 
-Day 3:
+Bước 3: Đánh giá và tinh chỉnh
 - đánh giá dev WER/CER
 - clinical error analysis
-
-Day 4:
 - tinh chỉnh training config nếu cần
 
-Day 5:
+Bước 4: Hoàn thiện
 - chọn checkpoint tốt nhất theo dev
-
-Day 6:
 - chạy test_holdout một lần nếu đã freeze model + preprocessing
-
-Day 7:
-- viết báo cáo Week 5
+- tổng hợp và viết báo cáo
 ```
 
-### Sau Week 5
+### Các giai đoạn sau
 
 ```text
 - bổ sung volunteer/actor audio từ synthetic scripts
@@ -1211,7 +1205,7 @@ Hiện tại pipeline ASR đã đạt mục tiêu WER < 20% trên dev với Chun
 - numeric error
 ```
 
-Tuần 4 đã chứng minh cách làm đúng là:
+Quá trình đánh giá đã chứng minh cách làm đúng là:
 
 ```text
 Không fine-tune ngay.
@@ -1222,4 +1216,4 @@ Chọn preprocessing bằng WER + clinical error.
 Manual inspect các sample VAD-risk trước khi freeze.
 ```
 
-Đây là nền tảng bắt buộc để Week 5 fine-tune không rơi vào tình trạng “train trên dữ liệu bẩn” hoặc đạt WER đẹp nhưng tăng rủi ro lâm sàng.
+Đây là nền tảng bắt buộc để quá trình fine-tune không rơi vào tình trạng “train trên dữ liệu bẩn” hoặc đạt WER đẹp nhưng tăng rủi ro lâm sàng.
