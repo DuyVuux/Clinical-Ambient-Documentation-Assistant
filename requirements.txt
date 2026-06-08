@@ -1,10 +1,19 @@
+# Data Processing & Storage
 datasets>=4.8.5
-soundfile>=0.13.1
 pandas>=3.0.3
-kaggle>=2.2.0
+
+# Audio Processing
+soundfile>=0.13.1
+librosa>=0.10.0
+
+# Deep Learning & Modeling
 torch>=2.1.0
 transformers>=4.40.0
 accelerate>=0.28.0
-librosa>=0.10.0
-jiwer>=4.0.0
 chunkformer>=1.2.0
+
+# Evaluation & Metrics
+jiwer>=4.0.0
+
+# Cloud & Utilities
+kaggle>=2.2.0

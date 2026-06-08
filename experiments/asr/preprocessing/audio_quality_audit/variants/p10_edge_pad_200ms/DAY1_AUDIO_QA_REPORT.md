@@ -2,9 +2,9 @@
 
 ## Input
 
-- Manifest: `/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/asr_manifests/preprocessing_variants/vietmed_dev_p10_edge_pad_200ms.jsonl`
-- Full JSON report: `/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/experiments/asr/preprocessing/audio_quality_audit/variants/p10_edge_pad_200ms/audio_quality_report.json`
-- Edge-loss risk samples: `/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/experiments/asr/preprocessing/audio_quality_audit/variants/p10_edge_pad_200ms/edge_loss_risk_samples.jsonl`
+- Manifest: `/content/Clinical-Ambient-Documentation-Assistant/data/data_lake/silver/asr_manifests/preprocessing_variants/vietmed_dev_p10_edge_pad_200ms.jsonl`
+- Full JSON report: `/content/Clinical-Ambient-Documentation-Assistant/experiments/asr/preprocessing/audio_quality_audit/variants/p10_edge_pad_200ms/audio_quality_report.json`
+- Edge-loss risk samples: `/content/Clinical-Ambient-Documentation-Assistant/experiments/asr/preprocessing/audio_quality_audit/variants/p10_edge_pad_200ms/edge_loss_risk_samples.jsonl`
 
 ## Summary
 

@@ -1,5 +1,11 @@
 -r requirements.txt
+
+# Testing & Linting
 pytest
 ruff
 mypy
+
+# Notebooks & Experimentation
 jupyter
+ipykernel
+notebook

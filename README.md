@@ -78,7 +78,68 @@ Clinical Ambient Documentation Assistant/
 │       ├── baseline/                   # Kết quả chạy Baseline (logs, metrics, predictions)
 │       ├── error_analysis/             # Phân tích lỗi (Medical taxonomy, terms check)
 │       ├── finetune/                   # Thư mục cho Phase Fine-tuning (Tuần 4)
+│       ├── model_expansion_v2/         # Mở rộng thử nghiệm mô hình ASR mới (ViStreamASR, Zipformer...)
+│       │   ├── ADAPTER_INTERFACE.md
+│       │   ├── MODEL_REGISTRY_EXPANSION_V2.md
+│       │   ├── configs/
+│       │   │   ├── vietmed_dev_mini_30.jsonl
+│       │   │   └── vietmed_dev_smoke_10.jsonl
+│       │   ├── error_analysis/
+│       │   │   └── dev/
+│       │   │       ├── vistream_dev_medical_errors.json
+│       │   │       ├── vistream_dev_medical_errors.md
+│       │   │       ├── zipformer30m_dev_medical_errors.json
+│       │   │       └── zipformer30m_dev_medical_errors.md
+│       │   ├── logs/
+│       │   ├── metrics/
+│       │   │   └── dev/
+│       │   │       ├── vistream_dev_full_metrics.json
+│       │   │       ├── vistream_dev_smoke_10_metrics.json
+│       │   │       ├── zipformer30m_dev_full_metrics.json
+│       │   │       └── zipformer30m_dev_smoke_10_metrics.json
+│       │   ├── predictions/
+│       │   │   └── dev/
+│       │   │       ├── vistream_dev_full_predictions.jsonl
+│       │   │       ├── vistream_dev_smoke_10_predictions.jsonl
+│       │   │       ├── zipformer30m_dev_full_predictions.jsonl
+│       │   │       └── zipformer30m_dev_smoke_10_predictions.jsonl
+│       │   └── runtime/
+│       │       └── dev/
+│       ├── preprocessing/              # Thử nghiệm tiền xử lý âm thanh (A/B test, kiểm toán, ablation)
+│       │   ├── DAY1_AUDIO_QA_REPORT.md
+│       │   ├── DAY3_VARIANT_AUDIO_QA_FINDING.md
+│       │   ├── ablation/
+│       │   │   ├── DAY4_ASR_PREPROCESSING_ABLATION.md
+│       │   │   ├── PREPROCESSING_ABLATION_LEADERBOARD_DEV.md
+│       │   │   ├── logs/
+│       │   │   ├── metrics/
+│       │   │   └── predictions/
+│       │   ├── audio_quality_audit/
+│       │   │   ├── VARIANT_AUDIO_QA_SUMMARY.md
+│       │   │   ├── dev/
+│       │   │   ├── padding_aware/
+│       │   │   ├── train/
+│       │   │   ├── variant_audio_qa_summary.json
+│       │   │   └── variants/
+│       │   └── day2_build_variants/
+│       │       ├── DAY2_BUILD_PREPROCESSING_VARIANTS_REPORT.md
+│       │       ├── p00_format_only_failures.jsonl
+│       │       ├── p00_format_only_summary.json
+│       │       ├── p03_vad_pad_200ms_failures.jsonl
+│       │       ├── p03_vad_pad_200ms_summary.json
+│       │       ├── p04_vad_pad_300ms_failures.jsonl
+│       │       ├── p04_vad_pad_300ms_summary.json
+│       │       ├── p05_vad_pad_500ms_failures.jsonl
+│       │       ├── p05_vad_pad_500ms_summary.json
+│       │       ├── p10_edge_pad_200ms_failures.jsonl
+│       │       ├── p10_edge_pad_200ms_summary.json
+│       │       ├── p11_edge_pad_300ms_failures.jsonl
+│       │       ├── p11_edge_pad_300ms_summary.json
+│       │       ├── p12_edge_pad_500ms_failures.jsonl
+│       │       └── p12_edge_pad_500ms_summary.json
 │       └── validation/                 # Kiểm chứng mô hình (Leakage check, audit thủ công, day6 summary)
+├── external_models/                    # Lưu trữ các mô hình ASR mở rộng bên ngoài (VD: ChunkFormer)
+│   └── (Thư mục trống/chờ tải model)
 ├── report/                             # Báo cáo tiến độ hàng tuần
 │   ├── Tuần_1/                         # Các báo cáo LaTeX và file PDF tuần 1
 │   ├── Tuần_2/                         # Các báo cáo LaTeX và file PDF tuần 2
@@ -95,6 +156,11 @@ Clinical Ambient Documentation Assistant/
 │   │   ├── run_hf_ctc_asr.py           # Script chạy mô hình CTC của HuggingFace
 │   │   ├── run_whisper_transformers.py # Script chạy mô hình họ Whisper
 │   │   └── text_normalization_vi.py    # Chuẩn hóa văn bản tiếng Việt
+│   ├── asr_preprocess/                 # Scripts tiền xử lý và kiểm toán chất lượng âm thanh
+│   │   ├── audit_audio_quality.py      # Kiểm toán chất lượng âm thanh ban đầu
+│   │   ├── audit_audio_quality_padding_aware.py # Kiểm toán tách biệt padding và vùng có tiếng (speech)
+│   │   ├── build_preprocess_variants.py # Xây dựng các biến thể dữ liệu âm thanh để A/B testing
+│   │   └── summarize_variant_audio_qa.py # Tổng hợp báo cáo kiểm toán cho từng biến thể
 │   ├── data_ingestion/                 # Scripts tải và import dữ liệu (Common Voice, public data)
 │   │   ├── ingest_asr_public_day1.py   # Ingest script dữ liệu public day1
 │   │   ├── ingest_common_voice_vi_official.py # Ingest script dữ liệu Common Voice VN

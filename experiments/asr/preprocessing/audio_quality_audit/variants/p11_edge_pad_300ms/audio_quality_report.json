@@ -1,6 +1,6 @@
 {
-  "manifest_path": "/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/asr_manifests/preprocessing_variants/vietmed_dev_p11_edge_pad_300ms.jsonl",
-  "output_dir": "/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/experiments/asr/preprocessing/audio_quality_audit/variants/p11_edge_pad_300ms",
+  "manifest_path": "/content/Clinical-Ambient-Documentation-Assistant/data/data_lake/silver/asr_manifests/preprocessing_variants/vietmed_dev_p11_edge_pad_300ms.jsonl",
+  "output_dir": "/content/Clinical-Ambient-Documentation-Assistant/experiments/asr/preprocessing/audio_quality_audit/variants/p11_edge_pad_300ms",
   "summary": {
     "n_samples": 200,
     "warning_counts": {
@@ -142,13 +142,13 @@
         "trailing_silence_ms": 360.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.06245017424225807,
+        "middle_rms": 0.06245017796754837,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -24.08932691125868,
-        "first_to_middle_ratio": 1.6012765530421438e-05,
-        "last_to_middle_ratio": 1.6012765530421438e-05,
-        "min_edge_to_middle_ratio": 1.6012765530421438e-05
+        "middle_db": -24.08932639312627,
+        "first_to_middle_ratio": 1.60127645752248e-05,
+        "last_to_middle_ratio": 1.60127645752248e-05,
+        "min_edge_to_middle_ratio": 1.60127645752248e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -173,13 +173,13 @@
         "trailing_silence_ms": 300.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.061083339154720306,
+        "middle_rms": 0.06108333542943001,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -24.28154460034403,
-        "first_to_middle_ratio": 1.637107616108387e-05,
-        "last_to_middle_ratio": 1.637107616108387e-05,
-        "min_edge_to_middle_ratio": 1.637107616108387e-05
+        "middle_db": -24.281545130070498,
+        "first_to_middle_ratio": 1.637107715950694e-05,
+        "last_to_middle_ratio": 1.637107715950694e-05,
+        "min_edge_to_middle_ratio": 1.637107715950694e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -195,8 +195,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 5.6,
-        "rms": 0.06679925322532654,
-        "rms_db": -23.504567852864163,
+        "rms": 0.06679926067590714,
+        "rms_db": -23.504566884067145,
         "peak": 0.580352783203125,
         "peak_db": -4.726158569361594,
         "clipping_ratio": 0.0,
@@ -266,13 +266,13 @@
         "trailing_silence_ms": 300.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.06946359574794769,
+        "middle_rms": 0.06946360319852829,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -23.164854788177678,
-        "first_to_middle_ratio": 1.4396029844233737e-05,
-        "last_to_middle_ratio": 1.4396029844233737e-05,
-        "min_edge_to_middle_ratio": 1.4396029844233737e-05
+        "middle_db": -23.164853856539796,
+        "first_to_middle_ratio": 1.4396028300133291e-05,
+        "last_to_middle_ratio": 1.4396028300133291e-05,
+        "min_edge_to_middle_ratio": 1.4396028300133291e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -288,8 +288,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 6.6,
-        "rms": 0.05811987444758415,
-        "rms_db": -24.71350665099728,
+        "rms": 0.05811987817287445,
+        "rms_db": -24.713506094260715,
         "peak": 0.50030517578125,
         "peak_db": -6.015300084182336,
         "clipping_ratio": 0.0,
@@ -319,8 +319,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 6.6,
-        "rms": 0.05873008817434311,
-        "rms_db": -24.62278694258172,
+        "rms": 0.058730095624923706,
+        "rms_db": -24.622785840677757,
         "peak": 0.559906005859375,
         "peak_db": -5.037697479977212,
         "clipping_ratio": 0.0,
@@ -359,13 +359,13 @@
         "trailing_silence_ms": 300.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.06115017458796501,
+        "middle_rms": 0.06115017831325531,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -24.27204597370467,
-        "first_to_middle_ratio": 1.635318303199175e-05,
-        "last_to_middle_ratio": 1.635318303199175e-05,
-        "min_edge_to_middle_ratio": 1.635318303199175e-05
+        "middle_db": -24.27204544455721,
+        "first_to_middle_ratio": 1.6353182035750112e-05,
+        "last_to_middle_ratio": 1.6353182035750112e-05,
+        "min_edge_to_middle_ratio": 1.6353182035750112e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -474,8 +474,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 7.6,
-        "rms": 0.06157483533024788,
-        "rms_db": -24.211934818444764,
+        "rms": 0.06157483160495758,
+        "rms_db": -24.211935343942905,
         "peak": 0.492401123046875,
         "peak_db": -6.153619304395884,
         "clipping_ratio": 0.0,
@@ -598,8 +598,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 6.6,
-        "rms": 0.0592319555580616,
-        "rms_db": -24.548878575593992,
+        "rms": 0.0592319592833519,
+        "rms_db": -24.548878029310167,
         "peak": 0.4749755859375,
         "peak_db": -6.466574256560261,
         "clipping_ratio": 0.0,
@@ -607,13 +607,13 @@
         "trailing_silence_ms": 300.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.062123000621795654,
+        "middle_rms": 0.062122996896505356,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -24.13495150896114,
-        "first_to_middle_ratio": 1.609709749152709e-05,
-        "last_to_middle_ratio": 1.609709749152709e-05,
-        "min_edge_to_middle_ratio": 1.609709749152709e-05
+        "middle_db": -24.13495202982235,
+        "first_to_middle_ratio": 1.6097098456811513e-05,
+        "last_to_middle_ratio": 1.6097098456811513e-05,
+        "min_edge_to_middle_ratio": 1.6097098456811513e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -629,8 +629,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 6.6,
-        "rms": 0.05688149482011795,
-        "rms_db": -24.900579981290715,
+        "rms": 0.05688149854540825,
+        "rms_db": -24.900579412433316,
         "peak": 0.451416015625,
         "peak_db": -6.908460736172026,
         "clipping_ratio": 0.0,
@@ -660,8 +660,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 7.6,
-        "rms": 0.06670647859573364,
-        "rms_db": -23.51663969895761,
+        "rms": 0.06670648604631424,
+        "rms_db": -23.516638728813206,
         "peak": 0.750091552734375,
         "peak_db": -2.497714507613195,
         "clipping_ratio": 0.0,
@@ -669,13 +669,13 @@
         "trailing_silence_ms": 360.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.06950656324625015,
+        "middle_rms": 0.06950655579566956,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -23.159483693219272,
-        "first_to_middle_ratio": 1.4387130520788513e-05,
-        "last_to_middle_ratio": 1.4387130520788513e-05,
-        "min_edge_to_middle_ratio": 1.4387130520788513e-05
+        "middle_db": -23.159484624281337,
+        "first_to_middle_ratio": 1.4387132062980819e-05,
+        "last_to_middle_ratio": 1.4387132062980819e-05,
+        "min_edge_to_middle_ratio": 1.4387132062980819e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -722,8 +722,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 6.6,
-        "rms": 0.05520045757293701,
-        "rms_db": -25.161146445206608,
+        "rms": 0.05520046129822731,
+        "rms_db": -25.16114585902561,
         "peak": 0.53765869140625,
         "peak_db": -5.389866586190423,
         "clipping_ratio": 0.0,
@@ -731,13 +731,13 @@
         "trailing_silence_ms": 300.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.05789473280310631,
+        "middle_rms": 0.057894736528396606,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -24.747218921859083,
-        "first_to_middle_ratio": 1.7272728434141565e-05,
-        "last_to_middle_ratio": 1.7272728434141565e-05,
-        "min_edge_to_middle_ratio": 1.7272728434141565e-05
+        "middle_db": -24.747218362957476,
+        "first_to_middle_ratio": 1.7272727322711898e-05,
+        "last_to_middle_ratio": 1.7272727322711898e-05,
+        "min_edge_to_middle_ratio": 1.7272727322711898e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -784,8 +784,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 5.6,
-        "rms": 0.06076839938759804,
-        "rms_db": -24.326444052480547,
+        "rms": 0.06076839566230774,
+        "rms_db": -24.326444584952384,
         "peak": 0.493499755859375,
         "peak_db": -6.1342611569062395,
         "clipping_ratio": 0.0,
@@ -815,8 +815,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 6.6,
-        "rms": 0.0672423392534256,
-        "rms_db": -23.447143731188184,
+        "rms": 0.067242331802845,
+        "rms_db": -23.447144693601526,
         "peak": 0.721435546875,
         "peak_db": -2.8360492550100034,
         "clipping_ratio": 0.0,
@@ -855,13 +855,13 @@
         "trailing_silence_ms": 300.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.07087312638759613,
+        "middle_rms": 0.07087313383817673,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -22.990368180402942,
-        "first_to_middle_ratio": 1.4109720403843477e-05,
-        "last_to_middle_ratio": 1.4109720403843477e-05,
-        "min_edge_to_middle_ratio": 1.4109720403843477e-05
+        "middle_db": -22.99036726729355,
+        "first_to_middle_ratio": 1.4109718920550678e-05,
+        "last_to_middle_ratio": 1.4109718920550678e-05,
+        "min_edge_to_middle_ratio": 1.4109718920550678e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -939,8 +939,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 5.6,
-        "rms": 0.06371613591909409,
-        "rms_db": -23.915011399382948,
+        "rms": 0.06371614336967468,
+        "rms_db": -23.915010383707465,
         "peak": 0.640594482421875,
         "peak_db": -3.868336126558298,
         "clipping_ratio": 0.0,
@@ -948,13 +948,13 @@
         "trailing_silence_ms": 340.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.06743083149194717,
+        "middle_rms": 0.06743082404136658,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -23.422829699797184,
-        "first_to_middle_ratio": 1.4830011366457289e-05,
-        "last_to_middle_ratio": 1.4830011366457289e-05,
-        "min_edge_to_middle_ratio": 1.4830011366457289e-05
+        "middle_db": -23.42283065952025,
+        "first_to_middle_ratio": 1.4830013005057982e-05,
+        "last_to_middle_ratio": 1.4830013005057982e-05,
+        "min_edge_to_middle_ratio": 1.4830013005057982e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -1010,13 +1010,13 @@
         "trailing_silence_ms": 400.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.055113356560468674,
+        "middle_rms": 0.055113352835178375,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -25.174862767950504,
-        "first_to_middle_ratio": 1.8144421967442204e-05,
-        "last_to_middle_ratio": 1.8144421967442204e-05,
-        "min_edge_to_middle_ratio": 1.8144421967442204e-05
+        "middle_db": -25.17486335505794,
+        "first_to_middle_ratio": 1.8144423193882543e-05,
+        "last_to_middle_ratio": 1.8144423193882543e-05,
+        "min_edge_to_middle_ratio": 1.8144423193882543e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -1063,8 +1063,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 7.6,
-        "rms": 0.05970913544297218,
-        "rms_db": -24.479184342589416,
+        "rms": 0.05970913916826248,
+        "rms_db": -24.479183800671347,
         "peak": 0.76934814453125,
         "peak_db": -2.2775417856654405,
         "clipping_ratio": 0.0,
@@ -1103,13 +1103,13 @@
         "trailing_silence_ms": 300.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.08073283731937408,
+        "middle_rms": 0.08073282986879349,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -21.858995683270052,
-        "first_to_middle_ratio": 1.2386533542965979e-05,
-        "last_to_middle_ratio": 1.2386533542965979e-05,
-        "min_edge_to_middle_ratio": 1.2386533542965979e-05
+        "middle_db": -21.858996484863628,
+        "first_to_middle_ratio": 1.2386534686080455e-05,
+        "last_to_middle_ratio": 1.2386534686080455e-05,
+        "min_edge_to_middle_ratio": 1.2386534686080455e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -1125,8 +1125,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 5.6,
-        "rms": 0.06587127596139908,
-        "rms_db": -23.626078479271232,
+        "rms": 0.06587126851081848,
+        "rms_db": -23.626079461716518,
         "peak": 0.64654541015625,
         "peak_db": -3.7880193402595435,
         "clipping_ratio": 0.0,
@@ -1134,13 +1134,13 @@
         "trailing_silence_ms": 300.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.0697115957736969,
+        "middle_rms": 0.0697116032242775,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -23.13389951360189,
-        "first_to_middle_ratio": 1.4344815756642825e-05,
-        "last_to_middle_ratio": 1.4344815756642825e-05,
-        "min_edge_to_middle_ratio": 1.4344815756642825e-05
+        "middle_db": -23.133898585278324,
+        "first_to_middle_ratio": 1.4344814223509157e-05,
+        "last_to_middle_ratio": 1.4344814223509157e-05,
+        "min_edge_to_middle_ratio": 1.4344814223509157e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -1165,13 +1165,13 @@
         "trailing_silence_ms": 300.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.06566810607910156,
+        "middle_rms": 0.06566811352968216,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -23.652910178666055,
-        "first_to_middle_ratio": 1.5228092557910484e-05,
-        "last_to_middle_ratio": 1.5228092557910484e-05,
-        "min_edge_to_middle_ratio": 1.5228092557910484e-05
+        "middle_db": -23.652909193181305,
+        "first_to_middle_ratio": 1.5228090830159756e-05,
+        "last_to_middle_ratio": 1.5228090830159756e-05,
+        "min_edge_to_middle_ratio": 1.5228090830159756e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -1249,8 +1249,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 7.6,
-        "rms": 0.07441288232803345,
-        "rms_db": -22.567037461213374,
+        "rms": 0.07441287487745285,
+        "rms_db": -22.567038330887037,
         "peak": 0.7508544921875,
         "peak_db": -2.4888843321601555,
         "clipping_ratio": 0.0,
@@ -1280,8 +1280,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 5.6,
-        "rms": 0.056584615260362625,
-        "rms_db": -24.94603265388907,
+        "rms": 0.056584618985652924,
+        "rms_db": -24.946032082047076,
         "peak": 0.610931396484375,
         "peak_db": -4.280151107785684,
         "clipping_ratio": 0.0,
@@ -1413,13 +1413,13 @@
         "trailing_silence_ms": 300.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.07761180400848389,
+        "middle_rms": 0.07761179655790329,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -22.201444434142964,
-        "first_to_middle_ratio": 1.2884637978082959e-05,
-        "last_to_middle_ratio": 1.2884637978082959e-05,
-        "min_edge_to_middle_ratio": 1.2884637978082959e-05
+        "middle_db": -22.201445267971334,
+        "first_to_middle_ratio": 1.2884639214982991e-05,
+        "last_to_middle_ratio": 1.2884639214982991e-05,
+        "min_edge_to_middle_ratio": 1.2884639214982991e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -1435,8 +1435,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 7.6,
-        "rms": 0.061277661472558975,
-        "rms_db": -24.253956339096003,
+        "rms": 0.061277665197849274,
+        "rms_db": -24.253955811049423,
         "peak": 0.556640625,
         "peak_db": -5.088502019346411,
         "clipping_ratio": 0.0,
@@ -1538,13 +1538,13 @@
         "trailing_silence_ms": 300.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.060351286083459854,
+        "middle_rms": 0.060351282358169556,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -24.386269413404346,
-        "first_to_middle_ratio": 1.6569655136964965e-05,
-        "last_to_middle_ratio": 1.6569655136964965e-05,
-        "min_edge_to_middle_ratio": 1.6569655136964965e-05
+        "middle_db": -24.38626994955633,
+        "first_to_middle_ratio": 1.6569656159756412e-05,
+        "last_to_middle_ratio": 1.6569656159756412e-05,
+        "min_edge_to_middle_ratio": 1.6569656159756412e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -1560,8 +1560,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 5.6,
-        "rms": 0.09827277064323425,
-        "rms_db": -20.15133599077277,
+        "rms": 0.09827277809381485,
+        "rms_db": -20.151335332249374,
         "peak": 0.794342041015625,
         "peak_db": -1.9998490310736532,
         "clipping_ratio": 0.0,
@@ -1600,13 +1600,13 @@
         "trailing_silence_ms": 300.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.06704175472259521,
+        "middle_rms": 0.06704174727201462,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -23.47309254377061,
-        "first_to_middle_ratio": 1.4916077325437466e-05,
-        "last_to_middle_ratio": 1.4916077325437466e-05,
-        "min_edge_to_middle_ratio": 1.4916077325437466e-05
+        "middle_db": -23.47309350906343,
+        "first_to_middle_ratio": 1.4916078983112584e-05,
+        "last_to_middle_ratio": 1.4916078983112584e-05,
+        "min_edge_to_middle_ratio": 1.4916078983112584e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -1684,8 +1684,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 6.6,
-        "rms": 0.07148904353380203,
-        "rms_db": -22.915210268153267,
+        "rms": 0.07148903608322144,
+        "rms_db": -22.915211173395818,
         "peak": 0.78607177734375,
         "peak_db": -2.0907559219327103,
         "clipping_ratio": 0.0,
@@ -1724,13 +1724,13 @@
         "trailing_silence_ms": 300.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.08174633979797363,
+        "middle_rms": 0.08174633234739304,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -21.750633676382165,
-        "first_to_middle_ratio": 1.2232963579123223e-05,
-        "last_to_middle_ratio": 1.2232963579123223e-05,
-        "min_edge_to_middle_ratio": 1.2232963579123223e-05
+        "middle_db": -21.75063446803747,
+        "first_to_middle_ratio": 1.2232964694068426e-05,
+        "last_to_middle_ratio": 1.2232964694068426e-05,
+        "min_edge_to_middle_ratio": 1.2232964694068426e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -1755,13 +1755,13 @@
         "trailing_silence_ms": 460.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.0654972568154335,
+        "middle_rms": 0.0654972642660141,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -23.675537778749998,
-        "first_to_middle_ratio": 1.5267814960452005e-05,
-        "last_to_middle_ratio": 1.5267814960452005e-05,
-        "min_edge_to_middle_ratio": 1.5267814960452005e-05
+        "middle_db": -23.675536790694622,
+        "first_to_middle_ratio": 1.5267813223675864e-05,
+        "last_to_middle_ratio": 1.5267813223675864e-05,
+        "min_edge_to_middle_ratio": 1.5267813223675864e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -1839,8 +1839,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 6.6,
-        "rms": 0.06619498133659363,
-        "rms_db": -23.583498718893516,
+        "rms": 0.06619498878717422,
+        "rms_db": -23.583497741252675,
         "peak": 0.60888671875,
         "peak_db": -4.309269976505011,
         "clipping_ratio": 0.0,
@@ -1901,8 +1901,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 5.6,
-        "rms": 0.05739656090736389,
-        "rms_db": -24.82228257841681,
+        "rms": 0.05739655718207359,
+        "rms_db": -24.82228314216943,
         "peak": 0.49420166015625,
         "peak_db": -6.1219160003911535,
         "clipping_ratio": 0.0,
@@ -1932,8 +1932,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 6.6,
-        "rms": 0.06015939638018608,
-        "rms_db": -24.413930599282242,
+        "rms": 0.06015939265489578,
+        "rms_db": -24.413931137144374,
         "peak": 0.571533203125,
         "peak_db": -4.859170685423,
         "clipping_ratio": 0.0,
@@ -1963,8 +1963,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 7.6,
-        "rms": 0.07650517672300339,
-        "rms_db": -22.326183546294963,
+        "rms": 0.07650516927242279,
+        "rms_db": -22.326184392184445,
         "peak": 0.509796142578125,
         "peak_db": -5.852069099711357,
         "clipping_ratio": 0.0,
@@ -1972,13 +1972,13 @@
         "trailing_silence_ms": 300.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.07971657067537308,
+        "middle_rms": 0.07971656322479248,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -21.969027849405045,
-        "first_to_middle_ratio": 1.2544443256942233e-05,
-        "last_to_middle_ratio": 1.2544443256942233e-05,
-        "min_edge_to_middle_ratio": 1.2544443256942233e-05
+        "middle_db": -21.969028661217735,
+        "first_to_middle_ratio": 1.2544444429388482e-05,
+        "last_to_middle_ratio": 1.2544444429388482e-05,
+        "min_edge_to_middle_ratio": 1.2544444429388482e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -1994,8 +1994,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 6.6,
-        "rms": 0.0600736066699028,
-        "rms_db": -24.426325866191632,
+        "rms": 0.0600736103951931,
+        "rms_db": -24.426325327561422,
         "peak": 0.576263427734375,
         "peak_db": -4.787578836453685,
         "clipping_ratio": 0.0,
@@ -2087,8 +2087,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 6.6,
-        "rms": 0.0795448049902916,
-        "rms_db": -21.98776357056103,
+        "rms": 0.079544797539711,
+        "rms_db": -21.987764384126717,
         "peak": 0.793365478515625,
         "peak_db": -2.01053401563788,
         "clipping_ratio": 0.0,
@@ -2189,13 +2189,13 @@
         "trailing_silence_ms": 300.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.06824547052383423,
+        "middle_rms": 0.06824546307325363,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -23.318523352200597,
-        "first_to_middle_ratio": 1.465298707444621e-05,
-        "last_to_middle_ratio": 1.465298707444621e-05,
-        "min_edge_to_middle_ratio": 1.465298707444621e-05
+        "middle_db": -23.31852430046755,
+        "first_to_middle_ratio": 1.4652988674160772e-05,
+        "last_to_middle_ratio": 1.4652988674160772e-05,
+        "min_edge_to_middle_ratio": 1.4652988674160772e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -2211,8 +2211,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 7.6,
-        "rms": 0.06908665597438812,
-        "rms_db": -23.21211656230647,
+        "rms": 0.06908666342496872,
+        "rms_db": -23.21211562558553,
         "peak": 0.791290283203125,
         "peak_db": -2.0332833447996017,
         "clipping_ratio": 0.0,
@@ -2375,13 +2375,13 @@
         "trailing_silence_ms": 300.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.0701296254992485,
+        "middle_rms": 0.07012961804866791,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -23.081969605610297,
-        "first_to_middle_ratio": 1.425930896331335e-05,
-        "last_to_middle_ratio": 1.425930896331335e-05,
-        "min_edge_to_middle_ratio": 1.425930896331335e-05
+        "middle_db": -23.081970528400394,
+        "first_to_middle_ratio": 1.4259310478224363e-05,
+        "last_to_middle_ratio": 1.4259310478224363e-05,
+        "min_edge_to_middle_ratio": 1.4259310478224363e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -2406,13 +2406,13 @@
         "trailing_silence_ms": 300.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.07390748709440231,
+        "middle_rms": 0.07390747964382172,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -22.626231275654426,
-        "first_to_middle_ratio": 1.3530428875195539e-05,
-        "last_to_middle_ratio": 1.3530428875195539e-05,
-        "min_edge_to_middle_ratio": 1.3530428875195539e-05
+        "middle_db": -22.626232151275104,
+        "first_to_middle_ratio": 1.3530430239192137e-05,
+        "last_to_middle_ratio": 1.3530430239192137e-05,
+        "min_edge_to_middle_ratio": 1.3530430239192137e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -2499,13 +2499,13 @@
         "trailing_silence_ms": 400.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.052379876375198364,
+        "middle_rms": 0.05237988010048866,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -25.616710618266335,
-        "first_to_middle_ratio": 1.9091301214844758e-05,
-        "last_to_middle_ratio": 1.9091301214844758e-05,
-        "min_edge_to_middle_ratio": 1.9091301214844758e-05
+        "middle_db": -25.616710000520335,
+        "first_to_middle_ratio": 1.9091299857059305e-05,
+        "last_to_middle_ratio": 1.9091299857059305e-05,
+        "min_edge_to_middle_ratio": 1.9091299857059305e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -2521,8 +2521,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 5.6,
-        "rms": 0.06301194429397583,
-        "rms_db": -24.0115423921071,
+        "rms": 0.06301195174455643,
+        "rms_db": -24.01154136508091,
         "peak": 0.508270263671875,
         "peak_db": -5.878105958650446,
         "clipping_ratio": 0.0,
@@ -2530,13 +2530,13 @@
         "trailing_silence_ms": 400.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.06668557971715927,
+        "middle_rms": 0.06668557226657867,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -23.51936138054252,
-        "first_to_middle_ratio": 1.4995745732685393e-05,
-        "last_to_middle_ratio": 1.4995745732685393e-05,
-        "min_edge_to_middle_ratio": 1.4995745732685393e-05
+        "middle_db": -23.519362350991074,
+        "first_to_middle_ratio": 1.4995747408115451e-05,
+        "last_to_middle_ratio": 1.4995747408115451e-05,
+        "min_edge_to_middle_ratio": 1.4995747408115451e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -2561,13 +2561,13 @@
         "trailing_silence_ms": 300.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.07453234493732452,
+        "middle_rms": 0.07453235238790512,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -22.553104295556015,
-        "first_to_middle_ratio": 1.3416993632981213e-05,
-        "last_to_middle_ratio": 1.3416993632981213e-05,
-        "min_edge_to_middle_ratio": 1.3416993632981213e-05
+        "middle_db": -22.553103427276376,
+        "first_to_middle_ratio": 1.3416992291759726e-05,
+        "last_to_middle_ratio": 1.3416992291759726e-05,
+        "min_edge_to_middle_ratio": 1.3416992291759726e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -2707,8 +2707,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 6.6,
-        "rms": 0.06100990250706673,
-        "rms_db": -24.29199338006596,
+        "rms": 0.06100989878177643,
+        "rms_db": -24.29199391043005,
         "peak": 0.79388427734375,
         "peak_db": -2.004855981025761,
         "clipping_ratio": 0.0,
@@ -2800,8 +2800,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 8.6,
-        "rms": 0.053678497672080994,
-        "rms_db": -25.403992949871977,
+        "rms": 0.0536784902215004,
+        "rms_db": -25.403994155474372,
         "peak": 0.48748779296875,
         "peak_db": -6.2407250972653046,
         "clipping_ratio": 0.0,
@@ -2809,13 +2809,13 @@
         "trailing_silence_ms": 300.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.05565505102276802,
+        "middle_rms": 0.05565504729747772,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -25.08990829531119,
-        "first_to_middle_ratio": 1.796782105304604e-05,
-        "last_to_middle_ratio": 1.796782105304604e-05,
-        "min_edge_to_middle_ratio": 1.796782105304604e-05
+        "middle_db": -25.08990887670427,
+        "first_to_middle_ratio": 1.7967822255728504e-05,
+        "last_to_middle_ratio": 1.7967822255728504e-05,
+        "min_edge_to_middle_ratio": 1.7967822255728504e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -2893,8 +2893,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 6.6,
-        "rms": 0.054075296968221664,
-        "rms_db": -25.340021736878363,
+        "rms": 0.054075293242931366,
+        "rms_db": -25.340022335256236,
         "peak": 0.4332275390625,
         "peak_db": -7.265678885683254,
         "clipping_ratio": 0.0,
@@ -2964,13 +2964,13 @@
         "trailing_silence_ms": 300.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.06673309206962585,
+        "middle_rms": 0.06673308461904526,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -23.513175034030624,
-        "first_to_middle_ratio": 1.4985069123305337e-05,
-        "last_to_middle_ratio": 1.4985069123305337e-05,
-        "min_edge_to_middle_ratio": 1.4985069123305337e-05
+        "middle_db": -23.513176003788242,
+        "first_to_middle_ratio": 1.4985070796350514e-05,
+        "last_to_middle_ratio": 1.4985070796350514e-05,
+        "min_edge_to_middle_ratio": 1.4985070796350514e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -3141,8 +3141,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 7.6,
-        "rms": 0.06479345262050629,
-        "rms_db": -23.769377547541097,
+        "rms": 0.06479346007108688,
+        "rms_db": -23.769376548753186,
         "peak": 0.547607421875,
         "peak_db": -5.230613487696132,
         "clipping_ratio": 0.0,
@@ -3172,8 +3172,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 7.6,
-        "rms": 0.07506360858678818,
-        "rms_db": -22.491411225408193,
+        "rms": 0.07506360113620758,
+        "rms_db": -22.491412087542656,
         "peak": 0.7943115234375,
         "peak_db": -2.0001827379579966,
         "clipping_ratio": 0.0,
@@ -3212,13 +3212,13 @@
         "trailing_silence_ms": 300.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.07853010296821594,
+        "middle_rms": 0.07853009551763535,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -22.099276662057925,
-        "first_to_middle_ratio": 1.2733970282453085e-05,
-        "last_to_middle_ratio": 1.2733970282453085e-05,
-        "min_edge_to_middle_ratio": 1.2733970282453085e-05
+        "middle_db": -22.09927748613584,
+        "first_to_middle_ratio": 1.2733971490594643e-05,
+        "last_to_middle_ratio": 1.2733971490594643e-05,
+        "min_edge_to_middle_ratio": 1.2733971490594643e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -3243,13 +3243,13 @@
         "trailing_silence_ms": 300.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.06374902278184891,
+        "middle_rms": 0.06374901533126831,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -23.910529364140057,
-        "first_to_middle_ratio": 1.5686514927409524e-05,
-        "last_to_middle_ratio": 1.5686514927409524e-05,
-        "min_edge_to_middle_ratio": 1.5686514927409524e-05
+        "middle_db": -23.91053037929169,
+        "first_to_middle_ratio": 1.56865167607499e-05,
+        "last_to_middle_ratio": 1.56865167607499e-05,
+        "min_edge_to_middle_ratio": 1.56865167607499e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -3296,8 +3296,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 8.6,
-        "rms": 0.06086065620183945,
-        "rms_db": -24.31326738746978,
+        "rms": 0.060860659927129745,
+        "rms_db": -24.313266855805125,
         "peak": 0.530548095703125,
         "peak_db": -5.505504798808813,
         "clipping_ratio": 0.0,
@@ -3429,13 +3429,13 @@
         "trailing_silence_ms": 1400.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.056845471262931824,
+        "middle_rms": 0.05684547498822212,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -24.906082575149156,
-        "first_to_middle_ratio": 1.759155083524357e-05,
-        "last_to_middle_ratio": 1.759155083524357e-05,
-        "min_edge_to_middle_ratio": 1.759155083524357e-05
+        "middle_db": -24.906082005931264,
+        "first_to_middle_ratio": 1.7591549682405396e-05,
+        "last_to_middle_ratio": 1.7591549682405396e-05,
+        "min_edge_to_middle_ratio": 1.7591549682405396e-05
       },
       "warnings": [
         "long_trailing_silence",
@@ -3452,8 +3452,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 6.6,
-        "rms": 0.07217534631490707,
-        "rms_db": -22.83222247182885,
+        "rms": 0.07217535376548767,
+        "rms_db": -22.832221575194186,
         "peak": 0.600616455078125,
         "peak_db": -4.428055472320046,
         "clipping_ratio": 0.0,
@@ -3492,13 +3492,13 @@
         "trailing_silence_ms": 340.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.06005450710654259,
+        "middle_rms": 0.060054510831832886,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -24.429087862458196,
-        "first_to_middle_ratio": 1.6651539503956707e-05,
-        "last_to_middle_ratio": 1.6651539503956707e-05,
-        "min_edge_to_middle_ratio": 1.6651539503956707e-05
+        "middle_db": -24.429087323656677,
+        "first_to_middle_ratio": 1.665153847103149e-05,
+        "last_to_middle_ratio": 1.665153847103149e-05,
+        "min_edge_to_middle_ratio": 1.665153847103149e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -3545,8 +3545,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 7.6,
-        "rms": 0.06237274035811424,
-        "rms_db": -24.10010349439409,
+        "rms": 0.06237274408340454,
+        "rms_db": -24.100102975618434,
         "peak": 0.691680908203125,
         "peak_db": -3.201884231300226,
         "clipping_ratio": 0.0,
@@ -3607,8 +3607,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 6.6,
-        "rms": 0.0698583647608757,
-        "rms_db": -23.11563169021138,
+        "rms": 0.0698583573102951,
+        "rms_db": -23.115632616584687,
         "peak": 0.620391845703125,
         "peak_db": -4.146678381882063,
         "clipping_ratio": 0.0,
@@ -3616,13 +3616,13 @@
         "trailing_silence_ms": 300.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.07326807081699371,
+        "middle_rms": 0.07326806336641312,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -22.70170486979704,
-        "first_to_middle_ratio": 1.3648510003395693e-05,
-        "last_to_middle_ratio": 1.3648510003395693e-05,
-        "min_edge_to_middle_ratio": 1.3648510003395693e-05
+        "middle_db": -22.70170575305933,
+        "first_to_middle_ratio": 1.364851139130359e-05,
+        "last_to_middle_ratio": 1.364851139130359e-05,
+        "min_edge_to_middle_ratio": 1.364851139130359e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -3638,8 +3638,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 6.6,
-        "rms": 0.05401104688644409,
-        "rms_db": -25.350348095701975,
+        "rms": 0.05401105433702469,
+        "rms_db": -25.350346897522712,
         "peak": 0.699951171875,
         "peak_db": -3.098645100425797,
         "clipping_ratio": 0.0,
@@ -3647,13 +3647,13 @@
         "trailing_silence_ms": 440.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.05664726719260216,
+        "middle_rms": 0.056647270917892456,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -24.936420735182267,
-        "first_to_middle_ratio": 1.765310220659396e-05,
-        "last_to_middle_ratio": 1.765310220659396e-05,
-        "min_edge_to_middle_ratio": 1.765310220659396e-05
+        "middle_db": -24.936420163972727,
+        "first_to_middle_ratio": 1.76531010456743e-05,
+        "last_to_middle_ratio": 1.76531010456743e-05,
+        "min_edge_to_middle_ratio": 1.76531010456743e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -3669,8 +3669,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 6.6,
-        "rms": 0.06619784235954285,
-        "rms_db": -23.583123312902483,
+        "rms": 0.06619784981012344,
+        "rms_db": -23.583122335303894,
         "peak": 0.653839111328125,
         "peak_db": -3.6905820872896427,
         "clipping_ratio": 0.0,
@@ -3678,13 +3678,13 @@
         "trailing_silence_ms": 300.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.06942888349294662,
+        "middle_rms": 0.06942887604236603,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -23.169196374186555,
-        "first_to_middle_ratio": 1.4403227405735743e-05,
-        "last_to_middle_ratio": 1.4403227405735743e-05,
-        "min_edge_to_middle_ratio": 1.4403227405735743e-05
+        "middle_db": -23.16919730629033,
+        "first_to_middle_ratio": 1.4403228951380907e-05,
+        "last_to_middle_ratio": 1.4403228951380907e-05,
+        "min_edge_to_middle_ratio": 1.4403228951380907e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -3763,8 +3763,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 6.6,
-        "rms": 0.06850484758615494,
-        "rms_db": -23.28557391163229,
+        "rms": 0.06850484013557434,
+        "rms_db": -23.285574856308855,
         "peak": 0.62774658203125,
         "peak_db": -4.0443128652998785,
         "clipping_ratio": 0.0,
@@ -3803,13 +3803,13 @@
         "trailing_silence_ms": 300.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.06035536155104637,
+        "middle_rms": 0.06035536527633667,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -24.385682882962367,
-        "first_to_middle_ratio": 1.6568536278744334e-05,
-        "last_to_middle_ratio": 1.6568536278744334e-05,
-        "min_edge_to_middle_ratio": 1.6568536278744334e-05
+        "middle_db": -24.38568234684663,
+        "first_to_middle_ratio": 1.6568535256091133e-05,
+        "last_to_middle_ratio": 1.6568535256091133e-05,
+        "min_edge_to_middle_ratio": 1.6568535256091133e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -3865,13 +3865,13 @@
         "trailing_silence_ms": 300.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.060825858265161514,
+        "middle_rms": 0.060825854539871216,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -24.318235087418778,
-        "first_to_middle_ratio": 1.6440376280691144e-05,
-        "last_to_middle_ratio": 1.6440376280691144e-05,
-        "min_edge_to_middle_ratio": 1.6440376280691144e-05
+        "middle_db": -24.318235619387618,
+        "first_to_middle_ratio": 1.6440377287584917e-05,
+        "last_to_middle_ratio": 1.6440377287584917e-05,
+        "min_edge_to_middle_ratio": 1.6440377287584917e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -3896,13 +3896,13 @@
         "trailing_silence_ms": 340.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.05998183786869049,
+        "middle_rms": 0.05998184159398079,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -24.43960462814791,
-        "first_to_middle_ratio": 1.667171318865549e-05,
-        "last_to_middle_ratio": 1.667171318865549e-05,
-        "min_edge_to_middle_ratio": 1.667171318865549e-05
+        "middle_db": -24.439604088693624,
+        "first_to_middle_ratio": 1.667171215322594e-05,
+        "last_to_middle_ratio": 1.667171215322594e-05,
+        "min_edge_to_middle_ratio": 1.667171215322594e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -3918,8 +3918,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 6.6,
-        "rms": 0.06309214979410172,
-        "rms_db": -24.000493484909654,
+        "rms": 0.06309215724468231,
+        "rms_db": -24.00049245918907,
         "peak": 0.792327880859375,
         "peak_db": -2.021901232337019,
         "clipping_ratio": 0.0,
@@ -3958,13 +3958,13 @@
         "trailing_silence_ms": 300.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.0586647130548954,
+        "middle_rms": 0.0586647167801857,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -24.632460984794008,
-        "first_to_middle_ratio": 1.7046022138376343e-05,
-        "last_to_middle_ratio": 1.7046022138376343e-05,
-        "min_edge_to_middle_ratio": 1.7046022138376343e-05
+        "middle_db": -24.63246043322804,
+        "first_to_middle_ratio": 1.7046021055930466e-05,
+        "last_to_middle_ratio": 1.7046021055930466e-05,
+        "min_edge_to_middle_ratio": 1.7046021055930466e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -4082,13 +4082,13 @@
         "trailing_silence_ms": 300.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.062266845256090164,
+        "middle_rms": 0.062266841530799866,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -24.114862744213067,
-        "first_to_middle_ratio": 1.6059911070850906e-05,
-        "last_to_middle_ratio": 1.6059911070850906e-05,
-        "min_edge_to_middle_ratio": 1.6059911070850906e-05
+        "middle_db": -24.11486326387102,
+        "first_to_middle_ratio": 1.6059912031680612e-05,
+        "last_to_middle_ratio": 1.6059912031680612e-05,
+        "min_edge_to_middle_ratio": 1.6059912031680612e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -4104,8 +4104,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 6.6,
-        "rms": 0.06593694537878036,
-        "rms_db": -23.617423520523356,
+        "rms": 0.06593693792819977,
+        "rms_db": -23.61742450199018,
         "peak": 0.433990478515625,
         "peak_db": -7.250395970739848,
         "clipping_ratio": 0.0,
@@ -4135,8 +4135,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 6.6,
-        "rms": 0.05702526122331619,
-        "rms_db": -24.87865433230732,
+        "rms": 0.05702526494860649,
+        "rms_db": -24.878653764884064,
         "peak": 0.622222900390625,
         "peak_db": -4.1210801817992335,
         "clipping_ratio": 0.0,
@@ -4144,13 +4144,13 @@
         "trailing_silence_ms": 300.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.05980859696865082,
+        "middle_rms": 0.059808600693941116,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -24.46472770896229,
-        "first_to_middle_ratio": 1.6720004282986295e-05,
-        "last_to_middle_ratio": 1.6720004282986295e-05,
-        "min_edge_to_middle_ratio": 1.6720004282986295e-05
+        "middle_db": -24.464727167945433,
+        "first_to_middle_ratio": 1.6720003241549626e-05,
+        "last_to_middle_ratio": 1.6720003241549626e-05,
+        "min_edge_to_middle_ratio": 1.6720003241549626e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -4175,13 +4175,13 @@
         "trailing_silence_ms": 300.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.06692928820848465,
+        "middle_rms": 0.06692928075790405,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -23.48767587368501,
-        "first_to_middle_ratio": 1.4941141975994783e-05,
-        "last_to_middle_ratio": 1.4941141975994783e-05,
-        "min_edge_to_middle_ratio": 1.4941141975994783e-05
+        "middle_db": -23.48767684059989,
+        "first_to_middle_ratio": 1.4941143639245624e-05,
+        "last_to_middle_ratio": 1.4941143639245624e-05,
+        "min_edge_to_middle_ratio": 1.4941143639245624e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -4206,13 +4206,13 @@
         "trailing_silence_ms": 300.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.07441279292106628,
+        "middle_rms": 0.07441280037164688,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -22.56704789730309,
-        "first_to_middle_ratio": 1.343854945124822e-05,
-        "last_to_middle_ratio": 1.343854945124822e-05,
-        "min_edge_to_middle_ratio": 1.343854945124822e-05
+        "middle_db": -22.56704702762847,
+        "first_to_middle_ratio": 1.3438548105713644e-05,
+        "last_to_middle_ratio": 1.3438548105713644e-05,
+        "min_edge_to_middle_ratio": 1.3438548105713644e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -4290,8 +4290,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 8.6,
-        "rms": 0.057432666420936584,
-        "rms_db": -24.81682040604398,
+        "rms": 0.057432662695646286,
+        "rms_db": -24.81682096944219,
         "peak": 0.57647705078125,
         "peak_db": -4.784359540757687,
         "clipping_ratio": 0.0,
@@ -4321,8 +4321,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 6.6,
-        "rms": 0.05761982500553131,
-        "rms_db": -24.78856130058019,
+        "rms": 0.05761982128024101,
+        "rms_db": -24.78856186214839,
         "peak": 0.754638671875,
         "peak_db": -2.445218858089388,
         "clipping_ratio": 0.0,
@@ -4352,8 +4352,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 6.6,
-        "rms": 0.059686124324798584,
-        "rms_db": -24.482532415800495,
+        "rms": 0.05968612805008888,
+        "rms_db": -24.482531873673498,
         "peak": 0.5068359375,
         "peak_db": -5.902651975827082,
         "clipping_ratio": 0.0,
@@ -4445,8 +4445,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 6.6,
-        "rms": 0.059135328978300095,
-        "rms_db": -24.563059656078035,
+        "rms": 0.059135325253009796,
+        "rms_db": -24.563060203254516,
         "peak": 0.536041259765625,
         "peak_db": -5.416035616633471,
         "clipping_ratio": 0.0,
@@ -4516,13 +4516,13 @@
         "trailing_silence_ms": 500.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.07502104341983795,
+        "middle_rms": 0.07502105087041855,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -22.496337996367444,
-        "first_to_middle_ratio": 1.3329593296629767e-05,
-        "last_to_middle_ratio": 1.3329593296629767e-05,
-        "min_edge_to_middle_ratio": 1.3329593296629767e-05
+        "middle_db": -22.496337133743914,
+        "first_to_middle_ratio": 1.3329591972825208e-05,
+        "last_to_middle_ratio": 1.3329591972825208e-05,
+        "min_edge_to_middle_ratio": 1.3329591972825208e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -4631,8 +4631,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 5.6,
-        "rms": 0.05227157846093178,
-        "rms_db": -25.634687703603785,
+        "rms": 0.05227157473564148,
+        "rms_db": -25.6346883226297,
         "peak": 0.46539306640625,
         "peak_db": -6.643601825538266,
         "clipping_ratio": 0.0,
@@ -4693,8 +4693,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 6.6,
-        "rms": 0.05733036622405052,
-        "rms_db": -24.83230567921911,
+        "rms": 0.05733036249876022,
+        "rms_db": -24.832306243622646,
         "peak": 0.413726806640625,
         "peak_db": -7.665726778177074,
         "clipping_ratio": 0.0,
@@ -4733,13 +4733,13 @@
         "trailing_silence_ms": 300.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.06123289465904236,
+        "middle_rms": 0.06123289093375206,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -24.260304194027658,
-        "first_to_middle_ratio": 1.6331091369164452e-05,
-        "last_to_middle_ratio": 1.6331091369164452e-05,
-        "min_edge_to_middle_ratio": 1.6331091369164452e-05
+        "middle_db": -24.260304722460315,
+        "first_to_middle_ratio": 1.633109236271637e-05,
+        "last_to_middle_ratio": 1.633109236271637e-05,
+        "min_edge_to_middle_ratio": 1.633109236271637e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -4755,8 +4755,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 7.6,
-        "rms": 0.06098588928580284,
-        "rms_db": -24.295412779856413,
+        "rms": 0.06098588556051254,
+        "rms_db": -24.295413310429335,
         "peak": 0.5203857421875,
         "peak_db": -5.673492219692466,
         "clipping_ratio": 0.0,
@@ -4795,13 +4795,13 @@
         "trailing_silence_ms": 300.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.06185658276081085,
+        "middle_rms": 0.061856575310230255,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -24.17228152148264,
-        "first_to_middle_ratio": 1.616642809613452e-05,
-        "last_to_middle_ratio": 1.616642809613452e-05,
-        "min_edge_to_middle_ratio": 1.616642809613452e-05
+        "middle_db": -24.172282567691816,
+        "first_to_middle_ratio": 1.616643004336931e-05,
+        "last_to_middle_ratio": 1.616643004336931e-05,
+        "min_edge_to_middle_ratio": 1.616643004336931e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -4910,8 +4910,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 7.6,
-        "rms": 0.060205671936273575,
-        "rms_db": -24.407251844415207,
+        "rms": 0.060205668210983276,
+        "rms_db": -24.407252381863927,
         "peak": 0.571685791015625,
         "peak_db": -4.856852036777838,
         "clipping_ratio": 0.0,
@@ -4919,13 +4919,13 @@
         "trailing_silence_ms": 300.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.06273287534713745,
+        "middle_rms": 0.06273288279771805,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -24.050096124344375,
-        "first_to_middle_ratio": 1.594060517618014e-05,
-        "last_to_middle_ratio": 1.594060517618014e-05,
-        "min_edge_to_middle_ratio": 1.594060517618014e-05
+        "middle_db": -24.050095092749434,
+        "first_to_middle_ratio": 1.5940603282966273e-05,
+        "last_to_middle_ratio": 1.5940603282966273e-05,
+        "min_edge_to_middle_ratio": 1.5940603282966273e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -4941,8 +4941,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 7.6,
-        "rms": 0.06214702129364014,
-        "rms_db": -24.131593645108605,
+        "rms": 0.062147025018930435,
+        "rms_db": -24.13159312444874,
         "peak": 0.476226806640625,
         "peak_db": -6.443723239167328,
         "clipping_ratio": 0.0,
@@ -5012,13 +5012,13 @@
         "trailing_silence_ms": 300.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.06908740103244781,
+        "middle_rms": 0.06908740848302841,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -23.212022890712532,
-        "first_to_middle_ratio": 1.4474419105816116e-05,
-        "last_to_middle_ratio": 1.4474419105816116e-05,
-        "min_edge_to_middle_ratio": 1.4474419105816116e-05
+        "middle_db": -23.212021954001692,
+        "first_to_middle_ratio": 1.4474417544854018e-05,
+        "last_to_middle_ratio": 1.4474417544854018e-05,
+        "min_edge_to_middle_ratio": 1.4474417544854018e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -5127,8 +5127,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 6.6,
-        "rms": 0.06005466729402542,
-        "rms_db": -24.42906469402324,
+        "rms": 0.06005466356873512,
+        "rms_db": -24.42906523282335,
         "peak": 0.50653076171875,
         "peak_db": -5.907883494167528,
         "clipping_ratio": 0.0,
@@ -5198,13 +5198,13 @@
         "trailing_silence_ms": 300.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.08372131735086441,
+        "middle_rms": 0.08372130990028381,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -21.543278933539934,
-        "first_to_middle_ratio": 1.1944389184469968e-05,
-        "last_to_middle_ratio": 1.1944389184469968e-05,
-        "min_edge_to_middle_ratio": 1.1944389184469968e-05
+        "middle_db": -21.543279706520167,
+        "first_to_middle_ratio": 1.1944390247432723e-05,
+        "last_to_middle_ratio": 1.1944390247432723e-05,
+        "min_edge_to_middle_ratio": 1.1944390247432723e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -5220,8 +5220,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 5.6,
-        "rms": 0.05745277553796768,
-        "rms_db": -24.813779714898843,
+        "rms": 0.05745277926325798,
+        "rms_db": -24.813779151697865,
         "peak": 0.595245361328125,
         "peak_db": -4.506079606238155,
         "clipping_ratio": 0.0,
@@ -5260,13 +5260,13 @@
         "trailing_silence_ms": 340.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.05837542936205864,
+        "middle_rms": 0.05837543308734894,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -24.67539824196004,
-        "first_to_middle_ratio": 1.7130494942880832e-05,
-        "last_to_middle_ratio": 1.7130494942880832e-05,
-        "min_edge_to_middle_ratio": 1.7130494942880832e-05
+        "middle_db": -24.67539768766074,
+        "first_to_middle_ratio": 1.713049384968009e-05,
+        "last_to_middle_ratio": 1.713049384968009e-05,
+        "min_edge_to_middle_ratio": 1.713049384968009e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -5353,13 +5353,13 @@
         "trailing_silence_ms": 300.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.06664568185806274,
+        "middle_rms": 0.06664567440748215,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -23.52455968748355,
-        "first_to_middle_ratio": 1.5004723030742966e-05,
-        "last_to_middle_ratio": 1.5004723030742966e-05,
-        "min_edge_to_middle_ratio": 1.5004723030742966e-05
+        "middle_db": -23.524560658513067,
+        "first_to_middle_ratio": 1.5004724708179637e-05,
+        "last_to_middle_ratio": 1.5004724708179637e-05,
+        "min_edge_to_middle_ratio": 1.5004724708179637e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -5375,8 +5375,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 5.6,
-        "rms": 0.06016627699136734,
-        "rms_db": -24.41293722475537,
+        "rms": 0.06016627326607704,
+        "rms_db": -24.412937762556,
         "peak": 0.52972412109375,
         "peak_db": -5.519005018561827,
         "clipping_ratio": 0.0,
@@ -5415,13 +5415,13 @@
         "trailing_silence_ms": 300.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.08175935596227646,
+        "middle_rms": 0.08175934851169586,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -21.74925076471834,
-        "first_to_middle_ratio": 1.2231016080124701e-05,
-        "last_to_middle_ratio": 1.2231016080124701e-05,
-        "min_edge_to_middle_ratio": 1.2231016080124701e-05
+        "middle_db": -21.74925155624762,
+        "first_to_middle_ratio": 1.2231017194714931e-05,
+        "last_to_middle_ratio": 1.2231017194714931e-05,
+        "min_edge_to_middle_ratio": 1.2231017194714931e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -5468,8 +5468,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 6.6,
-        "rms": 0.07354860752820969,
-        "rms_db": -22.668510904286983,
+        "rms": 0.07354860007762909,
+        "rms_db": -22.668511784180243,
         "peak": 0.620391845703125,
         "peak_db": -4.146678381882063,
         "clipping_ratio": 0.0,
@@ -5477,13 +5477,13 @@
         "trailing_silence_ms": 300.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.07713843137025833,
+        "middle_rms": 0.07713842391967773,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -22.25458393739217,
-        "first_to_middle_ratio": 1.2963706672687214e-05,
-        "last_to_middle_ratio": 1.2963706672687214e-05,
-        "min_edge_to_middle_ratio": 1.2963706672687214e-05
+        "middle_db": -22.254584776337467,
+        "first_to_middle_ratio": 1.2963707924814709e-05,
+        "last_to_middle_ratio": 1.2963707924814709e-05,
+        "min_edge_to_middle_ratio": 1.2963707924814709e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -5508,13 +5508,13 @@
         "trailing_silence_ms": 300.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.08497471362352371,
+        "middle_rms": 0.08497472107410431,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -21.41420580749187,
-        "first_to_middle_ratio": 1.1768206738603362e-05,
-        "last_to_middle_ratio": 1.1768206738603362e-05,
-        "min_edge_to_middle_ratio": 1.1768206738603362e-05
+        "middle_db": -21.414205045913334,
+        "first_to_middle_ratio": 1.1768205706767404e-05,
+        "last_to_middle_ratio": 1.1768205706767404e-05,
+        "min_edge_to_middle_ratio": 1.1768205706767404e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -5539,13 +5539,13 @@
         "trailing_silence_ms": 300.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.06661450117826462,
+        "middle_rms": 0.06661449372768402,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -23.52862439672134,
-        "first_to_middle_ratio": 1.5011746388360388e-05,
-        "last_to_middle_ratio": 1.5011746388360388e-05,
-        "min_edge_to_middle_ratio": 1.5011746388360388e-05
+        "middle_db": -23.528625368205375,
+        "first_to_middle_ratio": 1.5011748067367765e-05,
+        "last_to_middle_ratio": 1.5011748067367765e-05,
+        "min_edge_to_middle_ratio": 1.5011748067367765e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -5561,8 +5561,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 8.6,
-        "rms": 0.05887459218502045,
-        "rms_db": -24.601441762835016,
+        "rms": 0.058874595910310745,
+        "rms_db": -24.6014412132353,
         "peak": 0.418670654296875,
         "peak_db": -7.562549577187472,
         "clipping_ratio": 0.0,
@@ -5601,13 +5601,13 @@
         "trailing_silence_ms": 300.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.06870277225971222,
+        "middle_rms": 0.06870276480913162,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -23.260514763087315,
-        "first_to_middle_ratio": 1.4555453362129458e-05,
-        "last_to_middle_ratio": 1.4555453362129458e-05,
-        "min_edge_to_middle_ratio": 1.4555453362129458e-05
+        "middle_db": -23.26051570504238,
+        "first_to_middle_ratio": 1.4555454940618749e-05,
+        "last_to_middle_ratio": 1.4555454940618749e-05,
+        "min_edge_to_middle_ratio": 1.4555454940618749e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -5654,8 +5654,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 6.6,
-        "rms": 0.04874943941831589,
-        "rms_db": -26.240607479896312,
+        "rms": 0.048749443143606186,
+        "rms_db": -26.240606816145927,
         "peak": 0.539031982421875,
         "peak_db": -5.367709320485331,
         "clipping_ratio": 0.0,
@@ -5747,8 +5747,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 7.6,
-        "rms": 0.05041271820664406,
-        "rms_db": -25.949197703560007,
+        "rms": 0.05041271448135376,
+        "rms_db": -25.949198345411165,
         "peak": 0.57666015625,
         "peak_db": -4.781601093805566,
         "clipping_ratio": 0.0,
@@ -5756,13 +5756,13 @@
         "trailing_silence_ms": 300.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.05252884700894356,
+        "middle_rms": 0.052528850734233856,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -25.592042634289616,
-        "first_to_middle_ratio": 1.903715871214502e-05,
-        "last_to_middle_ratio": 1.903715871214502e-05,
-        "min_edge_to_middle_ratio": 1.903715871214502e-05
+        "middle_db": -25.59204201829553,
+        "first_to_middle_ratio": 1.9037157362049946e-05,
+        "last_to_middle_ratio": 1.9037157362049946e-05,
+        "min_edge_to_middle_ratio": 1.9037157362049946e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -5778,8 +5778,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 7.6,
-        "rms": 0.08604239672422409,
-        "rms_db": -21.305750015526918,
+        "rms": 0.08604240417480469,
+        "rms_db": -21.30574926339866,
         "peak": 0.7933349609375,
         "peak_db": -2.010868133293685,
         "clipping_ratio": 0.0,
@@ -5880,13 +5880,13 @@
         "trailing_silence_ms": 300.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.06128734350204468,
+        "middle_rms": 0.061287347227334976,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -24.252584054408747,
-        "first_to_middle_ratio": 1.6316582516615044e-05,
-        "last_to_middle_ratio": 1.6316582516615044e-05,
-        "min_edge_to_middle_ratio": 1.6316582516615044e-05
+        "middle_db": -24.252583526445587,
+        "first_to_middle_ratio": 1.6316581524827842e-05,
+        "last_to_middle_ratio": 1.6316581524827842e-05,
+        "min_edge_to_middle_ratio": 1.6316581524827842e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -6004,13 +6004,13 @@
         "trailing_silence_ms": 300.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.0603192001581192,
+        "middle_rms": 0.0603191964328289,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -24.390888518235904,
-        "first_to_middle_ratio": 1.6578469125151997e-05,
-        "last_to_middle_ratio": 1.6578469125151997e-05,
-        "min_edge_to_middle_ratio": 1.6578469125151997e-05
+        "middle_db": -24.390889054673078,
+        "first_to_middle_ratio": 1.6578470149031854e-05,
+        "last_to_middle_ratio": 1.6578470149031854e-05,
+        "min_edge_to_middle_ratio": 1.6578470149031854e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -6057,8 +6057,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 6.6,
-        "rms": 0.05906078964471817,
-        "rms_db": -24.57401501600966,
+        "rms": 0.05906078591942787,
+        "rms_db": -24.574015563876728,
         "peak": 0.604034423828125,
         "peak_db": -4.378766205968382,
         "clipping_ratio": 0.0,
@@ -6128,13 +6128,13 @@
         "trailing_silence_ms": 300.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.06605852395296097,
+        "middle_rms": 0.06605853140354156,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -23.601422692893873,
-        "first_to_middle_ratio": 1.513809176522509e-05,
-        "last_to_middle_ratio": 1.513809176522509e-05,
-        "min_edge_to_middle_ratio": 1.513809176522509e-05
+        "middle_db": -23.601421713233517,
+        "first_to_middle_ratio": 1.513809005783665e-05,
+        "last_to_middle_ratio": 1.513809005783665e-05,
+        "min_edge_to_middle_ratio": 1.513809005783665e-05
       },
       "warnings": [
         "edge_loss_risk"
@@ -6212,8 +6212,8 @@
         "sample_rate_hz": 16000,
         "channels": 1,
         "duration_seconds": 6.6,
-        "rms": 0.06918609142303467,
-        "rms_db": -23.199624071946737,
+        "rms": 0.06918608397245407,
+        "rms_db": -23.19962500732151,
         "peak": 0.69610595703125,
         "peak_db": -3.1464929936613872,
         "clipping_ratio": 0.0,
@@ -6252,13 +6252,13 @@
         "trailing_silence_ms": 300.0,
         "first_300ms_rms": 9.999999974752427e-07,
         "last_300ms_rms": 9.999999974752427e-07,
-        "middle_rms": 0.06986650079488754,
+        "middle_rms": 0.06986650824546814,
         "first_300ms_db": -120.00000002192976,
         "last_300ms_db": -120.00000002192976,
-        "middle_db": -23.114620149519357,
-        "first_to_middle_ratio": 1.431301104389097e-05,
-        "last_to_middle_ratio": 1.431301104389097e-05,
-        "min_edge_to_middle_ratio": 1.431301104389097e-05
+        "middle_db": -23.11461922325403,
+        "first_to_middle_ratio": 1.4313009517548164e-05,
+        "last_to_middle_ratio": 1.4313009517548164e-05,
+        "min_edge_to_middle_ratio": 1.4313009517548164e-05
       },
       "warnings": [
         "edge_loss_risk"
