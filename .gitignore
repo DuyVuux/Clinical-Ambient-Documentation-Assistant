@@ -41,8 +41,24 @@ data/data_lake/silver/audio_clean/
 # ==============================================================================
 # Reports & Temporary Files
 # ==============================================================================
-report/
+# Ignore all PDFs in the report directory by default
+report/**/*.pdf
 
+# Explicitly ignore the ones requested (redundant but matches user intent exactly)
+report/Tuần_3/04_Report_ASR_Preprocessing_Ablation_Tuan_3.pdf
+report/Tuần_3/Report_ASR_Benchmark_Clinical_Tuan_3.pdf
+
+# Allow only the final summary PDF to be pushed
+!report/Tuần_3/05_Report_ASR_Tuan_3.pdf
+
+# Ignore LaTeX compilation temporary files
+report/**/*.aux
+report/**/*.log
+report/**/*.out
+report/**/*.toc
+report/**/*.fls
+report/**/*.fdb_latexmk
+report/**/*.synctex.gz
 # ==============================================================================
 # Research Documents
 # ==============================================================================

@@ -1,0 +1,336 @@
+% =======================
+% PHẦN 3: WHISPER VÀ PHOWHISPER CHO ASR LÂM SÀNG TIẾNG VIỆT
+% =======================
+\section{Phần 3: Nghiên cứu Whisper và PhoWhisper cho ASR lâm sàng tiếng Việt}
+
+\subsection{Tổng quan kiến trúc Whisper}
+
+\subsubsection{Phát biểu bài toán}
+
+Whisper là mô hình encoder-decoder Transformer sequence-to-sequence được huấn luyện trên quy mô lớn cho nhiều tác vụ speech processing dưới cùng một giao diện token. Bài toán ASR được phát biểu: cho tín hiệu audio $x[n]$, xây dựng đặc trưng âm học $X \in \mathbb{R}^{T \times F}$ dạng log-Mel spectrogram, mô hình cực đại hóa xác suất có điều kiện $p(y \mid X)$ với $y = (y_1, \dots, y_N)$ là chuỗi token đích.
+
+Đặc trưng âm học được tính qua các bước:
+\[
+S_{m,k} = \sum_{n=0}^{N-1} x[n + mH] \, w[n] \, e^{-j2\pi kn/N}, \qquad P_{m,k} = |S_{m,k}|^2
+\]
+\[
+M = P \cdot H_{\text{mel}}, \qquad X = \log(\max(M, \varepsilon))
+\]
+
+trong đó $H_{\text{mel}} \in \mathbb{R}^{K \times F}$ là ma trận Mel filterbank. Whisper resample audio về 16\,kHz, dùng cửa sổ 25\,ms, stride 10\,ms và tạo 80-channel log-Mel spectrogram (riêng large-v3 dùng 128 Mel bins).
+
+\subsubsection{Encoder-decoder Transformer}
+
+Encoder nhận $X$, đi qua stem gồm hai convolution layers (kernel 3, GELU, stride 2 ở layer thứ hai), thêm sinusoidal position embeddings rồi vào các encoder blocks. Decoder dùng learned position embeddings và tied input-output embeddings. Encoder và decoder có cùng width và số block trong mỗi model size.
+
+Attention tiêu chuẩn cho một head:
+\[
+Q = HW_Q, \quad K = HW_K, \quad V = HW_V
+\]
+\[
+\operatorname{Attn}(Q,K,V) = \operatorname{softmax}\!\left(\frac{QK^\top}{\sqrt{d_k}}\right)V
+\]
+
+Multi-head attention: $\operatorname{MHA}(H) = \operatorname{Concat}(\text{head}_1, \dots, \text{head}_h)W_O$.
+
+Decoder autoregressive factorize:
+\[
+p(y \mid X) = \prod_{i=1}^{N} p(y_i \mid y_{<i}, X)
+\]
+
+Trong ngữ cảnh lâm sàng, cross-attention là nơi các ambiguity âm học được giải quyết (ví dụ ``thở nhanh'' vs ``thở ngắt''), nhưng decoder cũng có thể gây lỗi ``fluently wrong'' vì đây là sequence generator, không phải bộ aligner ràng buộc cứng.
+
+\subsubsection{Tokenization và mục tiêu huấn luyện}
+
+Whisper dùng byte-level BPE kiểu GPT-2 cho English-only models, còn multilingual models thì refit vocabulary để giảm fragmentation trên các ngôn ngữ khác. Decoder phát sinh chuỗi token đa nhiệm gồm: token bắt đầu transcript, token ngôn ngữ, token task (transcribe/translate), token timestamps lượng tử hóa theo bước 20\,ms, và token nospeech.
+
+Một điểm thiết kế quan trọng: OpenAI nhấn mạnh Whisper được train để dự đoán raw text of transcripts without significant standardization. Với dự án này, điều đó gợi ý rằng ASR nên giữ vai trò tạo transcript gần bằng lời nói, còn normalization lâm sàng và fact extraction nên để ở các tầng downstream có provenance tốt hơn.
+
+\subsubsection{Ý nghĩa của chunking 30 giây}
+
+Whisper được huấn luyện và suy diễn trên cửa sổ 30 giây. Với hop 10\,ms, 30 giây tương ứng khoảng 3000 frames; sau stem convolution stride 2, còn khoảng 1500 bước thời gian vào encoder. Trong triển khai cho audio khám ngoại trú, chunk ASR không nên vượt xa nhịp 30 giây native này.
+
+\subsubsection{Đặc thù tiếng Việt: tone là thông tin từ vựng}
+
+Tone trong tiếng Việt không phải phụ kiện ngữ điệu mà là thông tin từ vựng quan trọng. Các quyết định tiền xử lý như VAD cắt quá sát, denoising quá mạnh, hoặc augmentation làm méo đặc tính cao độ có thể bào mòn thông tin phân biệt nghĩa. Trong môi trường lâm sàng, điều này liên quan trực tiếp tới các cặp semantically-near nhưng clinically-far khi dấu/âm/tone bị lệch.
+
+\subsection{Điểm mạnh và điểm yếu của Whisper trong khám ngoại trú tiếng Việt}
+
+\subsubsection{Điểm mạnh}
+
+\begin{itemize}
+    \item \textbf{Robust generalization:} Whisper generalize tốt zero-shot từ weak supervision quy mô lớn. Large-v3 được train trên hơn 5 triệu giờ dữ liệu weakly/pseudo-labeled, cải thiện robustness với accents, background noise và technical language.
+    \item \textbf{Phù hợp batch-after-stop:} Whisper không real-time ``out of the box'', nên kiến trúc xử lý local sau khi bác sĩ bấm stop không phải nhượng bộ mà là thiết kế ăn khớp với bản chất model.
+    \item \textbf{Hệ sinh thái mạnh:} Nhiều công cụ downstream như faster-whisper, WhisperX, stable-ts, whisper-timestamped.
+\end{itemize}
+
+\subsubsection{Điểm yếu}
+
+\begin{itemize}
+    \item \textbf{Hallucination:} Model có thể sinh văn bản không thật sự được nói.
+    \item \textbf{Repetitive text:} Sequence-to-sequence architecture dễ lặp lại.
+    \item \textbf{Sai speaker names:} Paper gốc ghi nhận mô hình có xu hướng đoán tên speaker ``plausible but almost always incorrect''.
+    \item \textbf{Performance không đều:} Chất lượng khác biệt giữa ngôn ngữ, accent và dialect.
+\end{itemize}
+
+Ba yêu cầu thiết kế cứng từ các điểm yếu trên: không tự tin vào speaker names, không dùng raw ASR để sinh fact không có evidence, và không dùng Whisper để classification doctor/patient/caregiver roles.
+
+\subsection{PhoWhisper: chuyên biệt hóa Whisper cho tiếng Việt}
+
+\subsubsection{Kiến trúc và dữ liệu huấn luyện}
+
+PhoWhisper là họ checkpoint ASR tiếng Việt do VinAI công bố, gồm 5 phiên bản: tiny, base, small, medium và large. Tất cả dùng cùng architecture với các multilingual Whisper models tương ứng; riêng bản large tương ứng với Whisper large-v2 (không phải large-v3).
+
+\begin{longtable}{p{4cm} p{10cm}}
+\toprule
+\textbf{Thuộc tính} & \textbf{Chi tiết} \\
+\midrule
+Dữ liệu huấn luyện & $\sim$844 giờ: Common Voice vi, VIVOS, VLSP 2020 Task 1, private data \\
+\midrule
+Accent diversity & 26.000 người, 63 tỉnh/thành \\
+\midrule
+Augmentation & Chia train làm hai nửa, augment một nửa bằng environmental sounds qua audiomentations \\
+\midrule
+Training setup & 8 $\times$ A100 40\,GB, batch size 64, 48.000 steps ($\sim$5 epochs) \\
+\midrule
+Architecture base & Large: Whisper large-v2; Medium: Whisper medium \\
+\bottomrule
+\end{longtable}
+
+PhoWhisper không đổi lớp toán học nền của Whisper mà đổi miền dữ liệu và phân bố ngôn ngữ. Kỳ vọng hợp lý: PhoWhisper mạnh hơn ở accent Bắc/Trung/Nam, từ vựng tiếng Việt thường dùng và orthography có dấu.
+
+\subsubsection{Kết quả benchmark công khai}
+
+\begin{longtable}{l r r r r r}
+\toprule
+\textbf{Checkpoint} & \textbf{Params} & \textbf{CMV-Vi} & \textbf{VIVOS} & \textbf{VLSP T1} & \textbf{VLSP T2} \\
+ & & \textbf{WER} & \textbf{WER} & \textbf{WER} & \textbf{WER} \\
+\midrule
+PhoWhisper-medium & 769M & 8.27 & 4.97 & 14.12 & 26.85 \\
+PhoWhisper-large & 1.55B & 8.14 & 4.67 & 13.75 & 26.68 \\
+\bottomrule
+\end{longtable}
+
+\textbf{Lưu ý quan trọng:} Đây là benchmark ASR tiếng Việt công khai, không phải benchmark outpatient clinical ambient. Không nên ngoại suy quá mức từ bảng này sang khám ngoại trú vì các failure modes lâm sàng (tên thuốc, liều, phủ định, overlap, code-switching) thường không được đại diện trong benchmark công khai.
+
+\subsubsection{Giới hạn cho môi trường lâm sàng}
+
+PhoWhisper là mandatory benchmark, chưa phải ``auto-winner'' cho lâm sàng vì:
+\begin{itemize}
+    \item Chưa có evidence công khai trên outpatient ambient clinical dialogues.
+    \item Chưa đánh giá các lỗi nguy hiểm: phủ định ``không/chưa'', thuốc-liều-đường dùng, lab/vital, người nhà chen lời, code-switching Anh--Việt.
+    \item Tokenizer: tài liệu công khai không nói rõ PhoWhisper có thay tokenizer hay không; suy luận hợp lý là thừa hưởng tokenizer Whisper-compatible, cần verification trước khi convert sang CTranslate2.
+\end{itemize}
+
+\subsection{Phân biệt architecture, runtime, checkpoint và tooling}
+
+\begin{small}
+\begin{longtable}{p{2.5cm} p{4cm} p{4cm} p{3.5cm}}
+\toprule
+\textbf{Lớp} & \textbf{Nó là gì} & \textbf{Ví dụ} & \textbf{Đổi thì ảnh hưởng gì} \\
+\midrule
+Architecture & Lớp toán học nền & Whisper encoder-decoder Transformer & Class mô hình \\
+\midrule
+Checkpoint & Trọng số cụ thể & large-v3, large-v3-turbo, PhoWhisper-medium/large & Chất lượng, domain \\
+\midrule
+Runtime & Engine suy diễn & openai/whisper, transformers, faster-whisper & Speed, memory, deployment \\
+\midrule
+Alignment & Timestamp hậu xử lý & WhisperX, stable-ts, whisper-timestamped & Word timing, confidence \\
+\midrule
+Diarization & Tách speaker & pyannote & Speaker segmentation \\
+\midrule
+Fine-tuning & Cập nhật trọng số & Full FT, LoRA/adapters & Cost, rollback risk \\
+\bottomrule
+\end{longtable}
+\end{small}
+
+Khuyến nghị: dùng faster-whisper như runtime mặc định (CTranslate2, hỗ trợ int8 quantization, convert được mọi Whisper-compatible checkpoints kể cả fine-tuned models). Không nhầm runtime với checkpoint.
+
+\subsection{So sánh checkpoint cho bài toán outpatient ambient clinical ASR}
+
+\begin{small}
+\begin{longtable}{p{2.8cm} p{3cm} p{3.5cm} p{2.5cm} p{2.2cm}}
+\toprule
+\textbf{Checkpoint} & \textbf{Bản chất} & \textbf{Điểm mạnh} & \textbf{Điểm yếu} & \textbf{Vai trò} \\
+\midrule
+Whisper large-v3 & OpenAI, 128-Mel, recipe mới & Robust, hệ sinh thái mạnh & Không chuyên tiếng Việt & Baseline chất lượng \\
+\midrule
+large-v3-turbo & Pruned từ large-v3, 4 decoder layers & Nhanh, ít VRAM & Suy giảm chất lượng nhỏ & Baseline latency \\
+\midrule
+PhoWhisper-medium & Specialize tiếng Việt, 769M & Evidence tốt trên public VI ASR & Chưa có clinical evidence & Baseline tiếng Việt \\
+\midrule
+PhoWhisper-large & Large-v2-class, 1.55B & Tốt nhất trong họ PhoWhisper & Chậm hơn; chưa có clinical benchmark & Ứng viên mạnh \\
+\bottomrule
+\end{longtable}
+\end{small}
+
+Về hardware: class medium $\sim$5\,GB VRAM, class large $\sim$10\,GB VRAM, turbo $\sim$6\,GB VRAM (ước lượng từ OpenAI repo, cần verify trên máy đích).
+
+\subsection{Giao thức đánh giá theo chuẩn quốc tế}
+
+\subsubsection{Lớp 1: ASR surface metrics}
+
+\[
+\text{WER} = \frac{S + D + I}{N}, \qquad \text{CER} = \frac{S_c + D_c + I_c}{N_c}
+\]
+
+Bổ sung: Vietnamese Diacritic Error Rate, Number/Unit Normalization Error, Code-switching Error Rate. Việc thêm metric riêng cho diacritics đặc biệt quan trọng vì bề mặt chữ tiếng Việt mang nghĩa nhiều hơn so với nhiều ngôn ngữ non-tonal Latin script.
+
+\subsubsection{Lớp 2: Clinical safety metrics}
+
+Suy ra trực tiếp từ clinical\_fact.schema:
+\[
+\text{NegER} = \frac{\#\text{facts có assertion sai}}{\#\text{gold facts có assertion cần phân cực}}
+\]
+\[
+\text{CEER} = \frac{\#\text{critical entities sai}}{\#\text{gold critical entities}}
+\]
+
+Critical entities gồm tối thiểu: medication, allergy, vital\_sign, lab\_result, diagnosis, red\_flag, plan. Các metric riêng: Medical Term Error Rate, Medication Error Rate, Dosage/Route/Frequency Error, Allergy Error Rate, Lab/Vital Numeric Error.
+
+Một transcript có WER thấp vẫn có thể cực kỳ nguy hiểm nếu sai một token phủ định hoặc một con số liều dùng.
+
+\subsubsection{Lớp 3: Evidence/provenance metrics}
+
+\begin{itemize}
+    \item \textbf{Timestamp Usefulness:} tỉ lệ fact được click-back tới audio đúng ngữ cảnh trong tolerance đã định.
+    \item \textbf{Source Attribution Accuracy:} fact có link đúng tới source\_segment\_ids hay không.
+    \item \textbf{Quote Exactness:} quote trong source\_evidence có khớp transcript reviewed hay không.
+    \item \textbf{Audio Click-back Success:} reviewer có mở lại được đoạn audio tương ứng hay không.
+\end{itemize}
+
+\subsubsection{Lớp 4: Speaker và downstream metrics}
+
+DER cho diarization kỹ thuật; thêm Speaker Attribution Accuracy, Role Mapping Accuracy, Overlap Handling, Clinical Fact Precision/Recall/F1, Unsupported Fact Rate, Hallucinated Plan Rate, Doctor Correction Burden, Review Time per Encounter và Note Usability Score.
+
+\subsection{Lộ trình benchmark và fine-tuning theo giai đoạn}
+
+\begin{longtable}{p{3cm} p{2.5cm} p{4.5cm} p{4cm}}
+\toprule
+\textbf{Giai đoạn} & \textbf{Cập nhật weights} & \textbf{Data tối thiểu} & \textbf{Mục tiêu} \\
+\midrule
+Stage 0: Benchmark & Không & Eval set frozen, config đồng nhất & Chọn baseline đúng \\
+\midrule
+Stage 1: Adaptation nhẹ & Không & Benchmark logs, dictionary, review UI & Giảm lỗi an toàn mà chưa đụng weights \\
+\midrule
+Stage 2: PEFT (LoRA) & Có, ít & Gold transcript đủ sạch, holdout, legal rõ & Hấp thụ từ vựng/âm vực chuyên biệt \\
+\midrule
+Stage 3: Domain FT & Có & Real-patient approval, rollback, model card & Chỉ mở khi governance cho phép \\
+\bottomrule
+\end{longtable}
+
+\subsubsection{Stage 0: Benchmark}
+
+Chạy tối thiểu bốn tổ hợp trên cùng audio, cùng preprocessing, cùng VAD, cùng decoding config: Whisper large-v3, large-v3-turbo, PhoWhisper-medium, PhoWhisper-large. Lưu ý quan trọng: openai/whisper mặc định beam size 1, faster-whisper mặc định beam size 5. Nếu không khóa cùng decoding config, so sánh sẽ sai lệch.
+
+\subsubsection{Stage 1: Adaptation nhẹ}
+
+Ưu tiên thay đổi không động vào weights: khóa normalization policy cho transcript, controlled dictionary correction chỉ áp dụng trên normalized copy (không đụng raw quote), validator cho pattern nguy hiểm (phủ định, số đo, thuốc/liều).
+
+\subsubsection{Stage 2: PEFT}
+
+LoRA đóng băng base weights và chèn low-rank updates, giảm mạnh số tham số trainable và giúp rollback đơn giản. Kế hoạch thực nghiệm bảo thủ: so ba cấu hình adapter placement:
+\begin{enumerate}
+    \item Decoder-attention-only
+    \item Encoder-top-half-attention-only
+    \item Hybrid encoder-top-half + decoder-cross-attention
+\end{enumerate}
+
+Nếu lỗi chủ yếu là âm học/giọng/clinic noise, adaptation phía encoder có thể có ích hơn. Nếu lỗi chủ yếu là từ vựng/orthography/medication names, adaptation phía decoder có thể hiệu quả hơn.
+
+Dữ liệu PEFT: giữ cặp audio $\rightarrow$ transcript text (không dùng clinical\_fact làm target ASR). Tránh augmentation làm sai F0/prosodic contour vì tiếng Việt mang nghĩa qua tonal information.
+
+\subsubsection{Stage 3: Domain fine-tuning}
+
+Chỉ mở khi đủ bốn điều kiện: consent/governance rõ, holdout freeze riêng, internal model card, và rollback plan.
+
+\subsection{Điều kiện tiên quyết trước khi fine-tune}
+
+\begin{itemize}
+    \item Gold transcript/evaluation set đã freeze.
+    \item Dataset registry audit hoàn chỉnh.
+    \item Annotation guideline ổn định cho transcript, negation, medication, dosage, speaker role.
+    \item Legal/consent clearance cho dữ liệu sử dụng.
+    \item Baseline benchmark rõ ràng trên cùng evaluation set.
+    \item Error taxonomy cho clinical ASR.
+    \item Cấu hình training có thể tái lập (reproducible).
+    \item Governance approval nếu dùng real-patient data.
+\end{itemize}
+
+Whisper paper cảnh báo: transcript machine-generated có thể làm hỏng chất lượng mô hình. Trong dự án, nếu dùng raw\_asr hoặc transcript ``sửa sơ'' làm gold mà không tách sạch khỏi dữ liệu human-reviewed, rất dễ tạo vòng lặp tự củng cố lỗi của chính ASR.
+
+\subsection{Ma trận rủi ro ASR lâm sàng}
+
+\begin{small}
+\begin{longtable}{p{3.2cm} p{4cm} p{6.5cm}}
+\toprule
+\textbf{Rủi ro} & \textbf{Tại sao nguy hiểm} & \textbf{Giảm thiểu} \\
+\midrule
+Sai phủ định & Đảo nghĩa lâm sàng hoàn toàn & Red-team set phủ định; Negation Error Rate; boundary overlap ở VAD; doctor review bắt buộc \\
+\midrule
+Sai thuốc/liều/đường dùng & Dẫn đến note sai điều trị & Medication Error Rate riêng; không auto-correct nếu không chắc \\
+\midrule
+Sai số đo/lab/vital & Thay đổi đánh giá mức độ nặng & Numeric/unit metric; fallback segment-level evidence \\
+\midrule
+Sai speaker role & Gán nhầm bác sĩ $\leftrightarrow$ bệnh nhân & Role mapping phải manual; khóa role trước fact extraction \\
+\midrule
+Hallucination/lặp text & Tạo fact không được nói & VAD, decoding guardrails, unsupported-fact validator \\
+\midrule
+Code-switching Anh--Việt & Sai tên thuốc quốc tế, xét nghiệm & Evaluation subset mixed-language; code-switching error metric \\
+\midrule
+Leakage train/eval & Metric ảo, chọn sai model & Split theo encounter\_id; freeze holdout; transcript fingerprint dedup \\
+\bottomrule
+\end{longtable}
+\end{small}
+
+\subsection{Ma trận khuyến nghị sử dụng}
+
+\begin{small}
+\begin{longtable}{p{2.8cm} c c c c}
+\toprule
+\textbf{Thành phần} & \textbf{Baseline} & \textbf{Benchmark} & \textbf{FT later} & \textbf{Legal review} \\
+\midrule
+faster-whisper & $\checkmark$ & & $\checkmark$ & \\
+Whisper large-v3 & $\checkmark$ & & Có thể & \\
+large-v3-turbo & $\checkmark$ & & & \\
+PhoWhisper-medium & $\checkmark$ & & $\checkmark$ & \\
+PhoWhisper-large & Sau benchmark & $\checkmark$ & $\checkmark$ & \\
+WhisperX & & $\checkmark$ & & \\
+stable-ts & & $\checkmark$ & & \\
+whisper-timestamped & & $\checkmark$ & & $\checkmark$ (AGPL) \\
+pyannote & & $\checkmark$ & & Có thể \\
+\bottomrule
+\end{longtable}
+\end{small}
+
+\subsection{License và legal risk}
+
+\begin{small}
+\begin{longtable}{p{4cm} p{3cm} p{6.5cm}}
+\toprule
+\textbf{Artifact} & \textbf{License} & \textbf{Ghi chú} \\
+\midrule
+OpenAI Whisper repo & MIT & Code và weights \\
+whisper-large-v3 (HF) & Apache-2.0 & Metadata license không thống nhất với repo gốc \\
+large-v3-turbo (HF) & MIT & \\
+PhoWhisper & BSD-3-Clause & \\
+chunkformer-ctc-large-vie & CC BY-NC 4.0 & Creative Commons Attribution-NonCommercial 4.0 International \\
+chunkformer (PyPI) & CC BY 4.0 & Thư viện bổ trợ kiến trúc CTC \\
+faster-whisper & MIT & Runtime \\
+WhisperX & BSD-2-Clause & \\
+stable-ts & MIT & Development đang pause vô thời hạn \\
+whisper-timestamped & AGPL-3.0 & Experimental; cần legal sign-off cho bệnh viện/doanh nghiệp \\
+pyannote community-1 & MIT & Yêu cầu accept conditions trên HF và cấp token \\
+\bottomrule
+\end{longtable}
+\end{small}
+
+Với pilot y tế, ma trận license phải khóa theo artifact cụ thể chứ không theo ``tên model family'' nói chung.
+
+\subsection{Kết luận phần Whisper/PhoWhisper}
+
+\textbf{Best immediate baseline:} runtime mặc định = faster-whisper; checkpoint chất lượng = Whisper large-v3; checkpoint latency = large-v3-turbo; baseline tiếng Việt bắt buộc benchmark = PhoWhisper-medium/large.
+
+\textbf{Fine-tuning readiness:} partially ready overall, not ready for real-patient ASR fine-tuning. Stage 0 (benchmark) và Stage 1 (adaptation nhẹ) sẵn sàng; PEFT chỉ mở sau khi có gold set; real-patient fine-tuning chưa nên mở.
+
+Quyết định kỹ thuật an toàn nhất hiện tại không phải ``fine-tune sớm'' mà là: đo thật kỹ, chặn lỗi nguy hiểm, và ép mọi output lâm sàng quay về evidence có thể click-back.

@@ -1,0 +1,892 @@
+\documentclass[12pt,a4paper]{article}
+
+% =======================
+% Packages
+% =======================
+\usepackage[utf8]{inputenc}
+\usepackage[T5]{fontenc}
+\usepackage[vietnamese]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+% =======================
+% Preamble cần thêm
+% =======================
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning, shapes.geometric, shapes.misc, fit, calc}
+
+\tikzset{
+    process/.style={
+        rectangle,
+        rounded corners,
+        draw,
+        align=center,
+        minimum height=1.0cm,
+        text width=2.4cm,
+        font=\scriptsize
+    },
+    smallprocess/.style={
+        rectangle,
+        rounded corners,
+        draw,
+        align=center,
+        minimum height=0.9cm,
+        text width=2.2cm,
+        font=\scriptsize
+    },
+    decision/.style={
+        diamond,
+        draw,
+        align=center,
+        aspect=2.5,
+        inner sep=2pt,
+        text width=1.8cm,
+        font=\scriptsize
+    },
+    zone/.style={
+        rectangle,
+        rounded corners,
+        draw,
+        align=center,
+        minimum height=1.0cm,
+        text width=2.2cm,
+        font=\scriptsize
+    },
+    arrow/.style={-{Latex[length=2.5mm]}, thick},
+    dasharrow/.style={-{Latex[length=2.5mm]}, thick, dashed}
+}
+\geometry{
+    left=2.5cm,
+    right=2.5cm,
+    top=2.5cm,
+    bottom=2.5cm
+}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue,
+    citecolor=black
+}
+
+% =======================
+% Title
+% =======================
+\title{\textbf{Báo cáo nghiên cứu}\\[0.3em]
+\Large Clinical ASR \& NLP\\[0.3em]
+\large Tuần 1: Xác định dữ liệu đầu vào và nghiên cứu Whisper/PhoWhisper}
+\author{Vũ Đức Duy}
+\date{Tháng 6 năm 2026}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+\newpage
+
+% =======================
+\section{Tóm tắt điều hành}
+
+Báo cáo này tổng hợp kết quả nghiên cứu ban đầu cho dự án ứng dụng AI, ASR và NLP trong hỗ trợ ghi chép lâm sàng tiếng Việt. 
+Mục tiêu của dự án là hỗ trợ bác sĩ chuyển đổi audio cuộc khám thành transcript, trích xuất thông tin lâm sàng có bằng chứng, và tạo bản nháp ghi chú y khoa để bác sĩ kiểm tra, chỉnh sửa và xác nhận.
+
+Dự án không được định vị là hệ thống chẩn đoán tự động, không thay thế bác sĩ, không tự kê đơn và không tự ghi dữ liệu vào hệ thống hồ sơ bệnh án chính thức nếu chưa có xác nhận của bác sĩ.
+
+Các nội dung chính của báo cáo gồm:
+\begin{itemize}
+    \item Governance cho việc sử dụng AI/ASR trong môi trường y tế.
+    \item Quá trình nghiên cứu và xác định dữ liệu đầu vào.
+    \item Tìm hiểu, thử nghiệm và định hướng fine-tune Whisper/PhoWhisper.
+    \item Rủi ro, điều kiện triển khai an toàn và các quyết định cần xin ý kiến quản lý.
+\end{itemize}
+
+% =======================
+\section{Giới thiệu}
+
+\subsection{Bối cảnh dự án}
+
+Dự án Clinical Ambient Documentation Assistant được xây dựng nhằm hỗ trợ ghi chép lâm sàng trong bối cảnh khám ngoại trú tiếng Việt. Đầu vào chính của hệ thống là audio hoặc hội thoại từ cuộc khám bệnh. Đầu ra mong muốn là transcript có gắn timestamp và người nói, các clinical facts được trích xuất có bằng chứng, và bản nháp ghi chú lâm sàng theo cấu trúc phù hợp (ví dụ SOAP) để bác sĩ kiểm tra, chỉnh sửa và xác nhận trước khi trở thành bản cuối.
+
+Bác sĩ là người review và xác nhận cuối cùng đối với mọi output lâm sàng. Hệ thống không tự tạo bản ghi y tế chính thức, không tự chẩn đoán, không tự kê đơn và không tự đưa ra quyết định điều trị.
+
+Dự án có liên quan trực tiếp đến dữ liệu y tế nhạy cảm và có thể ảnh hưởng đến an toàn bệnh nhân nếu output sai. Vì vậy, đây không phải bài toán nhận dạng giọng nói (ASR) thông thường mà là bài toán tài liệu hóa lâm sàng có kiểm soát, đòi hỏi governance, traceability, audit và human review nghiêm túc ngay từ giai đoạn nghiên cứu.
+
+\subsection{Vấn đề cần giải quyết}
+
+Trong thực hành lâm sàng ngoại trú, bác sĩ thường phải dành thời gian đáng kể cho việc ghi chép sau mỗi lượt khám. Thông tin về bệnh sử, triệu chứng, thuốc đang dùng, chỉ định xét nghiệm, tư vấn và kế hoạch điều trị có thể bị thiếu hoặc khó truy xuất nếu ghi chép thủ công không đầy đủ. Điều này ảnh hưởng đến chất lượng hồ sơ bệnh án và khả năng theo dõi bệnh nhân ở các lần khám tiếp theo.
+
+Việc ứng dụng ASR (Automatic Speech Recognition) và NLP (Natural Language Processing) trong y tế tiếng Việt gặp nhiều thách thức đặc thù:
+
+\begin{itemize}
+    \item Giọng vùng miền đa dạng ảnh hưởng đến độ chính xác nhận dạng.
+    \item Nhiễu âm thanh trong môi trường phòng khám.
+    \item Nhiều người nói cùng lúc hoặc xen kẽ (bác sĩ, bệnh nhân, người nhà, điều dưỡng).
+    \item Thuật ngữ y khoa thường được dùng xen kẽ tiếng Việt và tiếng Anh (code-switching).
+    \item Cách nói không chuẩn hóa: viết tắt, lối nói thông tục, phương ngữ.
+    \item Lỗi phủ định nguy hiểm: ``không đau ngực'' bị nhận thành ``đau ngực''.
+    \item Tên thuốc, liều lượng, đường dùng và tần suất dễ bị nhận sai.
+\end{itemize}
+
+Ngoài ASR, bước trích xuất thông tin lâm sàng (clinical fact extraction) và tạo ghi chú (note generation) bằng LLM có rủi ro tạo thông tin không có bằng chứng trong cuộc khám (hallucination), gán nhầm người nói hoặc tự suy diễn chẩn đoán. Vì vậy, hệ thống cần có cơ chế governance, traceability, audit trail và bắt buộc bác sĩ review trước khi bất kỳ output nào trở thành bản chính thức.
+
+\subsection{Mục tiêu của báo cáo}
+
+Báo cáo này nhằm:
+
+\begin{enumerate}
+    \item Tổng hợp kết quả nghiên cứu sau giai đoạn tìm hiểu ban đầu về việc ứng dụng AI, ASR và NLP trong hỗ trợ ghi chép lâm sàng tiếng Việt.
+    \item Làm rõ yêu cầu governance khi sử dụng AI/ASR trong môi trường y tế, bao gồm data governance, AI safety, consent, retention và audit.
+    \item Trình bày quá trình xác định dữ liệu đầu vào, thiết kế data schema và kiến trúc dữ liệu đảm bảo traceability từ audio đến ghi chú lâm sàng cuối cùng.
+    \item Trình bày hướng nghiên cứu về Whisper và PhoWhisper, quy trình benchmark, hệ thống evaluation metrics phù hợp với y tế và chiến lược fine-tuning có điều kiện.
+    \item Làm rõ các rủi ro chính, điều kiện triển khai an toàn và các quyết định cần xin ý kiến quản lý trước khi chuyển sang giai đoạn tiếp theo.
+\end{enumerate}
+
+\subsection{Phạm vi của MVP}
+
+MVP (Minimum Viable Product) của dự án được xác định với các ưu tiên sau:
+
+\begin{itemize}
+    \item \textbf{Bối cảnh lâm sàng:} ưu tiên khám ngoại trú.
+    \item \textbf{Ngôn ngữ:} ưu tiên tiếng Việt.
+    \item \textbf{Hạ tầng:} ưu tiên xử lý local-first hoặc trong môi trường kiểm soát nội bộ. Không gửi dữ liệu y tế lên cloud API theo mặc định.
+    \item \textbf{Chế độ xử lý:} ưu tiên pipeline batch-after-stop (xử lý sau khi bác sĩ bấm dừng ghi âm hoặc upload audio) thay vì realtime transcription trong giai đoạn đầu.
+    \item \textbf{Dữ liệu:} chưa dùng dữ liệu bệnh nhân thật nếu chưa có consent, legal review và governance approval. Giai đoạn đầu sử dụng dữ liệu synthetic và volunteer/actor data có consent.
+    \item \textbf{Tích hợp:} chưa tích hợp trực tiếp HIS/EHR nếu chưa được phê duyệt.
+    \item \textbf{Trọng tâm:} nghiên cứu, thiết kế schema, benchmark ASR, xây dựng evaluation framework và thiết kế doctor review workflow.
+\end{itemize}
+
+\subsection{Các nguyên tắc thiết kế cốt lõi}
+
+Dự án được thiết kế theo các nguyên tắc sau, áp dụng xuyên suốt từ giai đoạn nghiên cứu đến triển khai:
+
+\begin{enumerate}
+    \item \textbf{Local-first:} xử lý audio, transcript, clinical facts và ghi chú tại máy cục bộ hoặc hạ tầng nội bộ. Không gửi dữ liệu y tế lên cloud theo mặc định.
+    \item \textbf{Privacy-first:} hạn chế tối đa việc thu thập, lưu trữ và chia sẻ dữ liệu nhạy cảm. Raw audio có thời hạn lưu trữ ngắn và phải xóa sau khi không còn cần.
+    \item \textbf{Evidence-first:} mọi clinical fact phải truy ngược được về transcript segment gốc, bao gồm quote, timestamp, speaker role và confidence. Thông tin không có bằng chứng không được đưa vào bản nháp lâm sàng.
+    \item \textbf{Human-in-the-loop:} bác sĩ bắt buộc phải kiểm tra, chỉnh sửa và xác nhận trước khi bất kỳ output nào trở thành bản cuối. AI draft không bao giờ là final.
+    \item \textbf{Audit-ready:} mọi thao tác quan trọng (tạo, sửa, xác nhận, xóa, export) đều được ghi nhận trong audit log với thông tin ai, khi nào, thao tác gì.
+    \item \textbf{Data minimization:} chỉ thu thập và lưu trữ dữ liệu tối thiểu cần thiết cho mục đích đã xác định.
+    \item \textbf{Traceability:} chuỗi truy vết bắt buộc: Audio $\rightarrow$ Transcript Segment $\rightarrow$ Clinical Fact $\rightarrow$ SOAP Draft $\rightarrow$ Doctor Confirmed Note.
+    \item \textbf{Safety-by-design:} nhúng các safety checkpoints vào pipeline thay vì bổ sung sau. Validator, safety flags và doctor confirmation gate là các điểm kiểm soát bắt buộc.
+    \item \textbf{Governance-before-real-data:} phải hoàn thành governance checklist trước khi dùng bất kỳ dữ liệu bệnh nhân thật nào.
+    \item \textbf{No autonomous clinical decision:} hệ thống không tự chẩn đoán, không tự kê đơn, không tự đưa ra quyết định lâm sàng.
+\end{enumerate}
+
+\subsection{Giới hạn và những nội dung ngoài phạm vi}
+
+Hệ thống \textbf{không} thực hiện các chức năng sau:
+
+\begin{itemize}
+    \item Không chẩn đoán tự động. Hệ thống không tự tạo chẩn đoán nếu bác sĩ không nói rõ trong cuộc khám.
+    \item Không kê đơn tự động. Thuốc, liều lượng, đường dùng và tần suất chỉ được ghi nhận nếu có bằng chứng rõ ràng từ transcript và được gán cho bác sĩ.
+    \item Không thay thế bác sĩ trong bất kỳ quyết định lâm sàng nào.
+    \item Không tự động ghi vào hồ sơ bệnh án chính thức (HIS/EHR) nếu chưa có xác nhận của bác sĩ và phê duyệt governance.
+    \item Không đưa ra clinical decision tự động, bao gồm differential diagnosis, khuyến nghị điều trị hoặc chỉ định xét nghiệm.
+    \item Không dùng dữ liệu bệnh nhân thật cho training hoặc fine-tuning nếu chưa có consent, legal review và governance approval.
+    \item Không khẳng định hiệu năng model nếu chưa có benchmark nội bộ trên dữ liệu đại diện.
+    \item Không đưa ra kết luận pháp lý nếu chưa xác định rõ phạm vi pháp lý và chưa có legal review.
+\end{itemize}
+
+Ngoài ra, hệ thống không trình bày sản phẩm như ``AI Doctor'' và không coi LLM output là ground truth.
+
+% =======================
+% =======================
+\section{Phần 1: Governance cho việc sử dụng AI trong y tế}
+% =======================
+
+\subsection{Mục tiêu và phạm vi governance}
+
+Phần governance này xác định ranh giới sử dụng, nguyên tắc an toàn và các kiểm soát tối thiểu cho hệ thống \textit{Clinical Ambient Documentation Assistant}. Đây là hệ thống hỗ trợ ghi chép lâm sàng bằng AI/ASR/NLP cho bối cảnh khám ngoại trú tiếng Việt. Hệ thống nhận audio cuộc khám, tạo transcript, phân đoạn người nói, trích xuất clinical facts, tạo bản nháp ghi chú lâm sàng và yêu cầu bác sĩ review/confirm trước khi nội dung được sử dụng như bản cuối.
+
+Mục tiêu governance không phải là chứng minh AI có thể thay thế bác sĩ, mà là chứng minh hệ thống được thiết kế như một \textit{clinical documentation pipeline} có kiểm soát rủi ro. Các rủi ro chính cần quản trị gồm: rủi ro dữ liệu y tế nhạy cảm, rủi ro sai nội dung lâm sàng, rủi ro bác sĩ quá tin vào bản nháp AI, rủi ro thiếu consent, rủi ro dùng sai dataset và rủi ro không truy vết được lỗi.
+
+\textbf{Lưu ý pháp lý:} phần này là bản tổng hợp nghiên cứu nội bộ. Các nội dung liên quan đến consent, retention, quyền dùng dữ liệu bệnh nhân thật, phân loại phần mềm y tế, DPIA/TIA/DPA và điều kiện pilot cần được bộ phận pháp chế hoặc đơn vị quản trị của cơ sở y tế xác nhận trước khi triển khai thực tế.
+
+\subsection{Định vị hệ thống và giới hạn sử dụng}
+
+Hệ thống được định vị là công cụ \textbf{hỗ trợ ghi chép lâm sàng}, không phải công cụ ra quyết định y khoa. AI chỉ tạo transcript, clinical facts và draft note để bác sĩ kiểm tra. Final note chỉ hợp lệ khi bác sĩ đã review, chỉnh sửa nếu cần và xác nhận theo quy trình của tổ chức.
+
+Hệ thống có các giới hạn sử dụng bắt buộc:
+
+\begin{itemize}
+    \item \textbf{Không phải AI doctor}.
+    \item \textbf{Không tự chẩn đoán}.
+    \item \textbf{Không tự kê đơn}.
+    \item \textbf{Không tự quyết định điều trị}.
+    \item \textbf{Không thay thế bác sĩ}.
+    \item \textbf{Không tự động ghi trực tiếp vào hồ sơ y tế chính thức nếu chưa có xác nhận của bác sĩ}.
+\end{itemize}
+
+Tất cả tài liệu demo, README, UI và báo cáo cần tránh các cách diễn đạt như ``tự động chẩn đoán'', ``tự động kê đơn'', ``thay thế bác sĩ'' hoặc ``tự động tạo bệnh án hoàn chỉnh''. Cách diễn đạt phù hợp hơn là: \textit{AI-assisted clinical documentation}, \textit{draft note generation}, \textit{doctor-reviewed output} và \textit{source-grounded clinical facts}.
+
+\subsection{Nguyên tắc governance tối thiểu cho MVP}
+
+MVP cần tuân thủ các nguyên tắc governance sau:
+
+\begin{small}
+\begin{longtable}{|p{0.24\textwidth}|p{0.36\textwidth}|p{0.32\textwidth}|}
+\hline
+\textbf{Nguyên tắc} & \textbf{Ý nghĩa} & \textbf{Cách áp dụng trong MVP} \\
+\hline
+Human-in-the-loop & Bác sĩ giữ quyền kiểm soát nội dung cuối & Draft note chỉ thành final note sau khi bác sĩ review/confirm \\
+\hline
+Draft-only by default & AI output không phải hồ sơ chính thức & Mọi note do AI tạo phải có trạng thái draft, pending review hoặc confirmed \\
+\hline
+Source-grounded facts & Clinical fact phải có bằng chứng & Mỗi fact cần liên kết về transcript/audio segment, quote hoặc timestamp \\
+\hline
+Privacy-by-design & Bảo vệ dữ liệu ngay từ kiến trúc & Ưu tiên local-first, minimization, encryption, retention ngắn và audit log \\
+\hline
+Consent-first & Không xử lý dữ liệu bệnh nhân thật nếu chưa có quyền hợp lệ & Dữ liệu thật chỉ dùng sau consent và governance/legal approval \\
+\hline
+Auditability & Mọi thao tác quan trọng phải truy vết được & Log ingest, ASR, extraction, edit, review, confirm, export và delete \\
+\hline
+Versioned AI & Output phải biết sinh bởi model/prompt/schema nào & Lưu version của ASR, diarization, NLP/LLM, prompt, schema và evaluation set \\
+\hline
+\end{longtable}
+\end{small}
+
+\subsection{Quản trị dữ liệu y tế}
+
+Pipeline xử lý nhiều loại dữ liệu nhạy cảm: raw audio, transcript, transcript segment, clinical fact, draft note, final note, audit log và evaluation set. Trong đó, raw audio cần được xem là dữ liệu nhạy cảm rất cao vì chứa giọng nói, thông tin sức khỏe, bối cảnh gia đình và thông tin định danh. Transcript và draft note cũng có thể chứa PHI/PII nên không được đưa vào repo, notebook, prompt playground hoặc dịch vụ cloud chưa được phê duyệt.
+
+Với MVP, chiến lược dữ liệu an toàn là:
+
+\begin{enumerate}
+    \item Ưu tiên \textbf{synthetic data} và dữ liệu giả lập để demo pipeline.
+    \item Dùng \textbf{public data} chỉ khi license và allowed-use rõ ràng.
+    \item Dùng \textbf{volunteer/actor data} khi đã có consent phù hợp.
+    \item Không dùng \textbf{real patient data} nếu chưa có consent, legal/governance approval, retention policy và audit trail.
+    \item Tách riêng \textbf{evaluation hold-out set}; tuyệt đối không dùng tập này để train.
+\end{enumerate}
+
+Mỗi dataset hoặc artifact cần có metadata tối thiểu: \texttt{dataset\_id}, \texttt{source\_type}, \texttt{setting}, \texttt{specialty}, \texttt{language}, \texttt{contains\_phi}, \texttt{consent\_status}, \texttt{license\_status}, \texttt{allowed\_use}, \texttt{review\_status}, \texttt{owner}, \texttt{retention\_policy} và \texttt{version}.
+
+\subsection{An toàn AI và quy trình bác sĩ xác nhận}
+
+AI output phải luôn được hiểu là bản nháp. Quy trình an toàn tối thiểu là:
+
+\begin{center}
+Audio $\rightarrow$ Transcript $\rightarrow$ Clinical Facts $\rightarrow$ Draft Note $\rightarrow$ Doctor Review $\rightarrow$ Confirmed Final Note
+\end{center}
+
+Mỗi clinical fact cần có source segment hoặc evidence rõ ràng. Nếu một fact không có bằng chứng từ transcript/audio, fact đó không được đưa vào final note như một khẳng định. Nếu vẫn cần hiển thị để bác sĩ cân nhắc, hệ thống phải đánh dấu là thông tin cần xác nhận thủ công.
+
+Các nhóm lỗi lâm sàng cần được đặc biệt kiểm soát gồm:
+
+\begin{itemize}
+    \item Sai thuật ngữ y khoa.
+    \item Sai phủ định, ví dụ ``không sốt'' thành ``sốt''.
+    \item Sai thuốc, liều lượng, đường dùng hoặc tần suất.
+    \item Bỏ sót dị ứng.
+    \item Gán nhầm lời nói giữa bác sĩ, bệnh nhân hoặc người nhà.
+    \item Sinh nội dung không có trong transcript.
+    \item Bỏ sót triệu chứng nguy hiểm.
+\end{itemize}
+
+Với các nội dung có rủi ro cao như thuốc, dị ứng, phủ định, chẩn đoán, kế hoạch điều trị và triệu chứng nguy hiểm, UI nên highlight để bác sĩ bắt buộc kiểm tra trước khi xác nhận.
+
+\subsection{Điều kiện tối thiểu trước demo và pilot}
+
+Trước demo nội bộ, hệ thống tối thiểu cần có: dữ liệu synthetic/actor/volunteer hợp lệ, schema cho encounter/transcript/clinical fact, source attribution, draft-only workflow, doctor review step, audit log cơ bản và versioning cho model/prompt/schema.
+
+Trước pilot với dữ liệu bệnh nhân thật, không nên triển khai nếu thiếu các điều kiện sau:
+
+\begin{itemize}
+    \item Consent workflow đã được phê duyệt.
+    \item Dataset registry và license/allowed-use matrix.
+    \item Chính sách retention và deletion cho raw audio/transcript/draft note.
+    \item RBAC hoặc cơ chế phân quyền tối thiểu.
+    \item Audit log cho ingest, processing, edit, review, confirm, export và delete.
+    \item Doctor review/confirm workflow bắt buộc.
+    \item Clinical fact grounding về transcript/audio.
+    \item Safety flags cho thuốc, dị ứng, phủ định và thông tin nguy cơ cao.
+    \item Evaluation protocol và hold-out set tách khỏi training.
+    \item Legal/management sign-off cho phạm vi pilot.
+\end{itemize}
+
+\subsection{Kết luận phần governance}
+
+Governance là điều kiện nền tảng để dự án có thể tiến từ research sang demo hoặc pilot trong môi trường y tế. Với MVP, hướng triển khai an toàn là bắt đầu bằng synthetic/actor/volunteer data, không dùng dữ liệu bệnh nhân thật nếu chưa có consent và phê duyệt governance. AI output chỉ là draft; final note chỉ hợp lệ sau khi bác sĩ review/confirm. Mọi clinical fact cần có source evidence; mọi thao tác quan trọng cần được audit; mọi model, prompt, schema và evaluation set cần được versioning.
+
+Khuyến nghị trạng thái cho giai đoạn hiện tại là \textbf{Conditional Go}: có thể tiếp tục phát triển MVP và demo nội bộ, nhưng chỉ chuyển sang pilot với dữ liệu thật khi các điều kiện pháp lý, bảo mật, dữ liệu và clinical safety tối thiểu đã được ký duyệt.
+% =======================
+% =======================
+\section{Phần 2: Quá trình research và xác định dữ liệu đầu vào}
+% =======================
+
+\subsection{Mục tiêu nghiên cứu dữ liệu}
+
+Mục tiêu của phần này là xác định các nguồn dữ liệu đầu vào phù hợp cho MVP \textit{Clinical Ambient Documentation Assistant} trong bối cảnh khám ngoại trú tiếng Việt. Việc nghiên cứu dữ liệu không chỉ nhằm tìm dataset để huấn luyện mô hình, mà còn nhằm xác định dữ liệu nào được phép dùng, dùng cho mục đích nào, có cần consent hay không, có chứa PHI/PII hay không, và có đủ điều kiện để đưa vào pipeline local-first hay không.
+
+Kết quả research cho thấy hiện chưa có một dataset công khai tiếng Việt nào bao phủ đầy đủ bài toán end-to-end từ audio cuộc khám, transcript, diarization, speaker role, clinical facts, SOAP/outpatient note cho đến doctor confirmation. Vì vậy, chiến lược dữ liệu của MVP cần đi theo hướng \textbf{synthetic-first + public bootstrap + volunteer/actor data + approved real data + hold-out evaluation set}.
+
+\subsection{Luồng dữ liệu mục tiêu của hệ thống}
+
+Luồng dữ liệu mục tiêu được thiết kế xoay quanh nguyên tắc: mọi clinical fact phải truy vết được về transcript/audio segment, và mọi output lâm sàng phải được bác sĩ review/confirm trước khi trở thành dữ liệu Gold.
+
+\begin{figure}[htbp]
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tikzpicture}[node distance=2.0cm and 2.2cm]
+
+\node[process] (audio) {Outpatient\\audio};
+\node[process, right=of audio] (consent) {Consent \&\\session metadata};
+\node[process, right=of consent] (preprocess) {Audio preprocess\\resample, VAD};
+
+\node[smallprocess, above=1.5cm of consent] (gov) {Governance gate:\\license, consent, PHI};
+
+\node[process, below left=2.2cm and 1.0cm of preprocess] (asr) {ASR\\transcript};
+\node[process, below right=2.2cm and 1.0cm of preprocess] (diar) {Diarization\\speaker turns};
+
+\node[process, below=2.0cm of asr] (timestamp) {Timestamp\\alignment};
+\node[process, below=2.0cm of diar] (role) {Speaker role\\labeling};
+
+\node[process, below=2.0cm of timestamp] (norm) {Normalized\\transcript};
+\node[process, right=2.2cm of norm] (fact) {Clinical fact\\extraction};
+\node[process, right=2.2cm of fact] (term) {Terminology\\normalization};
+\node[process, right=2.2cm of term] (sourcefact) {Source-attributed\\facts};
+
+\node[smallprocess, above=1.5cm of term] (dict) {Dictionary \&\\FHIR terminology};
+
+\node[process, below=2.0cm of sourcefact] (draft) {SOAP / outpatient\\note draft};
+\node[process, left=2.2cm of draft] (review) {Doctor review\\confirmation};
+\node[process, left=2.2cm of review] (gold) {Gold note,\\confirmed facts};
+\node[process, left=2.2cm of gold] (storage) {Local storage,\\export, eval};
+
+\draw[arrow] (audio) -- (consent);
+\draw[arrow] (consent) -- (preprocess);
+\draw[arrow] (preprocess) -- (asr);
+\draw[arrow] (preprocess) -- (diar);
+\draw[arrow] (asr) -- (timestamp);
+\draw[arrow] (diar) -- (role);
+\draw[arrow] (timestamp) -- (norm);
+\draw[arrow] (role.south) |- ([yshift=-0.5cm]role.south) -| (norm.east);
+\draw[arrow] (norm) -- (fact);
+\draw[arrow] (fact) -- (term);
+\draw[arrow] (term) -- (sourcefact);
+\draw[arrow] (sourcefact) -- (draft);
+\draw[arrow] (draft) -- (review);
+\draw[arrow] (review) -- (gold);
+\draw[arrow] (gold) -- (storage);
+
+\draw[dasharrow] (dict) -- (fact);
+\draw[dasharrow] (dict) -- (term);
+\draw[dasharrow] (dict.west) -| (norm.north);
+\draw[dasharrow] (gov) -- (consent);
+\draw[dasharrow] (gov.east) -| ([xshift=1cm]preprocess.east) |- (gold.east);
+
+\end{tikzpicture}
+}
+\caption{Luồng dữ liệu end-to-end từ audio cuộc khám đến note đã được bác sĩ xác nhận.}
+\label{fig:data-flow-end-to-end}
+\end{figure}
+
+\subsection{Các loại dữ liệu cần cho dự án}
+
+\begin{longtable}{p{3.6cm} p{5.2cm} p{5.2cm}}
+\toprule
+\textbf{Loại dữ liệu} & \textbf{Mục đích sử dụng} & \textbf{Yêu cầu chính} \\
+\midrule
+Audio cuộc khám & Input cho ASR và diarization & Có consent hoặc là dữ liệu synthetic; lưu local; có metadata, checksum, chất lượng âm thanh đủ tốt \\
+\midrule
+Transcript & Huấn luyện, kiểm thử và đánh giá ASR/NLP & Có timestamp, speaker ID, speaker role, text chuẩn hóa, trạng thái review \\
+\midrule
+Speaker segment & Diarization, role mapping và source attribution & Có segment ID, thời gian bắt đầu/kết thúc, speaker ID, speaker role, audio span \\
+\midrule
+Clinical facts & Trích xuất thông tin lâm sàng từ hội thoại & Có fact type, assertion, clinical subject, source segment IDs, confidence, doctor confirmation status \\
+\midrule
+SOAP/outpatient note & Tạo bản nháp ghi chú lâm sàng & Chỉ được sinh từ clinical facts có bằng chứng; phải qua doctor review trước khi dùng \\
+\midrule
+Terminology/dictionary & Chuẩn hóa thuật ngữ, thuốc, bệnh, xét nghiệm, thủ thuật & Có nguồn rõ ràng, version, coding candidates, mapping hint sang ICD-10, RxNorm, ATC, LOINC hoặc FHIR-ready terminology \\
+\midrule
+Audit log & Truy vết ingest, xử lý, chỉnh sửa, xác nhận và export & Ghi lại model version, prompt version, reviewer, thời điểm review, hành động chỉnh sửa và trạng thái dữ liệu \\
+\bottomrule
+\end{longtable}
+
+\subsection{Chiến lược dữ liệu đề xuất}
+
+Chiến lược dữ liệu nên triển khai theo năm lớp sau:
+
+\begin{enumerate}
+    \item \textbf{Synthetic-first}: tạo hội thoại khám ngoại trú giả lập tiếng Việt để kiểm thử schema, pipeline, source attribution và review workflow mà không chạm vào dữ liệu bệnh nhân thật.
+    \item \textbf{Public bootstrap}: dùng các nguồn công khai phù hợp cho từng module, ví dụ ASR tiếng Việt, speech y khoa, medical QA, NLI y tế và terminology.
+    \item \textbf{Volunteer/actor data}: thu âm giả lập có consent để kiểm thử end-to-end trong điều kiện âm thanh và giọng nói thật hơn.
+    \item \textbf{Approved real data}: chỉ dùng dữ liệu bệnh nhân thật sau khi có consent, legal/governance approval, retention policy, access control và audit log.
+    \item \textbf{Gold/Evaluation set}: tạo bộ đánh giá cố định, tách khỏi training, dùng để đo WER/CER, medical term error, role accuracy, fact F1, source attribution và note usability.
+\end{enumerate}
+
+Nguyên tắc quản trị quan trọng là: \textbf{không được mặc định rằng dataset public là được phép train}. Mọi nguồn dữ liệu phải đi qua governance gate trước khi ingest sâu, train, evaluate hoặc demo.
+
+\begin{figure}[htbp]
+\centering
+\resizebox{0.95\textwidth}{!}{
+\begin{tikzpicture}[node distance=2.0cm and 2.0cm]
+
+\node[process] (new) {New dataset\\found};
+\node[process, right=of new] (reg) {Add to\\dataset registry};
+\node[process, right=of reg] (lic) {Check\\license status};
+\node[process, right=of lic] (use) {Check\\allowed use};
+
+\node[process, below=2.0cm of use] (consent) {Check\\consent status};
+\node[process, left=of consent] (phi) {Check\\contains PHI};
+\node[process, left=of phi] (gov) {Assign\\governance status};
+
+\node[decision, left=of gov] (decision) {Allowed\\to train?};
+
+\node[process, below left=2.5cm and 1.5cm of decision] (ingest) {Ingest subset\\into Bronze/Silver};
+\node[process, below right=2.5cm and 1.5cm of decision] (reject) {Reference /\\Eval only / reject};
+
+\node[process, below=5.0cm of decision] (snapshot) {Snapshot license,\\checksum, version};
+
+\draw[arrow] (new) -- (reg);
+\draw[arrow] (reg) -- (lic);
+\draw[arrow] (lic) -- (use);
+\draw[arrow] (use) -- (consent);
+\draw[arrow] (consent) -- (phi);
+\draw[arrow] (phi) -- (gov);
+\draw[arrow] (gov) -- (decision);
+
+\draw[arrow] (decision) -- node[left, font=\scriptsize] {yes} (ingest);
+\draw[arrow] (decision) -- node[right, font=\scriptsize] {no / unclear} (reject);
+\draw[arrow] (ingest) -- (snapshot);
+\draw[arrow] (reject) -- (snapshot);
+
+\end{tikzpicture}
+}
+\caption{Governance review workflow trước khi sử dụng bất kỳ dataset nào.}
+\label{fig:governance-review-workflow}
+\end{figure}
+
+\subsection{Tổ chức dữ liệu theo data lake tối thiểu}
+
+Với MVP của intern, không cần triển khai lakehouse phức tạp. Có thể tổ chức bằng folder structure, JSONL/CSV và SQLite local. Tuy nhiên, tư duy dữ liệu vẫn nên theo kiến trúc medallion tối giản:
+
+\begin{itemize}
+    \item \textbf{Bronze}: dữ liệu raw/immutable, metadata, license snapshot, checksum.
+    \item \textbf{Silver}: transcript đã chuẩn hóa, timestamp, speaker turns, diarization, role prediction.
+    \item \textbf{Gold}: transcript/facts/note đã được review hoặc doctor-confirmed.
+    \item \textbf{Evaluation}: hold-out set, tuyệt đối không dùng để train.
+    \item \textbf{Dictionary}: thuật ngữ, thuốc, bệnh, xét nghiệm, coding candidates.
+    \item \textbf{Audit}: log xử lý, review, chỉnh sửa, model version và prompt version.
+\end{itemize}
+
+\begin{figure}[htbp]
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tikzpicture}[node distance=2.2cm and 2.4cm]
+
+\node[zone] (source) {Public / Synthetic /\\Volunteer / Approved\\Real Data};
+\node[zone, right=of source] (gate) {Governance\\Gate};
+
+\node[zone, right=of gate] (bronze) {Bronze\\Zone};
+\node[zone, right=of bronze] (silver) {Silver\\Zone};
+\node[zone, right=of silver] (gold) {Gold\\Zone};
+
+\node[zone, above=2.0cm of gold] (eval) {Evaluation\\Zone};
+\node[zone, below=2.0cm of gold] (train) {Training-ready\\dataset};
+
+\node[zone, above=2.0cm of silver] (dict) {Dictionary /\\Terminology};
+\node[zone, below=2.0cm of silver] (audit) {Audit /\\Review Zone};
+
+\node[zone, right=of eval] (metric) {Metrics\\dashboard};
+\node[zone, right=of train] (model) {Local model\\improvement};
+
+\node[zone, below=2.0cm of gate] (reject) {Reject /\\quarantine};
+
+\draw[arrow] (source) -- (gate);
+\draw[arrow] (gate) -- node[above, font=\scriptsize] {license / consent pass} (bronze);
+\draw[arrow] (gate) -- node[left, font=\scriptsize] {fail} (reject);
+
+\draw[arrow] (bronze) -- (silver);
+\draw[arrow] (silver) -- (gold);
+\draw[arrow] (gold) -- (eval);
+\draw[arrow] (gold) -- (train);
+
+\draw[dasharrow] (dict) -- (silver);
+\draw[dasharrow] (dict) -- (gold);
+\draw[dasharrow] (dict) -- (eval);
+
+\draw[dasharrow] (audit) -- (gold);
+\draw[dasharrow] (audit) -- (eval);
+
+\draw[arrow] (eval) -- (metric);
+\draw[arrow] (train) -- (model);
+
+\end{tikzpicture}
+}
+\caption{Data lake architecture tối thiểu cho MVP local-first.}
+\label{fig:data-lake-architecture}
+\end{figure}
+
+\subsection{Data schema đề xuất}
+
+MVP nên dùng bốn schema cốt lõi:
+
+\begin{itemize}
+    \item \texttt{dataset\_metadata.schema.json}: quản lý metadata cấp dataset/source.
+    \item \texttt{encounter.schema.json}: quản lý metadata cho một cuộc khám hoặc một phiên giả lập.
+    \item \texttt{transcript\_segment.schema.json}: quản lý từng đoạn transcript có timestamp, speaker và audio span.
+    \item \texttt{clinical\_fact.schema.json}: quản lý fact lâm sàng có source attribution và doctor confirmation.
+\end{itemize}
+
+Các trường tối thiểu cần có ở cấp dataset/encounter gồm:
+
+\begin{itemize}
+    \item \texttt{dataset\_id}, \texttt{encounter\_id}, \texttt{source\_name}, \texttt{source\_type}
+    \item \texttt{setting}, \texttt{specialty}, \texttt{language}
+    \item \texttt{audio\_path}, \texttt{transcript\_path}
+    \item \texttt{contains\_phi}, \texttt{consent\_status}, \texttt{license\_status}
+    \item \texttt{allowed\_use}, \texttt{governance\_status}, \texttt{review\_status}
+    \item \texttt{retention\_policy}, \texttt{access\_control\_policy}, \texttt{audit\_log\_required}
+    \item \texttt{target\_zone}, \texttt{is\_holdout}, \texttt{version}
+\end{itemize}
+
+Với transcript segment, các trường quan trọng gồm:
+
+\begin{itemize}
+    \item \texttt{segment\_id}, \texttt{encounter\_id}
+    \item \texttt{start\_time}, \texttt{end\_time}, \texttt{audio\_span}
+    \item \texttt{speaker\_id}, \texttt{speaker\_role}
+    \item \texttt{text}, \texttt{confidence}
+    \item \texttt{asr\_engine}, \texttt{asr\_model\_version}
+    \item \texttt{diarization\_engine}, \texttt{role\_label\_source}
+    \item \texttt{segment\_status}, \texttt{version}
+\end{itemize}
+
+Với clinical fact, các trường bắt buộc nên gồm:
+
+\begin{itemize}
+    \item \texttt{fact\_id}, \texttt{encounter\_id}, \texttt{fact\_type}
+    \item \texttt{original\_text}, \texttt{normalized\_text}
+    \item \texttt{assertion}: present, absent, possible, historical, planned, unknown
+    \item \texttt{speaker\_role}, \texttt{clinical\_subject}
+    \item \texttt{source\_segment\_ids}, \texttt{source\_evidence}
+    \item \texttt{confidence}, \texttt{coding\_candidates}
+    \item \texttt{doctor\_confirmation\_status}, \texttt{review\_status}
+    \item \texttt{reviewed\_by}, \texttt{reviewed\_at}, \texttt{version}
+\end{itemize}
+
+\subsection{Nguồn dữ liệu ưu tiên cho MVP}
+
+Trong phạm vi MVP, các nguồn nên được chia theo mức ưu tiên:
+
+\begin{longtable}{p{3.2cm} p{4.5cm} p{6cm}}
+\toprule
+\textbf{Nhóm} & \textbf{Nguồn ưu tiên} & \textbf{Cách sử dụng trong MVP} \\
+\midrule
+Synthetic/internal & Synthetic Vietnamese Outpatient Encounter Set; Synthetic SOAP-lite Set & Dùng ngay cho end-to-end pipeline, demo, schema validation và seed Gold/Evaluation \\
+\midrule
+ASR/speech & VietMed, Common Voice vi, FOSD & VietMed cho speech y khoa; Common Voice vi cho robustness tiếng Việt; FOSD cho chunk/timestamp testing \\
+\midrule
+Medical NLP & VietMed-NER, ViMQ, Vietnamese Medical QA, vi\_mednli & Bootstrap fact extraction, phrase mining, assertion/consistency checking và evaluation phụ trợ \\
+\midrule
+Terminology & DAV/DrugBank VN, ICD-10, RxNorm, ATC, LOINC, HL7 THO, acrDrAid & Xây dictionary v0.1, coding candidates và FHIR-ready mapping hints \\
+\midrule
+Note reference & Synthetic SOAP-lite, VietMed-Sum, ACI-Bench/MEDIQA/MTS-Dialog & Dùng làm tham chiếu cấu trúc note; không dùng trực tiếp cho production nếu lệch miền hoặc license chưa rõ \\
+\bottomrule
+\end{longtable}
+
+\subsection{Vấn đề chất lượng dữ liệu}
+
+Các vấn đề chất lượng dữ liệu cần đánh giá gồm:
+
+\begin{itemize}
+    \item Nhiễu âm thanh, khoảng cách micro, phòng khám ồn hoặc nhiều người nói cùng lúc.
+    \item Khác biệt giọng vùng miền, tốc độ nói, cách nói tắt và thuật ngữ y khoa Việt--Anh lẫn lộn.
+    \item Thiếu timestamp, thiếu speaker label hoặc speaker role.
+    \item Sai chính tả tiếng Việt, sai dấu, sai thuật ngữ y khoa, sai tên thuốc hoặc đơn vị liều.
+    \item Không phân biệt được phủ định, nghi ngờ, tiền sử, kế hoạch, chỉ định và thông tin đã được bác sĩ xác nhận.
+    \item Dữ liệu không khớp domain ngoại trú, ví dụ dữ liệu nội trú, cấp cứu hoặc tư vấn online.
+    \item License, consent, allowed use hoặc commercial/pilot safety không rõ.
+    \item Evaluation set bị lẫn vào training set, gây leakage và làm sai lệch kết quả đánh giá.
+\end{itemize}
+
+\subsection{Data lineage và traceability}
+
+Chuỗi truy vết bắt buộc của hệ thống là:
+
+\begin{center}
+\textbf{Audio} $\rightarrow$ \textbf{Transcript Segment} $\rightarrow$ \textbf{Clinical Fact} $\rightarrow$ \textbf{SOAP/Outpatient Draft} $\rightarrow$ \textbf{Doctor Confirmed Note}
+\end{center}
+
+Nếu một clinical fact không có bằng chứng từ transcript hoặc audio segment, fact đó không được đưa vào bản nháp lâm sàng. Nếu một note đã được đánh dấu Gold, note đó phải có doctor confirmation, reviewer, thời điểm review và audit log tương ứng.
+
+\subsection{Kết luận phần dữ liệu đầu vào}
+
+Kết luận chính của quá trình research là MVP không nên phụ thuộc vào việc tìm được một dataset y tế tiếng Việt hoàn chỉnh. Hướng triển khai đúng là tự xây bộ synthetic/volunteer outpatient encounters có nhãn đầy đủ, dùng public datasets để bootstrap từng module, áp dụng governance gate trước mọi thao tác ingest/train/evaluate, và duy trì data lineage chặt chẽ từ audio đến doctor-confirmed note. Đây là cách tiếp cận vừa khả thi cho MVP, vừa đủ an toàn để mở rộng sang pilot bệnh viện trong tương lai.
+
+% =======================
+% =======================
+\input{section3_whisper_phowhisper}
+
+% =======================
+\section{Risk \& Governance Matrix}
+
+\begin{longtable}{p{3.5cm} p{3.5cm} p{3cm} p{4cm}}
+\toprule
+\textbf{Rủi ro} & \textbf{Tác động} & \textbf{Bên chịu trách nhiệm} & \textbf{Biện pháp kiểm soát} \\
+\midrule
+Dữ liệu bệnh nhân bị lộ & Ảnh hưởng quyền riêng tư, pháp lý và uy tín tổ chức & Security Lead, Data Lead & Mã hóa, phân quyền, audit log, retention policy \\
+\midrule
+ASR sai nội dung lâm sàng & Có thể làm sai note & AI Lead, Clinical Reviewer & Đánh giá lỗi y khoa và bác sĩ review \\
+\midrule
+Clinical fact không có bằng chứng & Tạo thông tin sai lệch & AI Lead & Bắt buộc source segment và evidence quote \\
+\midrule
+Dùng dataset sai license & Rủi ro pháp lý & Data Lead, Legal & License matrix và allowed use check \\
+\midrule
+Fine-tune quá sớm & Model học sai, metric không đáng tin & ML Lead & Chỉ fine-tune sau khi có Gold/Evaluation set \\
+\midrule
+Export note chưa được xác nhận & Draft bị hiểu nhầm là hồ sơ chính thức & Product Owner & Confirmation gate trước export \\
+\bottomrule
+\end{longtable}
+
+% =======================
+\section{Decision Log}
+
+\begin{longtable}{p{2cm} p{4cm} p{5cm} p{3cm}}
+\toprule
+\textbf{ID} & \textbf{Quyết định} & \textbf{Lý do} & \textbf{Trạng thái} \\
+\midrule
+D-001 & Ưu tiên khám ngoại trú trước & Scope rõ hơn, phù hợp MVP & Đề xuất \\
+\midrule
+D-002 & Thiết kế local-first & Giảm rủi ro dữ liệu nhạy cảm & Đề xuất \\
+\midrule
+D-003 & Không dùng dữ liệu bệnh nhân thật ở giai đoạn đầu & Chưa đủ consent và legal approval & Đề xuất \\
+\midrule
+D-004 & Benchmark Whisper và PhoWhisper song song & Cần so sánh baseline tổng quát và baseline tiếng Việt & Đề xuất \\
+\midrule
+D-005 & Chưa fine-tune nếu chưa có Gold/Evaluation set & Tránh đánh giá sai và model học dữ liệu kém chất lượng & Đề xuất \\
+\midrule
+D-006 & Doctor review bắt buộc trước final note & Đảm bảo human accountability & Đề xuất \\
+\bottomrule
+\end{longtable}
+
+% =======================
+\section{Các câu hỏi còn mở}
+
+Các câu hỏi cần làm rõ với quản lý, mentor, bộ phận pháp lý hoặc chuyên môn lâm sàng:
+
+\begin{enumerate}
+    \item Dự án áp dụng trong phạm vi pháp lý nào?
+    \item Có được sử dụng dữ liệu bệnh nhân thật không?
+    \item Nếu có, consent flow sẽ được thiết kế như thế nào?
+    \item Raw audio được lưu trong bao lâu?
+    \item Output cuối cùng cần theo SOAP, bệnh án truyền thống Việt Nam hay template nội bộ?
+    \item Có cần tích hợp HIS/EHR hay chỉ export file?
+    \item Chuyên khoa ưu tiên đầu tiên là gì?
+    \item Ai là người chịu trách nhiệm xác nhận final note?
+    \item Ngưỡng WER, CER và lỗi thuật ngữ y khoa chấp nhận được là bao nhiêu?
+    \item Điều kiện nào để chuyển từ demo sang pilot?
+\end{enumerate}
+
+% =======================
+\section{Khuyến nghị triển khai tiếp theo}
+
+Trong giai đoạn tiếp theo, dự án nên tập trung vào:
+
+\begin{itemize}
+    \item Hoàn thiện dataset registry và license matrix.
+    \item Chốt schema tối thiểu cho encounter, transcript segment và clinical fact.
+    \item Tạo synthetic data và volunteer/actor data có consent.
+    \item Benchmark Whisper và PhoWhisper trên cùng một bộ dữ liệu.
+    \item Xây dựng bộ metrics riêng cho ASR y tế tiếng Việt.
+    \item Thiết kế doctor review workflow.
+    \item Chuẩn bị governance checklist trước khi dùng dữ liệu thật.
+\end{itemize}
+
+% =======================
+\section{Kết luận}
+
+Dự án Clinical ASR \& NLP có tiềm năng hỗ trợ bác sĩ giảm thời gian ghi chép và cải thiện khả năng truy xuất thông tin lâm sàng. 
+Tuy nhiên, vì dự án liên quan đến dữ liệu y tế và có thể ảnh hưởng đến an toàn bệnh nhân, hướng triển khai cần đặt governance, privacy, traceability và human review làm nền tảng.
+
+Khuyến nghị hiện tại là tiếp tục theo hướng local-first, synthetic-first và evidence-first; chưa fine-tune trên dữ liệu thật nếu chưa có Gold/Evaluation set, consent, license và phê duyệt governance đầy đủ.
+
+% =======================
+% TÀI LIỆU THAM KHẢO
+% =======================
+\section{Tài liệu tham khảo}
+
+\subsection*{A. Bài báo khoa học và nghiên cứu}
+
+\begin{enumerate}[label={[A\arabic*]}]
+
+\item A.~Radford, J.~W.~Kim, T.~Xu, G.~Brockman, C.~McLeavey, I.~Sutskever,
+``Robust Speech Recognition via Large-Scale Weak Supervision,''
+\textit{Proceedings of the 40th International Conference on Machine Learning (ICML)}, 2023.\\
+\url{https://arxiv.org/abs/2212.04356}
+
+\item A.~Vaswani, N.~Shazeer, N.~Parmar, J.~Uszkoreit, L.~Jones, A.~N.~Gomez, Ł.~Kaiser, I.~Polosukhin,
+``Attention Is All You Need,''
+\textit{Advances in Neural Information Processing Systems (NeurIPS)}, 2017.\\
+\url{https://arxiv.org/abs/1706.03762}
+
+\item V.~T.~Nguyen, H.~T.~Nguyen,
+``PhoWhisper: Automatic Speech Recognition for Vietnamese,''
+\textit{VinAI Research}, 2024.\\
+\url{https://github.com/VinAIResearch/PhoWhisper}
+
+\item E.~J.~Hu, Y.~Shen, P.~Wallis, Z.~Allen-Zhu, Y.~Li, S.~Wang, L.~Wang, W.~Chen,
+``LoRA: Low-Rank Adaptation of Large Language Models,''
+\textit{International Conference on Learning Representations (ICLR)}, 2022.\\
+\url{https://arxiv.org/abs/2106.09685}
+
+\item M.~Bain, J.~Huh, T.~Han, A.~Zisserman,
+``WhisperX: Time-Accurate Speech Transcription of Long-Form Audio,''
+\textit{INTERSPEECH}, 2023.\\
+\url{https://github.com/m-bain/whisperX}
+
+\item A.~Yim, Y.~Mishra, L.~Georgiou, et~al.,
+``ACI-Bench: A Novel Ambient Clinical Intelligence Dataset for Benchmarking Automatic Visit Note Generation,''
+\textit{Scientific Data, Nature}, 2023.\\
+\url{https://www.nature.com/articles/s41597-023-02487-3}
+
+\item A.~Baevski, Y.~Zhou, A.~Mohamed, M.~Auli,
+``wav2vec 2.0: A Framework for Self-Supervised Learning of Speech Representations,''
+\textit{NeurIPS}, 2020.\\
+\url{https://arxiv.org/abs/2006.11477}
+
+\end{enumerate}
+
+\subsection*{B. Model Cards và tài liệu chính thức}
+
+\begin{enumerate}[label={[B\arabic*]}]
+
+\item OpenAI, ``Whisper large-v3 --- Model Card,''
+Hugging Face, 2023.\\
+\url{https://huggingface.co/openai/whisper-large-v3}
+
+\item OpenAI, ``Whisper large-v3-turbo --- Model Card,''
+Hugging Face, 2024.\\
+\url{https://huggingface.co/openai/whisper-large-v3-turbo}
+
+\item VinAI Research, ``PhoWhisper-medium --- Model Card,''
+Hugging Face, 2024.\\
+\url{https://huggingface.co/vinai/PhoWhisper-medium}
+
+\item VinAI Research, ``PhoWhisper-large --- Model Card,''
+Hugging Face, 2024.\\
+\url{https://huggingface.co/vinai/PhoWhisper-large}
+
+\item Qwen Team, ``Qwen2.5-7B-Instruct --- Model Card,''
+Hugging Face, 2024.\\
+\url{https://huggingface.co/Qwen/Qwen2.5-7B-Instruct}
+
+\end{enumerate}
+
+\subsection*{C. Công cụ mã nguồn mở và Repositories}
+
+\begin{enumerate}[label={[C\arabic*]}]
+
+\item OpenAI, ``openai/whisper --- Official Whisper Repository,''
+GitHub (MIT License).\\
+\url{https://github.com/openai/whisper}
+
+\item SYSTRAN, ``faster-whisper --- CTranslate2-based Whisper Inference,''
+GitHub (MIT License).\\
+\url{https://github.com/SYSTRAN/faster-whisper}
+
+\item M.~Bain, ``WhisperX --- Time-Accurate ASR with Word-Level Timestamps,''
+GitHub (BSD-2-Clause License).\\
+\url{https://github.com/m-bain/whisperX}
+
+\item J.~Lin, ``stable-ts --- Stabilized Timestamps for Whisper,''
+GitHub (MIT License).\\
+\url{https://github.com/jianfch/stable-ts}
+
+\item L.~Music, ``whisper-timestamped --- Multilingual ASR with Word-Level Timestamps via Cross-Attention,''
+GitHub (AGPL-3.0 License).\\
+\url{https://github.com/linto-ai/whisper-timestamped}
+
+\item H.~Bredin \textit{et~al.}, ``pyannote-audio --- Speaker Diarization Toolkit,''
+GitHub (MIT License).\\
+\url{https://github.com/pyannote/pyannote-audio}
+
+\item Silero Team, ``Silero VAD --- Voice Activity Detection,''
+GitHub.\\
+\url{https://github.com/snakers4/silero-vad}
+
+\item VinAI Research, ``PhoWhisper --- Vietnamese ASR Repository,''
+GitHub (BSD-3-Clause License).\\
+\url{https://github.com/VinAIResearch/PhoWhisper}
+
+\item Y.~Le, ``underthesea --- Vietnamese NLP Toolkit,''
+GitHub.\\
+\url{https://github.com/undertheseanlp/underthesea}
+
+\item V.~X.~Pham, T.~L.~Nguyen, ``VnCoreNLP --- Vietnamese Natural Language Processing Toolkit,''
+GitHub.\\
+\url{https://github.com/vncorenlp/VnCoreNLP}
+
+\end{enumerate}
+
+\subsection*{D. Tiêu chuẩn và hệ thống thuật ngữ y khoa}
+
+\begin{enumerate}[label={[D\arabic*]}]
+
+\item HL7 International, ``FHIR R4 --- Fast Healthcare Interoperability Resources,''
+HL7 Official Specification.\\
+\url{https://hl7.org/fhir/R4/}
+
+\item HL7 International, ``FHIR Terminology Services,''
+\url{http://terminology.hl7.org/}
+
+\item SNOMED International, ``SNOMED CT --- Systematized Nomenclature of Medicine,''
+\url{https://www.snomed.org/}
+
+\item Regenstrief Institute, ``LOINC --- Logical Observation Identifiers Names and Codes,''
+\url{https://loinc.org/}
+
+\item WHO, ``ICD-10 --- International Classification of Diseases, 10th Revision,''
+World Health Organization.\\
+\url{https://icd.who.int/browse10/2019/en}
+
+\item UCUM, ``Unified Code for Units of Measure,''
+\url{http://unitsofmeasure.org/}
+
+\item JSON Schema, ``JSON Schema Specification --- Draft 2020-12,''
+\url{https://json-schema.org/draft/2020-12/schema}
+
+\end{enumerate}
+
+\subsection*{E. Khung pháp lý và quản trị AI trong y tế}
+
+\begin{enumerate}[label={[E\arabic*]}]
+
+\item WHO, ``Ethics and Governance of Artificial Intelligence for Health,''
+World Health Organization, 2021.\\
+\url{https://www.who.int/publications/i/item/9789240029200}
+
+\item WHO, ``Regulatory Considerations on Artificial Intelligence for Health,''
+World Health Organization, 2023.\\
+\url{https://www.who.int/publications/i/item/9789240078871}
+
+\item Quốc hội Việt Nam, ``Luật Bảo vệ dữ liệu cá nhân --- Nghị định 13/2023/NĐ-CP,''
+Chính phủ Việt Nam, 2023.
+
+\item Bộ Y tế Việt Nam, ``Thông tư về quản lý hồ sơ bệnh án điện tử,''
+Bộ Y tế, 2018.
+
+\item European Commission, ``EU AI Act --- Artificial Intelligence Act,''
+European Union, 2024.\\
+\url{https://artificialintelligenceact.eu/}
+
+\item U.S.~Department of Health and Human Services,
+``HIPAA --- Health Insurance Portability and Accountability Act,''
+\url{https://www.hhs.gov/hipaa/}
+
+\end{enumerate}
+
+\end{document}
+

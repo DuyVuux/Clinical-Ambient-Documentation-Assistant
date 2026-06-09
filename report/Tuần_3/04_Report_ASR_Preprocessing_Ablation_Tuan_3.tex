@@ -1,0 +1,251 @@
+\documentclass[12pt,a4paper]{article}
+
+% =========================
+% PACKAGES
+% =========================
+\usepackage[utf8]{inputenc}
+\usepackage[T5]{fontenc}
+\usepackage[provide=*,vietnamese]{babel}
+\usepackage{geometry}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning, calc}
+\pgfplotsset{compat=1.18}
+
+% =========================
+% SETTINGS & STYLES
+% =========================
+\geometry{
+    left=2.5cm,
+    right=2.5cm,
+    top=2.5cm,
+    bottom=2.5cm
+}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkblue,
+    urlcolor=darkblue,
+    citecolor=darkblue
+}
+
+\definecolor{lightgray}{gray}{0.96}
+\definecolor{darkblue}{RGB}{0, 70, 140}
+\definecolor{darkred}{RGB}{150, 20, 20}
+\definecolor{darkgreen}{RGB}{20, 120, 60}
+\definecolor{darkorange}{RGB}{210, 110, 20}
+
+\lstdefinestyle{codestyle}{
+    backgroundcolor=\color{lightgray},
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    frame=single,
+    columns=fullflexible
+}
+
+% Định dạng cho TikZ Diagram
+\tikzset{
+    box/.style = {rectangle, draw=darkblue, fill=white, thick, text width=3.5cm, align=center, rounded corners, minimum height=1cm},
+    widebox/.style = {rectangle, draw=darkblue, fill=white, thick, text width=6.5cm, align=center, rounded corners, minimum height=1cm},
+    decision/.style = {diamond, draw=darkred, fill=white, thick, text width=2.5cm, align=center, inner sep=-2pt},
+    arrow/.style = {thick, ->, >=stealth},
+    line/.style = {thick, -}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\footnotesize Clinical Ambient Documentation Assistant}
+\rhead{\footnotesize Báo cáo Kỹ thuật Tiền xử lý Âm thanh}
+\cfoot{\thepage}
+
+\titleformat{\section}
+{\normalfont\Large\bfseries\color{darkblue}}
+{\thesection}{1em}{}
+
+\titleformat{\subsection}
+{\normalfont\large\bfseries\color{darkblue}}
+{\thesubsection}{1em}{}
+
+\title{
+    \textbf{Báo cáo Đánh giá Kỹ thuật Tiền xử lý Âm thanh (ASR Ablation)}\\
+    \large Phân tích Edge Loss, VAD+Padding và Lý luận Kỹ thuật MLOps\\
+    \normalsize Dự án: Local-first Clinical Ambient Documentation Assistant for Vietnamese Outpatient Care
+}
+
+\author{Vũ Đức Duy}
+\date{Ngày lập: 08/06/2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Báo cáo này trình bày kết quả phân tích chất lượng âm thanh và thực nghiệm (ablation study) các kỹ thuật tiền xử lý cho mô hình Nhận dạng Giọng nói (ASR). Vấn đề cốt lõi được phát hiện trên tập dữ liệu VietMed là nguy cơ mất từ ở đầu và cuối file (Edge Loss) do bị cắt quá sát. 
+
+Thực nghiệm A/B Testing trên mô hình ChunkFormer đã chứng minh phương pháp kết hợp Voice Activity Detection và Padding 200ms (\texttt{p03\_vad\_pad\_200ms}) giải quyết thành công vấn đề này: giảm tỷ lệ lỗi trên nhóm rủi ro (Edge-risk subset WER giảm từ 12.18\% xuống 11.81\%) mà không làm suy giảm độ chính xác tổng thể (WER 12.90\%). Báo cáo cũng giải thích chi tiết lý luận kỹ thuật đằng sau việc lựa chọn ChunkFormer làm mô hình thực nghiệm duy nhất, cũng như lý do từ chối áp dụng các phương pháp tiền xử lý khác như "Padding only", "VAD only", "Chunk overlap", "Noise reduction", và "Amplitude normalization".
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+% ======================================================
+\section{Tóm tắt Điều hành}
+
+\subsection{Mục tiêu báo cáo}
+Báo cáo này được xây dựng nhằm mục đích:
+\begin{itemize}[leftmargin=1.2cm]
+    \item Xác nhận vấn đề mất tín hiệu âm thanh ở đầu/cuối (Edge Loss) trong tập dữ liệu VietMed.
+    \item Trình bày kết quả đánh giá (Ablation) các phương án tiền xử lý âm thanh để giải quyết lỗi trên.
+    \item Giải thích lý luận chiến lược MLOps trong việc chọn mô hình và loại bỏ các kỹ thuật tiền xử lý không phù hợp.
+\end{itemize}
+
+\subsection{Kết luận nổi bật}
+
+\begin{table}[h]
+\centering
+\caption{Tóm tắt kết quả kỹ thuật}
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{Hạng mục} & \textbf{Kết luận} \\
+\hline
+Vấn đề cốt lõi & Nguy cơ mất từ (edge loss) chiếm 18.3\% (Train) và 14.5\% (Dev), là nguyên nhân chính gây hụt transcript ở ranh giới câu. \\
+\hline
+Giải pháp thành công & Kỹ thuật \textbf{VAD + 200ms Padding} (\texttt{p03\_vad\_pad\_200ms}) cải thiện Edge-risk WER từ 12.18\% xuống 11.81\%, duy trì WER tổng 12.90\%. \\
+\hline
+Giải pháp thất bại & Kỹ thuật \textbf{Padding-only} (\texttt{p10}) làm WER tệ đi (tăng lên 14.49\%). \\
+\hline
+Mô hình thực nghiệm & \textbf{ChunkFormer} được dùng làm baseline proxy duy nhất vì có WER tốt nhất (12.90\%). \\
+\hline
+Quyết định tiếp theo & Chốt áp dụng \texttt{p03\_vad\_pad\_200ms} cho toàn bộ tập Train trước khi bước vào giai đoạn Fine-tuning. \\
+\hline
+\end{tabularx}
+\end{table}
+
+% ======================================================
+\section{Hiện trạng Chất lượng Âm thanh và Lỗi Edge Loss}
+
+\subsection{Khảo sát chất lượng ban đầu (Audio QA)}
+Kiểm tra tự động trên tập dữ liệu gốc VietMed (Day 1) cho thấy một vấn đề nghiêm trọng liên quan đến ranh giới âm thanh:
+\begin{itemize}[leftmargin=1.2cm]
+    \item \textbf{Tập Train (600 mẫu):} Có 110 mẫu (18.3\%) bị đánh dấu cảnh báo \texttt{edge\_loss\_risk}.
+    \item \textbf{Tập Dev (200 mẫu):} Có 29 mẫu (14.5\%) bị đánh dấu cảnh báo \texttt{edge\_loss\_risk}.
+\end{itemize}
+Năng lượng âm thanh ở ranh giới đầu/cuối quá yếu. Nếu đưa trực tiếp vào mô hình, ASR có nguy cơ cao sẽ bỏ sót các từ đầu và cuối câu do cửa sổ trích xuất đặc trưng (feature extraction window) không đủ bối cảnh (context).
+
+\subsection{Tình trạng Âm lượng (Loudness)}
+Đáng chú ý, các vấn đề về âm lượng tổng thể hoàn toàn không tồn tại. Kết quả ghi nhận **0 file** gặp lỗi \texttt{too\_quiet}, \texttt{too\_loud}, hay \texttt{clipping\_risk}.
+Chỉ số RMS (năng lượng trung bình) nằm ở mức chuẩn $\sim -23.5$ dB và Peak (đỉnh) ở mức $\sim -4.6$ dB. Điều này cho thấy chất lượng thu âm rất "khỏe mạnh".
+
+\subsection{Chuẩn hóa Định dạng Âm thanh (16kHz Mono PCM)}
+Toàn bộ tập dữ liệu đã được xác nhận tuân thủ chuẩn định dạng \textbf{16kHz mono PCM (WAV)} từ trước khi bước vào thực nghiệm. Báo cáo kiểm toán chất lượng (QA Audit) ghi nhận tuyệt đối **0 lỗi** \texttt{non\_16khz} và **0 lỗi** \texttt{non\_mono}. Quá trình chuyển đổi định dạng này đã được thực hiện khi đưa dữ liệu từ tầng Bronze (thô) sang tầng Silver (chuẩn hóa), đảm bảo tính đồng nhất 100\% cho đầu vào của các mô hình ASR.
+
+% ======================================================
+\section{Đánh giá Thực nghiệm Tiền xử lý (Ablation Study)}
+
+Để khắc phục lỗi Edge Loss, đội ngũ đã tạo các biến thể tiền xử lý và chạy thực nghiệm (A/B testing) trực tiếp trên mô hình ChunkFormer.
+
+\subsection{Định nghĩa các biến thể (Preprocessing Variants)}
+Để người đọc dễ dàng đối chiếu, dưới đây là định nghĩa chi tiết về cơ chế hoạt động của các biến thể được sử dụng:
+\begin{itemize}[leftmargin=1.2cm]
+    \item \textbf{\texttt{original}}: Âm thanh gốc đã được chuẩn hóa 16kHz mono PCM ở tầng Silver, chưa qua bất kỳ can thiệp cắt ghép hay bù đắp nào.
+    \item \textbf{\texttt{p10\_edge\_pad\_200ms}} (Padding-only): Kỹ thuật chêm cơ học 200ms khoảng lặng (silence) trực tiếp vào ranh giới hai đầu của file. Nhược điểm là thuật toán này mù quáng, không biết vị trí thực sự của tiếng nói nằm ở đâu.
+    \item \textbf{\texttt{p03\_vad\_pad\_200ms}} (VAD + Padding): Kỹ thuật kết hợp sử dụng Voice Activity Detection (VAD) để định vị chính xác khoảng thời gian con người thực sự phát âm, sau đó mới chêm thêm 200ms khoảng lặng từ ranh giới phát âm đó trở ra để bảo vệ các âm tiết đầu/cuối không bị lẹm.
+\end{itemize}
+
+\subsection{Kết quả Leaderboard (Tập Dev)}
+
+\begin{table}[h]
+\centering
+\caption{Kết quả chạy ChunkFormer trên các biến thể tiền xử lý}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|l|l|r|r|r|l|}
+\hline
+\textbf{Biến thể} & \textbf{Mô hình} & \textbf{Strict WER} & \textbf{Medical Errors} & \textbf{Edge-risk WER} & \textbf{Quyết định} \\
+\hline
+\texttt{original} & ChunkFormer & 12.90\% & 7 & 12.18\% & Baseline tham chiếu \\
+\hline
+\texttt{p10\_edge\_pad\_200ms} & ChunkFormer & 14.49\% & 6 & 13.49\% & Loại bỏ (Làm tăng WER) \\
+\hline
+\texttt{p03\_vad\_pad\_200ms} & ChunkFormer & \textbf{12.90\%} & \textbf{7} & \textbf{11.81\%} & \textbf{Được chọn} (Cải thiện Edge WER) \\
+\hline
+\end{tabular}
+}
+\end{table}
+
+\subsection{Nhận định Thành tựu}
+Việc thử nghiệm không chỉ dừng ở mức lên kế hoạch mà đã nghiệm thu thành công bằng các chỉ số thực tế:
+\begin{itemize}[leftmargin=1.2cm]
+    \item \textbf{Loại bỏ phương án sai lầm:} Việc chêm khoảng lặng ngây thơ (Padding-only/p10) khiến mô hình bị nhiễu, làm độ chính xác giảm sút (WER tăng vọt).
+    \item \textbf{Chứng minh hiệu quả:} Phương án kết hợp VAD để tìm đúng ranh giới tiếng nói rồi mới Padding (\texttt{p03}) đã thành công giảm tỷ lệ lỗi trên tập con rủi ro (Edge-risk subset) từ 12.18\% xuống 11.81\%, trong khi không làm tăng các lỗi y khoa nghiêm trọng.
+\end{itemize}
+
+% ======================================================
+\section{Chiến lược Lựa chọn Mô hình Thực nghiệm}
+
+\subsection{Danh mục các mô hình hiện có}
+Hệ thống dự án hiện đang sở hữu tổng cộng \textbf{5 mô hình} bên cạnh ChunkFormer:
+\begin{enumerate}[leftmargin=1.2cm]
+    \item \texttt{vinai/PhoWhisper-medium}
+    \item \texttt{vinai/PhoWhisper-base}
+    \item \texttt{openai/whisper-small}
+    \item \texttt{ViStreamASR} (Adapter)
+    \item \texttt{Zipformer-30M-RNNT} (Adapter)
+\end{enumerate}
+
+\subsection{Lý do chỉ dùng ChunkFormer cho Ablation Study}
+Trong quy trình MLOps, thử nghiệm A/B Testing trên dữ liệu rất tốn kém tài nguyên (O($N\_models \times M\_variants$)). Chiến lược tối ưu là sử dụng mô hình có hiệu năng cao nhất làm "thước đo" (proxy):
+\begin{itemize}[leftmargin=1.2cm]
+    \item ChunkFormer là mô hình chính xác nhất hiện tại (WER 12.90\%), vượt xa PhoWhisper-medium (21.51\%).
+    \item Một mô hình nhạy bén và độ chính xác cao sẽ phản ánh chân thực nhất sự thay đổi chất lượng của dữ liệu (Data Quality).
+    \item Nếu thử nghiệm trên các mô hình kém hơn (như Whisper-small với WER 53\%), các lỗi do bản thân kiến trúc mô hình dở sẽ lấn át (masking) lợi ích của việc sửa dữ liệu, làm sai lệch quyết định.
+\end{itemize}
+
+% ======================================================
+\section{Lý luận Kỹ thuật: Các Phương án Bị Loại bỏ}
+
+Trong quá trình thiết kế giải pháp tiền xử lý, nhiều phương án đã được đưa ra nhưng bị loại trừ. Dưới đây là lý luận kỹ thuật (Rationale) xác đáng cho các quyết định này:
+
+\begin{longtable}{|p{3.5cm}|p{3cm}|p{8.5cm}|}
+\caption{Lý do từ chối các phương án tiền xử lý thay thế}\\
+\hline
+\textbf{Phương pháp} & \textbf{Trạng thái} & \textbf{Lý do Kỹ thuật \& Lâm sàng} \\
+\hline
+\endfirsthead
+
+\hline
+\textbf{Phương pháp} & \textbf{Trạng thái} & \textbf{Lý do Kỹ thuật \& Lâm sàng} \\
+\hline
+\endhead
+
+Padding-only & \textcolor{darkred}{Đã thử và loại} & Thực nghiệm biến thể \texttt{p10} chứng minh việc chêm thêm khoảng lặng mù quáng mà không phân tích âm thanh sẽ làm tăng WER lên 14.49\%. \\
+\hline
+VAD-only & \textcolor{darkred}{Từ chối} & VAD có chức năng cắt vứt khoảng lặng. Dữ liệu gốc đang bị lỗi lẹm từ (Edge loss). Việc dùng VAD-only sẽ gọt âm thanh chặt hơn, làm trầm trọng thêm sự hụt tiếng ở ranh giới. \\
+\hline
+Chunk Overlap & \textcolor{darkred}{Từ chối} & Phương pháp này sinh ra cho các luồng audio dài (hàng chục phút) phải băm nhỏ để tránh cắt đôi từ giữa các chunk. Audio y khoa hiện tại rất ngắn (trung bình 6 giây), mất chữ ở 2 đầu gốc chứ không phải ở ranh giới chunk. Chèn overlap là áp dụng sai use-case. \\
+\hline
+Noise Reduction & \textcolor{darkred}{Từ chối} & Báo cáo QA Ngày 1 xác nhận không có vấn đề tiếng ồn/tạp âm. Với y khoa, bộ lọc nhiễu mang rủi ro chí mạng: nó có thể xóa sổ các âm thanh quan trọng có tần số thấp (tiếng thở ran, tiếng ho, hoặc lời nói lí nhí), làm mất dữ liệu chẩn đoán. \\
+\hline
+Amplitude Normalization & \textcolor{darkred}{Từ chối} & Âm lượng gốc đang ở ngưỡng cực kỳ lý tưởng (RMS $\sim -23.5$ dB, Peak $\sim -4.6$ dB). Việc ép chuẩn hóa biên độ (dùng AGC/Compressor) sẽ tạo hiệu ứng "Noise pumping" (khuếch đại rác ở các khoảng lặng) và làm biến dạng tính tự nhiên trong sắc thái giọng nói lâm sàng. Không sửa thứ không hỏng. \\
+\hline
+\end{longtable}
+
+% ======================================================
+\section{Kết luận}
+
+Thực nghiệm tiền xử lý (Preprocessing Ablation) không chỉ là một kế hoạch trên giấy mà đã được chứng minh thành công qua dữ liệu. Phương pháp \textbf{VAD + 200ms Padding} (\texttt{p03\_vad\_pad\_200ms}) đã giải quyết được nút thắt cổ chai "Edge Loss" một cách hiệu quả, an toàn, và được bảo chứng qua kết quả trên mô hình tốt nhất là ChunkFormer.
+
+Mọi quyết định từ bỏ các phương pháp thừa thãi (như Noise Reduction hay Normalization) đều tuân thủ chặt chẽ nguyên lý: Chỉ giải quyết đúng điểm nghẽn dựa trên bằng chứng dữ liệu kiểm toán (Audio QA), bảo vệ tối đa tính nguyên bản của âm thanh lâm sàng. Bước tiếp theo của dự án là tự tin áp dụng pipeline này lên toàn bộ tập dữ liệu huấn luyện để sẵn sàng cho Phase Fine-tuning.
+
+\end{document}

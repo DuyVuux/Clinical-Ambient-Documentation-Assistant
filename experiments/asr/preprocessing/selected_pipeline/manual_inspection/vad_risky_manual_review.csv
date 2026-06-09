@@ -1,0 +1,8 @@
+sample_id,split,original_duration,processed_duration,duration_delta,decision,reason
+public_vietmed_0007,train,6.0,4.408,-1.592,keep_p03,original audio did not contain the missing word from transcript; p03 removed silence only
+public_vietmed_0152,train,5.0,3.568,-1.432,fallback_original,lost 4 words at the end and last syllable cut abnormally
+public_vietmed_0176,train,7.0,4.944,-2.056,fallback_original,lost first syllable (mà)
+public_vietmed_0483,dev,3.0,2.336,-0.664,keep_p03,removed silence only with better quality
+public_vietmed_0547,train,5.0,3.728,-1.272,keep_p03,original audio had only one 'mình'; p03 removed silence only without cutting speech
+public_vietmed_0894,train,5.0,5.4,0.4,fallback_original,lost first word (hiểu) and kept long silence
+public_vietmed_0972,train,9.0,9.4,0.4,fallback_original,lost first word (suốt) and kept long silence
