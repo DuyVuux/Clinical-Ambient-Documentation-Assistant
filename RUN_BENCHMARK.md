@@ -19,8 +19,7 @@ source .venv/bin/activate
 Tiến hành tải hoặc import dữ liệu gốc (VietMed/FOSD) vào Data Lake (`bronze` layer):
 
 ```bash
-python scripts/data_ingestion/ingest_asr_public_day1.py \
-  --output_dir data/data_lake/bronze/public
+python scripts/data_ingestion/ingest_asr_public_day1.py
 ```
 
 ## 3. Normalize audio
@@ -28,10 +27,7 @@ python scripts/data_ingestion/ingest_asr_public_day1.py \
 Chuẩn hóa âm thanh (chuyển đổi tần số lấy mẫu, định dạng mono) và lưu sang `silver` layer:
 
 ```bash
-python scripts/data_ingestion/normalize_public_audio.py \
-  --input_dir data/data_lake/bronze/public/vietmed \
-  --output_dir data/data_lake/silver/public/vietmed \
-  --manifest_output data/data_lake/silver/asr_manifests/vietmed_v0_1.jsonl
+python scripts/data_ingestion/normalize_public_audio.py
 ```
 
 ## 4. Create train/dev/test split
@@ -39,9 +35,7 @@ python scripts/data_ingestion/normalize_public_audio.py \
 Tạo các tập dữ liệu huấn luyện, kiểm tra, và đánh giá:
 
 ```bash
-python scripts/asr_eval/create_asr_splits.py \
-  --manifest data/data_lake/silver/asr_manifests/vietmed_v0_1.jsonl \
-  --output_dir data/data_lake/silver/asr_manifests/splits
+python scripts/asr_eval/create_asr_splits.py
 ```
 
 ## 5. Check leakage
@@ -52,7 +46,8 @@ Kiểm tra rò rỉ dữ liệu (data leakage) giữa các tập (để đảm b
 python scripts/asr_eval/check_split_leakage.py \
   --train data/data_lake/silver/asr_manifests/splits/vietmed_train_candidate_v0_1.jsonl \
   --dev data/data_lake/silver/asr_manifests/splits/vietmed_dev_v0_1.jsonl \
-  --test data/data_lake/evaluation/asr_eval_v0_1/vietmed_test_holdout_v0_1.jsonl
+  --test data/data_lake/evaluation/asr_eval_v0_1/vietmed_test_holdout_v0_1.jsonl \
+  --output experiments/asr/baseline/metrics/split_leakage_report.json
 ```
 
 ## 6. Run PhoWhisper
