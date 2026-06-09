@@ -1,0 +1,28 @@
+{
+  "input_manifest": "/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/data/data_lake/silver/asr_manifests/vietmed_train_preprocessed_selected_safe_v0_1.jsonl",
+  "output_manifest": "/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/experiments/asr/finetune/week5/data/train_manifest_for_phowhisper.jsonl",
+  "split": "train",
+  "expected_preprocessing": "p03_safe_hybrid_v0_1",
+  "n_output_rows": 600,
+  "n_skipped_rows": 0,
+  "preprocessing_versions": {
+    "p03_safe_hybrid_v0_1": 600
+  },
+  "manual_fallback_applied_count": 4,
+  "duration_seconds": {
+    "min": 1.0,
+    "p10": 5.0,
+    "median": 6.0,
+    "mean": 6.0746,
+    "p90": 7.0,
+    "max": 13.0
+  },
+  "transcript_words": {
+    "min": 1,
+    "median": 27.0,
+    "mean": 25.45,
+    "max": 39
+  },
+  "skipped_reasons": {},
+  "created_at": "2026-06-09T08:25:53.992196+00:00"
+}
