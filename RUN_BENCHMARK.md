@@ -105,7 +105,6 @@ Tổng hợp các kết quả JSON vào một báo cáo kỹ thuật hoàn chỉ
 ```bash
 # Tổng hợp các metrics và medical error vào báo cáo benchmark
 python scripts/asr_eval/clinical_error_analysis.py \
-  --metrics_dir experiments/asr/baseline/metrics \
-  --error_dir experiments/asr/error_analysis \
-  --output_report experiments/asr/baseline/FINAL_REPORT.md
+  --metrics_dir experiments/asr/baseline/metrics/dev \
+  --output experiments/asr/baseline/FINAL_REPORT.md
 ```
