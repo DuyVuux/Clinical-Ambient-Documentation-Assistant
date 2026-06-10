@@ -255,7 +255,7 @@ def main() -> None:
         eval_dataset=dev_ds_prepared,
         data_collator=data_collator,
         compute_metrics=compute_metrics,
-        tokenizer=processor.feature_extractor,
+        processing_class=processor.feature_extractor,
     )
     
     print("[INFO] Starting training...")
