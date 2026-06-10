@@ -62,8 +62,18 @@ def resolve_path(path_value: str, project_root: Path) -> Path:
         return p
     return project_root / p
 
-def load_jsonl_dataset(manifest_path: Path, sampling_rate: int = 16000) -> Dataset:
+def load_jsonl_dataset(manifest_path: Path, project_root: Path, sampling_rate: int = 16000) -> Dataset:
     dataset = Dataset.from_json(str(manifest_path))
+    
+    # Map absolute local paths to correct project_root paths
+    def fix_path(example):
+        old_path = example["audio"]
+        if "data/data_lake" in old_path:
+            rel_part = old_path[old_path.find("data/data_lake"):]
+            example["audio"] = str(project_root / rel_part)
+        return example
+        
+    dataset = dataset.map(fix_path)
     dataset = dataset.cast_column("audio", Audio(sampling_rate=sampling_rate))
     return dataset
 
@@ -159,8 +169,8 @@ def main() -> None:
         
     model.config.suppress_tokens = []
     
-    train_ds = load_jsonl_dataset(train_manifest)
-    dev_ds = load_jsonl_dataset(dev_manifest)
+    train_ds = load_jsonl_dataset(train_manifest, project_root)
+    dev_ds = load_jsonl_dataset(dev_manifest, project_root)
     
     if args.max_train_samples is not None:
         train_ds = train_ds.select(range(min(args.max_train_samples, len(train_ds))))
