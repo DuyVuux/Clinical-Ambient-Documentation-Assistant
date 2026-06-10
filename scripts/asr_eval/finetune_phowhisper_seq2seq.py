@@ -181,7 +181,7 @@ def main() -> None:
         {
             "sample_id": row["sample_id"],
             "reference_text": row["sentence"],
-            "audio": row["audio"],
+            "audio": row["audio"]["path"] if isinstance(row["audio"], dict) and "path" in row["audio"] else str(row["audio"]),
             "preprocessing_version": row.get("preprocessing_version"),
         }
         for row in dev_ds
