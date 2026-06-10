@@ -69,4 +69,4 @@ Nghiên cứu pháp lý AI Y tế tại Việt Nam.md
 Vietnamese ASR Clinical Documentation Research.md
 docs/research/technical/
 docs/research/architecture/
-docs/research_data_source/
+docs/research_data_source/experiments/asr/finetune/week5/data/*_dataset_hf/
