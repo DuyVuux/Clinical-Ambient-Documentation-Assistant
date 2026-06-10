@@ -234,7 +234,7 @@ def main() -> None:
         weight_decay=float(cfg.get("weight_decay", 0.01)),
         gradient_checkpointing=bool(cfg.get("gradient_checkpointing", True)),
         fp16=fp16,
-        evaluation_strategy=cfg.get("eval_strategy", "epoch"),
+        eval_strategy=cfg.get("eval_strategy", "epoch"),
         save_strategy=cfg.get("save_strategy", "epoch"),
         logging_steps=int(cfg.get("logging_steps", 10)),
         predict_with_generate=bool(cfg.get("predict_with_generate", True)),
