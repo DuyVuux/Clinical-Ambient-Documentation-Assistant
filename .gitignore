@@ -73,3 +73,5 @@ docs/research_data_source/
 experiments/asr/finetune/week5/data/*_dataset_hf/
 experiments/asr/finetune/week5/**/.cache/
 experiments/asr/finetune/week5/**/best_model/
+experiments/asr/models/phowhisper_backup_v0_1/
+experiments/asr/finetune/week5/selected_backup_model_v0_1/

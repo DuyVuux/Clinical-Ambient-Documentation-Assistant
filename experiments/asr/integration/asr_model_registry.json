@@ -1,0 +1,21 @@
+{
+  "primary_model": {
+    "model_id": "chunkformer_ctc_large_vie",
+    "model_name": "khanhld/chunkformer-ctc-large-vie",
+    "role": "primary",
+    "dev_wer_reference": "12.90%",
+    "architecture": "CTC"
+  },
+  "backup_model": {
+    "model_id": "phowhisper_backup_v0_1",
+    "model_path": "experiments/asr/models/phowhisper_backup_v0_1",
+    "base_model": "vinai/PhoWhisper-medium",
+    "role": "backup",
+    "dev_wer_reference": "16.57%",
+    "architecture": "Whisper Seq2Seq"
+  },
+  "preprocessing": {
+    "version": "p03_safe_hybrid_v0_1",
+    "test_holdout_used": false
+  }
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "name": "ChunkFormer reference",
+    "role": "primary_reference",
+    "wer": 0.12900718865358463,
+    "cer": 0.12060347594809007,
+    "missing_negation": null,
+    "missing_symptom": null,
+    "medication_error": null,
+    "dose_unit_error": null,
+    "numeric_error": null,
+    "edge_wer": null,
+    "edge_cer": null,
+    "edge_missing_negation": null,
+    "edge_missing_symptom": null
+  },
+  {
+    "name": "PhoWhisper-medium baseline",
+    "role": "backup_baseline",
+    "wer": 0.246357101224014,
+    "cer": 0.1980098133626817,
+    "missing_negation": null,
+    "missing_symptom": null,
+    "medication_error": null,
+    "dose_unit_error": null,
+    "numeric_error": null,
+    "edge_wer": 0.22603719599427755,
+    "edge_cer": 0.17389841910528087,
+    "edge_missing_negation": null,
+    "edge_missing_symptom": null
+  },
+  {
+    "name": "Run 01 conservative",
+    "role": "candidate",
+    "wer": 0.1657276083155236,
+    "cer": 0.14642087403127435,
+    "missing_negation": null,
+    "missing_symptom": null,
+    "medication_error": null,
+    "dose_unit_error": null,
+    "numeric_error": null,
+    "edge_wer": 0.15736766809728184,
+    "edge_cer": 0.13958964009418096,
+    "edge_missing_negation": null,
+    "edge_missing_symptom": null
+  },
+  {
+    "name": "Run 02 low-lr",
+    "role": "candidate",
+    "wer": 0.18224208276666018,
+    "cer": 0.16242490943275095,
+    "missing_negation": null,
+    "missing_symptom": null,
+    "medication_error": null,
+    "dose_unit_error": null,
+    "numeric_error": null,
+    "edge_wer": 0.17453505007153075,
+    "edge_cer": 0.15539858728557013,
+    "edge_missing_negation": null,
+    "edge_missing_symptom": null
+  }
+]
