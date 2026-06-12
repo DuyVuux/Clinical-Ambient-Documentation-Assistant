@@ -57,8 +57,9 @@ def main():
     outputs = []
 
     for i, row in enumerate(rows, start=1):
-        audio_path = PROJECT_ROOT / row["clean_audio_path"]
-        ref = row.get("transcript_text", "")
+        audio_file = row.get("clean_audio_path") or row.get("audio_path")
+        audio_path = PROJECT_ROOT / audio_file
+        ref = row.get("transcript_text") or row.get("text", "")
 
         try:
             result = asr(str(audio_path))
@@ -70,7 +71,7 @@ def main():
         outputs.append({
             "sample_id": row["sample_id"],
             "model_name": args.model,
-            "clean_audio_path": row["clean_audio_path"],
+            "clean_audio_path": audio_file,
             "reference_text": ref,
             "prediction_text": pred,
             "split_role": row.get("split_role"),

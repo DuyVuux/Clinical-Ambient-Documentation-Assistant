@@ -36,7 +36,7 @@ def find_audio_column(columns: list[str]) -> str | None:
 
 
 def find_text_column(columns: list[str]) -> str | None:
-    candidates = ["text", "sentence", "transcript", "transcription", "normalized_text"]
+    candidates = ["text", "sentence", "transcript", "transcription", "normalized_text", "segment_text"]
     for c in candidates:
         if c in columns:
             return c
@@ -152,8 +152,9 @@ def main() -> None:
             ],
         }
 
+        cols_str = ", ".join(columns)
         md_lines.append(
-            f"| `{split_name}` | {len(split_ds)} | `{columns}` | `{audio_col}` | `{text_col}` |"
+            f"| `{split_name}` | {len(split_ds)} | `{cols_str}` | `{audio_col}` | `{text_col}` |"
         )
 
     write_json(audit_dir / "dataset_inventory.json", inventory)
