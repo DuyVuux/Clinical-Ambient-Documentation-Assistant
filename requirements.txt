@@ -8,6 +8,8 @@ librosa>=0.11.0
 
 # Deep Learning & Modeling
 torch>=2.12.0
+torchvision
+torchaudio
 transformers>=5.10.2
 accelerate>=1.13.0
 chunkformer>=1.2.0
