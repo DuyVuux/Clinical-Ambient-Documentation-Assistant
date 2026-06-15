@@ -1,0 +1,126 @@
+[
+  {
+    "dataset_id": "tensorxt/ViMedCSS",
+    "split": "train",
+    "output_path": "/content/Clinical-Ambient-Documentation-Assistant/experiments/asr/vimedcss/manifests/raw/vimedcss_train_raw.jsonl",
+    "rows": 11832,
+    "columns": [
+      "segment_id",
+      "audio",
+      "duration_seconds",
+      "segment_text",
+      "cs_terms_list",
+      "cs_terms_count",
+      "topic",
+      "original_video_link",
+      "original_video_title",
+      "start_time",
+      "end_time"
+    ],
+    "inferred": {
+      "audio_col": "audio",
+      "text_col": "segment_text",
+      "duration_col": "duration_seconds",
+      "id_col": "segment_id"
+    },
+    "missing_audio": 0,
+    "missing_segment_text": 0,
+    "missing_duration_seconds": 0,
+    "max_rows": null,
+    "streaming": true,
+    "created_at": "2026-06-15T06:52:42.641186+00:00"
+  },
+  {
+    "dataset_id": "tensorxt/ViMedCSS",
+    "split": "validation",
+    "output_path": "/content/Clinical-Ambient-Documentation-Assistant/experiments/asr/vimedcss/manifests/raw/vimedcss_validation_raw.jsonl",
+    "rows": 1714,
+    "columns": [
+      "segment_id",
+      "audio",
+      "duration_seconds",
+      "segment_text",
+      "cs_terms_list",
+      "cs_terms_count",
+      "topic",
+      "original_video_link",
+      "original_video_title",
+      "start_time",
+      "end_time"
+    ],
+    "inferred": {
+      "audio_col": "audio",
+      "text_col": "segment_text",
+      "duration_col": "duration_seconds",
+      "id_col": "segment_id"
+    },
+    "missing_audio": 0,
+    "missing_segment_text": 0,
+    "missing_duration_seconds": 0,
+    "max_rows": null,
+    "streaming": true,
+    "created_at": "2026-06-15T06:53:12.209782+00:00"
+  },
+  {
+    "dataset_id": "tensorxt/ViMedCSS",
+    "split": "test",
+    "output_path": "/content/Clinical-Ambient-Documentation-Assistant/experiments/asr/vimedcss/manifests/raw/vimedcss_test_raw.jsonl",
+    "rows": 1614,
+    "columns": [
+      "segment_id",
+      "audio",
+      "duration_seconds",
+      "segment_text",
+      "cs_terms_list",
+      "cs_terms_count",
+      "topic",
+      "original_video_link",
+      "original_video_title",
+      "start_time",
+      "end_time"
+    ],
+    "inferred": {
+      "audio_col": "audio",
+      "text_col": "segment_text",
+      "duration_col": "duration_seconds",
+      "id_col": "segment_id"
+    },
+    "missing_audio": 0,
+    "missing_segment_text": 0,
+    "missing_duration_seconds": 0,
+    "max_rows": null,
+    "streaming": true,
+    "created_at": "2026-06-15T06:53:30.854101+00:00"
+  },
+  {
+    "dataset_id": "tensorxt/ViMedCSS",
+    "split": "hard",
+    "output_path": "/content/Clinical-Ambient-Documentation-Assistant/experiments/asr/vimedcss/manifests/raw/vimedcss_hard_raw.jsonl",
+    "rows": 658,
+    "columns": [
+      "segment_id",
+      "audio",
+      "duration_seconds",
+      "segment_text",
+      "cs_terms_list",
+      "cs_terms_count",
+      "topic",
+      "original_video_link",
+      "original_video_title",
+      "start_time",
+      "end_time"
+    ],
+    "inferred": {
+      "audio_col": "audio",
+      "text_col": "segment_text",
+      "duration_col": "duration_seconds",
+      "id_col": "segment_id"
+    },
+    "missing_audio": 0,
+    "missing_segment_text": 0,
+    "missing_duration_seconds": 0,
+    "max_rows": null,
+    "streaming": true,
+    "created_at": "2026-06-15T06:53:38.566755+00:00"
+  }
+]

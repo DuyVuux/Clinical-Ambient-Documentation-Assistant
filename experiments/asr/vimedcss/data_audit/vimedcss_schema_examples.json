@@ -1,0 +1,294 @@
+{
+  "train": {
+    "manifest_path": "/content/Clinical-Ambient-Documentation-Assistant/experiments/asr/vimedcss/manifests/raw/vimedcss_train_raw.jsonl",
+    "rows": 11832,
+    "examples": [
+      {
+        "sample_id": "vimedcss_train_000000",
+        "segment_id": "Med_CS-0-1",
+        "dataset_id": "tensorxt/ViMedCSS",
+        "split": "train",
+        "row_index": 0,
+        "audio": "Med_CS-0-1.wav",
+        "audio_path": "Med_CS-0-1.wav",
+        "segment_text": "5 alpha reductase là một enzyme chuyển đổi hóc môn nam testosterone thành dạng có hiệu lực hơn được gọi là dihydrotestosterone.",
+        "duration_seconds": 10,
+        "sampling_rate": null,
+        "cs_terms_list": [
+          "reductase",
+          "testosteron"
+        ],
+        "cs_terms_count": 2,
+        "topic": "Medical Sciences",
+        "original_video_link": "https://www.youtube.com/watch?v=GUEt9JwUd-4",
+        "original_video_title": "Thiếu hụt 5 alpha reductase - cơ quan sd lưỡng tính",
+        "start_time": 1781482320000,
+        "end_time": 1781482860000,
+        "clean_audio_path": "/content/Clinical-Ambient-Documentation-Assistant/data/vimedcss_audio/Med_CS-0-1.wav"
+      },
+      {
+        "sample_id": "vimedcss_train_000001",
+        "segment_id": "Med_CS-0-10",
+        "dataset_id": "tensorxt/ViMedCSS",
+        "split": "train",
+        "row_index": 1,
+        "audio": "Med_CS-0-10.wav",
+        "audio_path": "Med_CS-0-10.wav",
+        "segment_text": "Mặc dù chúng không thể chuyển thành dihydrotestosterone, nhưng lượng testosterone quá cao cũng làm dương vật và bìu phát triển lớn hơn và bắt đầu có ngoại hình nam tính hơn.",
+        "duration_seconds": 11,
+        "sampling_rate": null,
+        "cs_terms_list": [
+          "testosteron"
+        ],
+        "cs_terms_count": 1,
+        "topic": "Medical Sciences",
+        "original_video_link": "https://www.youtube.com/watch?v=GUEt9JwUd-4",
+        "original_video_title": "Thiếu hụt 5 alpha reductase - cơ quan sd lưỡng tính",
+        "start_time": 1781494920000,
+        "end_time": 1781495520000,
+        "clean_audio_path": "/content/Clinical-Ambient-Documentation-Assistant/data/vimedcss_audio/Med_CS-0-10.wav"
+      },
+      {
+        "sample_id": "vimedcss_train_000002",
+        "segment_id": "Med_CS-0-11",
+        "dataset_id": "tensorxt/ViMedCSS",
+        "split": "train",
+        "row_index": 2,
+        "audio": "Med_CS-0-11.wav",
+        "audio_path": "Med_CS-0-11.wav",
+        "segment_text": "Ngoài ra, lượng testosterone cao còn làm trầm giọng, phát triển cơ bắp, mọc râu ở mặt và lông ở thân mình.",
+        "duration_seconds": 9,
+        "sampling_rate": null,
+        "cs_terms_list": [
+          "testosteron"
+        ],
+        "cs_terms_count": 1,
+        "topic": "Medical Sciences",
+        "original_video_link": "https://www.youtube.com/watch?v=GUEt9JwUd-4",
+        "original_video_title": "Thiếu hụt 5 alpha reductase - cơ quan sd lưỡng tính",
+        "start_time": 1781495520000,
+        "end_time": 1781496000000,
+        "clean_audio_path": "/content/Clinical-Ambient-Documentation-Assistant/data/vimedcss_audio/Med_CS-0-11.wav"
+      }
+    ]
+  },
+  "validation": {
+    "manifest_path": "/content/Clinical-Ambient-Documentation-Assistant/experiments/asr/vimedcss/manifests/raw/vimedcss_validation_raw.jsonl",
+    "rows": 1714,
+    "examples": [
+      {
+        "sample_id": "vimedcss_validation_000000",
+        "segment_id": "Med_CS-100-17",
+        "dataset_id": "tensorxt/ViMedCSS",
+        "split": "validation",
+        "row_index": 0,
+        "audio": "Med_CS-100-17.wav",
+        "audio_path": "Med_CS-100-17.wav",
+        "segment_text": "Thì ngoài ra, ở cho chúng ta thấy là cái hàm lượng dinh dưỡng so với Alpha lipid ở trên một lon có cùng trọng lượng là 450 g và sữa Colos IgGOLD cũng là 450 g.",
+        "duration_seconds": 11,
+        "sampling_rate": null,
+        "cs_terms_list": [
+          "lipid"
+        ],
+        "cs_terms_count": 1,
+        "topic": "Medical Sciences",
+        "original_video_link": "https://www.youtube.com/watch?v=y578jWB56QE",
+        "original_video_title": "So sánh Alpha Lipid & Colos IgGold",
+        "start_time": 1781497860000,
+        "end_time": 1781498460000,
+        "clean_audio_path": "/content/Clinical-Ambient-Documentation-Assistant/data/vimedcss_audio/Med_CS-100-17.wav"
+      },
+      {
+        "sample_id": "vimedcss_validation_000001",
+        "segment_id": "Med_CS-1000-9",
+        "dataset_id": "tensorxt/ViMedCSS",
+        "split": "validation",
+        "row_index": 1,
+        "audio": "Med_CS-1000-9.wav",
+        "audio_path": "Med_CS-1000-9.wav",
+        "segment_text": "khi ngăn methionin sẽ giúp cho cắt đoạn sự phát triển của các tế bào ung thư.",
+        "duration_seconds": 9,
+        "sampling_rate": null,
+        "cs_terms_list": [
+          "methionin"
+        ],
+        "cs_terms_count": 1,
+        "topic": "Medical Sciences",
+        "original_video_link": "https://www.youtube.com/watch?v=PKaw6828hUM",
+        "original_video_title": "UNG THƯ CẦN HẠN CHẾ CHẤT METHIONIN TRONG THỰC PHẨM",
+        "start_time": 1781490600000,
+        "end_time": 1781491080000,
+        "clean_audio_path": "/content/Clinical-Ambient-Documentation-Assistant/data/vimedcss_audio/Med_CS-1000-9.wav"
+      },
+      {
+        "sample_id": "vimedcss_validation_000002",
+        "segment_id": "Med_CS-1006-14",
+        "dataset_id": "tensorxt/ViMedCSS",
+        "split": "validation",
+        "row_index": 2,
+        "audio": "Med_CS-1006-14.wav",
+        "audio_path": "Med_CS-1006-14.wav",
+        "segment_text": "Tác dụng của estrogen có thể ảnh hưởng đến những cơ quan như buồng trứng, hỗ trợ kích thích sự phát triển của nang trứng.",
+        "duration_seconds": 6,
+        "sampling_rate": null,
+        "cs_terms_list": [
+          "estrogen"
+        ],
+        "cs_terms_count": 1,
+        "topic": "Medical Sciences",
+        "original_video_link": "https://www.youtube.com/watch?v=TyT8r2wiKm4",
+        "original_video_title": "TÁC DỤNG CỦA ESTROGEN VỚI SỨC KHỎE TỔNG THỂ - Duy Anh Web",
+        "start_time": 1781489040000,
+        "end_time": 1781489340000,
+        "clean_audio_path": "/content/Clinical-Ambient-Documentation-Assistant/data/vimedcss_audio/Med_CS-1006-14.wav"
+      }
+    ]
+  },
+  "test": {
+    "manifest_path": "/content/Clinical-Ambient-Documentation-Assistant/experiments/asr/vimedcss/manifests/raw/vimedcss_test_raw.jsonl",
+    "rows": 1614,
+    "examples": [
+      {
+        "sample_id": "vimedcss_test_000000",
+        "segment_id": "Med_CS-0-7",
+        "dataset_id": "tensorxt/ViMedCSS",
+        "split": "test",
+        "row_index": 0,
+        "audio": "Med_CS-0-7.wav",
+        "audio_path": "Med_CS-0-7.wav",
+        "segment_text": "Điều này có nghĩa là để xuất hiện bệnh, cả hai bản sao của gen phải bị đột biến và bệnh nhân phải là nam giới về mặt di truyền,",
+        "duration_seconds": 9,
+        "sampling_rate": null,
+        "cs_terms_list": [
+          "gen"
+        ],
+        "cs_terms_count": 1,
+        "topic": "Medical Sciences",
+        "original_video_link": "https://www.youtube.com/watch?v=GUEt9JwUd-4",
+        "original_video_title": "Thiếu hụt 5 alpha reductase - cơ quan sd lưỡng tính",
+        "start_time": 1781490720000,
+        "end_time": 1781491200000,
+        "clean_audio_path": "/content/Clinical-Ambient-Documentation-Assistant/data/vimedcss_audio/Med_CS-0-7.wav"
+      },
+      {
+        "sample_id": "vimedcss_test_000001",
+        "segment_id": "Med_CS-100-12",
+        "dataset_id": "tensorxt/ViMedCSS",
+        "split": "test",
+        "row_index": 1,
+        "audio": "Med_CS-100-12.wav",
+        "audio_path": "Med_CS-100-12.wav",
+        "segment_text": "Rồi tiếp theo, về lợi khuẩn thì sản phẩm Alpha lipid trước đây đã được trang bị rất tốt với cái hàm lượng lợi khuẩn là 1 tỷ lợi khuẩn tiêu hóa trên một phần.",
+        "duration_seconds": 10,
+        "sampling_rate": null,
+        "cs_terms_list": [
+          "lipid"
+        ],
+        "cs_terms_count": 1,
+        "topic": "Medical Sciences",
+        "original_video_link": "https://www.youtube.com/watch?v=y578jWB56QE",
+        "original_video_title": "So sánh Alpha Lipid & Colos IgGold",
+        "start_time": 1781490900000,
+        "end_time": 1781491440000,
+        "clean_audio_path": "/content/Clinical-Ambient-Documentation-Assistant/data/vimedcss_audio/Med_CS-100-12.wav"
+      },
+      {
+        "sample_id": "vimedcss_test_000002",
+        "segment_id": "Med_CS-100-13",
+        "dataset_id": "tensorxt/ViMedCSS",
+        "split": "test",
+        "row_index": 2,
+        "audio": "Med_CS-100-13.wav",
+        "audio_path": "Med_CS-100-13.wav",
+        "segment_text": "Rồi về chất khoáng ấy thì Alpha lipid thì có ba loại khoáng chất chính, đó là sắt, đó là magie và đó là canxi.",
+        "duration_seconds": 8,
+        "sampling_rate": null,
+        "cs_terms_list": [
+          "lipid"
+        ],
+        "cs_terms_count": 1,
+        "topic": "Medical Sciences",
+        "original_video_link": "https://www.youtube.com/watch?v=y578jWB56QE",
+        "original_video_title": "So sánh Alpha Lipid & Colos IgGold",
+        "start_time": 1781493720000,
+        "end_time": 1781494140000,
+        "clean_audio_path": "/content/Clinical-Ambient-Documentation-Assistant/data/vimedcss_audio/Med_CS-100-13.wav"
+      }
+    ]
+  },
+  "hard": {
+    "manifest_path": "/content/Clinical-Ambient-Documentation-Assistant/experiments/asr/vimedcss/manifests/raw/vimedcss_hard_raw.jsonl",
+    "rows": 658,
+    "examples": [
+      {
+        "sample_id": "vimedcss_hard_000000",
+        "segment_id": "Med_CS-1017-1",
+        "dataset_id": "tensorxt/ViMedCSS",
+        "split": "hard",
+        "row_index": 0,
+        "audio": "Med_CS-1017-1.wav",
+        "audio_path": "Med_CS-1017-1.wav",
+        "segment_text": "Bệnh cường giáp là một rối loạn nội tiết xảy ra khi tuyến giáp sản xuất quá mức hormone thyroxine và triiodothyronine.",
+        "duration_seconds": 6,
+        "sampling_rate": null,
+        "cs_terms_list": [
+          "hormone",
+          "thyroxine",
+          "triiodothyronine"
+        ],
+        "cs_terms_count": 3,
+        "topic": "Medical Sciences",
+        "original_video_link": "https://www.youtube.com/watch?v=ov1SDKivdo8",
+        "original_video_title": "Bệnh cường giáp nguyên nhân triệu chứng và cách điều trị hiệu quả",
+        "start_time": 1781481600000,
+        "end_time": 1781481900000,
+        "clean_audio_path": "/content/Clinical-Ambient-Documentation-Assistant/data/vimedcss_audio/Med_CS-1017-1.wav"
+      },
+      {
+        "sample_id": "vimedcss_hard_000001",
+        "segment_id": "Med_CS-1020-2",
+        "dataset_id": "tensorxt/ViMedCSS",
+        "split": "hard",
+        "row_index": 1,
+        "audio": "Med_CS-1020-2.wav",
+        "audio_path": "Med_CS-1020-2.wav",
+        "segment_text": "Một thành phần chính khác là peptit giàu proline, hoạt động chống lại vi rút, kháng khuẩn, chống viêm và điều hòa miễn dịch.",
+        "duration_seconds": 9,
+        "sampling_rate": null,
+        "cs_terms_list": [
+          "peptit",
+          "prolin"
+        ],
+        "cs_terms_count": 2,
+        "topic": "Medical Sciences",
+        "original_video_link": "https://www.youtube.com/watch?v=NW3XBVxZpcA",
+        "original_video_title": "#SỮANON_CHÌA KHÓA CỦA SỨC KHỎE.",
+        "start_time": 1781483460000,
+        "end_time": 1781483940000,
+        "clean_audio_path": "/content/Clinical-Ambient-Documentation-Assistant/data/vimedcss_audio/Med_CS-1020-2.wav"
+      },
+      {
+        "sample_id": "vimedcss_hard_000002",
+        "segment_id": "Med_CS-1046-1",
+        "dataset_id": "tensorxt/ViMedCSS",
+        "split": "hard",
+        "row_index": 2,
+        "audio": "Med_CS-1046-1.wav",
+        "audio_path": "Med_CS-1046-1.wav",
+        "segment_text": "Bột ngủ ngon cao cấp Super glycine 4000 Morning là giải pháp tuyệt vời cho chứng mất ngủ dai dẳng.",
+        "duration_seconds": 7,
+        "sampling_rate": null,
+        "cs_terms_list": [
+          "glycine"
+        ],
+        "cs_terms_count": 1,
+        "topic": "Medical Sciences",
+        "original_video_link": "https://www.youtube.com/watch?v=RwnC6SVLphs",
+        "original_video_title": "Review Bột hỗ trợ ngủ ngon Glycine 4000 Happy Morning Giá Bao Nhiêu Tiền? Mua Ở Đâu?",
+        "start_time": 1781483100000,
+        "end_time": 1781483460000,
+        "clean_audio_path": "/content/Clinical-Ambient-Documentation-Assistant/data/vimedcss_audio/Med_CS-1046-1.wav"
+      }
+    ]
+  }
+}

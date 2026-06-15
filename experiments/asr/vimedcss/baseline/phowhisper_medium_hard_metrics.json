@@ -1,0 +1,64 @@
+{
+  "n_samples": 5,
+  "strict_wer": 116,
+  "normalized_wer": 116,
+  "strict_cer": 533,
+  "normalized_cer": 528,
+  "items": [
+    {
+      "sample_id": "vimedcss_hard_000000",
+      "reference_text": "",
+      "prediction_text": "bệnh cường giáp là một rối loạn nội tiết xảy ra khi tuyến giáp sản xuất quá mức hormone thiroxin và tri âu.",
+      "reference_text_normalized": "",
+      "prediction_text_normalized": "bệnh cường giáp là một rối loạn nội tiết xảy ra khi tuyến giáp sản xuất quá mức hormone thiroxin và tri âu",
+      "strict_wer": 23,
+      "normalized_wer": 23,
+      "strict_cer": 107,
+      "normalized_cer": 106
+    },
+    {
+      "sample_id": "vimedcss_hard_000001",
+      "reference_text": "",
+      "prediction_text": "một thành phần chính khác là peptid giàu protein hoạt động chống lại virus kháng khuẩn chống viêm và điều hoà miễn dịch.",
+      "reference_text_normalized": "",
+      "prediction_text_normalized": "một thành phần chính khác là peptid giàu protein hoạt động chống lại virus kháng khuẩn chống viêm và điều hoà miễn dịch",
+      "strict_wer": 23,
+      "normalized_wer": 23,
+      "strict_cer": 120,
+      "normalized_cer": 119
+    },
+    {
+      "sample_id": "vimedcss_hard_000002",
+      "reference_text": "",
+      "prediction_text": "bột ngủ ngon cao cấp super glycine morning là giải pháp tuyệt vời cho chứng mất ngủ dai dẳng.",
+      "reference_text_normalized": "",
+      "prediction_text_normalized": "bột ngủ ngon cao cấp super glycine morning là giải pháp tuyệt vời cho chứng mất ngủ dai dẳng",
+      "strict_wer": 19,
+      "normalized_wer": 19,
+      "strict_cer": 93,
+      "normalized_cer": 92
+    },
+    {
+      "sample_id": "vimedcss_hard_000003",
+      "reference_text": "",
+      "prediction_text": "siu bơ li xin bốn nghìn mo ninh là sản phẩm được nhiều chuyên gia khuyên dùng cho người.",
+      "reference_text_normalized": "",
+      "prediction_text_normalized": "siu bơ li xin bốn nghìn mo ninh là sản phẩm được nhiều chuyên gia khuyên dùng cho người",
+      "strict_wer": 19,
+      "normalized_wer": 19,
+      "strict_cer": 88,
+      "normalized_cer": 87
+    },
+    {
+      "sample_id": "vimedcss_hard_000004",
+      "reference_text": "",
+      "prediction_text": "sản phẩm được tạo ra từ quá trình này được gọi là hb bị gly cô xì hoá thông thường để biểu thị chỉ số hb đã bị gly cô xì hoá.",
+      "reference_text_normalized": "",
+      "prediction_text_normalized": "sản phẩm được tạo ra từ quá trình này được gọi là hb bị gly cô xì hoá thông thường để biểu thị chỉ số hb đã bị gly cô xì hoá",
+      "strict_wer": 32,
+      "normalized_wer": 32,
+      "strict_cer": 125,
+      "normalized_cer": 124
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+split,topic,count
+hard,Medical Sciences,299
+hard,Diagnostics,162
+hard,Pathology & Pathogens,127
+hard,Treatments,57
+hard,Nutrition,13
+test,Medical Sciences,705
+test,Pathology & Pathogens,484
+test,Treatments,220
+test,Nutrition,117
+test,Diagnostics,88
+train,Medical Sciences,5091
+train,Pathology & Pathogens,3700
+train,Treatments,1449
+train,Nutrition,896
+train,Diagnostics,696
+validation,Medical Sciences,741
+validation,Pathology & Pathogens,516
+validation,Treatments,243
+validation,Nutrition,129
+validation,Diagnostics,85
