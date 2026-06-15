@@ -452,7 +452,7 @@ def find_vietmed_manifest(vroot: Path, explicit: str | None) -> Path | None:
         vroot.parents[3] / "data" / "data_lake" / "silver" / "asr_manifests" / "vietmed_dev_preprocessed_selected_safe_v0_1.jsonl" if len(vroot.parents) > 3 else vroot,
     ])
     for p in candidates:
-        if p.exists():
+        if p.is_file():
             return p
     return None
 
