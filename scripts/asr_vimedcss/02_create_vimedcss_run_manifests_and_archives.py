@@ -203,6 +203,16 @@ def resolve_audio(ref: str | None, roots: list[Path]) -> Path | None:
         cand = root / ref
         if cand.exists():
             return cand
+    basename = p.name
+    if basename != ref:
+        for root in roots:
+            cand = root / basename
+            if cand.exists():
+                return cand
+    for root in roots:
+        for match in root.rglob(basename):
+            if match.is_file():
+                return match
     return None
 
 
@@ -376,7 +386,8 @@ def make_tar(src_dir: Path, out_tar: Path) -> None:
 
 
 def materialize(subset_name: str, rows: list[dict[str, Any]], manifest_path: Path, vroot: Path, work_root: Path,
-                archive_root: Path, drive_archive_root: Path | None, manifests_only: bool, allow_missing_audio: bool) -> dict[str, Any]:
+                archive_root: Path, drive_archive_root: Path | None, manifests_only: bool, allow_missing_audio: bool,
+                audio_roots: list[Path] | None = None) -> dict[str, Any]:
     write_jsonl(manifest_path, rows)
     total_hours = sum(float(r.get("duration_seconds") or 0.0) for r in rows) / 3600.0
     if manifests_only:
@@ -389,7 +400,7 @@ def materialize(subset_name: str, rows: list[dict[str, Any]], manifest_path: Pat
         shutil.rmtree(out_dir)
     audio_dir = out_dir / "audio"
     audio_dir.mkdir(parents=True, exist_ok=True)
-    roots = [vroot, vroot.parent.parent.parent if len(vroot.parents) >= 4 else vroot, Path.cwd()]
+    roots = build_audio_roots(vroot, audio_roots)
     materialized, copied, missing = [], 0, 0
     for i, row in enumerate(rows):
         r = dict(row)
@@ -457,11 +468,36 @@ def find_vietmed_manifest(vroot: Path, explicit: str | None) -> Path | None:
     return None
 
 
+def build_audio_roots(vroot: Path, extra_roots: list[Path] | None = None) -> list[Path]:
+    roots = []
+    if extra_roots:
+        roots.extend(extra_roots)
+    project_root = vroot
+    for parent in [vroot] + list(vroot.parents):
+        if (parent / ".git").exists() or (parent / "data").is_dir():
+            project_root = parent
+            break
+    audio_candidates = [
+        project_root / "data" / "vimedcss_audio",
+        project_root / "data",
+        vroot / "audio",
+        vroot / "data",
+        vroot,
+        project_root,
+        Path.cwd(),
+    ]
+    for cand in audio_candidates:
+        if cand.is_dir() and cand not in roots:
+            roots.append(cand)
+    return roots
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--vimedcss_root", required=True)
     ap.add_argument("--drive_root", default=None)
     ap.add_argument("--work_root", required=True)
+    ap.add_argument("--audio_search_roots", nargs="*", default=None)
     ap.add_argument("--make_run0", action="store_true")
     ap.add_argument("--make_runA", action="store_true")
     ap.add_argument("--make_runB", action="store_true")
@@ -496,6 +532,8 @@ def main() -> None:
     drive_archive = Path(args.drive_root) / "subset_archives" if args.drive_root else None
     manifests_root = vroot / "manifests"
     suspects = load_suspects(vroot)
+    extra_audio_roots = [Path(p) for p in args.audio_search_roots] if args.audio_search_roots else None
+    audio_roots = build_audio_roots(vroot, extra_audio_roots)
 
     raw = {s: read_jsonl(detect_manifest(vroot, s)) for s in SPLITS}
     feats = {s: [make_feat(row, s, i, suspects) for i, row in enumerate(rows)] for s, rows in raw.items()}
@@ -505,7 +543,7 @@ def main() -> None:
 
     def add_subset(name: str, selected: list[dict[str, Any]], mpath: Path, usage: str, run_name: str):
         rows = [normalize_run_row(f, run_name, usage) for f in selected]
-        info = materialize(name, rows, mpath, vroot, work_root, archive_root, drive_archive, args.manifests_only, args.allow_missing_audio)
+        info = materialize(name, rows, mpath, vroot, work_root, archive_root, drive_archive, args.manifests_only, args.allow_missing_audio, audio_roots)
         info["group_counts"] = group_counts(rows)
         info["created_at"] = now_iso()
         index_rows.append(info)
@@ -545,7 +583,7 @@ def main() -> None:
                 if len(converted) >= args.vietmed_dev_small_n:
                     break
             if converted:
-                info = materialize("vietmed_dev_small", converted, manifests_root/"forgetting_eval"/"vietmed_dev_small.jsonl", vroot, work_root, archive_root, drive_archive, args.manifests_only, args.allow_missing_audio)
+                info = materialize("vietmed_dev_small", converted, manifests_root/"forgetting_eval"/"vietmed_dev_small.jsonl", vroot, work_root, archive_root, drive_archive, args.manifests_only, args.allow_missing_audio, audio_roots)
                 info["group_counts"] = json.dumps({"vietmed_forgetting_eval": len(converted)}, ensure_ascii=False)
                 info["created_at"] = now_iso()
                 index_rows.append(info)
