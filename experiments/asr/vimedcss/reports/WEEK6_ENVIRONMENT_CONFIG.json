@@ -1,0 +1,13 @@
+{
+  "project_root": "/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant",
+  "vimedcss_root": "/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/experiments/asr/vimedcss",
+  "drive_root": "/content/drive/MyDrive/clinical_asr_vimedcss",
+  "week5_checkpoint": "/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/experiments/asr/finetune/week5/run_01_phowhisper_medium_conservative/best_model",
+  "dataset_id": "tensorxt/ViMedCSS",
+  "track": "ViMedCSS Progressive Fine-tuning",
+  "skeleton_version": "week6_day1_v1.0",
+  "folder_policy": "module_based_not_day_based",
+  "local_policy": "code_reports_manifests_only",
+  "drive_policy": "heavy_artifacts_and_archives",
+  "created_by": "Duy"
+}

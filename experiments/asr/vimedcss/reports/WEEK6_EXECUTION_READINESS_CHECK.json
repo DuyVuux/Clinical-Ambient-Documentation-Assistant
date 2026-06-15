@@ -1,0 +1,181 @@
+{
+  "created_at": "2026-06-15T03:21:20.932851+00:00",
+  "project_root": ".",
+  "vimedcss_root": "experiments/asr/vimedcss",
+  "drive_root": ".",
+  "week5_checkpoint": "experiments/asr/finetune/week5/run_01_phowhisper_medium_conservative/best_model",
+  "decision": "PASS_WITH_WARNINGS",
+  "hard_failures": [],
+  "warnings": [
+    "manifest_missing_audio_column:train",
+    "manifest_missing_segment_text:train",
+    "manifest_missing_audio_column:validation",
+    "manifest_missing_segment_text:validation",
+    "manifest_missing_audio_column:test",
+    "manifest_missing_segment_text:test",
+    "manifest_missing_audio_column:hard",
+    "manifest_missing_segment_text:hard",
+    "week5_checkpoint_missing_or_incomplete"
+  ],
+  "core_dirs": {
+    "data_audit": "present",
+    "manifests": "present",
+    "manifests/raw": "present",
+    "manifests/run0": "present",
+    "manifests/runA": "present",
+    "manifests/runB": "present",
+    "manifests/runC": "present",
+    "manifests/runD_optional": "present",
+    "manifests/forgetting_eval": "present",
+    "preprocessing": "present",
+    "preprocessing/subset_archives": "present",
+    "preprocessing/materialized_subsets": "present",
+    "baseline": "present",
+    "baseline/run0_original_phowhisper": "present",
+    "baseline/run0_week5_checkpoint": "present",
+    "finetune": "present",
+    "finetune/runA_smoke_200": "present",
+    "finetune/runB_mini_1000": "present",
+    "finetune/runC_balanced_4h": "present",
+    "finetune/runD_medium_8h_optional": "present",
+    "final_model": "present",
+    "final_model/selected_model": "present",
+    "reports": "present"
+  },
+  "required_reports": {
+    "reports/DAY1_VIMEDCSS_INVENTORY_REPORT.md": {
+      "status": "present",
+      "size_mb": 0.0009
+    },
+    "reports/VIMEDCSS_TASK_BRIEF.md": {
+      "status": "present",
+      "size_mb": 0.0012
+    },
+    "reports/COLAB_CPU_GPU_PROTOCOL.md": {
+      "status": "present",
+      "size_mb": 0.0012
+    },
+    "reports/DRIVE_STORAGE_POLICY.md": {
+      "status": "present",
+      "size_mb": 0.001
+    },
+    "reports/TTS_DATA_REQUEST_MESSAGE.md": {
+      "status": "present",
+      "size_mb": 0.0008
+    },
+    "preprocessing/PREPROCESSING_POLICY_VIMEDCSS.md": {
+      "status": "present",
+      "size_mb": 0.0012
+    }
+  },
+  "optional_inventory": {
+    "data_audit/dataset_inventory.json": {
+      "status": "present",
+      "size_mb": 0.0227
+    },
+    "data_audit/split_inventory.md": {
+      "status": "present",
+      "size_mb": 0.0
+    }
+  },
+  "raw_manifests": {
+    "train": {
+      "path": "experiments/asr/vimedcss/manifests/raw/vimedcss_train_raw.jsonl",
+      "status": "present",
+      "rows": 11832,
+      "size_mb": 3.3625,
+      "first_row_columns": [
+        "audio_col",
+        "audio_path",
+        "created_at",
+        "dataset_id",
+        "duration_seconds",
+        "row_index",
+        "sample_id",
+        "sampling_rate",
+        "split",
+        "text",
+        "text_col"
+      ],
+      "has_audio_column": false,
+      "has_text_column_segment_text": false,
+      "has_duration_seconds": true,
+      "has_cs_terms_count": false
+    },
+    "validation": {
+      "path": "experiments/asr/vimedcss/manifests/raw/vimedcss_validation_raw.jsonl",
+      "status": "present",
+      "rows": 1,
+      "size_mb": 0.0,
+      "first_row_columns": [
+        "clean_audio_path",
+        "sample_id"
+      ],
+      "has_audio_column": false,
+      "has_text_column_segment_text": false,
+      "has_duration_seconds": false,
+      "has_cs_terms_count": false
+    },
+    "test": {
+      "path": "experiments/asr/vimedcss/manifests/raw/vimedcss_test_raw.jsonl",
+      "status": "present",
+      "rows": 1614,
+      "size_mb": 0.4544,
+      "first_row_columns": [
+        "audio_col",
+        "audio_path",
+        "created_at",
+        "dataset_id",
+        "duration_seconds",
+        "row_index",
+        "sample_id",
+        "sampling_rate",
+        "split",
+        "text",
+        "text_col"
+      ],
+      "has_audio_column": false,
+      "has_text_column_segment_text": false,
+      "has_duration_seconds": true,
+      "has_cs_terms_count": false
+    },
+    "hard": {
+      "path": "experiments/asr/vimedcss/manifests/raw/vimedcss_hard_raw.jsonl",
+      "status": "present",
+      "rows": 658,
+      "size_mb": 0.1849,
+      "first_row_columns": [
+        "audio_col",
+        "audio_path",
+        "created_at",
+        "dataset_id",
+        "duration_seconds",
+        "row_index",
+        "sample_id",
+        "sampling_rate",
+        "split",
+        "text",
+        "text_col"
+      ],
+      "has_audio_column": false,
+      "has_text_column_segment_text": false,
+      "has_duration_seconds": true,
+      "has_cs_terms_count": false
+    }
+  },
+  "drive": {
+    "path": ".",
+    "exists": true,
+    "status": "present_writable",
+    "writable": true,
+    "created_or_verified": true
+  },
+  "week5_checkpoint_check": {
+    "path": "experiments/asr/finetune/week5/run_01_phowhisper_medium_conservative/best_model",
+    "exists": false,
+    "status": "missing",
+    "files": {},
+    "has_model_weights": false
+  },
+  "day_based_folders_detected": []
+}
