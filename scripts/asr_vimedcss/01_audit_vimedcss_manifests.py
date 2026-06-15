@@ -671,6 +671,8 @@ def main() -> None:
         "english_token_mean",
         "cs_terms_mean",
         "audio_present_count",
+        "field_presence",
+        "observed_schema_keys_top",
     ]
 
     write_csv(output_dir / "vimedcss_audit_samples.csv", all_audits, sample_fields)
