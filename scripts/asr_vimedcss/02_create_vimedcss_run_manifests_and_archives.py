@@ -332,6 +332,7 @@ def select_hours(items: list[dict[str, Any]], hours: float, ratios: dict[str, fl
 
 def normalize_run_row(f: dict[str, Any], run_name: str, usage: str) -> dict[str, Any]:
     row = f["source_row"]
+    resolved = f.get("audio_ref_resolved") or f["audio_ref"]
     return {
         "sample_id": f["segment_id"],
         "segment_id": f["segment_id"],
@@ -340,7 +341,7 @@ def normalize_run_row(f: dict[str, Any], run_name: str, usage: str) -> dict[str,
         "source_split": f["split"],
         "run_name": run_name,
         "usage": usage,
-        "audio": f["audio_ref"],
+        "audio": str(resolved),
         "source_audio_field": f["audio_field"],
         "sentence": f["segment_text"],
         "segment_text": f["segment_text"],
@@ -492,6 +493,23 @@ def build_audio_roots(vroot: Path, extra_roots: list[Path] | None = None) -> lis
     return roots
 
 
+def resolve_feats_audio(feats: dict[str, list[dict[str, Any]]], roots: list[Path]) -> None:
+    resolved_count = 0
+    for split_feats in feats.values():
+        for feat in split_feats:
+            ref = feat.get("audio_ref")
+            if not ref:
+                continue
+            found = resolve_audio(ref, roots)
+            if found:
+                feat["audio_ref_resolved"] = str(found.resolve())
+                resolved_count += 1
+            else:
+                feat["audio_ref_resolved"] = ref
+    total = sum(len(v) for v in feats.values())
+    print(f"[INFO] Audio resolved: {resolved_count}/{total} samples")
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--vimedcss_root", required=True)
@@ -537,6 +555,7 @@ def main() -> None:
 
     raw = {s: read_jsonl(detect_manifest(vroot, s)) for s in SPLITS}
     feats = {s: [make_feat(row, s, i, suspects) for i, row in enumerate(rows)] for s, rows in raw.items()}
+    resolve_feats_audio(feats, audio_roots)
     elig = {s: eligible(items) for s, items in feats.items()}
 
     index_rows = []
