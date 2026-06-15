@@ -1,8 +1,8 @@
 {
-  "project_root": "/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant",
-  "vimedcss_root": "/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/experiments/asr/vimedcss",
+  "project_root": "/content/Clinical-Ambient-Documentation-Assistant",
+  "vimedcss_root": "/content/Clinical-Ambient-Documentation-Assistant/experiments/asr/vimedcss",
   "drive_root": "/content/drive/MyDrive/clinical_asr_vimedcss",
-  "week5_checkpoint": "/home/duykhongngu28/massive/Clinical Ambient Documentation Assistant/experiments/asr/finetune/week5/run_01_phowhisper_medium_conservative/best_model",
+  "week5_checkpoint": "/content/drive/MyDrive/clinical_asr_models/phowhisper_vietmed_week5_checkpoint",
   "dataset_id": "tensorxt/ViMedCSS",
   "track": "ViMedCSS Progressive Fine-tuning",
   "skeleton_version": "week6_day1_v1.0",

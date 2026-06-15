@@ -6,10 +6,10 @@
 
 ## Context
 
-- Project root: `.`
-- ViMedCSS root: `experiments/asr/vimedcss`
-- Drive root: `.`
-- Week 5 checkpoint: `experiments/asr/finetune/week5/run_01_phowhisper_medium_conservative/best_model`
+- Project root: `/content/Clinical-Ambient-Documentation-Assistant`
+- ViMedCSS root: `/content/Clinical-Ambient-Documentation-Assistant/experiments/asr/vimedcss`
+- Drive root: `/content/drive/MyDrive/clinical_asr_vimedcss`
+- Week 5 checkpoint: `/content/drive/MyDrive/clinical_asr_models/phowhisper_vietmed_week5_checkpoint`
 
 ## Hard failures
 
@@ -17,14 +17,6 @@ No hard failures.
 
 ## Warnings
 
-- `manifest_missing_audio_column:train`
-- `manifest_missing_segment_text:train`
-- `manifest_missing_audio_column:validation`
-- `manifest_missing_segment_text:validation`
-- `manifest_missing_audio_column:test`
-- `manifest_missing_segment_text:test`
-- `manifest_missing_audio_column:hard`
-- `manifest_missing_segment_text:hard`
 - `week5_checkpoint_missing_or_incomplete`
 
 ## Core skeleton
@@ -77,16 +69,16 @@ No hard failures.
 
 | Split | Status | Rows | Has audio | Has segment_text | Has duration | Has cs_terms_count | Path |
 |---|---|---:|---|---|---|---|---|
-| train | present | 11832 | False | False | True | False | `experiments/asr/vimedcss/manifests/raw/vimedcss_train_raw.jsonl` |
-| validation | present | 1 | False | False | False | False | `experiments/asr/vimedcss/manifests/raw/vimedcss_validation_raw.jsonl` |
-| test | present | 1614 | False | False | True | False | `experiments/asr/vimedcss/manifests/raw/vimedcss_test_raw.jsonl` |
-| hard | present | 658 | False | False | True | False | `experiments/asr/vimedcss/manifests/raw/vimedcss_hard_raw.jsonl` |
+| train | present | 11832 | True | True | True | True | `/content/Clinical-Ambient-Documentation-Assistant/experiments/asr/vimedcss/manifests/raw/vimedcss_train_raw.jsonl` |
+| validation | present | 1714 | True | True | True | True | `/content/Clinical-Ambient-Documentation-Assistant/experiments/asr/vimedcss/manifests/raw/vimedcss_validation_raw.jsonl` |
+| test | present | 1614 | True | True | True | True | `/content/Clinical-Ambient-Documentation-Assistant/experiments/asr/vimedcss/manifests/raw/vimedcss_test_raw.jsonl` |
+| hard | present | 658 | True | True | True | True | `/content/Clinical-Ambient-Documentation-Assistant/experiments/asr/vimedcss/manifests/raw/vimedcss_hard_raw.jsonl` |
 
 ## Drive check
 
 | Item | Value |
 |---|---|
-| path | `.` |
+| path | `/content/drive/MyDrive/clinical_asr_vimedcss` |
 | exists | `True` |
 | status | `present_writable` |
 | writable | `True` |
