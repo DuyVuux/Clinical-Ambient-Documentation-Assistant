@@ -403,17 +403,26 @@ def materialize(subset_name: str, rows: list[dict[str, Any]], manifest_path: Pat
     audio_dir.mkdir(parents=True, exist_ok=True)
     roots = build_audio_roots(vroot, audio_roots)
     materialized, copied, missing = [], 0, 0
+    missing_ids = []
     for i, row in enumerate(rows):
         r = dict(row)
-        src = resolve_audio(str(r.get("audio")) if r.get("audio") is not None else None, roots)
+        audio_val = r.get("audio")
+        src = None
+        if audio_val:
+            src_path = Path(audio_val)
+            if src_path.is_absolute() and src_path.exists():
+                src = src_path
+            else:
+                src = resolve_audio(audio_val, roots)
         if src is None:
             missing += 1
+            missing_ids.append(r.get("sample_id", f"row_{i}"))
             r["audio_materialization_status"] = "missing_source_audio"
             r["materialized_audio"] = None
             if not allow_missing_audio:
                 raise FileNotFoundError(
-                    f"Missing audio for subset={subset_name}, sample={r.get('sample_id')}, audio={r.get('audio')}. "
-                    "Use --manifests_only for local planning, or run on Colab CPU where audio files are materialized."
+                    f"Missing audio for subset={subset_name}, sample={r.get('sample_id')}, audio={audio_val}. "
+                    "Use --allow_missing_audio to skip, or ensure audio files are available."
                 )
         else:
             dst = audio_dir / f"{i:06d}_{safe_name(str(r.get('sample_id') or i))}{src.suffix or '.wav'}"
@@ -424,6 +433,8 @@ def materialize(subset_name: str, rows: list[dict[str, Any]], manifest_path: Pat
             r["audio_materialization_status"] = "copied"
             copied += 1
         materialized.append(r)
+    if missing > 0:
+        print(f"[WARN] {subset_name}: {missing}/{len(rows)} samples missing audio ({copied} copied)")
     write_jsonl(out_dir / "manifest.jsonl", materialized)
     write_json(out_dir / "subset_metadata.json", {"subset_name": subset_name, "rows": len(rows), "total_hours": round(total_hours,4), "copied_audio": copied, "missing_audio": missing, "created_at": now_iso()})
     local_tar = archive_root / f"{subset_name}.tar.gz"
@@ -523,7 +534,8 @@ def main() -> None:
     ap.add_argument("--make_runD", action="store_true")
     ap.add_argument("--skip_runD", action="store_true")
     ap.add_argument("--manifests_only", action="store_true")
-    ap.add_argument("--allow_missing_audio", action="store_true")
+    ap.add_argument("--allow_missing_audio", action="store_true", default=True)
+    ap.add_argument("--strict_audio", action="store_true")
     ap.add_argument("--skip_forgetting_eval", action="store_true")
     ap.add_argument("--seed", type=int, default=42)
     ap.add_argument("--run0_val_n", type=int, default=200)
@@ -540,6 +552,9 @@ def main() -> None:
     ap.add_argument("--vietmed_dev_manifest", default=None)
     ap.add_argument("--vietmed_dev_small_n", type=int, default=100)
     args = ap.parse_args()
+
+    if args.strict_audio:
+        args.allow_missing_audio = False
 
     if args.make_runD and not args.skip_runD:
         raise SystemExit("Run D must not be created in Phase 2. Pass --skip_runD.")
