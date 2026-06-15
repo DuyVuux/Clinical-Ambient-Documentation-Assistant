@@ -1,148 +1,148 @@
 {
-  "created_at": "2026-06-15T08:14:49.331678+00:00",
+  "created_at": "2026-06-15T09:25:00.684241+00:00",
   "index_rows": [
     {
       "subset_name": "run0_eval_val_200",
-      "rows": 0,
-      "total_hours": 0.0,
+      "rows": 200,
+      "total_hours": 0.4042,
       "manifest_path": "/content/Clinical-Ambient-Documentation-Assistant/experiments/asr/vimedcss/manifests/run0/run0_eval_val_200.jsonl",
       "local_archive_path": null,
       "drive_archive_path": null,
       "copied_audio": 0,
       "missing_audio": null,
       "mode": "manifests_only",
-      "group_counts": "{}",
-      "created_at": "2026-06-15T08:14:49.315175+00:00"
+      "group_counts": "{\"high_code_switching\": 200}",
+      "created_at": "2026-06-15T09:25:00.234600+00:00"
     },
     {
       "subset_name": "run0_eval_hard_200",
-      "rows": 0,
-      "total_hours": 0.0,
+      "rows": 200,
+      "total_hours": 0.4347,
       "manifest_path": "/content/Clinical-Ambient-Documentation-Assistant/experiments/asr/vimedcss/manifests/run0/run0_eval_hard_200.jsonl",
       "local_archive_path": null,
       "drive_archive_path": null,
       "copied_audio": 0,
       "missing_audio": null,
       "mode": "manifests_only",
-      "group_counts": "{}",
-      "created_at": "2026-06-15T08:14:49.315452+00:00"
+      "group_counts": "{\"high_code_switching\": 200}",
+      "created_at": "2026-06-15T09:25:00.241335+00:00"
     },
     {
       "subset_name": "run0_eval_test_200",
-      "rows": 0,
-      "total_hours": 0.0,
+      "rows": 200,
+      "total_hours": 0.4269,
       "manifest_path": "/content/Clinical-Ambient-Documentation-Assistant/experiments/asr/vimedcss/manifests/run0/run0_eval_test_200.jsonl",
       "local_archive_path": null,
       "drive_archive_path": null,
       "copied_audio": 0,
       "missing_audio": null,
       "mode": "manifests_only",
-      "group_counts": "{}",
-      "created_at": "2026-06-15T08:14:49.315633+00:00"
+      "group_counts": "{\"high_code_switching\": 200}",
+      "created_at": "2026-06-15T09:25:00.248376+00:00"
     },
     {
       "subset_name": "runA_train_200",
-      "rows": 0,
-      "total_hours": 0.0,
+      "rows": 200,
+      "total_hours": 0.4294,
       "manifest_path": "/content/Clinical-Ambient-Documentation-Assistant/experiments/asr/vimedcss/manifests/runA/runA_train_200.jsonl",
       "local_archive_path": null,
       "drive_archive_path": null,
       "copied_audio": 0,
       "missing_audio": null,
       "mode": "manifests_only",
-      "group_counts": "{}",
-      "created_at": "2026-06-15T08:14:49.315907+00:00"
+      "group_counts": "{\"high_code_switching\": 199, \"normal_medical_vietnamese\": 1}",
+      "created_at": "2026-06-15T09:25:00.266112+00:00"
     },
     {
       "subset_name": "runA_eval_val_100",
-      "rows": 0,
-      "total_hours": 0.0,
+      "rows": 100,
+      "total_hours": 0.2156,
       "manifest_path": "/content/Clinical-Ambient-Documentation-Assistant/experiments/asr/vimedcss/manifests/runA/runA_eval_val_100.jsonl",
       "local_archive_path": null,
       "drive_archive_path": null,
       "copied_audio": 0,
       "missing_audio": null,
       "mode": "manifests_only",
-      "group_counts": "{}",
-      "created_at": "2026-06-15T08:14:49.316084+00:00"
+      "group_counts": "{\"high_code_switching\": 100}",
+      "created_at": "2026-06-15T09:25:00.270511+00:00"
     },
     {
       "subset_name": "runB_train_1000",
-      "rows": 0,
-      "total_hours": 0.0,
+      "rows": 1000,
+      "total_hours": 2.1031,
       "manifest_path": "/content/Clinical-Ambient-Documentation-Assistant/experiments/asr/vimedcss/manifests/runB/runB_train_1000.jsonl",
       "local_archive_path": null,
       "drive_archive_path": null,
       "copied_audio": 0,
       "missing_audio": null,
       "mode": "manifests_only",
-      "group_counts": "{}",
-      "created_at": "2026-06-15T08:14:49.316291+00:00"
+      "group_counts": "{\"high_code_switching\": 999, \"normal_medical_vietnamese\": 1}",
+      "created_at": "2026-06-15T09:25:00.314935+00:00"
     },
     {
       "subset_name": "runB_eval_val_200",
-      "rows": 0,
-      "total_hours": 0.0,
+      "rows": 200,
+      "total_hours": 0.4158,
       "manifest_path": "/content/Clinical-Ambient-Documentation-Assistant/experiments/asr/vimedcss/manifests/runB/runB_eval_val_200.jsonl",
       "local_archive_path": null,
       "drive_archive_path": null,
       "copied_audio": 0,
       "missing_audio": null,
       "mode": "manifests_only",
-      "group_counts": "{}",
-      "created_at": "2026-06-15T08:14:49.316414+00:00"
+      "group_counts": "{\"high_code_switching\": 200}",
+      "created_at": "2026-06-15T09:25:00.323340+00:00"
     },
     {
       "subset_name": "runB_eval_hard_200",
-      "rows": 0,
-      "total_hours": 0.0,
+      "rows": 200,
+      "total_hours": 0.4133,
       "manifest_path": "/content/Clinical-Ambient-Documentation-Assistant/experiments/asr/vimedcss/manifests/runB/runB_eval_hard_200.jsonl",
       "local_archive_path": null,
       "drive_archive_path": null,
       "copied_audio": 0,
       "missing_audio": null,
       "mode": "manifests_only",
-      "group_counts": "{}",
-      "created_at": "2026-06-15T08:14:49.316540+00:00"
+      "group_counts": "{\"high_code_switching\": 200}",
+      "created_at": "2026-06-15T09:25:00.329948+00:00"
     },
     {
       "subset_name": "runC_train_4h",
-      "rows": 0,
-      "total_hours": 0.0,
+      "rows": 1938,
+      "total_hours": 4.0014,
       "manifest_path": "/content/Clinical-Ambient-Documentation-Assistant/experiments/asr/vimedcss/manifests/runC/runC_train_4h.jsonl",
       "local_archive_path": null,
       "drive_archive_path": null,
       "copied_audio": 0,
       "missing_audio": null,
       "mode": "manifests_only",
-      "group_counts": "{}",
-      "created_at": "2026-06-15T08:14:49.316723+00:00"
+      "group_counts": "{\"high_code_switching\": 1937, \"normal_medical_vietnamese\": 1}",
+      "created_at": "2026-06-15T09:25:00.655823+00:00"
     },
     {
       "subset_name": "runC_eval_val_200",
-      "rows": 0,
-      "total_hours": 0.0,
+      "rows": 200,
+      "total_hours": 0.3989,
       "manifest_path": "/content/Clinical-Ambient-Documentation-Assistant/experiments/asr/vimedcss/manifests/runC/runC_eval_val_200.jsonl",
       "local_archive_path": null,
       "drive_archive_path": null,
       "copied_audio": 0,
       "missing_audio": null,
       "mode": "manifests_only",
-      "group_counts": "{}",
-      "created_at": "2026-06-15T08:14:49.316831+00:00"
+      "group_counts": "{\"high_code_switching\": 200}",
+      "created_at": "2026-06-15T09:25:00.664486+00:00"
     },
     {
       "subset_name": "runC_eval_hard_200",
-      "rows": 0,
-      "total_hours": 0.0,
+      "rows": 200,
+      "total_hours": 0.4317,
       "manifest_path": "/content/Clinical-Ambient-Documentation-Assistant/experiments/asr/vimedcss/manifests/runC/runC_eval_hard_200.jsonl",
       "local_archive_path": null,
       "drive_archive_path": null,
       "copied_audio": 0,
       "missing_audio": null,
       "mode": "manifests_only",
-      "group_counts": "{}",
-      "created_at": "2026-06-15T08:14:49.316957+00:00"
+      "group_counts": "{\"high_code_switching\": 200}",
+      "created_at": "2026-06-15T09:25:00.671237+00:00"
     },
     {
       "subset_name": "vietmed_dev_small",
@@ -155,21 +155,21 @@
       "missing_audio": null,
       "mode": "manifests_only",
       "group_counts": "{\"vietmed_forgetting_eval\": 100}",
-      "created_at": "2026-06-15T08:14:49.330848+00:00"
+      "created_at": "2026-06-15T09:25:00.683299+00:00"
     }
   ],
   "raw_counts": {
     "train": 11832,
-    "validation": 1,
+    "validation": 1714,
     "test": 1614,
     "hard": 658
   },
   "eligible_counts": {
-    "train": 0,
-    "validation": 0,
-    "test": 0,
-    "hard": 0
+    "train": 11828,
+    "validation": 1712,
+    "test": 1614,
+    "hard": 658
   },
-  "suspect_count": 15814,
+  "suspect_count": 6,
   "manifests_only": true
 }
