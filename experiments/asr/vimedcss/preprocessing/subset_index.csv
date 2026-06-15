@@ -1,0 +1,13 @@
+subset_name,rows,total_hours,manifest_path,local_archive_path,drive_archive_path,copied_audio,missing_audio,mode,group_counts,created_at
+run0_eval_val_200,0,0.0,/content/Clinical-Ambient-Documentation-Assistant/experiments/asr/vimedcss/manifests/run0/run0_eval_val_200.jsonl,,,0,,manifests_only,{},2026-06-15T08:14:49.315175+00:00
+run0_eval_hard_200,0,0.0,/content/Clinical-Ambient-Documentation-Assistant/experiments/asr/vimedcss/manifests/run0/run0_eval_hard_200.jsonl,,,0,,manifests_only,{},2026-06-15T08:14:49.315452+00:00
+run0_eval_test_200,0,0.0,/content/Clinical-Ambient-Documentation-Assistant/experiments/asr/vimedcss/manifests/run0/run0_eval_test_200.jsonl,,,0,,manifests_only,{},2026-06-15T08:14:49.315633+00:00
+runA_train_200,0,0.0,/content/Clinical-Ambient-Documentation-Assistant/experiments/asr/vimedcss/manifests/runA/runA_train_200.jsonl,,,0,,manifests_only,{},2026-06-15T08:14:49.315907+00:00
+runA_eval_val_100,0,0.0,/content/Clinical-Ambient-Documentation-Assistant/experiments/asr/vimedcss/manifests/runA/runA_eval_val_100.jsonl,,,0,,manifests_only,{},2026-06-15T08:14:49.316084+00:00
+runB_train_1000,0,0.0,/content/Clinical-Ambient-Documentation-Assistant/experiments/asr/vimedcss/manifests/runB/runB_train_1000.jsonl,,,0,,manifests_only,{},2026-06-15T08:14:49.316291+00:00
+runB_eval_val_200,0,0.0,/content/Clinical-Ambient-Documentation-Assistant/experiments/asr/vimedcss/manifests/runB/runB_eval_val_200.jsonl,,,0,,manifests_only,{},2026-06-15T08:14:49.316414+00:00
+runB_eval_hard_200,0,0.0,/content/Clinical-Ambient-Documentation-Assistant/experiments/asr/vimedcss/manifests/runB/runB_eval_hard_200.jsonl,,,0,,manifests_only,{},2026-06-15T08:14:49.316540+00:00
+runC_train_4h,0,0.0,/content/Clinical-Ambient-Documentation-Assistant/experiments/asr/vimedcss/manifests/runC/runC_train_4h.jsonl,,,0,,manifests_only,{},2026-06-15T08:14:49.316723+00:00
+runC_eval_val_200,0,0.0,/content/Clinical-Ambient-Documentation-Assistant/experiments/asr/vimedcss/manifests/runC/runC_eval_val_200.jsonl,,,0,,manifests_only,{},2026-06-15T08:14:49.316831+00:00
+runC_eval_hard_200,0,0.0,/content/Clinical-Ambient-Documentation-Assistant/experiments/asr/vimedcss/manifests/runC/runC_eval_hard_200.jsonl,,,0,,manifests_only,{},2026-06-15T08:14:49.316957+00:00
+vietmed_dev_small,100,0.1654,/content/Clinical-Ambient-Documentation-Assistant/experiments/asr/vimedcss/manifests/forgetting_eval/vietmed_dev_small.jsonl,,,0,,manifests_only,"{""vietmed_forgetting_eval"": 100}",2026-06-15T08:14:49.330848+00:00

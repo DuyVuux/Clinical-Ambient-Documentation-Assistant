@@ -113,6 +113,30 @@ def safe_int(value: Any) -> int | None:
     return None
 
 
+def parse_time_to_seconds(value: Any) -> float | None:
+    if value is None:
+        return None
+    if isinstance(value, (int, float)):
+        if math.isnan(float(value)) or math.isinf(float(value)):
+            return None
+        return float(value)
+    if isinstance(value, str):
+        v = value.strip()
+        if not v:
+            return None
+        if ":" in v:
+            parts = v.split(":")
+            try:
+                if len(parts) == 2:
+                    return int(parts[0]) * 60 + float(parts[1])
+                if len(parts) == 3:
+                    return int(parts[0]) * 3600 + int(parts[1]) * 60 + float(parts[2])
+            except (ValueError, IndexError):
+                pass
+        return safe_float(v)
+    return None
+
+
 def normalize_text_minimal(text: Any) -> str:
     if text is None:
         return ""
@@ -254,8 +278,8 @@ def build_sample_audit(row: dict[str, Any], split: str) -> dict[str, Any]:
 
     text = normalize_text_minimal(row.get("segment_text"))
     duration = safe_float(row.get("duration_seconds"))
-    start_time = safe_float(row.get("start_time"))
-    end_time = safe_float(row.get("end_time"))
+    start_time = parse_time_to_seconds(row.get("start_time"))
+    end_time = parse_time_to_seconds(row.get("end_time"))
 
     word_count = count_words(text)
     text_len = len(text)
@@ -270,6 +294,7 @@ def build_sample_audit(row: dict[str, Any], split: str) -> dict[str, Any]:
     audio_present = has_audio_value(row.get("audio"))
 
     suspect_reasons: list[str] = []
+    info_flags: list[str] = []
 
     if row.get("_invalid_json"):
         suspect_reasons.append("invalid_json")
@@ -301,7 +326,7 @@ def build_sample_audit(row: dict[str, Any], split: str) -> dict[str, Any]:
         if derived < 0:
             suspect_reasons.append("negative_start_end_duration")
         elif abs(derived - duration) > 1.0:
-            suspect_reasons.append("duration_mismatch_start_end_gt_1s")
+            info_flags.append("duration_mismatch_start_end_gt_1s")
 
     return {
         "split": split,
@@ -323,6 +348,7 @@ def build_sample_audit(row: dict[str, Any], split: str) -> dict[str, Any]:
         "has_original_video_title": bool(row.get("original_video_title")),
         "suspect": bool(suspect_reasons),
         "suspect_reasons": ";".join(suspect_reasons),
+        "info_flags": ";".join(info_flags),
         "segment_text_preview": text[:160],
         "cs_terms_preview": ";".join(cs_terms[:20]),
     }
@@ -440,6 +466,7 @@ def render_markdown_report(
     summaries: list[dict[str, Any]],
     output_dir: Path,
     suspect_reason_counter: Counter,
+    info_flag_counter: Counter,
 ) -> str:
     lines: list[str] = []
 
@@ -512,6 +539,19 @@ def render_markdown_report(
             lines.append(f"| `{reason}` | {count} |")
     else:
         lines.append("No suspect samples found.")
+    lines.append("")
+
+    lines.append("## Info flags (non-blocking)")
+    lines.append("")
+    lines.append("These flags are informational and do not mark samples as suspect.")
+    lines.append("")
+    if info_flag_counter:
+        lines.append("| Flag | Count |")
+        lines.append("|---|---:|")
+        for flag, count in info_flag_counter.most_common():
+            lines.append(f"| `{flag}` | {count} |")
+    else:
+        lines.append("No info flags.")
     lines.append("")
 
     lines.append("## Schema examples")
@@ -590,6 +630,7 @@ def main() -> None:
     summaries: list[dict[str, Any]] = []
     schema_examples: dict[str, Any] = {}
     suspect_reason_counter: Counter = Counter()
+    info_flag_counter: Counter = Counter()
 
     for split in SPLITS:
         manifest_path = detect_manifest_path(vimedcss_root, split)
@@ -603,6 +644,10 @@ def main() -> None:
                 for reason in a["suspect_reasons"].split(";"):
                     if reason:
                         suspect_reason_counter[reason] += 1
+            if a.get("info_flags"):
+                for flag in a["info_flags"].split(";"):
+                    if flag:
+                        info_flag_counter[flag] += 1
 
         summaries.append(
             summarize_split(
@@ -646,6 +691,7 @@ def main() -> None:
         "has_original_video_title",
         "suspect",
         "suspect_reasons",
+        "info_flags",
         "segment_text_preview",
         "cs_terms_preview",
     ]
@@ -688,6 +734,7 @@ def main() -> None:
         "output_dir": str(output_dir),
         "splits": summaries,
         "suspect_reason_counts": dict(suspect_reason_counter),
+        "info_flag_counts": dict(info_flag_counter),
         "total_rows": sum(s["rows"] for s in summaries),
         "total_suspect_samples": len(suspect_rows),
         "phase": "phase1_sample_based_audit",
@@ -702,6 +749,7 @@ def main() -> None:
         summaries=summaries,
         output_dir=output_dir,
         suspect_reason_counter=suspect_reason_counter,
+        info_flag_counter=info_flag_counter,
     )
 
     report_path = output_dir / "AUDIT_VIMEDCSS_SAMPLE_BASED_REPORT.md"
