@@ -20,10 +20,10 @@ This phase does not train models, does not materialize audio, and does not use G
 
 | Split | Rows | Total hours | Mean duration | Median duration | Mean words | Mean CS terms | Suspect samples | Suspect rate |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| train | 11832 | 24.3036 | 7.3946 | 7.0 | 26.4129 | 1.0407 | 11832 | 1.0 |
-| validation | 1714 | 3.5681 | 7.4942 | 7.0 | 26.0146 | 1.0583 | 1714 | 1.0 |
-| test | 1614 | 3.3889 | 7.5589 | 7.0 | 26.855 | 1.0502 | 1614 | 1.0 |
-| hard | 658 | 1.3828 | 7.5653 | 7.0 | 25.0213 | 1.152 | 658 | 1.0 |
+| train | 11832 | 24.3036 | 7.3946 | 7.0 | 26.4129 | 1.0407 | 4 | 0.0003 |
+| validation | 1714 | 3.5681 | 7.4942 | 7.0 | 26.0146 | 1.0583 | 2 | 0.0012 |
+| test | 1614 | 3.3889 | 7.5589 | 7.0 | 26.855 | 1.0502 | 0 | 0.0 |
+| hard | 658 | 1.3828 | 7.5653 | 7.0 | 25.0213 | 1.152 | 0 | 0.0 |
 
 ## Manifest paths
 
@@ -106,9 +106,16 @@ Counts below show how many rows have non-empty values for each expected field.
 
 | Reason | Count |
 |---|---:|
-| `duration_mismatch_start_end_gt_1s` | 15818 |
 | `too_few_words_le_1` | 3 |
 | `duration_too_long_gt_25s` | 3 |
+
+## Info flags (non-blocking)
+
+These flags are informational and do not mark samples as suspect.
+
+| Flag | Count |
+|---|---:|
+| `duration_mismatch_start_end_gt_1s` | 15818 |
 
 ## Schema examples
 

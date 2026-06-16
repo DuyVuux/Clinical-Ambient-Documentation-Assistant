@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-06-15T06:54:34.105570+00:00",
+  "created_at": "2026-06-15T18:15:46.409952+00:00",
   "project_root": "/content/Clinical-Ambient-Documentation-Assistant",
   "vimedcss_root": "/content/Clinical-Ambient-Documentation-Assistant/experiments/asr/vimedcss",
   "drive_root": "/content/drive/MyDrive/clinical_asr_vimedcss",
@@ -62,12 +62,12 @@
   },
   "optional_inventory": {
     "data_audit/dataset_inventory.json": {
-      "status": "present",
-      "size_mb": 0.0227
+      "status": "missing",
+      "size_mb": null
     },
     "data_audit/split_inventory.md": {
-      "status": "present",
-      "size_mb": 0.0
+      "status": "missing",
+      "size_mb": null
     }
   },
   "raw_manifests": {
@@ -75,7 +75,7 @@
       "path": "/content/Clinical-Ambient-Documentation-Assistant/experiments/asr/vimedcss/manifests/raw/vimedcss_train_raw.jsonl",
       "status": "present",
       "rows": 11832,
-      "size_mb": 11.7418,
+      "size_mb": 12.5978,
       "first_row_columns": [
         "_audio_bytes_present",
         "_audio_type",
@@ -85,6 +85,8 @@
         "_source_id_col",
         "_source_text_col",
         "audio",
+        "audio_basename",
+        "audio_original",
         "audio_path",
         "clean_audio_path",
         "cs_terms_count",
@@ -112,7 +114,7 @@
       "path": "/content/Clinical-Ambient-Documentation-Assistant/experiments/asr/vimedcss/manifests/raw/vimedcss_validation_raw.jsonl",
       "status": "present",
       "rows": 1714,
-      "size_mb": 1.7118,
+      "size_mb": 1.8356,
       "first_row_columns": [
         "_audio_bytes_present",
         "_audio_type",
@@ -122,6 +124,8 @@
         "_source_id_col",
         "_source_text_col",
         "audio",
+        "audio_basename",
+        "audio_original",
         "audio_path",
         "clean_audio_path",
         "cs_terms_count",
@@ -149,7 +153,7 @@
       "path": "/content/Clinical-Ambient-Documentation-Assistant/experiments/asr/vimedcss/manifests/raw/vimedcss_test_raw.jsonl",
       "status": "present",
       "rows": 1614,
-      "size_mb": 1.6031,
+      "size_mb": 1.7198,
       "first_row_columns": [
         "_audio_bytes_present",
         "_audio_type",
@@ -159,6 +163,8 @@
         "_source_id_col",
         "_source_text_col",
         "audio",
+        "audio_basename",
+        "audio_original",
         "audio_path",
         "clean_audio_path",
         "cs_terms_count",
@@ -186,7 +192,7 @@
       "path": "/content/Clinical-Ambient-Documentation-Assistant/experiments/asr/vimedcss/manifests/raw/vimedcss_hard_raw.jsonl",
       "status": "present",
       "rows": 658,
-      "size_mb": 0.647,
+      "size_mb": 0.6944,
       "first_row_columns": [
         "_audio_bytes_present",
         "_audio_type",
@@ -196,6 +202,8 @@
         "_source_id_col",
         "_source_text_col",
         "audio",
+        "audio_basename",
+        "audio_original",
         "audio_path",
         "clean_audio_path",
         "cs_terms_count",

@@ -62,8 +62,8 @@ No hard failures.
 
 | Artifact | Status | Size MB |
 |---|---|---:|
-| `data_audit/dataset_inventory.json` | present | 0.0227 |
-| `data_audit/split_inventory.md` | present | 0.0 |
+| `data_audit/dataset_inventory.json` | missing | None |
+| `data_audit/split_inventory.md` | missing | None |
 
 ## Raw manifests
 

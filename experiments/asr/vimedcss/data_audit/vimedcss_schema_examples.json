@@ -24,6 +24,8 @@
         "original_video_title": "Thiếu hụt 5 alpha reductase - cơ quan sd lưỡng tính",
         "start_time": 1781482320000,
         "end_time": 1781482860000,
+        "audio_original": "Med_CS-0-1.wav",
+        "audio_basename": "Med_CS-0-1.wav",
         "clean_audio_path": "/content/Clinical-Ambient-Documentation-Assistant/data/vimedcss_audio/Med_CS-0-1.wav"
       },
       {
@@ -46,6 +48,8 @@
         "original_video_title": "Thiếu hụt 5 alpha reductase - cơ quan sd lưỡng tính",
         "start_time": 1781494920000,
         "end_time": 1781495520000,
+        "audio_original": "Med_CS-0-10.wav",
+        "audio_basename": "Med_CS-0-10.wav",
         "clean_audio_path": "/content/Clinical-Ambient-Documentation-Assistant/data/vimedcss_audio/Med_CS-0-10.wav"
       },
       {
@@ -68,6 +72,8 @@
         "original_video_title": "Thiếu hụt 5 alpha reductase - cơ quan sd lưỡng tính",
         "start_time": 1781495520000,
         "end_time": 1781496000000,
+        "audio_original": "Med_CS-0-11.wav",
+        "audio_basename": "Med_CS-0-11.wav",
         "clean_audio_path": "/content/Clinical-Ambient-Documentation-Assistant/data/vimedcss_audio/Med_CS-0-11.wav"
       }
     ]
@@ -96,6 +102,8 @@
         "original_video_title": "So sánh Alpha Lipid & Colos IgGold",
         "start_time": 1781497860000,
         "end_time": 1781498460000,
+        "audio_original": "Med_CS-100-17.wav",
+        "audio_basename": "Med_CS-100-17.wav",
         "clean_audio_path": "/content/Clinical-Ambient-Documentation-Assistant/data/vimedcss_audio/Med_CS-100-17.wav"
       },
       {
@@ -118,6 +126,8 @@
         "original_video_title": "UNG THƯ CẦN HẠN CHẾ CHẤT METHIONIN TRONG THỰC PHẨM",
         "start_time": 1781490600000,
         "end_time": 1781491080000,
+        "audio_original": "Med_CS-1000-9.wav",
+        "audio_basename": "Med_CS-1000-9.wav",
         "clean_audio_path": "/content/Clinical-Ambient-Documentation-Assistant/data/vimedcss_audio/Med_CS-1000-9.wav"
       },
       {
@@ -140,6 +150,8 @@
         "original_video_title": "TÁC DỤNG CỦA ESTROGEN VỚI SỨC KHỎE TỔNG THỂ - Duy Anh Web",
         "start_time": 1781489040000,
         "end_time": 1781489340000,
+        "audio_original": "Med_CS-1006-14.wav",
+        "audio_basename": "Med_CS-1006-14.wav",
         "clean_audio_path": "/content/Clinical-Ambient-Documentation-Assistant/data/vimedcss_audio/Med_CS-1006-14.wav"
       }
     ]
@@ -168,6 +180,8 @@
         "original_video_title": "Thiếu hụt 5 alpha reductase - cơ quan sd lưỡng tính",
         "start_time": 1781490720000,
         "end_time": 1781491200000,
+        "audio_original": "Med_CS-0-7.wav",
+        "audio_basename": "Med_CS-0-7.wav",
         "clean_audio_path": "/content/Clinical-Ambient-Documentation-Assistant/data/vimedcss_audio/Med_CS-0-7.wav"
       },
       {
@@ -190,6 +204,8 @@
         "original_video_title": "So sánh Alpha Lipid & Colos IgGold",
         "start_time": 1781490900000,
         "end_time": 1781491440000,
+        "audio_original": "Med_CS-100-12.wav",
+        "audio_basename": "Med_CS-100-12.wav",
         "clean_audio_path": "/content/Clinical-Ambient-Documentation-Assistant/data/vimedcss_audio/Med_CS-100-12.wav"
       },
       {
@@ -212,6 +228,8 @@
         "original_video_title": "So sánh Alpha Lipid & Colos IgGold",
         "start_time": 1781493720000,
         "end_time": 1781494140000,
+        "audio_original": "Med_CS-100-13.wav",
+        "audio_basename": "Med_CS-100-13.wav",
         "clean_audio_path": "/content/Clinical-Ambient-Documentation-Assistant/data/vimedcss_audio/Med_CS-100-13.wav"
       }
     ]
@@ -242,6 +260,8 @@
         "original_video_title": "Bệnh cường giáp nguyên nhân triệu chứng và cách điều trị hiệu quả",
         "start_time": 1781481600000,
         "end_time": 1781481900000,
+        "audio_original": "Med_CS-1017-1.wav",
+        "audio_basename": "Med_CS-1017-1.wav",
         "clean_audio_path": "/content/Clinical-Ambient-Documentation-Assistant/data/vimedcss_audio/Med_CS-1017-1.wav"
       },
       {
@@ -265,6 +285,8 @@
         "original_video_title": "#SỮANON_CHÌA KHÓA CỦA SỨC KHỎE.",
         "start_time": 1781483460000,
         "end_time": 1781483940000,
+        "audio_original": "Med_CS-1020-2.wav",
+        "audio_basename": "Med_CS-1020-2.wav",
         "clean_audio_path": "/content/Clinical-Ambient-Documentation-Assistant/data/vimedcss_audio/Med_CS-1020-2.wav"
       },
       {
@@ -287,6 +309,8 @@
         "original_video_title": "Review Bột hỗ trợ ngủ ngon Glycine 4000 Happy Morning Giá Bao Nhiêu Tiền? Mua Ở Đâu?",
         "start_time": 1781483100000,
         "end_time": 1781483460000,
+        "audio_original": "Med_CS-1046-1.wav",
+        "audio_basename": "Med_CS-1046-1.wav",
         "clean_audio_path": "/content/Clinical-Ambient-Documentation-Assistant/data/vimedcss_audio/Med_CS-1046-1.wav"
       }
     ]
