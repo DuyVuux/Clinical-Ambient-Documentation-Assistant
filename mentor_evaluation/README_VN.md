@@ -30,20 +30,30 @@ pip install torch transformers soundfile tqdm pandas
 ```
 
 **Lệnh chạy đánh giá:**
-Sử dụng script Python đã được thiết kế sẵn. Bạn chỉ cần điền đường dẫn thư mục `testset` và đường dẫn đến thư mục chứa model.
+Sử dụng script Python đã được thiết kế sẵn. Bạn có thể sử dụng trực tiếp Model ID từ Hugging Face của dự án để chạy (hệ thống sẽ tự động tải trực tuyến về bộ nhớ đệm, sếp **không cần tự tải gì về thư mục gốc**).
+
+Model ID chuẩn của tuần 5: `DukeShy/phowhisper-medium-medical-vi-run01`
 
 ```bash
-python mentor_evaluation/run_benchmark.py --testset-dir data/raw/testset --model-path <đường_dẫn_tới_model>
+# Chạy trực tuyến bằng Model ID của Hugging Face (Không cần tải file về máy)
+python mentor_evaluation/run_benchmark.py \
+  --testset-dir data/raw/testset \
+  --model-path DukeShy/phowhisper-medium-medical-vi-run01
 ```
+
+*(Lưu ý: Nếu sếp muốn dùng file offline, sếp cũng có thể điền đường dẫn đến thư mục chứa checkpoint đã tải về máy vào tham số `--model-path`)*
 
 **Các tham số nâng cao (Tùy chọn):**
 - `--run-label <tên_phiên>`: Tên phiên chạy (VD: `run_test_week5`). Kết quả sẽ lưu vào thư mục này.
 - `--smoke-test`: Thêm cờ này vào cuối lệnh nếu bạn chỉ muốn chạy thử nhanh với 3 file âm thanh đầu tiên để kiểm tra lỗi.
 - `--no-resume`: Buộc script phải chạy lại toàn bộ từ đầu, thay vì tiếp tục từ những file đã chạy xong.
 
-*Ví dụ lệnh chạy đầy đủ:*
+*Ví dụ lệnh chạy đầy đủ sử dụng model online:*
 ```bash
-python mentor_evaluation/run_benchmark.py --testset-dir data/raw/testset --model-path external_models/phowhisper_vietmed_week5 --run-label mentor_test_1
+python mentor_evaluation/run_benchmark.py \
+  --testset-dir data/raw/testset \
+  --model-path DukeShy/phowhisper-medium-medical-vi-run01 \
+  --run-label mentor_test_1
 ```
 
 ## 3. Xem kết quả (Outputs)
