@@ -1,0 +1,10 @@
+{
+  "run_name": "runB_mini_1000",
+  "epochs": 2.0,
+  "learning_rate": 5e-06,
+  "model": "/content/drive/MyDrive/clinical_asr_models/phowhisper_vietmed_week5_checkpoint",
+  "train_archive": "/content/drive/MyDrive/clinical_asr_vimedcss/subset_archives/runB_train_1000.tar.gz",
+  "eval_archive": "/content/drive/MyDrive/clinical_asr_vimedcss/subset_archives/runB_eval_val_200.tar.gz",
+  "work_dir": "/content/vimedcss_work/runB",
+  "output_dir": "/content/drive/MyDrive/clinical_asr_vimedcss/finetune/runB_mini_1000"
+}

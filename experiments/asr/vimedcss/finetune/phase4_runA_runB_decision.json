@@ -1,0 +1,20 @@
+{
+  "status": "PROCEED_TO_RUN_C_WITH_CAUTION",
+  "reasons": [
+    "Run 0 baseline metrics were not provided; Run B ran technically and forgetting is acceptable."
+  ],
+  "metrics": {
+    "runA_wer": 0.3013698630136986,
+    "runB_wer": 0.2284843869002285,
+    "run0_wer": null,
+    "forgetting_vietmed_wer": null,
+    "week5_vietmed_wer_reference": 0.1657,
+    "forgetting_tolerance_abs": 0.05
+  },
+  "paths": {
+    "runA_metrics": "/content/drive/MyDrive/clinical_asr_vimedcss/finetune/runA_smoke_200/metrics.json",
+    "runB_metrics": "/content/drive/MyDrive/clinical_asr_vimedcss/finetune/runB_mini_1000/metrics.json",
+    "forgetting_metrics": "/content/drive/MyDrive/clinical_asr_vimedcss/finetune/runB_mini_1000/forgetting_vietmed_metrics.json",
+    "run0_metrics": "/content/drive/MyDrive/clinical_asr_vimedcss/baseline/run0_week5_checkpoint/metrics_val_200.json"
+  }
+}

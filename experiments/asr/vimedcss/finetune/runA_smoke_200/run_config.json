@@ -1,0 +1,10 @@
+{
+  "run_name": "runA_smoke_200",
+  "epochs": 1.0,
+  "learning_rate": 5e-06,
+  "model": "/content/drive/MyDrive/clinical_asr_models/phowhisper_vietmed_week5_checkpoint",
+  "train_archive": "/content/drive/MyDrive/clinical_asr_vimedcss/subset_archives/runA_train_200.tar.gz",
+  "eval_archive": "/content/drive/MyDrive/clinical_asr_vimedcss/subset_archives/runA_eval_val_100.tar.gz",
+  "work_dir": "/content/vimedcss_work/runA",
+  "output_dir": "/content/drive/MyDrive/clinical_asr_vimedcss/finetune/runA_smoke_200"
+}

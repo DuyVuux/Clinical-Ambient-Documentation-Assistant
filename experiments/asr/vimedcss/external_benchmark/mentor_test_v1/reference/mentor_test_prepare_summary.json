@@ -1,0 +1,64 @@
+{
+  "status": "PASS",
+  "extracted_root": "/content/mentor_test_work/extracted",
+  "selected_reference_file": "/content/mentor_test_work/extracted/testset/transcript.txt",
+  "n_audio_files": 5980,
+  "n_text_candidates": 1,
+  "n_refs_in_selected_file": 5980,
+  "n_matched": 5980,
+  "n_unmatched": 0,
+  "manifest_jsonl": "/content/drive/MyDrive/clinical_asr_vimedcss/external_benchmarks/mentor_test_v1/reference/mentor_test_manifest.jsonl",
+  "reference_tsv": "/content/drive/MyDrive/clinical_asr_vimedcss/external_benchmarks/mentor_test_v1/reference/mentor_test_reference.tsv",
+  "inventory_csv": "/content/drive/MyDrive/clinical_asr_vimedcss/external_benchmarks/mentor_test_v1/reference/mentor_test_inventory.csv",
+  "candidate_summary": [
+    {
+      "path": "/content/mentor_test_work/extracted/testset/transcript.txt",
+      "n_refs": 5980,
+      "n_matched": 5980,
+      "n_unmatched": 0,
+      "matched_preview": [
+        [
+          "bacsidatnhkhoavitadoc_1_1.wav",
+          "/content/mentor_test_work/extracted/testset/audio/bacsidatnhkhoavitadoc_1_1.wav"
+        ],
+        [
+          "bacsidatnhkhoavitadoc_1_2.wav",
+          "/content/mentor_test_work/extracted/testset/audio/bacsidatnhkhoavitadoc_1_2.wav"
+        ],
+        [
+          "bacsidatnhkhoavitadoc_1_4.wav",
+          "/content/mentor_test_work/extracted/testset/audio/bacsidatnhkhoavitadoc_1_4.wav"
+        ],
+        [
+          "bacsidatnhkhoavitadoc_1_3.wav",
+          "/content/mentor_test_work/extracted/testset/audio/bacsidatnhkhoavitadoc_1_3.wav"
+        ],
+        [
+          "bacsidatnhkhoavitadoc_2_1.wav",
+          "/content/mentor_test_work/extracted/testset/audio/bacsidatnhkhoavitadoc_2_1.wav"
+        ],
+        [
+          "bacsidatnhkhoavitadoc_2_10.wav",
+          "/content/mentor_test_work/extracted/testset/audio/bacsidatnhkhoavitadoc_2_10.wav"
+        ],
+        [
+          "bacsidatnhkhoavitadoc_1_9.wav",
+          "/content/mentor_test_work/extracted/testset/audio/bacsidatnhkhoavitadoc_1_9.wav"
+        ],
+        [
+          "bacsidatnhkhoavitadoc_2_12.wav",
+          "/content/mentor_test_work/extracted/testset/audio/bacsidatnhkhoavitadoc_2_12.wav"
+        ],
+        [
+          "bacsidatnhkhoavitadoc_2_11.wav",
+          "/content/mentor_test_work/extracted/testset/audio/bacsidatnhkhoavitadoc_2_11.wav"
+        ],
+        [
+          "bacsidatnhkhoavitadoc_1_6.wav",
+          "/content/mentor_test_work/extracted/testset/audio/bacsidatnhkhoavitadoc_1_6.wav"
+        ]
+      ],
+      "unmatched_preview": []
+    }
+  ]
+}

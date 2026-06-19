@@ -1,0 +1,31 @@
+==================================================
+  ASR Benchmark Results
+==================================================
+  Files matched:        200
+  Reference total:      200
+  Prediction total:     200
+--------------------------------------------------
+  WER:                  19.84%
+  CER:                  15.11%
+  CS-WER:               63.95%
+  N-WER:                15.82%
+  Negation miss rate:   8.93%  (5 missed / 56 ref negations, 42 utterances)
+--------------------------------------------------
+  Word errors:          1042
+    Substitutions:      560
+    Deletions:          247
+    Insertions:         235
+  Reference words:      5252
+  Reference chars:      18531
+--------------------------------------------------
+  CS word errors:       330
+    Substitutions:      252
+    Deletions:          49
+    Insertions:         29
+  CS ref words:         516
+  N word errors:        749
+    Substitutions:      271
+    Deletions:          235
+    Insertions:         243
+  N ref words:          4736
+==================================================
